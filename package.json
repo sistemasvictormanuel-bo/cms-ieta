@@ -1,0 +1,55 @@
+{
+    "$schema": "https://www.schemastore.org/package.json",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "vp build",
+        "build:ssr": "vp build && vp build --ssr",
+        "dev": "vp dev",
+        "check": "vp check",
+        "check:fix": "vp check --fix",
+        "types:check": "vue-tsc --noEmit"
+    },
+    "dependencies": {
+        "@editorjs/editorjs": "^2.31.7",
+        "@editorjs/embed": "^2.7.7",
+        "@editorjs/header": "^2.8.9",
+        "@editorjs/image": "^2.10.3",
+        "@editorjs/list": "^2.0.9",
+        "@inertiajs/vite": "^3.0.0",
+        "@inertiajs/vue3": "^3.0.0",
+        "@tailwindcss/vite": "^4.1.11",
+        "@vitejs/plugin-vue": "^6.0.0",
+        "apexcharts": "^8.1.0",
+        "clsx": "^2.1.1",
+        "concurrently": "^10.0.3",
+        "laravel-vite-plugin": "^3.1",
+        "tailwind-merge": "^3.2.0",
+        "tailwindcss": "^4.1.1",
+        "typescript": "^5.2.2",
+        "vite": "^8.0.0",
+        "vue": "^3.5.13",
+        "vue3-apexcharts": "^1.11.2",
+        "vue3-toastify": "^0.2.9"
+    },
+    "devDependencies": {
+        "@inertiajs/vue3": "^2.0",
+        "@laravel/vite-plugin-wayfinder": "^0.1.3",
+        "@tailwindcss/forms": "^0.5.7",
+        "@tailwindcss/typography": "^0.5.10",
+        "@types/node": "^22.13.5",
+        "@vitejs/plugin-vue": "^6.0.4",
+        "autoprefixer": "^10.4.16",
+        "postcss": "^8.4.32",
+        "tailwindcss": "^3.4.0",
+        "vite-plus": "0.3.0",
+        "vue": "^3.3.13",
+        "vue-tsc": "^2.2.4"
+    },
+    "optionalDependencies": {
+        "@laravel/multiplex": "^0.4.1",
+        "@rollup/rollup-linux-x64-gnu": "4.9.5",
+        "@tailwindcss/oxide-linux-x64-gnu": "^4.0.1",
+        "lightningcss-linux-x64-gnu": "^1.29.1"
+    }
+}

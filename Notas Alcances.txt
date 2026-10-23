@@ -1,0 +1,1 @@
+Este es el sistema de un Instituto de Investigación Académica (IETA). Los sitios institucionales y científicos requieren consistencia visual, rigor y sobriedad, no páginas con diseños arbitrarios. Si en el futuro lo exigen, la solución limpia es un sistema de bloques modulares predefinidos (JSON), jamás HTML libre desde un WYSIWYG.
