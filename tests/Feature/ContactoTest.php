@@ -9,7 +9,7 @@ beforeEach(function () {
 });
 
 it('permite a un usuario autenticado ver la vista de edición de contacto institucional', function () {
-    $user = User::factory()->create();
+    $user = User::factory()->withTwoFactor()->create();
     $user->assignRole('administrador');
 
     $response = $this->actingAs($user)->get(route('admin.contacto.edit'));
@@ -18,7 +18,7 @@ it('permite a un usuario autenticado ver la vista de edición de contacto instit
 });
 
 it('permite actualizar el registro único institucional de contacto', function () {
-    $user = User::factory()->create();
+    $user = User::factory()->withTwoFactor()->create();
     $user->assignRole('administrador');
 
     $payload = [

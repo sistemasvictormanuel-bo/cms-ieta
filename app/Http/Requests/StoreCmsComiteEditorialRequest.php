@@ -24,6 +24,18 @@ class StoreCmsComiteEditorialRequest extends FormRequest
                 'user_is_active' => filter_var($this->user_is_active, FILTER_VALIDATE_BOOLEAN),
             ]);
         }
+
+        if ($this->has('p_sitio_web')) {
+            $sitio = trim((string) $this->p_sitio_web);
+            if ($sitio === '') {
+                $this->merge(['p_sitio_web' => null]);
+            } else {
+                if (! preg_match('/^https?:\/\//i', $sitio) && (str_contains($sitio, '.') || str_starts_with($sitio, 'orcid.org'))) {
+                    $sitio = 'https://'.$sitio;
+                }
+                $this->merge(['p_sitio_web' => $sitio]);
+            }
+        }
     }
 
     public function rules(): array

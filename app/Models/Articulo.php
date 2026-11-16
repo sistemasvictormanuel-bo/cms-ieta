@@ -39,6 +39,7 @@ class Articulo extends Model implements HasMedia
         'revisado_at',
         'created_by_user_id',
         'art_referencias',
+        'art_enlace_url',
         'art_vistas',
     ];
 

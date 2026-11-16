@@ -1,0 +1,303 @@
+[
+    {
+        "id": 2,
+        "sv_titulo": "Consultoria",
+        "sv_descripcion": "Servicios de asesoría y capacitación a diferentes instituciones públicas y privadas, de acuerdo a requerimientos mediante convenios u otros.",
+        "sv_contenido": {
+            "time": "1793464199755",
+            "blocks": [
+                {
+                    "id": "5QkNt92Viz",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "El IETA cuenta con servicios de asesoría y capacitación a diferentes instituciones públicas y privadas, de acuerdo a requerimientos mediante convenios u otros. Prestar asesoramiento en métodos, técnicas y análisis estadístico, a instituciones públicas y privadas e institutos de investigación."
+                    }
+                },
+                {
+                    "id": "EeWqzx5UCq",
+                    "type": "list",
+                    "data": {
+                        "style": "unordered",
+                        "items": [
+                            {
+                                "content": "Servicio de asesoría y capacitación en análisis estadístico mediante técnicas y métodos estadísticos como: análisis multivariado, análisis masivo de datos (data mining), modelos de series de tiempo, modelos estadísticos y econométricos, procesos estocásticos, muestras complejas, censos y encuestas, estudios de mercado y otros estudios científicos.",
+                                "meta": {},
+                                "items": []
+                            },
+                            {
+                                "content": "Capacitación en manejo y uso de software estadístico como RStudio, Python y otros.",
+                                "meta": {},
+                                "items": []
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "5-CtWpMNyk",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Promover la investigación científica cuantitativa y cualitativa, teórica y aplicada dirigida a las necesidades nacionales, regionales y locales. Planificar y organizar cursos de formación académica teórica y práctica en pregrado y postgrado Apoyar con la investigación a la enseñanza, desarrollando proyectos coordinados entre docentes y estudiantes. Proporcionar entrenamiento profesional a los estudiantes universitarios. Asesoramiento en la elaboración de tesis en diferentes ramas de la investigación."
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "created_at": "2026-10-10T22:41:57.000000Z",
+        "updated_at": "2026-10-31T16:30:03.000000Z",
+        "imagen_url": "\/storage\/6\/consultoriaServ.png",
+        "media": [
+            {
+                "id": 6,
+                "model_type": "App\\Models\\CmsServicios",
+                "model_id": 2,
+                "uuid": "babecf6f-3f31-4fdb-aa0c-6846034113e5",
+                "collection_name": "sv_imagen",
+                "name": "consultoriaServ",
+                "file_name": "consultoriaServ.png",
+                "mime_type": "image\/png",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 237227,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-10-10T22:41:57.000000Z",
+                "updated_at": "2026-10-10T22:41:57.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/6\/consultoriaServ.png",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "sv_titulo": "Procesamiento y Análisis de Datos",
+        "sv_descripcion": "Brinda servicio referente a: La construcción de plataforma de entrada, edición y salida de datos; crítica, codificación, transcripción de datos. Conformación de bases de datos depuradas y consistentes.",
+        "sv_contenido": {
+            "time": "1793464250450",
+            "blocks": [
+                {
+                    "id": "mhX24SuQ1T",
+                    "type": "list",
+                    "data": {
+                        "style": "unordered",
+                        "items": [
+                            {
+                                "content": "Brinda servicio referente a: La construcción de plataforma de entrada, edición y salida de datos; crítica, codificación, transcripción de datos. Conformación de bases de datos depuradas y consistentes.",
+                                "meta": {},
+                                "items": []
+                            },
+                            {
+                                "content": "Para el análisis de datos, todo lo referente a: La construcción de indicadores, estadísticas con cuadros y gráficos, uso de metodología estadística en modelos lineales y no lineales, análisis multivariante factorial, cluster, correspondencias. Otro tipo de análisis de datos con Data Mining.",
+                                "meta": {},
+                                "items": []
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "xol9q6w181",
+                    "type": "image",
+                    "data": {
+                        "caption": null,
+                        "withBorder": "0",
+                        "withBackground": "0",
+                        "stretched": "0",
+                        "file": {
+                            "url": "\/storage\/editor\/TtqluGca4ZqXOyy92QMG9Ys0lZOPknJoqzB7noOZ.png"
+                        }
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "created_at": "2026-10-19T21:14:27.000000Z",
+        "updated_at": "2026-10-31T16:30:52.000000Z",
+        "imagen_url": "\/storage\/21\/procesamiento.png",
+        "media": [
+            {
+                "id": 21,
+                "model_type": "App\\Models\\CmsServicios",
+                "model_id": 3,
+                "uuid": "5a9dc349-6e85-4c36-a1ba-1ab50173cb95",
+                "collection_name": "sv_imagen",
+                "name": "procesamiento",
+                "file_name": "procesamiento.png",
+                "mime_type": "image\/png",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 72148,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-10-19T21:14:27.000000Z",
+                "updated_at": "2026-10-19T21:14:27.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/21\/procesamiento.png",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "sv_titulo": "Apoyo Tecnico y Logistico",
+        "sv_descripcion": "Brinda servicio en la parte técnica aplicando métodos estadísticos como: control de calidad, teoría de decisiones, estudio de mercado y otros.",
+        "sv_contenido": {
+            "time": "1793463878483",
+            "blocks": [
+                {
+                    "id": "-_DyBq3oAO",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "En la parte logística, todo lo referente a optimización de trabajo de campo, realización de encuestas de satisfacción, construcción y fiabilidad de instrumentos y otros"
+                    }
+                },
+                {
+                    "id": "xaNMgCIa6x",
+                    "type": "image",
+                    "data": {
+                        "caption": null,
+                        "withBorder": "0",
+                        "withBackground": "0",
+                        "stretched": "0",
+                        "file": {
+                            "url": "\/storage\/editor\/cRCGUMaz3D7IYkr2MUuppI9DpsshLepCqfmBPxiX.png"
+                        }
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "created_at": "2026-10-31T16:24:40.000000Z",
+        "updated_at": "2026-10-31T16:24:40.000000Z",
+        "imagen_url": "\/storage\/38\/procesamientoyanalisis2.png",
+        "media": [
+            {
+                "id": 38,
+                "model_type": "App\\Models\\CmsServicios",
+                "model_id": 4,
+                "uuid": "16e80df5-0288-47df-867e-ec7d9076cc01",
+                "collection_name": "sv_imagen",
+                "name": "procesamientoyanalisis2",
+                "file_name": "procesamientoyanalisis2.png",
+                "mime_type": "image\/png",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 48419,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-10-31T16:24:40.000000Z",
+                "updated_at": "2026-10-31T16:24:40.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/38\/procesamientoyanalisis2.png",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "sv_titulo": "Capacitacion Tecnica",
+        "sv_descripcion": "Talleres de capacitación en el uso de metodología estadística en áreas de: muestreo, optimización, modelos estadísticos, probabilidad e inferencia, control de calidad, estadística no paramétrica, análisis multivariante y otros.",
+        "sv_contenido": {
+            "time": "1793463951986",
+            "blocks": [
+                {
+                    "id": "tvxdQdJN-y",
+                    "type": "image",
+                    "data": {
+                        "caption": null,
+                        "withBorder": "0",
+                        "withBackground": "0",
+                        "stretched": "0",
+                        "file": {
+                            "url": "\/storage\/editor\/yRHuMQEhgtmStPoonUSl4kcEYNxD17MbMDwKzYKW.png"
+                        }
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "created_at": "2026-10-31T16:25:53.000000Z",
+        "updated_at": "2026-10-31T16:25:53.000000Z",
+        "imagen_url": "\/storage\/39\/capacitacion2.png",
+        "media": [
+            {
+                "id": 39,
+                "model_type": "App\\Models\\CmsServicios",
+                "model_id": 5,
+                "uuid": "8277bef3-1859-47fb-b469-eaf887ddf83f",
+                "collection_name": "sv_imagen",
+                "name": "capacitacion2",
+                "file_name": "capacitacion2.png",
+                "mime_type": "image\/png",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 260254,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-10-31T16:25:53.000000Z",
+                "updated_at": "2026-10-31T16:25:53.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/39\/capacitacion2.png",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "sv_titulo": "Curso de Actualizacion",
+        "sv_descripcion": "Cursos de actualización en el campo de la estadística como: minería de datos, análisis de supervivencia, estudio de datos categóricos y otros.\r\nCursos de manejo de software estadístico con aplicación: R, RStudio, Python, Stata y otros.",
+        "sv_contenido": {
+            "time": "1793463995930",
+            "blocks": [
+                {
+                    "id": "N-Rkc7ebXD",
+                    "type": "image",
+                    "data": {
+                        "caption": null,
+                        "withBorder": "0",
+                        "withBackground": "0",
+                        "stretched": "0",
+                        "file": {
+                            "url": "\/storage\/editor\/4BoQmmJyXZ7prXR57VFLtsejUK5VZFUNYsO50vR8.png"
+                        }
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "created_at": "2026-10-31T16:28:37.000000Z",
+        "updated_at": "2026-10-31T16:28:57.000000Z",
+        "imagen_url": "\/storage\/40\/ey-banner-curso-actualizacion-continua.jpg",
+        "media": [
+            {
+                "id": 40,
+                "model_type": "App\\Models\\CmsServicios",
+                "model_id": 6,
+                "uuid": "6479f21e-72aa-4642-97e6-31db8fad8bc1",
+                "collection_name": "sv_imagen",
+                "name": "ey-banner-curso-actualizacion-continua",
+                "file_name": "ey-banner-curso-actualizacion-continua.jpg",
+                "mime_type": "image\/jpeg",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 278521,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-10-31T16:28:37.000000Z",
+                "updated_at": "2026-10-31T16:28:37.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/40\/ey-banner-curso-actualizacion-continua.jpg",
+                "preview_url": ""
+            }
+        ]
+    }
+]

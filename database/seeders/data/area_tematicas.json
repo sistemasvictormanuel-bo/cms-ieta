@@ -1,0 +1,212 @@
+[
+    {
+        "id": 1,
+        "at_nombre": "Agropecuario",
+        "at_descripcion": null,
+        "created_at": "2026-10-12T00:11:57.000000Z",
+        "updated_at": "2026-10-12T00:11:57.000000Z"
+    },
+    {
+        "id": 2,
+        "at_nombre": "Poblacion",
+        "at_descripcion": null,
+        "created_at": "2026-10-12T00:12:05.000000Z",
+        "updated_at": "2026-10-12T00:12:05.000000Z"
+    },
+    {
+        "id": 3,
+        "at_nombre": "Vivienda",
+        "at_descripcion": null,
+        "created_at": "2026-10-12T00:12:15.000000Z",
+        "updated_at": "2026-10-12T00:12:15.000000Z"
+    },
+    {
+        "id": 4,
+        "at_nombre": "Personas",
+        "at_descripcion": null,
+        "created_at": "2026-10-13T14:14:17.000000Z",
+        "updated_at": "2026-10-13T14:14:17.000000Z"
+    },
+    {
+        "id": 5,
+        "at_nombre": "Demografía",
+        "at_descripcion": "Área temática agregada automáticamente mediante importación masiva.",
+        "created_at": "2026-10-13T15:21:23.000000Z",
+        "updated_at": "2026-10-13T15:21:23.000000Z"
+    },
+    {
+        "id": 6,
+        "at_nombre": "Población y Vivienda",
+        "at_descripcion": "Área temática agregada automáticamente mediante importación masiva.",
+        "created_at": "2026-10-13T15:21:23.000000Z",
+        "updated_at": "2026-10-13T15:21:23.000000Z"
+    },
+    {
+        "id": 7,
+        "at_nombre": "Servicios Básicos",
+        "at_descripcion": "Área temática agregada automáticamente mediante importación masiva.",
+        "created_at": "2026-10-13T15:21:23.000000Z",
+        "updated_at": "2026-10-13T15:21:23.000000Z"
+    },
+    {
+        "id": 8,
+        "at_nombre": "Pobreza",
+        "at_descripcion": "Área temática agregada automáticamente mediante importación masiva.",
+        "created_at": "2026-10-13T15:21:23.000000Z",
+        "updated_at": "2026-10-13T15:21:23.000000Z"
+    },
+    {
+        "id": 9,
+        "at_nombre": "Empleo",
+        "at_descripcion": "Área temática agregada automáticamente mediante importación masiva.",
+        "created_at": "2026-10-13T15:21:23.000000Z",
+        "updated_at": "2026-10-13T15:21:23.000000Z"
+    },
+    {
+        "id": 10,
+        "at_nombre": "Ingresos",
+        "at_descripcion": "Área temática agregada automáticamente mediante importación masiva.",
+        "created_at": "2026-10-13T15:21:23.000000Z",
+        "updated_at": "2026-10-13T15:21:23.000000Z"
+    },
+    {
+        "id": 11,
+        "at_nombre": "Condiciones de Vida",
+        "at_descripcion": "Área temática agregada automáticamente mediante importación masiva.",
+        "created_at": "2026-10-13T15:21:23.000000Z",
+        "updated_at": "2026-10-13T15:21:23.000000Z"
+    },
+    {
+        "id": 12,
+        "at_nombre": "Mercado Laboral",
+        "at_descripcion": "Área temática agregada automáticamente mediante importación masiva.",
+        "created_at": "2026-10-13T15:21:23.000000Z",
+        "updated_at": "2026-10-13T15:21:23.000000Z"
+    },
+    {
+        "id": 13,
+        "at_nombre": "Ocupación",
+        "at_descripcion": "Área temática agregada automáticamente mediante importación masiva.",
+        "created_at": "2026-10-13T15:21:23.000000Z",
+        "updated_at": "2026-10-13T15:21:23.000000Z"
+    },
+    {
+        "id": 14,
+        "at_nombre": "Desempleo",
+        "at_descripcion": "Área temática agregada automáticamente mediante importación masiva.",
+        "created_at": "2026-10-13T15:21:23.000000Z",
+        "updated_at": "2026-10-13T15:21:23.000000Z"
+    },
+    {
+        "id": 15,
+        "at_nombre": "Población",
+        "at_descripcion": "Área temática agregada automáticamente mediante importación masiva.",
+        "created_at": "2026-10-19T20:18:36.000000Z",
+        "updated_at": "2026-10-19T20:18:36.000000Z"
+    },
+    {
+        "id": 16,
+        "at_nombre": "Producción Pecuaria",
+        "at_descripcion": "Área temática agregada automáticamente mediante importación masiva.",
+        "created_at": "2026-10-19T20:18:36.000000Z",
+        "updated_at": "2026-10-19T20:18:36.000000Z"
+    },
+    {
+        "id": 17,
+        "at_nombre": "Producción Agrícola",
+        "at_descripcion": "Área temática agregada automáticamente mediante importación masiva.",
+        "created_at": "2026-10-19T20:18:36.000000Z",
+        "updated_at": "2026-10-19T20:18:36.000000Z"
+    },
+    {
+        "id": 18,
+        "at_nombre": "Educación",
+        "at_descripcion": "Área temática agregada automáticamente mediante importación masiva.",
+        "created_at": "2026-10-19T20:18:36.000000Z",
+        "updated_at": "2026-10-19T20:18:36.000000Z"
+    },
+    {
+        "id": 19,
+        "at_nombre": "Salud",
+        "at_descripcion": "Área temática agregada automáticamente mediante importación masiva.",
+        "created_at": "2026-10-19T20:18:36.000000Z",
+        "updated_at": "2026-10-19T20:18:36.000000Z"
+    },
+    {
+        "id": 20,
+        "at_nombre": "Equipamiento del Hogar",
+        "at_descripcion": "Área temática agregada automáticamente mediante importación masiva.",
+        "created_at": "2026-10-19T20:18:36.000000Z",
+        "updated_at": "2026-10-19T20:18:36.000000Z"
+    },
+    {
+        "id": 21,
+        "at_nombre": "Gasto de Hogares",
+        "at_descripcion": "Área temática agregada automáticamente mediante importación masiva.",
+        "created_at": "2026-10-19T20:18:36.000000Z",
+        "updated_at": "2026-10-19T20:18:36.000000Z"
+    },
+    {
+        "id": 22,
+        "at_nombre": "Alimentación",
+        "at_descripcion": "Área temática agregada automáticamente mediante importación masiva.",
+        "created_at": "2026-10-19T20:18:36.000000Z",
+        "updated_at": "2026-10-19T20:18:36.000000Z"
+    },
+    {
+        "id": 23,
+        "at_nombre": "Consumo",
+        "at_descripcion": "Área temática agregada automáticamente mediante importación masiva.",
+        "created_at": "2026-10-19T20:18:36.000000Z",
+        "updated_at": "2026-10-19T20:18:36.000000Z"
+    },
+    {
+        "id": 24,
+        "at_nombre": "Seguridad Alimentaria",
+        "at_descripcion": "Área temática agregada automáticamente mediante importación masiva.",
+        "created_at": "2026-10-19T20:18:36.000000Z",
+        "updated_at": "2026-10-19T20:18:36.000000Z"
+    },
+    {
+        "id": 25,
+        "at_nombre": "Nutrición",
+        "at_descripcion": "Área temática agregada automáticamente mediante importación masiva.",
+        "created_at": "2026-10-19T20:18:36.000000Z",
+        "updated_at": "2026-10-19T20:18:36.000000Z"
+    },
+    {
+        "id": 26,
+        "at_nombre": "Cultura",
+        "at_descripcion": "Área temática agregada automáticamente mediante importación masiva.",
+        "created_at": "2026-10-19T20:18:36.000000Z",
+        "updated_at": "2026-10-19T20:18:36.000000Z"
+    },
+    {
+        "id": 27,
+        "at_nombre": "Uso del Tiempo",
+        "at_descripcion": "Área temática agregada automáticamente mediante importación masiva.",
+        "created_at": "2026-10-19T20:18:36.000000Z",
+        "updated_at": "2026-10-19T20:18:36.000000Z"
+    },
+    {
+        "id": 28,
+        "at_nombre": "Participación Social",
+        "at_descripcion": "Área temática agregada automáticamente mediante importación masiva.",
+        "created_at": "2026-10-19T20:18:36.000000Z",
+        "updated_at": "2026-10-19T20:18:36.000000Z"
+    },
+    {
+        "id": 29,
+        "at_nombre": "Turismo",
+        "at_descripcion": "Área temática agregada automáticamente mediante importación masiva.",
+        "created_at": "2026-10-19T20:18:36.000000Z",
+        "updated_at": "2026-10-19T20:18:36.000000Z"
+    },
+    {
+        "id": 30,
+        "at_nombre": "Movilidad",
+        "at_descripcion": "Área temática agregada automáticamente mediante importación masiva.",
+        "created_at": "2026-10-19T20:18:36.000000Z",
+        "updated_at": "2026-10-19T20:18:36.000000Z"
+    }
+]

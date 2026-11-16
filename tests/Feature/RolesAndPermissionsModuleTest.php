@@ -10,7 +10,7 @@ beforeEach(function () {
 });
 
 test('administrator can view roles index page', function () {
-    $admin = User::factory()->create(['is_active' => true]);
+    $admin = User::factory()->withTwoFactor()->create(['is_active' => true]);
     $admin->assignRole('administrador');
 
     $response = $this->actingAs($admin)->get(route('admin.roles.index'));
@@ -19,7 +19,7 @@ test('administrator can view roles index page', function () {
 });
 
 test('administrator can create a new custom role with assigned permissions', function () {
-    $admin = User::factory()->create(['is_active' => true]);
+    $admin = User::factory()->withTwoFactor()->create(['is_active' => true]);
     $admin->assignRole('administrador');
 
     $response = $this->actingAs($admin)->post(route('admin.roles.store'), [
@@ -41,7 +41,7 @@ test('administrator can create a new custom role with assigned permissions', fun
 });
 
 test('protected roles like administrador cannot be deleted', function () {
-    $admin = User::factory()->create(['is_active' => true]);
+    $admin = User::factory()->withTwoFactor()->create(['is_active' => true]);
     $admin->assignRole('administrador');
 
     $adminRole = Role::findByName('administrador', 'web');
@@ -54,7 +54,7 @@ test('protected roles like administrador cannot be deleted', function () {
 });
 
 test('administrator can view permissions index page', function () {
-    $admin = User::factory()->create(['is_active' => true]);
+    $admin = User::factory()->withTwoFactor()->create(['is_active' => true]);
     $admin->assignRole('administrador');
 
     $response = $this->actingAs($admin)->get(route('admin.permisos.index'));
@@ -63,7 +63,7 @@ test('administrator can view permissions index page', function () {
 });
 
 test('administrator can create a permission for a new future module', function () {
-    $admin = User::factory()->create(['is_active' => true]);
+    $admin = User::factory()->withTwoFactor()->create(['is_active' => true]);
     $admin->assignRole('administrador');
 
     $response = $this->actingAs($admin)->post(route('admin.permisos.store'), [
@@ -84,7 +84,7 @@ test('administrator can create a permission for a new future module', function (
 });
 
 test('protected system permissions cannot be deleted', function () {
-    $admin = User::factory()->create(['is_active' => true]);
+    $admin = User::factory()->withTwoFactor()->create(['is_active' => true]);
     $admin->assignRole('administrador');
 
     $perm = Permission::findByName('usuarios.gestionar', 'web');
@@ -97,7 +97,7 @@ test('protected system permissions cannot be deleted', function () {
 });
 
 test('custom permission can be deleted', function () {
-    $admin = User::factory()->create(['is_active' => true]);
+    $admin = User::factory()->withTwoFactor()->create(['is_active' => true]);
     $admin->assignRole('administrador');
 
     $perm = Permission::create([

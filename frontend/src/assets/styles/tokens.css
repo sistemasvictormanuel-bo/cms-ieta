@@ -1,0 +1,95 @@
+/* ============================================================
+   IETA — Design Tokens
+   Fuente de verdad: GUIA_IMPLEMENTACION_FRONTEND_IETA.md §3
+   ============================================================ */
+
+/* Fuente principal — DM Sans Variable Font */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root {
+  /* ── Colores de marca ────────────────────────────────────── */
+  --color-indigo:       #35449F;  /* Primario: header, botones, nav activo */
+  --color-magenta:      #F50088;  /* Decorativo puntual (franjas, acentos) */
+  --color-rosa-carmin:  #F30060;  /* Acento de interacción: links, ver más, activos */
+  --color-violeta:      #71589F;  /* Secundario: tags, apoyo ilustración */
+  --color-purpura:      #3E2987;  /* Extremo oscuro de degradados */
+  --color-resaltador:   #6C81C7;  /* Fondos tenues, hover suave, estados foco */
+
+  /* ── Neutros ─────────────────────────────────────────────── */
+  --color-tinta:        #14161C;  /* Texto principal, footer */
+  --color-superficie:   #F5F5F8;  /* Fondo alterno de secciones */
+  --color-desactivado:  #E0E0E0;  /* Estados disabled, bordes sutiles */
+
+  --color-blanco:       #FFFFFF;
+  /* ── Degradado de marca ──────────────────────────────────── */
+  /* Reservado para bandas de cabecera de sección y hero de Inicio */
+  --gradient-marca: linear-gradient(135deg, var(--color-indigo) 0%, var(--color-purpura) 100%);
+
+  /* ── Tipografía ──────────────────────────────────────────── */
+  --font-main: 'DM Sans', sans-serif;
+
+  /* ── Escala tipográfica ──────────────────────────────────── */
+  --text-h1-size:   3.5rem;    /* 56px */
+  --text-h1-lh:     1.1;       /* 61.6px */
+  --text-h1-weight: 700;
+
+  --text-h2-size:   3rem;      /* 48px */
+  --text-h2-lh:     1.1;       /* 52.8px */
+  --text-h2-weight: 700;
+
+  --text-h3-size:   2.5rem;    /* 40px */
+  --text-h3-lh:     1.1;       /* 44px */
+  --text-h3-weight: 600;
+
+  --text-h4-size:   2rem;      /* 32px */
+  --text-h4-lh:     1.1;       /* 35.2px */
+  --text-h4-weight: 600;
+
+  --text-h5-size:   1.5rem;    /* 24px */
+  --text-h5-lh:     1.1;       /* 26.4px */
+  --text-h5-weight: 500;
+
+  --text-h6-size:   1.25rem;   /* 20px */
+  --text-h6-lh:     1.1;       /* 22px */
+  --text-h6-weight: 500;
+
+  --text-large-size:   1.25rem; /* 20px */
+  --text-large-lh:     1.4;    /* 28px */
+
+  --text-medium-size:  1.125rem;/* 18px */
+  --text-medium-lh:    1.4;    /* 25.2px */
+
+  --text-body-size:    1rem;   /* 16px */
+  --text-body-lh:      1.4;    /* 22.4px */
+
+  --text-small-size:   0.875rem;/* 14px */
+  --text-small-lh:     1.4;    /* 19.6px */
+
+  /* ── Espaciado (múltiplos de 8px) ────────────────────────── */
+  --space-1:  0.5rem;   /*  8px */
+  --space-2:  1rem;     /* 16px */
+  --space-3:  1.5rem;   /* 24px */
+  --space-4:  2rem;     /* 32px */
+  --space-6:  3rem;     /* 48px */
+  --space-8:  4rem;     /* 64px */
+  --space-12: 6rem;     /* 96px */
+
+  /* ── Radios de borde ─────────────────────────────────────── */
+  --radius-sm:  4px;   /* Chips, badges */
+  --radius-md:  8px;   /* Tarjetas */
+  --radius-lg:  12px;  /* Modales, contenedores grandes */
+
+  /* ── Sombra ──────────────────────────────────────────────── */
+  --shadow-card-hover: 0 4px 12px rgba(20, 22, 28, 0.08);
+
+  /* ── Breakpoints (referencia, usar en media queries) ─────── */
+  /* mobile: < 768px | tablet: 768–1279px | desktop: ≥ 1280px */
+  /* Menú hamburguesa: < 960px */
+
+  /* ── Layout ──────────────────────────────────────────────── */
+  --container-max: 1440px;
+  --header-max-width: 1920px;
+  --header-height: 83px;
+  --header-height-compact: 83px; /* después del scroll */
+}
+

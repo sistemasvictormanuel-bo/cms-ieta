@@ -13,47 +13,41 @@ class EdicionVarianzaSeeder extends Seeder
      */
     public function run(): void
     {
-        $ediciones = [
-            [
-                'ev_titulo' => 'Revista Varianza - N° 25 (2024)',
-                'ev_numero' => '25',
-                'ev_volumen' => '15',
-                'ev_anio' => 2024,
-                'ev_mes' => 'Julio - Diciembre',
-                'ev_slug' => Str::slug('Revista Varianza - N° 25 (2024)'),
-                'ev_issn_ver_impresa' => '2076-6645',
-                'ev_issn_ver_electronica' => '2664-0899',
-                'ev_num_art_originales' => 8,
-                'ev_notas_cientificas' => 2,
-                'ev_num_paginas' => 110,
-                'ev_doi' => '10.53287/varianza.2024.25',
-                'ev_editorial' => 'Presentamos el número 25 de la Revista Varianza con destacadas investigaciones en estadística multivariada y modelos estocásticos.',
-                'ev_fecha_publicacion' => '2024-12-15',
-                'ev_estado' => true,
-            ],
-            [
-                'ev_titulo' => 'Revista Varianza - N° 24 (2024)',
-                'ev_numero' => '24',
-                'ev_volumen' => '15',
-                'ev_anio' => 2024,
-                'ev_mes' => 'Enero - Junio',
-                'ev_slug' => Str::slug('Revista Varianza - N° 24 (2024)'),
-                'ev_issn_ver_impresa' => '2076-6645',
-                'ev_issn_ver_electronica' => '2664-0899',
-                'ev_num_art_originales' => 6,
-                'ev_notas_cientificas' => 3,
-                'ev_num_paginas' => 95,
-                'ev_doi' => '10.53287/varianza.2024.24',
-                'ev_editorial' => 'Edición dedicada a series temporales aplicadas a la economía y salud pública.',
-                'ev_fecha_publicacion' => '2024-06-30',
-                'ev_estado' => true,
-            ],
-        ];
+        $jsonPath = __DIR__.'/data/ediciones_varianza.json';
 
-        foreach ($ediciones as $edicion) {
-            EdicionVarianza::firstOrCreate(
-                ['ev_slug' => $edicion['ev_slug']],
-                $edicion
+        if (! file_exists($jsonPath)) {
+            return;
+        }
+
+        $ediciones = json_decode(file_get_contents($jsonPath), true);
+
+        if (! is_array($ediciones)) {
+            return;
+        }
+
+        foreach ($ediciones as $item) {
+            $slug = $item['ev_slug'] ?? Str::slug($item['ev_titulo'] ?? ('Varianza N° '.$item['ev_numero']));
+
+            EdicionVarianza::updateOrCreate(
+                ['id' => $item['id']],
+                [
+                    'ev_numero' => $item['ev_numero'],
+                    'ev_volumen' => $item['ev_volumen'] ?? null,
+                    'ev_anio' => $item['ev_anio'] ?? null,
+                    'ev_mes' => $item['ev_mes'] ?? null,
+                    'ev_titulo' => $item['ev_titulo'] ?? null,
+                    'ev_slug' => $slug,
+                    'ev_issn_ver_impresa' => $item['ev_issn_ver_impresa'] ?? null,
+                    'ev_issn_ver_electronica' => $item['ev_issn_ver_electronica'] ?? null,
+                    'ev_num_art_originales' => $item['ev_num_art_originales'] ?? null,
+                    'ev_notas_cientificas' => $item['ev_notas_cientificas'] ?? null,
+                    'ev_num_paginas' => $item['ev_num_paginas'] ?? null,
+                    'ev_doi' => $item['ev_doi'] ?? null,
+                    'ev_editorial' => $item['ev_editorial'] ?? null,
+                    'ev_fecha_publicacion' => $item['ev_fecha_publicacion'] ?? null,
+                    'ev_estado' => (bool) ($item['ev_estado'] ?? true),
+                    'ev_enlace_url' => $item['ev_enlace_url'] ?? null,
+                ]
             );
         }
     }

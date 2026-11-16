@@ -51,6 +51,17 @@ class UserFactory extends Factory
     }
 
     /**
+     * Indicate that the user has two factor authentication enabled and confirmed.
+     */
+    public function withTwoFactor(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'two_factor_secret' => 'encrypted_secret',
+            'two_factor_confirmed_at' => now(),
+        ]);
+    }
+
+    /**
      * Indicate that the model's email address should be unverified.
      */
     public function unverified(): static

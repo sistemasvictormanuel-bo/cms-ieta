@@ -18,18 +18,19 @@ class MemoriasInvestigacion extends Model implements HasMedia
         'mdi_titulo',
         'mdi_descripcion',
         'mdi_etiqueta',
-        'mdi_fecha',
+        'mdi_anio',
         'mdi_enlace_url',
     ];
 
     protected $appends = [
         'archivo_url',
+        'mdi_fecha',
     ];
 
     protected function casts(): array
     {
         return [
-            'mdi_fecha' => 'date',
+            'mdi_anio' => 'integer',
         ];
     }
 
@@ -38,6 +39,14 @@ class MemoriasInvestigacion extends Model implements HasMedia
         $url = $this->getFirstMediaUrl('mdi_archivo');
 
         return $url ? (parse_url($url, PHP_URL_PATH) ?: $url) : null;
+    }
+
+    /**
+     * Accesor para compatibilidad retroactiva si se consulta mdi_fecha
+     */
+    public function getMdiFechaAttribute(): ?string
+    {
+        return $this->mdi_anio ? (string) $this->mdi_anio : null;
     }
 
     public function autor(): BelongsTo

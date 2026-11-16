@@ -1,0 +1,2058 @@
+[
+    {
+        "id": 2,
+        "ev_titulo": "Varianza N° 24, Octubre 2024",
+        "ev_numero": "24",
+        "ev_volumen": null,
+        "ev_anio": 2024,
+        "ev_mes": null,
+        "ev_slug": "revista-varianza-n-24-2024",
+        "ev_issn_ver_impresa": "2789-3510",
+        "ev_issn_ver_electronica": "2789-3529",
+        "ev_num_art_originales": 2,
+        "ev_notas_cientificas": 1,
+        "ev_num_paginas": 61,
+        "ev_doi": null,
+        "ev_presentacion": {
+            "time": "1793550759982",
+            "blocks": [
+                {
+                    "id": "XbMJikX19c",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Una vez más, el Instituto de Estadística Teórica y Aplicada (IETA), dependiente de la Carrera de Estadística de la Universidad Mayor de San Andrés, tiene el agrado de compartir con la población en general y en particular con el mundo académico la edición N° 24 de la Revista Científica Varianza."
+                    }
+                },
+                {
+                    "id": "aS4hkQo1qT",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "En esta nueva edición se presentan dos artículos originales y una nota científica. Ordenados alfabéticamente, el primer artículo trata del estudio de las desigualdades en los ingresos de los adultos mayores bolivianos, un componente de mucha importancia en la determinación de la calidad de vida en la vejez. En un marco de bajos ingresos económicos de la mayoría de los adultos mayores, sean activos o inactivos económicamente, se constatan significativas desigualdades. Con base en los resultados de una regresión cuantil, los ingresos de los adultos económicamente inactivos son significativamente inferiores a los ingresos de los adultos ocupados, mientras dentro del grupo de inactivos destacan los muy bajos ingresos de las amas de casa y de las personas de edad avanzada. En el segundo artículo se emplearon técnicas multivariadas con el fin de determinar el riesgo de liquidez para los bancos, es decir, alertar tempranamente tal riesgo. A partir de un conjunto amplio de indicadores se obtuvo un reducido número de factores que indican de forma temprana los problemas surgidos en el ex Banco Fassil, en 2023. Por último, la nota científica, referida a los determinantes del rendimiento de la qañawa, es la investigación ganadora del segundo concurso de artículos científicos, en la categoría de estudiantes de la carrera de estadística, concurso realizado a iniciativa de la Dirección del IETA, con Resolución del Honorable Consejo de la Facultad de Ciencias Puras y Naturales de la UMSA. Esperamos que su publicación motive a los estudiantes de la carrera en la producción de conocimiento científico."
+                    }
+                },
+                {
+                    "id": "m44ToPnHcz",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Cabe resaltar que, de la misma manera que en las últimas tres ediciones de la Revista, los artículos originales publicados en esta nueva edición fueron evaluados y aprobados por el Comité Científico de la Revista. Nuestro sincero agradecimiento a los profesionales tanto internacionales como nacionales que conforman el Comité."
+                    }
+                },
+                {
+                    "id": "T_EaMHu0qz",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Por último, invitamos a visitar en la Web la nueva página de la Revista Varianza a través de la siguiente dirección electrónica: <a href=\"https:\/\/ojs.umsa.bo\/ojs\/index.php\/revistavarianza\" target=\"_blank\">https:\/\/ojs.umsa.bo\/ojs\/index.php\/revistavarianza<\/a>&nbsp;"
+                    }
+                },
+                {
+                    "id": "1eQNarL2-J",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "<b>Dr (c) Ramiro Coa Clemente <\/b>"
+                    }
+                },
+                {
+                    "id": "pfl9kpHEqr",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "<b>DIRECTOR INSTITUTO DE ESTADÍSTICA TEÓRICA Y APLICADA<\/b>"
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "ev_editorial": "Instituto de Estadística Teórica y Aplicada (IETA)",
+        "ev_fecha_publicacion": "2024-10-30",
+        "ev_estado": true,
+        "created_at": "2026-10-12T22:18:59.000000Z",
+        "updated_at": "2026-11-01T16:57:16.000000Z",
+        "ev_enlace_url": "https:\/\/drive.google.com\/file\/d\/1WTDsRbGEbFlH2CuPdsmm7MjXVyrmETtQ\/view",
+        "portada_url": "\/storage\/41\/gdrive_cqlj2viaa7hm01PRdHi.png",
+        "archivo_url": null,
+        "enlace_url": "https:\/\/drive.google.com\/file\/d\/1WTDsRbGEbFlH2CuPdsmm7MjXVyrmETtQ\/view",
+        "media": [
+            {
+                "id": 41,
+                "model_type": "App\\Models\\EdicionVarianza",
+                "model_id": 2,
+                "uuid": "3a8246cb-116e-401d-a181-42fbc1418785",
+                "collection_name": "ev_portada",
+                "name": "gdrive_cqlj2viaa7hm01PRdHi",
+                "file_name": "gdrive_cqlj2viaa7hm01PRdHi.png",
+                "mime_type": "image\/png",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 792935,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-11-01T17:01:12.000000Z",
+                "updated_at": "2026-11-01T17:01:12.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/41\/gdrive_cqlj2viaa7hm01PRdHi.png",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "ev_titulo": "Varianza N° 23, Abril 2024",
+        "ev_numero": "23",
+        "ev_volumen": null,
+        "ev_anio": 2024,
+        "ev_mes": "Abril",
+        "ev_slug": "varianza-n-23-abril-2024",
+        "ev_issn_ver_impresa": "2789-3510",
+        "ev_issn_ver_electronica": "2789-3529",
+        "ev_num_art_originales": 3,
+        "ev_notas_cientificas": null,
+        "ev_num_paginas": 75,
+        "ev_doi": null,
+        "ev_presentacion": {
+            "time": "1793633669585",
+            "blocks": [
+                {
+                    "id": "Yq6ohzo3GK",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "El Instituto de Estadística Teórica y Aplicada (IETA), dependiente de la Carrera de Estadística de la Universidad Mayor de San Andrés, tiene el agrado de compartir con la población en general y en particular con el mundo académico la edición N° 23 de la Revista Científica Varianza."
+                    }
+                },
+                {
+                    "id": "GIdZfhspvL",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "En esta ocasión se presentan tres artículos originales. Ordenados alfabéticamente, en el primer artículo, luego de construir un índice de calidad de vida en la vejez, se procede a analizar las desigualdades en cuanto a la calidad de vida de los adultos mayores bolivianos considerando diversas características demográficas y socioeconómicas. Además de observar brechas muy amplias en cuanto a la calidad de vida, se tiene evidencia estadística de que un mayor nivel de educación logrado en edades relativamente jóvenes viabiliza una mejor calidad de vida en la vejez. En el segundo artículo, se busca incrementar el rendimiento de los fondos de pensiones en Bolivia optimizando el portafolio de inversiones mediante el modelo de Markowitz y el algoritmo de Goldfarb-Idnani. Con este procedimiento, se logró incrementar el rendimiento de los fondos de pensiones de 3.36 a 6 por ciento. Se advierte, sin embargo, que se tiene limitaciones en el mercado de renta fija en Bolivia y otros riesgos más allá de las bajas rentabilidades. Por último, en el tercer artículo, se conforman conglomerados de municipios en Bolivia en función del grado de cumplimiento de los Objetivos de Desarrollo Sostenible mediante la técnica HJ-Biplot. Los municipios más grandes del país tienden a tener mayor cumplimiento de los Objetivos con relación a los más pequeños."
+                    }
+                },
+                {
+                    "id": "l8TxlADxsL",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Agradecemos de sobremanera al grupo de profesionales tanto internacionales como nacionales que conforman el Comité Científico de la Revista Varianza por su valiosa colaboración en la revisión de los artículos publicados así como a los autores de cada uno de los tres artículos por publicar en nuestra Revista Científica."
+                    }
+                },
+                {
+                    "id": "99GrOBItrw",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Por último, invitamos a visitar en la Web la nueva página de la Revista Varianza a través de la siguiente dirección electrónica:<a href=\"https:\/\/ojs.umsa.bo\/ojs\/index.php\/revistavarianza\" target=\"_blank\">https:\/\/ojs.umsa.bo\/ojs\/index.php\/revistavarianza<\/a>"
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "ev_editorial": "Instituto de Estadística Teórica y Aplicada (IETA) - UMSA",
+        "ev_fecha_publicacion": "2024-04-01",
+        "ev_estado": true,
+        "created_at": "2026-11-02T15:35:09.000000Z",
+        "updated_at": "2026-11-02T15:35:09.000000Z",
+        "ev_enlace_url": "https:\/\/drive.google.com\/file\/d\/1B2K34Qk8jMDCA0eBJfXaIXvIjXV9LhxD\/view?pli=1",
+        "portada_url": "\/storage\/42\/portada_drive_1793633712.png",
+        "archivo_url": null,
+        "enlace_url": "https:\/\/drive.google.com\/file\/d\/1B2K34Qk8jMDCA0eBJfXaIXvIjXV9LhxD\/view?pli=1",
+        "media": [
+            {
+                "id": 42,
+                "model_type": "App\\Models\\EdicionVarianza",
+                "model_id": 3,
+                "uuid": "c320b19d-3d12-4d1e-86a9-c0b6b573c99b",
+                "collection_name": "ev_portada",
+                "name": "gdrive_cover_ddff7a10-ec93-4738-838b-30432f503276",
+                "file_name": "portada_drive_1793633712.png",
+                "mime_type": "image\/png",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 720138,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-11-02T15:35:12.000000Z",
+                "updated_at": "2026-11-02T15:35:12.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/42\/portada_drive_1793633712.png",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "ev_titulo": "Varianza N° 22, Octubre 2023",
+        "ev_numero": "22",
+        "ev_volumen": null,
+        "ev_anio": 2023,
+        "ev_mes": "Octubre",
+        "ev_slug": "varianza-n-22-octubre-2023",
+        "ev_issn_ver_impresa": "2789-3510",
+        "ev_issn_ver_electronica": "2789-3529",
+        "ev_num_art_originales": 3,
+        "ev_notas_cientificas": null,
+        "ev_num_paginas": 72,
+        "ev_doi": null,
+        "ev_presentacion": {
+            "time": "1793635294404",
+            "blocks": [
+                {
+                    "id": "Fg_eDTW-7D",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Continuando con la edición semestral de nuestra Revista Científica, la Dirección del Instituto de Estadística Teórica y Aplicada (IETA), dependiente de la Carrera de Estadística de la Universidad Mayor de San Andrés, se complace en compartir con la comunidad universitaria, profesionales y población en general, la edición N° 22 de la Revista Varianza."
+                    }
+                },
+                {
+                    "id": "rdH0gFNLR1",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "En esta nueva edición de la Revista se presentan tres artículos científicos originales. Ordenados alfabéticamente, en el primer artículo, luego de confirmar estadísticamente que las tasas de mortalidad infantil obtenidas para el país con el método indirecto se encuentran sistemáticamente sobrestimadas con relación a las tasas generadas con el método directo, consideradas como las tasas correctas, se procede a su corrección usando un modelo de regresión penalizado basado en algoritmos de machine learning; en el segundo artículo, con base en un conjunto de medidas de desigualdad de ingresos, se evidencia que en aquéllas poblaciones rurales del país con menor ingreso existe mayor desigualdad que en las poblaciones rurales de mayor ingreso; y en el tercer artículo, recurriendo al método multivariado para analizar tablas de tres vías, denominado STATIS, por su sigla en francés, se exploran las relaciones entre las diferentes dimensiones de la pobreza multidimensional urbana en el país y la evolución en el tiempo de esas relaciones."
+                    }
+                },
+                {
+                    "id": "Uyb6i-ZSYT",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Remarcar que los artículos científicos publicados en la presente edición fueron revisados y aprobados por el Comité Editorial. Es por ello que reiteramos nuestro enorme y sincero agradecimiento al grupo de profesionales que conforman el Comité Editorial de la Revista Varianza."
+                    }
+                },
+                {
+                    "id": "1tF6Gs5ij3",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "También nuestro respeto, valoración y agradecimiento a los autores por publicar sus artículos científicos en la Revista Varianza. Gracias a estos esfuerzos es que se puede concretar nuestro pequeño aporte al conocimiento científico. Finalmente, recordar que no difundir o publicar los resultados de una investigación es equivalente a no hacer investigación."
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "ev_editorial": "Instituto de Estadística Teórica y Aplicada (IETA) - UMSA",
+        "ev_fecha_publicacion": null,
+        "ev_estado": true,
+        "created_at": "2026-11-02T16:01:40.000000Z",
+        "updated_at": "2026-11-02T16:01:40.000000Z",
+        "ev_enlace_url": "https:\/\/drive.google.com\/file\/d\/1dTaa9SCipSupz6UG_B-L6OwRgvTFGION\/view",
+        "portada_url": "\/storage\/43\/portada_drive_1793635302.png",
+        "archivo_url": null,
+        "enlace_url": "https:\/\/drive.google.com\/file\/d\/1dTaa9SCipSupz6UG_B-L6OwRgvTFGION\/view",
+        "media": [
+            {
+                "id": 43,
+                "model_type": "App\\Models\\EdicionVarianza",
+                "model_id": 4,
+                "uuid": "4d8d8742-930d-4923-9ebc-6fe432531b9b",
+                "collection_name": "ev_portada",
+                "name": "gdrive_cover_0ae5c707-52ac-41e1-b4d3-8520ce57226b",
+                "file_name": "portada_drive_1793635302.png",
+                "mime_type": "image\/png",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 774573,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-11-02T16:01:42.000000Z",
+                "updated_at": "2026-11-02T16:01:42.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/43\/portada_drive_1793635302.png",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "ev_titulo": "Varianza N° 1 Noviembre 2001",
+        "ev_numero": "1",
+        "ev_volumen": null,
+        "ev_anio": 2001,
+        "ev_mes": "Noviembre",
+        "ev_slug": "varianza-n-1-noviembre-2001",
+        "ev_issn_ver_impresa": null,
+        "ev_issn_ver_electronica": null,
+        "ev_num_art_originales": null,
+        "ev_notas_cientificas": null,
+        "ev_num_paginas": null,
+        "ev_doi": null,
+        "ev_presentacion": {
+            "time": "1793635385885",
+            "blocks": [
+                {
+                    "id": "kMIFipdDAs",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Consolidar una revista con un sentido científico no es una tarea más. Es una tarea que demanda cierta concentración de esfuerzos personales, y esfuerzo mancomunado de la entidad que la presente."
+                    }
+                },
+                {
+                    "id": "wJM6icK_6e",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "No se pretende con este número inicial ni competir, ni lograr espectaculares alcances, lo que se pretende es establecer un vehículo por el cual los docentes, y ojalá los estudiantes en el futuro, puedan expresar los resultados del análisis de la teoría y la aplicación en estadística."
+                    }
+                },
+                {
+                    "id": "kHadrZ8gED",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "No encontrara el que lea estas páginas información estadística o estadísticas de una u o estadísticas de una u otra cosa, lo que presentamos son artículos del desarrollo teórico de la estadística la forma y el sustento del porque se establece la información numérica."
+                    }
+                },
+                {
+                    "id": "7V0lnxVtsi",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Hay preocupaciones sobre las actuales corrientes de la elaboración inferencial, aplicaciones estadísticas que apoyan el análisis en las ciencias naturales sociales, económicas, pedagógicas y otras que demandan de soporte cuantitativo."
+                    }
+                },
+                {
+                    "id": "HSpY-qjvLU",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "En el futuro creemos que debe convertirse en el documento informe de la actividad científica que realiza la comunidad de estadística y en un foro abierto de la discusión metodología del tratamiento de la información cuantitativa. Espera de los lectores la comprensión de las falencias y errores que se hubiesen filtrado y por supuesto la critica que nos permita crecer."
+                    }
+                },
+                {
+                    "id": "v5y_sEm34l",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Es un deber agradecer a las instituciones que colaboraron en la cristalización de esta revista, en especial a VITAL."
+                    }
+                },
+                {
+                    "id": "qfpOmE8LsF",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Lic. José Aníbal Angulo Angulo"
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "ev_editorial": "Instituto de Estadística Teórica y Aplicada (IETA) - UMSA",
+        "ev_fecha_publicacion": null,
+        "ev_estado": true,
+        "created_at": "2026-11-02T16:03:35.000000Z",
+        "updated_at": "2026-11-02T16:03:35.000000Z",
+        "ev_enlace_url": "https:\/\/drive.google.com\/file\/d\/1LLReOB_4HkgobuhBs20P6q65IzdBjMNx\/view",
+        "portada_url": "\/storage\/44\/portada_drive_1793635417.png",
+        "archivo_url": null,
+        "enlace_url": "https:\/\/drive.google.com\/file\/d\/1LLReOB_4HkgobuhBs20P6q65IzdBjMNx\/view",
+        "media": [
+            {
+                "id": 44,
+                "model_type": "App\\Models\\EdicionVarianza",
+                "model_id": 5,
+                "uuid": "22845bb2-ca1c-4a20-a30e-debb48006684",
+                "collection_name": "ev_portada",
+                "name": "gdrive_cover_4b59c852-fdee-4298-9594-61a439c9c282",
+                "file_name": "portada_drive_1793635417.png",
+                "mime_type": "image\/png",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 1940617,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-11-02T16:03:37.000000Z",
+                "updated_at": "2026-11-02T16:03:37.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/44\/portada_drive_1793635417.png",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "ev_titulo": "Varianza N° 2 Noviembre 2002",
+        "ev_numero": "2",
+        "ev_volumen": null,
+        "ev_anio": 2002,
+        "ev_mes": "Noviembre",
+        "ev_slug": "varianza-n-2-noviembre-2002",
+        "ev_issn_ver_impresa": null,
+        "ev_issn_ver_electronica": null,
+        "ev_num_art_originales": null,
+        "ev_notas_cientificas": null,
+        "ev_num_paginas": null,
+        "ev_doi": null,
+        "ev_presentacion": {
+            "time": "1793635572181",
+            "blocks": [
+                {
+                    "id": "ZrCL2v7cv1",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "En reconocimiento de la importancia que los conceptos y técnicas Estadísticas tiene en las diferentes disciplinas, motivó a la anterior Dirección del I.E.T.A. y a los docentes de la Carrera de Estadística a publicar el 1er número de la revista VARIANZA."
+                    }
+                },
+                {
+                    "id": "-K3bMFuUAY",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Con la publicación de este 2do número, se pretende por una parte poner a consideración del lector los temas que han motivado a los autores a realizar dichos artículos y por otra se motiva a los lectores en diferentes temas para que puedan tener suficiente interés en profundizar los fundamentos teóricos de esta importante disciplina."
+                    }
+                },
+                {
+                    "id": "Xfb8JXhzL_",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Si bien los temas presentados en esta oportunidad son diversos, el orden y el enfoque de los mismos han sido introducidos de manera accesibles a la comprensión de la comunidad Universitaria, ofreciendo en muchos casos herramientas efectivas para estructurar, analizar y sintetizar una gran variedad de problemas referidos al manejo de información estadística."
+                    }
+                },
+                {
+                    "id": "ldtb2SlAIM",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "El esfuerzo de la Dirección del I.E.T.A. es un ejemplo motivador y conservar el entusiasmo por el valor y la importancia de la Estadística es una tarea en la cual toda la comunidad de la Carrera está comprometida."
+                    }
+                },
+                {
+                    "id": "Pq_3Bukax8",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Apreciaremos mucho a los lectores que nos hagan conocer sus opiniones y sugerencias para mejorar."
+                    }
+                },
+                {
+                    "id": "NCwFYnP0GO",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Lic. Nilda Flores Salinas"
+                    }
+                },
+                {
+                    "id": "RvaQm3E_lX",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "<b>DIRECTORA CARRERA DE ESTADÍSTICA<\/b>"
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "ev_editorial": "Instituto de Estadística Teórica y Aplicada (IETA) - UMSA",
+        "ev_fecha_publicacion": null,
+        "ev_estado": true,
+        "created_at": "2026-11-02T16:05:52.000000Z",
+        "updated_at": "2026-11-02T16:06:16.000000Z",
+        "ev_enlace_url": "https:\/\/drive.google.com\/file\/d\/1lrQcDlkSfuozijGLx_nYBZrJlo9og2eX\/view",
+        "portada_url": "\/storage\/45\/portada_drive_1793635555.png",
+        "archivo_url": null,
+        "enlace_url": "https:\/\/drive.google.com\/file\/d\/1lrQcDlkSfuozijGLx_nYBZrJlo9og2eX\/view",
+        "media": [
+            {
+                "id": 45,
+                "model_type": "App\\Models\\EdicionVarianza",
+                "model_id": 6,
+                "uuid": "4c08c521-3dc6-4cd1-b9d9-1cc15506f1fc",
+                "collection_name": "ev_portada",
+                "name": "gdrive_cover_1c761635-6303-4b2c-b00f-eb27155f0d53",
+                "file_name": "portada_drive_1793635555.png",
+                "mime_type": "image\/png",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 1684637,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-11-02T16:05:55.000000Z",
+                "updated_at": "2026-11-02T16:05:55.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/45\/portada_drive_1793635555.png",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "ev_titulo": "Varianza N° 3 Diciembre 2003",
+        "ev_numero": "3",
+        "ev_volumen": null,
+        "ev_anio": 2003,
+        "ev_mes": "Diciembre",
+        "ev_slug": "varianza-n-3-diciembre-2003",
+        "ev_issn_ver_impresa": null,
+        "ev_issn_ver_electronica": null,
+        "ev_num_art_originales": null,
+        "ev_notas_cientificas": null,
+        "ev_num_paginas": null,
+        "ev_doi": null,
+        "ev_presentacion": {
+            "time": "1793635636756",
+            "blocks": [
+                {
+                    "id": "FoGBW_tA7D",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Leer lo que Bolivia produce es conocer lo que Bolivia es. Una oración que leí hace algún tiempo y representa una afirmación acertada en el caso que nos ocupa. La Revista Varianza representa, en esta oportunidad, lo que es la Carrera de Estadística. Los aportes que usted amable lector encontrará en estas páginas, reflejan una inquietud personal e institucional que se hace en una gestión, de parte de los autores."
+                    }
+                },
+                {
+                    "id": "r7s3A0Gj2v",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Escribir la presentación de la Revista Varianza No. 3 es un compromiso y una satisfacción grata. En ella esta inserta el rol que tiene la estadística en el contexto de las aplicaciones y el potencial como ciencia."
+                    }
+                },
+                {
+                    "id": "YHvplS_do4",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Espero que cada artículo y contribución sirvan para reflexionar en sus contenidos y sirvan de aliento y motivación para los colegas y otras personas interesadas en hacer llegar nuevos aportes para el próximo número."
+                    }
+                },
+                {
+                    "id": "oWzwmB5b6K",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Lic. Luis Zapata Escobar"
+                    }
+                },
+                {
+                    "id": "FmqBaFiEZx",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "<b>DIRECTOR CARRERA DE ESTADÍSTICA<\/b>"
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "ev_editorial": "Instituto de Estadística Teórica y Aplicada (IETA) - UMSA",
+        "ev_fecha_publicacion": null,
+        "ev_estado": true,
+        "created_at": "2026-11-02T16:07:40.000000Z",
+        "updated_at": "2026-11-02T16:07:40.000000Z",
+        "ev_enlace_url": "https:\/\/drive.google.com\/file\/d\/19FNHfNBlj410zt-XXmLuz9T6FBoY0gwP\/view",
+        "portada_url": "\/storage\/46\/portada_drive_1793635662.png",
+        "archivo_url": null,
+        "enlace_url": "https:\/\/drive.google.com\/file\/d\/19FNHfNBlj410zt-XXmLuz9T6FBoY0gwP\/view",
+        "media": [
+            {
+                "id": 46,
+                "model_type": "App\\Models\\EdicionVarianza",
+                "model_id": 7,
+                "uuid": "2e3bcd30-83b0-4a51-8300-572b2643a2bc",
+                "collection_name": "ev_portada",
+                "name": "gdrive_cover_e7346c9d-6e37-487b-94ff-452142516cb7",
+                "file_name": "portada_drive_1793635662.png",
+                "mime_type": "image\/png",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 1309287,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-11-02T16:07:42.000000Z",
+                "updated_at": "2026-11-02T16:07:42.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/46\/portada_drive_1793635662.png",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "ev_titulo": "Varianza N° 4 Octubre 2005",
+        "ev_numero": "4",
+        "ev_volumen": null,
+        "ev_anio": 2005,
+        "ev_mes": "Octubre",
+        "ev_slug": "varianza-n-4-octubre-2005",
+        "ev_issn_ver_impresa": null,
+        "ev_issn_ver_electronica": null,
+        "ev_num_art_originales": null,
+        "ev_notas_cientificas": null,
+        "ev_num_paginas": null,
+        "ev_doi": null,
+        "ev_presentacion": {
+            "time": "1793635738024",
+            "blocks": [
+                {
+                    "id": "qzScXgJIGM",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "La presente revista, la cuarta de su serie se constituye en un referente de la actividad estadística de la carrera, la misma que desde la publicación de la primera revista ha concitado el interés tanto de docentes y estudiantes de la carrera, así como de personas no vinculadas a la Universidad, de esta manera la presente revista constituye un aporte tanto a la comunidad estadística como a la sociedad en su conjunto."
+                    }
+                },
+                {
+                    "id": "mNVQ-lN1Rz",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "A la espera que trabajo colme las expectativas de los lectores de las anteriores tres publicaciones, mostrando temas de interés y principalmente actuales, también se espera observaciones o criticas de los lectores ávidos por mayores ampliaciones a los artículos aquí tratados."
+                    }
+                },
+                {
+                    "id": "7oUGIJTumr",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "A tiempo de felicitar al cuerpo de profesionales que hacen posible esta entrega, congratulo también al lector paciente y crítico."
+                    }
+                },
+                {
+                    "id": "r0WJOKod2F",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Lic. Raúl Delgado Álvarez"
+                    }
+                },
+                {
+                    "id": "2nosKB4OS0",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "<b>DIRECTOR CARRERA DE ESTADÍSTICA<\/b>"
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "ev_editorial": "Instituto de Estadística Teórica y Aplicada (IETA) - UMSA",
+        "ev_fecha_publicacion": null,
+        "ev_estado": true,
+        "created_at": "2026-11-02T16:09:38.000000Z",
+        "updated_at": "2026-11-02T16:09:38.000000Z",
+        "ev_enlace_url": "https:\/\/drive.google.com\/file\/d\/14kzCQb3YEOfzYLBM5ZNfUOlZwUk0umgk\/view",
+        "portada_url": "\/storage\/47\/portada_drive_1793635780.png",
+        "archivo_url": null,
+        "enlace_url": "https:\/\/drive.google.com\/file\/d\/14kzCQb3YEOfzYLBM5ZNfUOlZwUk0umgk\/view",
+        "media": [
+            {
+                "id": 47,
+                "model_type": "App\\Models\\EdicionVarianza",
+                "model_id": 8,
+                "uuid": "9949481f-a3fd-4052-94f3-7447c8a6d7b8",
+                "collection_name": "ev_portada",
+                "name": "gdrive_cover_bcebfd84-2d83-49c5-a688-b1f1999467a6",
+                "file_name": "portada_drive_1793635780.png",
+                "mime_type": "image\/png",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 1556340,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-11-02T16:09:40.000000Z",
+                "updated_at": "2026-11-02T16:09:40.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/47\/portada_drive_1793635780.png",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "ev_titulo": "Varianza N° 5 Octubre 2006",
+        "ev_numero": "5",
+        "ev_volumen": null,
+        "ev_anio": 2006,
+        "ev_mes": "Octubre",
+        "ev_slug": "varianza-n-5-octubre-2006",
+        "ev_issn_ver_impresa": null,
+        "ev_issn_ver_electronica": null,
+        "ev_num_art_originales": null,
+        "ev_notas_cientificas": null,
+        "ev_num_paginas": null,
+        "ev_doi": null,
+        "ev_presentacion": {
+            "time": "1793635860936",
+            "blocks": [
+                {
+                    "id": "ax8psoMXZd",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "El material de la quinta versión de la revista “Varianza” publicación anual de la Carrera de Estadística de la Facultad de Ciencias Puras y Naturales, muestra el interés de docentes y estadísticos asociados a esta revista para hacer conocer el aporte ate la comunidad y por ende a la sociedad, temas de actualidad del ámbito estadístico."
+                    }
+                },
+                {
+                    "id": "XTVC5BMiec",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Esperando que los lectores de la presente publicación no honren con sus comentarios y aportes a los temas expuestos, felicito a los lectores como al personal que hace posible la presente edición."
+                    }
+                },
+                {
+                    "id": "ojoFUNo9zH",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Lic. Raúl Delgado Álvarez"
+                    }
+                },
+                {
+                    "id": "T99bW2o9He",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "<b>DIRECTOR DE LA CARRERA DE ESTADISTICA<\/b>"
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "ev_editorial": "Instituto de Estadística Teórica y Aplicada (IETA) - UMSA",
+        "ev_fecha_publicacion": null,
+        "ev_estado": true,
+        "created_at": "2026-11-02T16:11:22.000000Z",
+        "updated_at": "2026-11-02T16:11:22.000000Z",
+        "ev_enlace_url": "https:\/\/drive.google.com\/file\/d\/1m24FpEWSQc2-W16An4wwzJK8xBCFoAQi\/view",
+        "portada_url": "\/storage\/48\/portada_drive_1793635884.png",
+        "archivo_url": null,
+        "enlace_url": "https:\/\/drive.google.com\/file\/d\/1m24FpEWSQc2-W16An4wwzJK8xBCFoAQi\/view",
+        "media": [
+            {
+                "id": 48,
+                "model_type": "App\\Models\\EdicionVarianza",
+                "model_id": 9,
+                "uuid": "9fba3963-851f-47d2-9c3d-bb2b30d93f80",
+                "collection_name": "ev_portada",
+                "name": "gdrive_cover_bfe74031-8dc0-4030-ba7d-a2541dee38f0",
+                "file_name": "portada_drive_1793635884.png",
+                "mime_type": "image\/png",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 1227668,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-11-02T16:11:24.000000Z",
+                "updated_at": "2026-11-02T16:11:24.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/48\/portada_drive_1793635884.png",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "ev_titulo": "Varianza N° 6 Noviembre 2007",
+        "ev_numero": "6",
+        "ev_volumen": null,
+        "ev_anio": 2007,
+        "ev_mes": "Noviembre",
+        "ev_slug": "varianza-n-6-noviembre-2007",
+        "ev_issn_ver_impresa": null,
+        "ev_issn_ver_electronica": null,
+        "ev_num_art_originales": null,
+        "ev_notas_cientificas": null,
+        "ev_num_paginas": null,
+        "ev_doi": null,
+        "ev_presentacion": {
+            "blocks": []
+        },
+        "ev_editorial": "Instituto de Estadística Teórica y Aplicada (IETA) - UMSA",
+        "ev_fecha_publicacion": null,
+        "ev_estado": true,
+        "created_at": "2026-11-02T16:12:43.000000Z",
+        "updated_at": "2026-11-02T16:12:43.000000Z",
+        "ev_enlace_url": "https:\/\/drive.google.com\/file\/d\/1uUy8EGh5Mf00cCpRei6TAxp3TEojT8Mf\/view",
+        "portada_url": "\/storage\/49\/portada_drive_1793635965.png",
+        "archivo_url": null,
+        "enlace_url": "https:\/\/drive.google.com\/file\/d\/1uUy8EGh5Mf00cCpRei6TAxp3TEojT8Mf\/view",
+        "media": [
+            {
+                "id": 49,
+                "model_type": "App\\Models\\EdicionVarianza",
+                "model_id": 10,
+                "uuid": "52b6a252-eb6b-4cbb-b143-e284007b4560",
+                "collection_name": "ev_portada",
+                "name": "gdrive_cover_69fa995c-d043-4fea-bbfd-7fe061efafbe",
+                "file_name": "portada_drive_1793635965.png",
+                "mime_type": "image\/png",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 1225504,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-11-02T16:12:45.000000Z",
+                "updated_at": "2026-11-02T16:12:45.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/49\/portada_drive_1793635965.png",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "ev_titulo": "Varianza N° 7 Noviembre 2010",
+        "ev_numero": "7",
+        "ev_volumen": null,
+        "ev_anio": 2010,
+        "ev_mes": "Noviembre",
+        "ev_slug": "varianza-n-7-noviembre-2010",
+        "ev_issn_ver_impresa": null,
+        "ev_issn_ver_electronica": null,
+        "ev_num_art_originales": null,
+        "ev_notas_cientificas": null,
+        "ev_num_paginas": null,
+        "ev_doi": null,
+        "ev_presentacion": {
+            "time": "1793636026299",
+            "blocks": [
+                {
+                    "id": "mfIK4skXwR",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Este es un medio de comunicación que tiene la Carrera de Estadística dentro y fuera del entorno universitario, puesto que esta revista no sólo llega a la comunidad universitaria de San Andrés, sino también, a instituciones y a la sociedad en sí. Esta edición permite la difusión de artículos científicos, historia, investigación, curiosidades de la estadística y las distintas actividades que se realizan con el objeto de mostrar que la Carrea de Estadística en la UMSA, no solo es enseñanza académica sino también es investigación y actividad social."
+                    }
+                },
+                {
+                    "id": "O3HE0WLFj6",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "La revista que se edita este año, es especial a las ya presentadas anteriormente. Primero porque se la vuelve a publicar después de tres años de receso (la última edición fue el año 2007), y segundo porque esta es diferente en su contenido haciendo honor a su nombre “Varianza”, que la hace mas accesible a distinto publico lector. A los lectores pedirles respetuosamente sus opiniones y sugerencias para mejorar la revista en las próximas ediciones."
+                    }
+                },
+                {
+                    "id": "gTIw0jsCJz",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Lic. Fernando O. Rivero Suguiura"
+                    }
+                },
+                {
+                    "id": "Uqkql_YlzW",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "<b>DIRECTOR a.i. CARRERA DE ESTADÍSTICA<\/b>"
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "ev_editorial": "Instituto de Estadística Teórica y Aplicada (IETA) - UMSA",
+        "ev_fecha_publicacion": null,
+        "ev_estado": true,
+        "created_at": "2026-11-02T16:15:31.000000Z",
+        "updated_at": "2026-11-02T16:15:31.000000Z",
+        "ev_enlace_url": "https:\/\/drive.google.com\/file\/d\/1kAwMJLbkRSTvEcreoMRtlj9blvzAlvR9\/view",
+        "portada_url": "\/storage\/50\/portada_drive_1793636133.png",
+        "archivo_url": null,
+        "enlace_url": "https:\/\/drive.google.com\/file\/d\/1kAwMJLbkRSTvEcreoMRtlj9blvzAlvR9\/view",
+        "media": [
+            {
+                "id": 50,
+                "model_type": "App\\Models\\EdicionVarianza",
+                "model_id": 11,
+                "uuid": "b45848a0-3e07-4f74-b74c-d2432e5c2d8a",
+                "collection_name": "ev_portada",
+                "name": "gdrive_cover_921b93cf-85e6-4e9b-b8bc-d14296d6e8b6",
+                "file_name": "portada_drive_1793636133.png",
+                "mime_type": "image\/png",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 995259,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-11-02T16:15:33.000000Z",
+                "updated_at": "2026-11-02T16:15:33.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/50\/portada_drive_1793636133.png",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "ev_titulo": "Varianza N° 8 Noviembre 2011",
+        "ev_numero": "8",
+        "ev_volumen": null,
+        "ev_anio": 2011,
+        "ev_mes": "Noviembre",
+        "ev_slug": "varianza-n-8-noviembre-2011",
+        "ev_issn_ver_impresa": null,
+        "ev_issn_ver_electronica": null,
+        "ev_num_art_originales": null,
+        "ev_notas_cientificas": null,
+        "ev_num_paginas": null,
+        "ev_doi": null,
+        "ev_presentacion": {
+            "time": "1793636196649",
+            "blocks": [
+                {
+                    "id": "_Kmi5lXnsQ",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "La Carrera de Estadística dependiente de la Facultad de Ciencias Puras y Naturales de la Universidad Mayor de San Andrés (U.M.S.A.) realiza investigaciones anuales con la participación activa de sus docentes, el Instituto de Estadística Teórica y Aplicada (I.E.T.A.) y nuestros estudiantes."
+                    }
+                },
+                {
+                    "id": "PBxN-hGAm7",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Como se sabe, toda investigación realizada para que sea productiva necesariamente debe ser publicada para el conocimiento de nuestros estudiantes y el reconocimiento de nuestra sociedad, con la mejor intención de que sea un a porte de las distintas metodologías que tiene la estadística. Es así que nuestra carrera presenta los resultados en la revista VARIANZA, cada gestión. esta publicación nos permite presentar los aportes teóricos practico y los resultados de las investigaciones realizada en la gestión 2011 de la Carrera de Estadística. Esperando que sea de utilidad para la comunidad universitaria y el conjunto de nuestra sociedad, damos a conocer los distintos temas de investigación desarrollados."
+                    }
+                },
+                {
+                    "id": "5OcKo-62I6",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "La dirección a mi cargo agradece y reconoce la colaboración de nuestros docentes, estudiantes por el aporte de sus investigaciones así también al personal de la carrera sin cuya participación no habría sido posible la realización de la presente publicación."
+                    }
+                },
+                {
+                    "id": "o-t_31cU5G",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Lic. Juan Carlos Flores López"
+                    }
+                },
+                {
+                    "id": "B0rETNALXf",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "<b>DIRECTOR CARRERA DE ESTADÍSTICA<\/b>"
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "ev_editorial": "Instituto de Estadística Teórica y Aplicada (IETA) - UMSA",
+        "ev_fecha_publicacion": null,
+        "ev_estado": true,
+        "created_at": "2026-11-02T16:16:57.000000Z",
+        "updated_at": "2026-11-02T16:16:57.000000Z",
+        "ev_enlace_url": "https:\/\/drive.google.com\/file\/d\/1DVCyORiqq0bsvmblVm1Sz_MnKvNCcxBy\/view",
+        "portada_url": "\/storage\/51\/portada_drive_1793636220.png",
+        "archivo_url": null,
+        "enlace_url": "https:\/\/drive.google.com\/file\/d\/1DVCyORiqq0bsvmblVm1Sz_MnKvNCcxBy\/view",
+        "media": [
+            {
+                "id": 51,
+                "model_type": "App\\Models\\EdicionVarianza",
+                "model_id": 12,
+                "uuid": "906b80e7-cbc9-4859-81c0-5cfefbadaeec",
+                "collection_name": "ev_portada",
+                "name": "gdrive_cover_6e10759e-fba9-447d-8148-b4d140285fa1",
+                "file_name": "portada_drive_1793636220.png",
+                "mime_type": "image\/png",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 1259071,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-11-02T16:17:00.000000Z",
+                "updated_at": "2026-11-02T16:17:00.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/51\/portada_drive_1793636220.png",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "ev_titulo": "Varianza N° 9 Noviembre 2012",
+        "ev_numero": "9",
+        "ev_volumen": null,
+        "ev_anio": 2012,
+        "ev_mes": "Noviembre",
+        "ev_slug": "varianza-n-9-noviembre-2012",
+        "ev_issn_ver_impresa": null,
+        "ev_issn_ver_electronica": null,
+        "ev_num_art_originales": null,
+        "ev_notas_cientificas": null,
+        "ev_num_paginas": null,
+        "ev_doi": null,
+        "ev_presentacion": {
+            "time": "1793636307188",
+            "blocks": [
+                {
+                    "id": "Iok0n-P-9a",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "La Universidad, a través de las distintas carreras que acoge, realiza investigaciones periódicas. Es así que la Carrera de Estadística dependiente de la Facultad de Ciencias Puras y Naturales de la Universidad Mayor de San Andrés, no queda al margen de estas actividades de investigación, con la participación activa de los docentes, estudiantes y el Instituto de Estadística Teórica y Aplicada."
+                    }
+                },
+                {
+                    "id": "t5H3XiUQLc",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Con el fin de dar a conocer los trabajos de investigación interacción social y otras actividades que tiene la Carrera durante una gestión, se publican estos en nuestra revista Varianza numero nueve. Esperando que esta nueva publicación sea del agrado de nuestros lectores, con la mejor intensión de aporte las distintas metodologías que tiene la estadística. Es así que la Carrera de Estadística da a conocer los resultados en la revista Varianza."
+                    }
+                },
+                {
+                    "id": "3f4XKJsXAt",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Esta publicación nos permite además, presentar los aportes teóricos – prácticos y los resultados de las investigaciones realizadas en la gestión 2012. Esperando que sea de utilidad para la comunidad universitaria y el conjunto de nuestra sociedad, damos a conocer los distintos temas de investigación desarrollados. La dirección a mi cargo agradece y reconoce la colaboración de nuestros docentes, estudiantes y los que intervienen aportando con sus investigaciones, así también al personal administrativos de la Carrera, sin cuya participación no habría sido posible la realización de la presente publicación."
+                    }
+                },
+                {
+                    "id": "cxYN9SMbhv",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Lic. Juan Carlos Flores López"
+                    }
+                },
+                {
+                    "id": "GPYfTG-gm0",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "<b>DIRECTOR CARRERA DE ESTADÍSTICA<\/b>"
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "ev_editorial": "Instituto de Estadística Teórica y Aplicada (IETA) - UMSA",
+        "ev_fecha_publicacion": null,
+        "ev_estado": true,
+        "created_at": "2026-11-02T16:19:44.000000Z",
+        "updated_at": "2026-11-02T16:19:44.000000Z",
+        "ev_enlace_url": "https:\/\/drive.google.com\/file\/d\/1ZL_UYpQBtHn516mvYQrz6g_-tIgKjgWC\/view",
+        "portada_url": "\/storage\/52\/portada_drive_1793636386.png",
+        "archivo_url": null,
+        "enlace_url": "https:\/\/drive.google.com\/file\/d\/1ZL_UYpQBtHn516mvYQrz6g_-tIgKjgWC\/view",
+        "media": [
+            {
+                "id": 52,
+                "model_type": "App\\Models\\EdicionVarianza",
+                "model_id": 13,
+                "uuid": "554799d0-974b-4424-a72e-5c76fe1051a5",
+                "collection_name": "ev_portada",
+                "name": "gdrive_cover_a41529cc-2f5d-41d8-91e9-868930632cba",
+                "file_name": "portada_drive_1793636386.png",
+                "mime_type": "image\/png",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 1763276,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-11-02T16:19:46.000000Z",
+                "updated_at": "2026-11-02T16:19:46.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/52\/portada_drive_1793636386.png",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "ev_titulo": "Varianza N° 10 Noviembre 2013",
+        "ev_numero": "10",
+        "ev_volumen": null,
+        "ev_anio": 2013,
+        "ev_mes": "Noviembre",
+        "ev_slug": "varianza-n-10-noviembre-2013",
+        "ev_issn_ver_impresa": null,
+        "ev_issn_ver_electronica": null,
+        "ev_num_art_originales": null,
+        "ev_notas_cientificas": null,
+        "ev_num_paginas": null,
+        "ev_doi": null,
+        "ev_presentacion": {
+            "time": "1793636427872",
+            "blocks": [
+                {
+                    "id": "CvHgMKkzft",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "La Universidad, a través de las distintas carreras que acoge, logra establecer investigaciones en diferentes facultades. Es así que la Carrera de Estadística dependiente de la Facultad de Ciencias Puras y Naturales de la Universidad Mayor de San Andrés, realiza investigaciones anuales con la participación activa de los docentes, estudiantes y el Instituto de Estadística Teórica y Aplicada."
+                    }
+                },
+                {
+                    "id": "wjsmsdp1GB",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Con el fin de dar a conocer los trabajos de investigación e interacción la Carrera presenta resultados de dichos estudios y otras actividades que se van dando durante la presente gestión en la revista. Esperando que sea del agrado de nuestros lectores, con la mejor intensión de aportar en las distintas metodologías que tiene la estadística en una publicación anual de la Varianza en su versión número 10."
+                    }
+                },
+                {
+                    "id": "lj415vum7X",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Confiando nuevamente que esta publicación será de gran utilidad para la comunidad universitaria y el conjunto de nuestra sociedad es que nos es grato lanzar la revista que en sus próximas versiones de constituirá en una publicación indexada nacional de periodicidad semestral."
+                    }
+                },
+                {
+                    "id": "FnEELHz9to",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "La Dirección a mi cargo agradece y reconoce la colaboración de nuestros docentes, estudiantes y todos los que intervinieron en el aporte de sus investigaciones así también al personal administrativos de la Carrera, sin cuya participación no habría sido posible la realización de la presente publicación."
+                    }
+                },
+                {
+                    "id": "TBMy8XkR4g",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Lic. Juan Carlos Flores López"
+                    }
+                },
+                {
+                    "id": "GBbIIPYRhX",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "<b>DIRECTOR CARRERA DE ESTADÍSTICA<\/b>"
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "ev_editorial": "Instituto de Estadística Teórica y Aplicada (IETA) - UMSA",
+        "ev_fecha_publicacion": null,
+        "ev_estado": true,
+        "created_at": "2026-11-02T16:20:52.000000Z",
+        "updated_at": "2026-11-02T16:20:52.000000Z",
+        "ev_enlace_url": "https:\/\/drive.google.com\/file\/d\/1hdVIi55kD3RRkEyxeiYp3qpCS-rgg3vt\/view",
+        "portada_url": "\/storage\/53\/portada_drive_1793636455.png",
+        "archivo_url": null,
+        "enlace_url": "https:\/\/drive.google.com\/file\/d\/1hdVIi55kD3RRkEyxeiYp3qpCS-rgg3vt\/view",
+        "media": [
+            {
+                "id": 53,
+                "model_type": "App\\Models\\EdicionVarianza",
+                "model_id": 14,
+                "uuid": "9fdfc0df-d2d2-496a-b8ae-d140f1a97469",
+                "collection_name": "ev_portada",
+                "name": "gdrive_cover_cd49f3d8-f281-426e-b115-c41e87fda466",
+                "file_name": "portada_drive_1793636455.png",
+                "mime_type": "image\/png",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 1476029,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-11-02T16:20:55.000000Z",
+                "updated_at": "2026-11-02T16:20:55.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/53\/portada_drive_1793636455.png",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "ev_titulo": "Varianza N° 11 Febrero 2015",
+        "ev_numero": "11",
+        "ev_volumen": null,
+        "ev_anio": 2015,
+        "ev_mes": "Febrero",
+        "ev_slug": "varianza-n-11-febrero-2015",
+        "ev_issn_ver_impresa": null,
+        "ev_issn_ver_electronica": null,
+        "ev_num_art_originales": null,
+        "ev_notas_cientificas": null,
+        "ev_num_paginas": null,
+        "ev_doi": null,
+        "ev_presentacion": {
+            "time": "1793636517749",
+            "blocks": [
+                {
+                    "id": "gskc95EaHO",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "El presente número de la revista Varianza, órgano oficial de difusión de la investigación en la Carrera de Estadística muestra una vez más el interés de nuestros docentes para dar a conocer temas de interés práctico y actual de la estadística, mostrando además proyectos de mejoramiento didáctico para la enseñanza de la ciencia que nos apasiona."
+                    }
+                },
+                {
+                    "id": "mZsvXKLwBF",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Espero que la socialización del conocimiento expuesta a través de esta revista, nos permita crecer en el ámbito de la investigación mediante la respuesta de nuestros lectores, reiteramos el compromiso con nuestra casa de estudios para ofrecer próximamente una nueva versión de Varianza."
+                    }
+                },
+                {
+                    "id": "IuRkJH9KN3",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Lic. Raúl Delgado Álvarez"
+                    }
+                },
+                {
+                    "id": "6LmP9IoGmU",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "<b>DIRECTOR CARRERA DE ESTADÍSTICA<\/b>"
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "ev_editorial": "Instituto de Estadística Teórica y Aplicada (IETA) - UMSA",
+        "ev_fecha_publicacion": null,
+        "ev_estado": true,
+        "created_at": "2026-11-02T16:22:43.000000Z",
+        "updated_at": "2026-11-02T16:22:43.000000Z",
+        "ev_enlace_url": "https:\/\/drive.google.com\/file\/d\/1A7doiUworj-EuCbgEL-PHauMoDMMz7zj\/view",
+        "portada_url": "\/storage\/54\/portada_drive_1793636565.png",
+        "archivo_url": null,
+        "enlace_url": "https:\/\/drive.google.com\/file\/d\/1A7doiUworj-EuCbgEL-PHauMoDMMz7zj\/view",
+        "media": [
+            {
+                "id": 54,
+                "model_type": "App\\Models\\EdicionVarianza",
+                "model_id": 15,
+                "uuid": "2ef95b99-5ef5-4490-a351-47da80fd1977",
+                "collection_name": "ev_portada",
+                "name": "gdrive_cover_a67bcec1-2a9c-47ea-bb4f-012f4550646b",
+                "file_name": "portada_drive_1793636565.png",
+                "mime_type": "image\/png",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 823427,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-11-02T16:22:45.000000Z",
+                "updated_at": "2026-11-02T16:22:45.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/54\/portada_drive_1793636565.png",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "ev_titulo": "Varianza N° 12 Septiembre 2016",
+        "ev_numero": "12",
+        "ev_volumen": null,
+        "ev_anio": 2016,
+        "ev_mes": "Septiembre",
+        "ev_slug": "varianza-n-12-septiembre-2016",
+        "ev_issn_ver_impresa": null,
+        "ev_issn_ver_electronica": null,
+        "ev_num_art_originales": null,
+        "ev_notas_cientificas": null,
+        "ev_num_paginas": null,
+        "ev_doi": null,
+        "ev_presentacion": {
+            "time": "1793636608431",
+            "blocks": [
+                {
+                    "id": "nMyg6fmsEN",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Las anteriores publicaciones de la revista VARIANZA, órgano oficial de difusión del Instituto de Estadística Teórica y Aplicada y por ende de la Carrera de Estadística, mostraban tanto el quehacer científico, como la difusión de actividades de la Carrera. La presente edición está orientada a mostrar la investigación realizada por nuestros docentes e investigadores asociados dando a nuestra revista un carácter científico."
+                    }
+                },
+                {
+                    "id": "ki8hcK3lTT",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "La doceava publicación, muestra a la comunidad, no solo de la Carrera, sino Facultativa y de la UMSA; la madurez alcanzada en la publicación de artículos científicos de la ciencia Estadística."
+                    }
+                },
+                {
+                    "id": "6mkwIKhCHu",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Es, sin embargo, el lector quien, con sus críticas y sugerencias, hará posible la mejora constante de este material que se pone a consideración."
+                    }
+                },
+                {
+                    "id": "qlE1SoLkK0",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Lic. Raúl L. Delgado Álvarez"
+                    }
+                },
+                {
+                    "id": "eb9ZxEU3Zz",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "<b>DIRECTOR CARRERA DE ESTADÍSTICA<\/b>"
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "ev_editorial": "Instituto de Estadística Teórica y Aplicada (IETA) - UMSA",
+        "ev_fecha_publicacion": null,
+        "ev_estado": true,
+        "created_at": "2026-11-02T16:23:56.000000Z",
+        "updated_at": "2026-11-02T16:23:56.000000Z",
+        "ev_enlace_url": "https:\/\/drive.google.com\/file\/d\/1v_ahbqjmARTrHPMKNPb18CodSCNnYKeS\/view",
+        "portada_url": "\/storage\/55\/portada_drive_1793636638.png",
+        "archivo_url": null,
+        "enlace_url": "https:\/\/drive.google.com\/file\/d\/1v_ahbqjmARTrHPMKNPb18CodSCNnYKeS\/view",
+        "media": [
+            {
+                "id": 55,
+                "model_type": "App\\Models\\EdicionVarianza",
+                "model_id": 16,
+                "uuid": "73ff892a-b1e7-498d-a7d6-4ef5aa8d5343",
+                "collection_name": "ev_portada",
+                "name": "gdrive_cover_d7c5cfc7-21de-4ec2-8d8c-d65f7ee45080",
+                "file_name": "portada_drive_1793636638.png",
+                "mime_type": "image\/png",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 1349513,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-11-02T16:23:58.000000Z",
+                "updated_at": "2026-11-02T16:23:58.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/55\/portada_drive_1793636638.png",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "ev_titulo": "Varianza N° 13 Septiembre 2017",
+        "ev_numero": "13",
+        "ev_volumen": null,
+        "ev_anio": 2017,
+        "ev_mes": "Septiembre",
+        "ev_slug": "varianza-n-13-septiembre-2017",
+        "ev_issn_ver_impresa": null,
+        "ev_issn_ver_electronica": null,
+        "ev_num_art_originales": null,
+        "ev_notas_cientificas": null,
+        "ev_num_paginas": null,
+        "ev_doi": null,
+        "ev_presentacion": {
+            "time": "1793636795600",
+            "blocks": [
+                {
+                    "id": "GeH2SwRyj3",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "En la presente revista, Varianza Nº 13, los artículos de investigación abordan temas actuales de interés social.&nbsp;"
+                    }
+                },
+                {
+                    "id": "ndfU_tbgw6",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Al mismo tiempo, las investigaciones realizadas bajo las limitaciones económicas que tiene la carrera, demuestran el esfuerzo de los investigadores, su compromiso y aporte a nuestra alma mater."
+                    }
+                },
+                {
+                    "id": "QABfg7GTec",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Sería injusto no citar a los estudiantes que colaboran con los docentes, siendo ellos, los que alimentan las investigaciones y muestran mucho interés por convertirse en futuros investigadores."
+                    }
+                },
+                {
+                    "id": "f9SDNzijS1",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "En este sentido, es de gran importancia para los autores y editores sus consideraciones y observaciones para mejorar las próximas ediciones."
+                    }
+                },
+                {
+                    "id": "IhxMRBICip",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Lic. Raúl L. Delgado Álvarez"
+                    }
+                },
+                {
+                    "id": "prLEkS6Shb",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "<b>DIRECTOR CARRERA DE ESTADÍSTICA<\/b>"
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "ev_editorial": "Instituto de Estadística Teórica y Aplicada (IETA) - UMSA",
+        "ev_fecha_publicacion": null,
+        "ev_estado": true,
+        "created_at": "2026-11-02T16:27:18.000000Z",
+        "updated_at": "2026-11-02T16:27:18.000000Z",
+        "ev_enlace_url": "https:\/\/drive.google.com\/file\/d\/1My89YFlsttSCC64HwyXrhDdhx5SloOId\/view",
+        "portada_url": "\/storage\/56\/portada_drive_1793636841.png",
+        "archivo_url": null,
+        "enlace_url": "https:\/\/drive.google.com\/file\/d\/1My89YFlsttSCC64HwyXrhDdhx5SloOId\/view",
+        "media": [
+            {
+                "id": 56,
+                "model_type": "App\\Models\\EdicionVarianza",
+                "model_id": 17,
+                "uuid": "a486bb05-7255-475c-9d71-9c28166e6dd9",
+                "collection_name": "ev_portada",
+                "name": "gdrive_cover_76666777-7ce1-44eb-8222-90620f924737",
+                "file_name": "portada_drive_1793636841.png",
+                "mime_type": "image\/png",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 1429602,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-11-02T16:27:21.000000Z",
+                "updated_at": "2026-11-02T16:27:21.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/56\/portada_drive_1793636841.png",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "ev_titulo": "Varianza N° 14 Diciembre 2017",
+        "ev_numero": "14",
+        "ev_volumen": null,
+        "ev_anio": 2017,
+        "ev_mes": "Diciembre",
+        "ev_slug": "varianza-n-14-diciembre-2017",
+        "ev_issn_ver_impresa": null,
+        "ev_issn_ver_electronica": null,
+        "ev_num_art_originales": null,
+        "ev_notas_cientificas": null,
+        "ev_num_paginas": null,
+        "ev_doi": null,
+        "ev_presentacion": {
+            "time": "1793637078362",
+            "blocks": [
+                {
+                    "id": "_EpIFmcxsL",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Una vez más la Revista Varianza pone en consideración de la comunidad universitaria y del público en general, los trabajos realizados como un aporte de los investigadores de Estadística, valorando el esfuerzo de cada de ellos, exhortando a la vez, a quienes aún no han tenido la oportunidad de aportar con su trabajo, presentarlos para su posterior publicación."
+                    }
+                },
+                {
+                    "id": "TbEOyMjWmx",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Es fundamental presentar nuestro agradecimiento a quienes han logrado mantener la expectativa en este proyecto, que sin duda, es la expresión del interés que tiene la carrera de Estadística para integrar nuestra visión con la sociedad."
+                    }
+                },
+                {
+                    "id": "2mtS34uY4i",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Lic. Nilda Flores Salinas de Uribe"
+                    }
+                },
+                {
+                    "id": "TnvO9qvZ2o",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "<b>DIRECTORA a.i. CARRERA DE ESTADISTICA<\/b>"
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "ev_editorial": "Instituto de Estadística Teórica y Aplicada (IETA) - UMSA",
+        "ev_fecha_publicacion": null,
+        "ev_estado": true,
+        "created_at": "2026-11-02T16:31:54.000000Z",
+        "updated_at": "2026-11-02T16:31:54.000000Z",
+        "ev_enlace_url": "https:\/\/drive.google.com\/file\/d\/145_aKG-RXVlXKGHxoUnRJaUTFy0g9tgm\/view",
+        "portada_url": "\/storage\/57\/portada_drive_1793637117.png",
+        "archivo_url": null,
+        "enlace_url": "https:\/\/drive.google.com\/file\/d\/145_aKG-RXVlXKGHxoUnRJaUTFy0g9tgm\/view",
+        "media": [
+            {
+                "id": 57,
+                "model_type": "App\\Models\\EdicionVarianza",
+                "model_id": 18,
+                "uuid": "9bf17dbc-8191-4534-8aaf-43cb03f98d4e",
+                "collection_name": "ev_portada",
+                "name": "gdrive_cover_6bcc82ce-3ada-4849-8847-1754fe8a32a5",
+                "file_name": "portada_drive_1793637117.png",
+                "mime_type": "image\/png",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 1713935,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-11-02T16:31:57.000000Z",
+                "updated_at": "2026-11-02T16:31:57.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/57\/portada_drive_1793637117.png",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "ev_titulo": "Varianza N° 15 Noviembre 2018",
+        "ev_numero": "15",
+        "ev_volumen": null,
+        "ev_anio": 2018,
+        "ev_mes": "Noviembre",
+        "ev_slug": "varianza-n-15-noviembre-2018",
+        "ev_issn_ver_impresa": null,
+        "ev_issn_ver_electronica": null,
+        "ev_num_art_originales": null,
+        "ev_notas_cientificas": null,
+        "ev_num_paginas": null,
+        "ev_doi": null,
+        "ev_presentacion": {
+            "time": "1793637158945",
+            "blocks": [
+                {
+                    "id": "Xx0AypPt9M",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "La ciencia de la estadística es un componente indispensable en investigaciones que utiliza la recopilación de información, tratamiento de datos, diseño de metodologías, predicción y análisis entre otras; ya sea en proyectos académicos, empresariales o gubernamentales. Conforme el incremento de la información estadística, se ha vuelto mucho más importante la necesidad de un creciente número de empresas e instituciones que requieren profesionales idóneos para comprender el lenguaje estadístico y sus aplicaciones."
+                    }
+                },
+                {
+                    "id": "ymBKaSijEx",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "La estadística tiene amplia participación en la investigación que se realiza en ámbitos tan diversos como: la industria, educación, medicina, salud, psicología, ingeniería, historia, política, demografía, economía, mercadotecnia, finanzas, entre muchas otras. Es así que la revista Varianza de esta gestión, presenta y difunde un conjunto de artículos científicos que emanan del trabajo investigativo de profesionales vinculados con la estadística, como también del proceso de enseñanza – aprendizaje y labor aplicativa que despliegan docentes y estudiantes de nuestra carrera."
+                    }
+                },
+                {
+                    "id": "9vQ6fvvA4l",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Finalmente, agradezco al director del Instituto de Estadística Teórica y Aplicada, Lic. Dindo Valdez Blanco y a todo el equipo por esta nueva edición de la revista Varianza, así como también a los profesionales, docentes y estudiantes que aportan con sus artículos."
+                    }
+                },
+                {
+                    "id": "ByOsGlMM6u",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "M. Sc. Fernando O. Rivero Suguiura"
+                    }
+                },
+                {
+                    "id": "HGJENe0cTm",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "<b>DIRECTOR CARRERA DE ESTADISTICA<\/b>"
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "ev_editorial": "Instituto de Estadística Teórica y Aplicada (IETA) - UMSA",
+        "ev_fecha_publicacion": null,
+        "ev_estado": true,
+        "created_at": "2026-11-02T16:33:06.000000Z",
+        "updated_at": "2026-11-02T16:33:06.000000Z",
+        "ev_enlace_url": "https:\/\/drive.google.com\/file\/d\/1lHwjwKaoX2GZy6aYz7QoWctNB87aJkUs\/view",
+        "portada_url": "\/storage\/58\/portada_drive_1793637188.png",
+        "archivo_url": null,
+        "enlace_url": "https:\/\/drive.google.com\/file\/d\/1lHwjwKaoX2GZy6aYz7QoWctNB87aJkUs\/view",
+        "media": [
+            {
+                "id": 58,
+                "model_type": "App\\Models\\EdicionVarianza",
+                "model_id": 19,
+                "uuid": "b39545c2-206b-4fd1-9e18-347c64cfa8d3",
+                "collection_name": "ev_portada",
+                "name": "gdrive_cover_634f30d8-c10e-466a-9f2d-cb0408f1d860",
+                "file_name": "portada_drive_1793637188.png",
+                "mime_type": "image\/png",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 1263652,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-11-02T16:33:08.000000Z",
+                "updated_at": "2026-11-02T16:33:08.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/58\/portada_drive_1793637188.png",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "ev_titulo": "Varianza N° 16 Octubre 2019",
+        "ev_numero": "16",
+        "ev_volumen": null,
+        "ev_anio": 2019,
+        "ev_mes": "Octubre",
+        "ev_slug": "varianza-n-16-octubre-2019",
+        "ev_issn_ver_impresa": null,
+        "ev_issn_ver_electronica": null,
+        "ev_num_art_originales": null,
+        "ev_notas_cientificas": null,
+        "ev_num_paginas": null,
+        "ev_doi": null,
+        "ev_presentacion": {
+            "time": "1793637272338",
+            "blocks": [
+                {
+                    "id": "5Wy-UrqbIJ",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "La presente Revista Varianza es la número 16, edición anual que se ha venido elaborando con la finalidad de difundir los proyectos de investigación e interacción social de los docentes y estudiantes de nuestra universidad, plasmados en el resumen de un artículo. La estadística es y será un medio instrumental importante para cualquier ciencia del conocimiento humano, por lo tanto, se convierte en una herramienta difícil de eludir."
+                    }
+                },
+                {
+                    "id": "KTnPTmOHmd",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Al transcurrir los años de esta nueva era del siglo veintiuno, la estadística se desarrolla y seguirá desarrollándose en materia de tecnología de aplicación esencial en la investigación, por ello, es fundamental el incremento de recursos humanos dedicados a esta ilustre actividad. La Revista Varianza debe traducir siempre el conocimiento de los grandes pensadores de la estadística científica - aplicada, para incentivar a nuevos postulantes universitarios, como principal objetivo."
+                    }
+                },
+                {
+                    "id": "hfH8Yvh98u",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Es así, que queda el compromiso de que las próximas ediciones de la revista se mejore y alcance así mayor difusión, basada en una publicación líder del quehacer científico de la estadística a nivel nacional e internacional para el bien de nuestra carrera, la universidad, de investigadores y futuros estudiantes que requieren de un eficaz instrumento de orientación en la rama de la estadística."
+                    }
+                },
+                {
+                    "id": "2K4xj0txBj",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "M. Sc. Fernando Oday Rivero Suguiura"
+                    }
+                },
+                {
+                    "id": "xpHcHByprE",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "<b>DIRECTOR CARRERA DE ESTADISTICA<\/b>"
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "ev_editorial": "Instituto de Estadística Teórica y Aplicada (IETA) - UMSA",
+        "ev_fecha_publicacion": null,
+        "ev_estado": true,
+        "created_at": "2026-11-02T16:34:55.000000Z",
+        "updated_at": "2026-11-02T16:34:55.000000Z",
+        "ev_enlace_url": "https:\/\/drive.google.com\/file\/d\/1RbtEvQdQJns1wAnlAqeRp49MnFCxlucg\/view",
+        "portada_url": "\/storage\/59\/portada_drive_1793637297.png",
+        "archivo_url": null,
+        "enlace_url": "https:\/\/drive.google.com\/file\/d\/1RbtEvQdQJns1wAnlAqeRp49MnFCxlucg\/view",
+        "media": [
+            {
+                "id": 59,
+                "model_type": "App\\Models\\EdicionVarianza",
+                "model_id": 20,
+                "uuid": "c1b191b7-5348-444f-85e8-fdbe1bcf06e5",
+                "collection_name": "ev_portada",
+                "name": "gdrive_cover_50d7742f-f72a-4927-b6f0-88b8497f52cb",
+                "file_name": "portada_drive_1793637297.png",
+                "mime_type": "image\/png",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 1217012,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-11-02T16:34:57.000000Z",
+                "updated_at": "2026-11-02T16:34:57.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/59\/portada_drive_1793637297.png",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 21,
+        "ev_titulo": "Varianza N° 17 Noviembre 2020",
+        "ev_numero": "17",
+        "ev_volumen": null,
+        "ev_anio": 2020,
+        "ev_mes": "Noviembre",
+        "ev_slug": "varianza-n-17-noviembre-2020",
+        "ev_issn_ver_impresa": null,
+        "ev_issn_ver_electronica": null,
+        "ev_num_art_originales": null,
+        "ev_notas_cientificas": null,
+        "ev_num_paginas": null,
+        "ev_doi": null,
+        "ev_presentacion": {
+            "time": "1793637448406",
+            "blocks": [
+                {
+                    "id": "aDZJOvgyje",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "La Dirección Interina del Instituto de Estadística Teórica&nbsp;y Aplicada (IETA) tiene la satisfacción de presentar a&nbsp;estudiantes y&nbsp;docentes de la Carrera de Estadística, así como&nbsp;a la población en general interesada en temas estadísticos,&nbsp;la REVISTA VARIANZA N° 17.&nbsp;En esta nueva edición de la revista se exhiben siete&nbsp;artículos científicos, algunos vinculados a la parte teórica&nbsp;de la estadística y otros relacionados con la parte aplicada.Ordenados alfabéticamente, en el primer artículo, luego&nbsp;de adoptar una distribución tipo G para la variación del&nbsp;índice de precios al consumidor, se procede a estimar los&nbsp;parámetros involucrados en dicha distribución mediante&nbsp;procedimientos bayesianos; en el segundo se platea el&nbsp;problema de estimación del parámetro de forma en un modelo&nbsp;normal asimétrico, un problema que surge principalmente&nbsp;en pequeños tamaños de muestra; en el tercero se usa el&nbsp;modelo de regresión logística con interceptos aleatorios&nbsp;para analizar datos de panel, un modelo que resulta ser un&nbsp;caso particular del modelo lineal generalizado de efectos&nbsp;mixtos; en el cuarto se realiza un análisis multivariado de la&nbsp;correspondencia entre un conjunto de variables categóricas&nbsp;usando el método de la descomposición tensorial tucker3,&nbsp;un método alternativo al de análisis de correspondencia&nbsp;clásico; el quinto tiene que ver con la utilidad del cálculo&nbsp;complejo en algunos aspectos de la teoría estadística; en el&nbsp;sexto se comparan las precisiones en las estimaciones de&nbsp;algunos parámetros poblacionales considerando tres planes&nbsp;de muestreo; y en el séptimo artículo se aplica el modelo de&nbsp;respuesta aleatorizada de Warner, un modelo usado cuando&nbsp;las preguntas formuladas a los entrevistados son delicadas.Se agradece de sobremanera a cada uno de los autores&nbsp;de los artículos por su esfuerzo y contribución para que&nbsp;se concrete esta nueva publicación de la revista varianza.&nbsp;De lo contrario, la continuidad anual de la publicación no&nbsp;hubiese sido posible."
+                    }
+                },
+                {
+                    "id": "i6jjzbWkcy",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "<b>Dr(c) Ramiro Coa Clemente<\/b>"
+                    }
+                },
+                {
+                    "id": "Ich59SZ3cf",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "<b>DIRECTOR a.i.INSTITUTO DE ESTADISTICA TEÓRICA Y APLICADA<\/b>"
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "ev_editorial": "Instituto de Estadística Teórica y Aplicada (IETA) - UMSA",
+        "ev_fecha_publicacion": null,
+        "ev_estado": true,
+        "created_at": "2026-11-02T16:37:47.000000Z",
+        "updated_at": "2026-11-02T16:37:47.000000Z",
+        "ev_enlace_url": "https:\/\/drive.google.com\/file\/d\/1w9Q-Xv2IGuObqUrlxyDwR2956m0jrBIX\/view",
+        "portada_url": "\/storage\/60\/portada_drive_1793637469.png",
+        "archivo_url": null,
+        "enlace_url": "https:\/\/drive.google.com\/file\/d\/1w9Q-Xv2IGuObqUrlxyDwR2956m0jrBIX\/view",
+        "media": [
+            {
+                "id": 60,
+                "model_type": "App\\Models\\EdicionVarianza",
+                "model_id": 21,
+                "uuid": "04dfdb5b-4a1c-4564-9632-a88422a32825",
+                "collection_name": "ev_portada",
+                "name": "gdrive_cover_2573073e-4010-433d-996e-0b55b8282e53",
+                "file_name": "portada_drive_1793637469.png",
+                "mime_type": "image\/png",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 955993,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-11-02T16:37:49.000000Z",
+                "updated_at": "2026-11-02T16:37:49.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/60\/portada_drive_1793637469.png",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 22,
+        "ev_titulo": "Varianza N° 18, Noviembre 2021",
+        "ev_numero": "18",
+        "ev_volumen": null,
+        "ev_anio": 2021,
+        "ev_mes": "Noviembre",
+        "ev_slug": "varianza-n-18-noviembre-2021",
+        "ev_issn_ver_impresa": "2789-3510",
+        "ev_issn_ver_electronica": "2789-3529",
+        "ev_num_art_originales": 7,
+        "ev_notas_cientificas": null,
+        "ev_num_paginas": 92,
+        "ev_doi": null,
+        "ev_presentacion": {
+            "time": "1793637695092",
+            "blocks": [
+                {
+                    "id": "HdrmLZ0eoZ",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "La revista Varianza pertenece a la carrera de Estadística y al Instituto de Estadística Teórica y Aplicada (IETA), de la Facultad de Ciencias Puras y Naturales de la Universidad Mayor de San Andrés. Es una publicación destinada a la difusión de resultados de los trabajos de investigación logrados en la carrera y por los investigadores nacionales e internacionales."
+                    }
+                },
+                {
+                    "id": "jJIRtXBDsK",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "A partir de la presente revista Varianza N°18, será de publicación semestral y abierta para recibir contribuciones de autores nacionales e internacionales. De esta manera se pretende generar un espacio favorable para el ámbito académico, análisis, desarrollo difusión de las técnicas y metodología que tiene la estadística. Por lo tanto, sus receptores son todos los profesionales e investigadores de cualquier área que involucre la temática."
+                    }
+                },
+                {
+                    "id": "1k-2h8x9eN",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Esperando sea de utilidad para la comunidad universitaria y el conjunto de nuestra sociedad, damos a conocer los distintos temas de investigación desarrollados."
+                    }
+                },
+                {
+                    "id": "5AbG1GKYCz",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "La dirección a mi cargo, agradece y reconoce la colaboración del Comité Editorial por sus aportes, en el análisis crítico de los artículos, así como sus observaciones. Así mismo, agradecer al personal administrativo de la carrera, del IETA y a todo el personal que trabaja en la edición de la revista, para asegurar la calidad y difusión de su contenido a nivel nacional e internacional."
+                    }
+                },
+                {
+                    "id": "wt_kbx9IHi",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "&nbsp;"
+                    }
+                },
+                {
+                    "id": "Ac47yqLlEJ",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "M. Sc. Juan Carlos Flores López"
+                    }
+                },
+                {
+                    "id": "YfwGEtXZOm",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "DIRECTOR CARRERA DE ESTADÍSTICA"
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "ev_editorial": "Instituto de Estadística Teórica y Aplicada (IETA) - UMSA",
+        "ev_fecha_publicacion": null,
+        "ev_estado": true,
+        "created_at": "2026-11-02T16:40:17.000000Z",
+        "updated_at": "2026-11-02T16:41:39.000000Z",
+        "ev_enlace_url": "https:\/\/drive.google.com\/file\/d\/1lDzdNUQlg1A68UFVed96Fp3W1V9fCVTS\/view",
+        "portada_url": "\/storage\/61\/portada_drive_1793637619.png",
+        "archivo_url": null,
+        "enlace_url": "https:\/\/drive.google.com\/file\/d\/1lDzdNUQlg1A68UFVed96Fp3W1V9fCVTS\/view",
+        "media": [
+            {
+                "id": 61,
+                "model_type": "App\\Models\\EdicionVarianza",
+                "model_id": 22,
+                "uuid": "0c164072-dab5-460c-9c25-bf4fc41a5faf",
+                "collection_name": "ev_portada",
+                "name": "gdrive_cover_ebab5eda-d2f7-46b8-9ba6-ca6a630c894f",
+                "file_name": "portada_drive_1793637619.png",
+                "mime_type": "image\/png",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 838904,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-11-02T16:40:19.000000Z",
+                "updated_at": "2026-11-02T16:40:19.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/61\/portada_drive_1793637619.png",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 23,
+        "ev_titulo": "Varianza N° 19, Abril 2022",
+        "ev_numero": "19",
+        "ev_volumen": null,
+        "ev_anio": 2022,
+        "ev_mes": "Abril",
+        "ev_slug": "varianza-n-19-abril-2022",
+        "ev_issn_ver_impresa": "2789-3510",
+        "ev_issn_ver_electronica": "2789-3529",
+        "ev_num_art_originales": 6,
+        "ev_notas_cientificas": null,
+        "ev_num_paginas": 75,
+        "ev_doi": null,
+        "ev_presentacion": {
+            "time": "1793637744294",
+            "blocks": [
+                {
+                    "id": "qqiXJdurkn",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Es un orgullo presentar a la Revista Varianza N° 19, de la Carrera de Estadística, dependiente de la Facultad de Ciencias Puras y Naturales de la Universidad Mayor de San Andrés. La comunidad académica, conformada por docentes y estudiantes, hasta la fecha ha producido una gran cantidad de documentos de investigación, y muchos de ellos han sido publicados.A partir de la revista Varianza N°18, publicada en octubre de 2021, la periodicidad de publicación es semestral y abierta para recibir contribuciones de autores nacionales e internacionales. De esta manera, se pretende generar un espacio favorable para el ámbito académico- investigativo, de análisis, desarrollo y difusión de las técnicas y metodologías de la estadística. Por lo tanto, sus receptores son todos los profesionales e investigadores de cualquier área que involucre la temática.La Dirección a mi cargo agradece y reconoce la contribución de los investigadores nacionales e internacionales, que enviaron sus manuscritos, para su revisión y posterior publicación. Asimismo, agradecer al comité editorial nacional e internacional por sus horas de dedicación en la revisión de los manuscritos y por supuesto, agradecer al equipo editorial y al personal administrativo de la Carrera, sin cuya participación no habría sido posible la realización de la presente publicación."
+                    }
+                },
+                {
+                    "id": "-JAe2XR3Cf",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "M. Sc. Juan Carlos Flores LópezDIRECTOR CARRERA DE ESTADÍSTICA"
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "ev_editorial": "Instituto de Estadística Teórica y Aplicada (IETA) - UMSA",
+        "ev_fecha_publicacion": null,
+        "ev_estado": true,
+        "created_at": "2026-11-02T16:43:18.000000Z",
+        "updated_at": "2026-11-02T16:43:18.000000Z",
+        "ev_enlace_url": "https:\/\/drive.google.com\/file\/d\/1G6i-npIGFdYgSzRd0P5JP57jIhuYtVoc\/view",
+        "portada_url": "\/storage\/62\/portada_drive_1793637801.png",
+        "archivo_url": null,
+        "enlace_url": "https:\/\/drive.google.com\/file\/d\/1G6i-npIGFdYgSzRd0P5JP57jIhuYtVoc\/view",
+        "media": [
+            {
+                "id": 62,
+                "model_type": "App\\Models\\EdicionVarianza",
+                "model_id": 23,
+                "uuid": "e748274d-6f16-4241-b401-f7bb596e4821",
+                "collection_name": "ev_portada",
+                "name": "gdrive_cover_f0e47f06-3e69-44de-99fc-28c1b748eea6",
+                "file_name": "portada_drive_1793637801.png",
+                "mime_type": "image\/png",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 972004,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-11-02T16:43:21.000000Z",
+                "updated_at": "2026-11-02T16:43:21.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/62\/portada_drive_1793637801.png",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 24,
+        "ev_titulo": "Varianza N° 20, Octubre 2022",
+        "ev_numero": "20",
+        "ev_volumen": null,
+        "ev_anio": 2022,
+        "ev_mes": "Octubre",
+        "ev_slug": "varianza-n-20-octubre-2022",
+        "ev_issn_ver_impresa": "2789-3510",
+        "ev_issn_ver_electronica": "2789-3529",
+        "ev_num_art_originales": 7,
+        "ev_notas_cientificas": null,
+        "ev_num_paginas": 73,
+        "ev_doi": "https:\/\/doi.org\/10.53287\/pklv4371tr28c",
+        "ev_presentacion": {
+            "time": "1793637926282",
+            "blocks": [
+                {
+                    "id": "FQyz57QEHk",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "La Dirección del Instituto de Estadística Teórica y Aplicada (IETA) tiene la gran satisfacción de presentar a la comunidad de la Carrera de Estadística, a la colectividad de la Universidad Mayor de San Andrés, a los profesionales y en general a la población nacional e internacional, la Edición No 20 de la Revista Varianza.A partir de la revista Varianza N°18, publicada en octubre de 2021, la periodicidad de publicación es semestral y abierta para recibir contribuciones de autores nacionales e internacionales. De esta manera, se pretende generar un espacio favorable para el ámbito académico- investigativo, de análisis, desarrollo y difusión de las técnicas y metodologías de la estadística. Por lo tanto, sus receptores son todos los profesionales e investigadores de cualquier área que involucre la temática.Como en ediciones previas, la Revista Varianza tiene el propósito de difundir artículos científicos vinculados a la Estadística tanto teórica como aplicada. Es de esta manera que se concreta nuestro pequeño aporte a la actividad científica. Continuaremos con esta importante labor y propenderemos a que nuestra actividad científica tenga cada vez un mayor impacto positivo en el desarrollo de nuestro país, tanto a nivel local como nacional. Es oportuno informar a los lectores que estamos haciendo todos los esfuerzos por indexar nuestra Revista Varianza en SciELO Bolivia, una colección de revistas científicas electrónicas que forma parte de una de las plataformas de revistas y publicaciones científicas más importantes y reconocidas a nivel internacional, la Red SciELO. En este tránsito hacia la indexación, queremos destacar y agradecer la valiosa colaboración del grupo de profesionales, tanto internacionales como nacionales, que conforma el comité editorial de la Revista Varianza, encargado de la revisión y evaluación de cada uno de los artículos de la presente edición. Igualmente, nuestro agradecimiento a cada uno de los autores de los distintos artículos en la presente edición por difundir su trabajo de investigación científica en nuestra Revista."
+                    }
+                },
+                {
+                    "id": "QmuYFAl9xu",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "<b>Dr (c) Ramiro Coa Clemente<\/b>"
+                    }
+                },
+                {
+                    "id": "3GgV68FH3m",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "<b>DIRECTOR INSTITUTO DE ESTADÍSTICA TEÓRICA Y APLICADA<\/b>"
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "ev_editorial": "Instituto de Estadística Teórica y Aplicada (IETA) - UMSA",
+        "ev_fecha_publicacion": null,
+        "ev_estado": true,
+        "created_at": "2026-11-02T16:45:33.000000Z",
+        "updated_at": "2026-11-02T16:45:33.000000Z",
+        "ev_enlace_url": "https:\/\/drive.google.com\/file\/d\/1Bw2oPRHInoiYtj2524ygRuAr630mV0te\/view",
+        "portada_url": "\/storage\/63\/portada_drive_1793637935.png",
+        "archivo_url": null,
+        "enlace_url": "https:\/\/drive.google.com\/file\/d\/1Bw2oPRHInoiYtj2524ygRuAr630mV0te\/view",
+        "media": [
+            {
+                "id": 63,
+                "model_type": "App\\Models\\EdicionVarianza",
+                "model_id": 24,
+                "uuid": "b13e98cb-ad0a-48b6-ab50-669e7b64ea7e",
+                "collection_name": "ev_portada",
+                "name": "gdrive_cover_a56a0424-a74e-4810-af26-00e33be92e05",
+                "file_name": "portada_drive_1793637935.png",
+                "mime_type": "image\/png",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 774522,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-11-02T16:45:35.000000Z",
+                "updated_at": "2026-11-02T16:45:35.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/63\/portada_drive_1793637935.png",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 25,
+        "ev_titulo": "Varianza N° 21, Abril 2023",
+        "ev_numero": "21",
+        "ev_volumen": null,
+        "ev_anio": 2023,
+        "ev_mes": "Abril",
+        "ev_slug": "varianza-n-21-abril-2023",
+        "ev_issn_ver_impresa": "2789-3510",
+        "ev_issn_ver_electronica": "2789-3529",
+        "ev_num_art_originales": 3,
+        "ev_notas_cientificas": 1,
+        "ev_num_paginas": 63,
+        "ev_doi": "https:\/\/doi.org\/10.53287\/ygaa4750ba26d",
+        "ev_presentacion": {
+            "time": "1793638067796",
+            "blocks": [
+                {
+                    "id": "fUmGb3HJzI",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "La Dirección del Instituto de Estadística Teórica y Aplicada (IETA), nuevamente tiene el agrado de presentar a la comunidad universitaria, a los profesionales y a la población en general la Edición No 21 de la Revista Varianza.Deseamos expresar que continuamos con nuestro ahínco por cumplir con los requisitos exigidos para indexar nuestra Revista Varianza en la colección de revistas científicas SciELO Bolivia. Debemos y estamos cumpliendo con la publicación semestral de forma continua. Asimismo, deseamos informar que a partir de la presente edición, la Revista Varianza también es difundida a través del Sistema de Código Abierto (OJS, por sus siglas en inglés), un sistema apropiado para la gestión y publicación de revistas científicas en linea y que es usada por varias unidades de investigación de la Universidad Mayor de San Andrés. Puede acceder a esta página web a través de la dirección <a href=\"https:\/\/ojs.umsa.bo\/ojs\/index.php\/revistavarianza\" target=\"_blank\">https:\/\/ojs.umsa.bo\/ojs\/index.php\/revistavarianza<\/a>.Por último, nuevamente deseamos manifestar nuestro agradecimiento al grupo de profesionales que conforman el Comité Científico de la Revista Varianza por su preciada colaboración en la revisión y evaluación de los artículos científicos difundidos en la presente edición. Como también, nuestro agradecimiento a los autores de los artículos por publicar su trabajo científico en nuestra Revista."
+                    }
+                },
+                {
+                    "id": "BprnObj77k",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "<b>Dr (c) Ramiro Coa Clemente<\/b>"
+                    }
+                },
+                {
+                    "id": "mk8BmQ8PSh",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "<b>DIRECTOR INSTITUTO DE ESTADÍSTICA TEÓRICA Y APLICADA<\/b>"
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "ev_editorial": "Instituto de Estadística Teórica y Aplicada (IETA) - UMSA",
+        "ev_fecha_publicacion": null,
+        "ev_estado": true,
+        "created_at": "2026-11-02T16:48:16.000000Z",
+        "updated_at": "2026-11-02T16:48:35.000000Z",
+        "ev_enlace_url": "https:\/\/drive.google.com\/file\/d\/1UEX36iomry4_0NDEBYmS3vg2rHI5C0ei\/view",
+        "portada_url": "\/storage\/64\/portada_drive_1793638098.png",
+        "archivo_url": null,
+        "enlace_url": "https:\/\/drive.google.com\/file\/d\/1UEX36iomry4_0NDEBYmS3vg2rHI5C0ei\/view",
+        "media": [
+            {
+                "id": 64,
+                "model_type": "App\\Models\\EdicionVarianza",
+                "model_id": 25,
+                "uuid": "8c5f5d4f-ace6-406e-b768-077e50ff6049",
+                "collection_name": "ev_portada",
+                "name": "gdrive_cover_80afdf9a-e65e-469c-a4b2-edb0dc3c49dd",
+                "file_name": "portada_drive_1793638098.png",
+                "mime_type": "image\/png",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 968298,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-11-02T16:48:18.000000Z",
+                "updated_at": "2026-11-02T16:48:18.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/64\/portada_drive_1793638098.png",
+                "preview_url": ""
+            }
+        ]
+    }
+]

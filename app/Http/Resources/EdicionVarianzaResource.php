@@ -29,6 +29,8 @@ class EdicionVarianzaResource extends JsonResource
             'estado' => (bool) $this->ev_estado,
             'portada_url' => $this->portada_url,
             'archivo_url' => $this->archivo_url,
+            'ev_enlace_url' => $this->ev_enlace_url,
+            'enlace_url' => $this->ev_enlace_url,
             'articulos_count' => $this->articulos_count ?? $this->whenLoaded('articulos', fn () => $this->articulos->count()),
             'articulos_originales_count' => $this->articulos_originales_count ?? 0,
             'notas_cientificas_count' => $this->notas_cientificas_count ?? 0,

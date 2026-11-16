@@ -17,7 +17,7 @@ beforeEach(function () {
 });
 
 it('permite ver detalle de articulo con autores y especialidades sin error de relacion', function () {
-    $admin = User::factory()->create();
+    $admin = User::factory()->withTwoFactor()->create();
     $admin->assignRole('administrador');
 
     $tipo = TipoArticulo::firstOrCreate(['tar_nombre' => 'Artículo Original'], ['tar_descripcion' => 'Original', 'tar_estado' => true]);
@@ -59,7 +59,7 @@ it('permite ver detalle de articulo con autores y especialidades sin error de re
 });
 
 it('permite a un administrador aprobar un articulo pendiente y autorellena fecha de aceptacion', function () {
-    $admin = User::factory()->create();
+    $admin = User::factory()->withTwoFactor()->create();
     $admin->assignRole('administrador');
 
     $tipo = TipoArticulo::firstOrCreate(['tar_nombre' => 'Artículo Original'], ['tar_descripcion' => 'Original', 'tar_estado' => true]);
@@ -137,7 +137,7 @@ it('un autor al registrar un articulo no fija fecha de aceptacion y su recepcion
 });
 
 it('permite a un administrador rechazar un articulo con motivo', function () {
-    $admin = User::factory()->create();
+    $admin = User::factory()->withTwoFactor()->create();
     $admin->assignRole('administrador');
 
     $tipo = TipoArticulo::firstOrCreate(['tar_nombre' => 'Artículo Original'], ['tar_descripcion' => 'Original', 'tar_estado' => true]);
@@ -227,4 +227,49 @@ it('la api publica solo retorna articulos aprobados de un autor excluyendo pendi
     $dataAutorArticulos = $resAutor->json('data.articulos');
     expect(count($dataAutorArticulos))->toBe(1);
     expect($dataAutorArticulos[0]['id'])->toBe($artAprobado->id);
+});
+
+it('permite registrar y actualizar un articulo con enlace externo a la nube', function () {
+    $admin = User::factory()->withTwoFactor()->create();
+    $admin->assignRole('administrador');
+
+    $tipo = TipoArticulo::firstOrCreate(['tar_nombre' => 'Artículo Original'], ['tar_descripcion' => 'Original', 'tar_estado' => true]);
+
+    $postData = [
+        'tipo_articulo_id' => $tipo->id,
+        'art_titulo' => 'Artículo con enlace externo Drive',
+        'art_slug' => 'articulo-con-enlace-externo-drive',
+        'art_resumen' => 'Resumen sobre almacenamiento en la nube',
+        'art_fecha_recepcion' => now()->toDateString(),
+        'art_enlace_url' => 'https://drive.google.com/file/d/1234567890/view?usp=sharing',
+        'art_estado' => true,
+        'autores' => [],
+        'etiquetas' => [],
+    ];
+
+    $response = $this->actingAs($admin)->post(route('admin.articulos.store'), $postData);
+    $response->assertRedirect(route('admin.articulos.index'));
+
+    $articulo = Articulo::where('art_slug', 'articulo-con-enlace-externo-drive')->first();
+    expect($articulo)->not->toBeNull();
+    expect($articulo->art_enlace_url)->toBe('https://drive.google.com/file/d/1234567890/view?usp=sharing');
+
+    // Ahora actualizar el enlace
+    $updateData = [
+        'tipo_articulo_id' => $tipo->id,
+        'art_titulo' => 'Artículo con enlace externo Actualizado',
+        'art_slug' => 'articulo-con-enlace-externo-drive',
+        'art_resumen' => 'Resumen actualizado',
+        'art_fecha_recepcion' => now()->toDateString(),
+        'art_enlace_url' => 'https://www.dropbox.com/s/1234567890/articulo_final.pdf?dl=0',
+        'art_estado' => true,
+        'autores' => [],
+        'etiquetas' => [],
+    ];
+
+    $updateResponse = $this->actingAs($admin)->put(route('admin.articulos.update', $articulo->id), $updateData);
+    $updateResponse->assertRedirect(route('admin.articulos.index'));
+
+    $articuloActualizado = $articulo->fresh();
+    expect($articuloActualizado->art_enlace_url)->toBe('https://www.dropbox.com/s/1234567890/articulo_final.pdf?dl=0');
 });

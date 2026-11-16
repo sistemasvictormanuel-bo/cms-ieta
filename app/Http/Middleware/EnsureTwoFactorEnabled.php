@@ -22,8 +22,8 @@ class EnsureTwoFactorEnabled
             return $next($request);
         }
 
-        // Esta regla aplica para usuarios con rol 'autor' (o cualquier rol que deba forzar 2FA)
-        if ($user->hasRole('autor') && ! $user->hasEnabledTwoFactorAuthentication()) {
+        // Esta regla aplica obligatoriamente para todos los usuarios (administrador, autor, o cualquier rol)
+        if (! $user->hasEnabledTwoFactorAuthentication()) {
             // Rutas y patrones excluidos del bloqueo:
             $allowedRoutes = [
                 'two-factor.setup',
@@ -38,7 +38,7 @@ class EnsureTwoFactorEnabled
                 return $next($request);
             }
 
-            // Excluir endpoints internos de Fortify para la habilitación de 2FA
+            // Excluir endpoints internos de Fortify para la habilitación de 2FA y rutas de sistema
             if (
                 $request->is('user/two-factor-authentication*') ||
                 $request->is('user/confirmed-two-factor-authentication*') ||
@@ -47,14 +47,16 @@ class EnsureTwoFactorEnabled
                 $request->is('user/two-factor-recovery-codes*') ||
                 $request->is('user/confirm-password*') ||
                 $request->is('user/confirmed-password-status*') ||
-                $request->is('logout')
+                $request->is('logout') ||
+                $request->is('_boost*') ||
+                $request->is('sanctum/csrf-cookie')
             ) {
                 return $next($request);
             }
 
             if ($request->expectsJson()) {
                 return response()->json([
-                    'message' => 'Se requiere la configuración obligatoria de 2FA para autores.',
+                    'message' => 'Por políticas de seguridad del IETA, es obligatorio activar la autenticación de dos factores (2FA) antes de utilizar el sistema.',
                     'requires_two_factor_setup' => true,
                     'redirect' => route('two-factor.setup'),
                 ], 403);

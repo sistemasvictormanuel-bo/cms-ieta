@@ -4,7 +4,7 @@ use App\Models\CargoInstitucional;
 use App\Models\CmsGaleria;
 use App\Models\Especialidades;
 use App\Models\GradoAcademico;
-use App\Models\Instituciones;
+use App\Models\Persona;
 use App\Models\TipoAutor;
 use App\Models\User;
 use Illuminate\Http\UploadedFile;
@@ -17,7 +17,7 @@ beforeEach(function () {
 });
 
 it('permite registrar un autor creando cuenta de usuario con rol autor de forma directa', function () {
-    $admin = User::factory()->create();
+    $admin = User::factory()->withTwoFactor()->create();
     $admin->assignRole('administrador');
 
     $tipo = TipoAutor::firstOrCreate(['ta_nombre' => 'Titular'], ['ta_descripcion' => 'Autor Titular']);
@@ -51,7 +51,7 @@ it('permite registrar un autor creando cuenta de usuario con rol autor de forma 
 });
 
 it('permite registrar un autor sin crear cuenta de usuario (user_id nulo)', function () {
-    $admin = User::factory()->create();
+    $admin = User::factory()->withTwoFactor()->create();
     $admin->assignRole('administrador');
 
     $tipo = TipoAutor::firstOrCreate(['ta_nombre' => 'Invitado'], ['ta_descripcion' => 'Autor Invitado']);
@@ -75,14 +75,14 @@ it('permite registrar un autor sin crear cuenta de usuario (user_id nulo)', func
     $user = User::where('email', 'ltorres_sin_cuenta@externo.edu.bo')->first();
     expect($user)->toBeNull();
 
-    $persona = \App\Models\Persona::where('p_correo', 'ltorres_sin_cuenta@externo.edu.bo')->first();
+    $persona = Persona::where('p_correo', 'ltorres_sin_cuenta@externo.edu.bo')->first();
     expect($persona)->not->toBeNull();
     expect($persona->user_id)->toBeNull();
     expect($persona->autor)->not->toBeNull();
 });
 
 it('permite registrar personal con alta directa de usuario administrador', function () {
-    $admin = User::factory()->create();
+    $admin = User::factory()->withTwoFactor()->create();
     $admin->assignRole('administrador');
 
     $cargo = CargoInstitucional::firstOrCreate(['ci_nombre' => 'Coordinador'], ['ci_descripcion' => 'Coord']);
@@ -112,7 +112,7 @@ it('permite guardar fotografia en modulo galeria recibiendo imagen', function ()
     Storage::fake('public');
     Storage::fake('media');
 
-    $admin = User::factory()->create();
+    $admin = User::factory()->withTwoFactor()->create();
     $admin->assignRole('administrador');
 
     $file = UploadedFile::fake()->image('evento.jpg', 600, 400);

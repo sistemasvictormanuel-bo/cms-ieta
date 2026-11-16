@@ -8,6 +8,7 @@ import TextInput from '@/Components/TextInput.vue';
 import InputError from '@/Components/InputError.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import SecondaryButton from '@/Components/SecondaryButton.vue';
+import SearchableSelect from '@/Components/SearchableSelect.vue';
 import { slugify } from '@/Utils/slugify';
 
 const props = defineProps({
@@ -101,6 +102,7 @@ const form = useForm({
     art_referencias: props.articulo.art_referencias ?? '',
     art_estado: Boolean(props.articulo.art_estado),
     art_archivo: null,
+    art_enlace_url: props.articulo.art_enlace_url ?? '',
     autores: initialAuthors(),
 });
 
@@ -237,11 +239,23 @@ const authorFullName = (autor) => {
     return `Autor #${autor.id}`;
 };
 
+const tieneEnlaceExterno = ref(Boolean(props.articulo?.art_enlace_url));
+
+const autoresOptions = computed(() => {
+    return props.autores.map((autor) => ({
+        value: autor.id,
+        label: authorFullName(autor),
+        sublabel: autor.persona?.p_correo || '',
+        badge: autor.grado_academico?.ga_abreviatura || '',
+    }));
+});
+
 const submit = () => {
     const autoresFiltrados = form.autores.filter(a => a.autor_id);
     form.transform((data) => ({
         ...data,
         autores: autoresFiltrados,
+        art_enlace_url: tieneEnlaceExterno.value ? (data.art_enlace_url?.trim() || null) : null,
     })).post(route('admin.articulos.update', props.articulo.id), {
         forceFormData: true,
         preserveScroll: true,
@@ -723,19 +737,12 @@ const submit = () => {
                             >
                                 <div class="flex-1 w-full">
                                     <InputLabel :value="`Autor #${index + 1} *`" class="text-xs text-gray-500 mb-1" />
-                                    <select
+                                    <SearchableSelect
                                         v-model="authorRow.autor_id"
-                                        class="w-full text-sm font-semibold rounded-xl border-gray-200 py-2 px-3 bg-white focus:border-[#35449F] focus:ring-2 focus:ring-[#35449F]/10"
-                                    >
-                                        <option value="">-- Seleccionar Autor --</option>
-                                        <option
-                                            v-for="autor in autores"
-                                            :key="autor.id"
-                                            :value="autor.id"
-                                        >
-                                            {{ authorFullName(autor) }}
-                                        </option>
-                                    </select>
+                                        :options="autoresOptions"
+                                        placeholder="-- Seleccionar Autor --"
+                                        search-placeholder="Buscar autor por nombre o apellido..."
+                                    />
                                 </div>
 
                                 <div class="w-full sm:w-64">
@@ -773,10 +780,22 @@ const submit = () => {
 
                     <!-- Sección 3: Archivo Adjunto (PDF / Word) -->
                     <div class="space-y-4">
-                        <h2 class="text-base font-extrabold text-[#14161C] pb-2 border-b border-gray-100 flex items-center gap-2">
-                            <span class="w-6 h-6 rounded-lg bg-[#35449F]/10 text-[#35449F] flex items-center justify-center text-xs font-bold">3</span>
-                            Documento Adjunto (PDF / Word)
-                        </h2>
+                        <div class="flex items-center justify-between pb-2 border-b border-gray-100">
+                            <h2 class="text-base font-extrabold text-[#14161C] flex items-center gap-2">
+                                <span class="w-6 h-6 rounded-lg bg-[#35449F]/10 text-[#35449F] flex items-center justify-center text-xs font-bold">3</span>
+                                Documento Adjunto (PDF / Word)
+                            </h2>
+                            <label class="inline-flex items-center gap-2 cursor-pointer select-none">
+                                <input
+                                    type="checkbox"
+                                    v-model="tieneEnlaceExterno"
+                                    class="rounded border-gray-300 text-[#35449F] focus:ring-[#35449F]/20 size-4 cursor-pointer"
+                                />
+                                <span class="text-[13.5px] font-bold text-[#35449F] hover:underline">
+                                    ¿Enlace externo?
+                                </span>
+                            </label>
+                        </div>
 
                         <!-- Archivo actual si existe -->
                         <div v-if="articulo.archivo_url" class="p-4 rounded-xl bg-indigo-50/50 border border-indigo-100 flex items-center justify-between">
@@ -825,6 +844,42 @@ const submit = () => {
                             </label>
                         </div>
                         <InputError :message="form.errors.art_archivo" class="mt-1.5" />
+
+                        <!-- Campo Dinámico: Enlace Externo (Drive, Dropbox, OneDrive, etc.) -->
+                        <div v-if="tieneEnlaceExterno" class="p-4 rounded-xl bg-indigo-50/50 border border-indigo-100 space-y-2 transition-all">
+                            <div class="flex items-center justify-between">
+                                <InputLabel for="art_enlace_url" value="Enlace Externo al Documento (Google Drive, Dropbox, Repositorio, etc.)" class="text-[15px] font-bold text-gray-900" />
+                                <span class="text-[12px] font-bold text-indigo-700 bg-indigo-100 px-2.5 py-0.5 rounded-full">
+                                    Drive • Dropbox • URL Nube
+                                </span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <TextInput
+                                    id="art_enlace_url"
+                                    v-model="form.art_enlace_url"
+                                    type="url"
+                                    class="block w-full text-[15px]"
+                                    placeholder="https://drive.google.com/file/d/... o enlace compartido del artículo"
+                                />
+                                <a
+                                    v-if="form.art_enlace_url"
+                                    :href="form.art_enlace_url"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="shrink-0 px-3 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold rounded-xl transition flex items-center gap-1.5 shadow-2xs"
+                                    title="Abrir y verificar enlace externo"
+                                >
+                                    <svg class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                    <span>Probar enlace</span>
+                                </a>
+                            </div>
+                            <p class="text-[12.5px] text-gray-500 font-medium">
+                                Opcional. Puedes subir un documento local (PDF/Word), proporcionar un enlace externo a la nube, ambos o ninguno según lo decidas.
+                            </p>
+                            <InputError :message="form.errors.art_enlace_url" class="mt-1" />
+                        </div>
                     </div>
 
                     <!-- Botones de Acción -->

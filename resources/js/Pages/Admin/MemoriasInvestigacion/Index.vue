@@ -1,12 +1,13 @@
 <script setup>
 import { ref, computed } from 'vue';
-import { Link, router } from '@inertiajs/vue3';
+import { Link, router, usePage } from '@inertiajs/vue3';
 import AppLayout from '@/Layouts/AppLayout.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import DangerButton from '@/Components/DangerButton.vue';
 import SecondaryButton from '@/Components/SecondaryButton.vue';
 import ConfirmationModal from '@/Components/ConfirmationModal.vue';
 import Pagination from '@/Components/Pagination.vue';
+import ExcelImportModal from '@/Components/ExcelImportModal.vue';
 
 const props = defineProps({
     memorias: {
@@ -22,6 +23,8 @@ const props = defineProps({
         default: () => ({ search: '', autor_id: null, etiqueta: '', per_page: 10 }),
     },
 });
+
+const page = usePage();
 
 const list = computed(() => {
     if (Array.isArray(props.memorias)) {
@@ -85,15 +88,60 @@ const deleteItem = () => {
     });
 };
 
-const formatDate = (dateStr) => {
-    if (!dateStr) return '—';
-    const cleanDate = dateStr.includes('T') ? dateStr.split('T')[0] : dateStr;
-    const parts = cleanDate.split('-');
-    if (parts.length === 3) {
-        return `${parts[2]}/${parts[1]}/${parts[0]}`;
-    }
-    return cleanDate;
-};
+const showImportModal = ref(false);
+
+const exportUrl = computed(() => {
+    const params = new URLSearchParams();
+    if (search.value) params.append('search', search.value);
+    if (autorId.value) params.append('autor_id', autorId.value);
+    if (etiqueta.value) params.append('etiqueta', etiqueta.value);
+    const qs = params.toString();
+    return route('admin.memorias-investigacion.export') + (qs ? `?${qs}` : '');
+});
+
+const memoriasColumns = [
+    { name: 'titulo', label: 'Título', required: true, desc: 'Nombre del proyecto o memoria de investigación', ejemplo: 'Análisis estadístico del crecimiento poblacional estudiantil en la UMSA' },
+    { name: 'autor', label: 'Investigador / Docente', required: true, desc: 'Nombre del docente o autor responsable', ejemplo: 'M.Sc. Nicolás Chávez Quisbert' },
+    { name: 'gestion', label: 'Gestión / Año', required: true, desc: 'Año académico de la investigación (ej: 2015, 2024)', ejemplo: '2015' },
+    { name: 'etiqueta', label: 'Tipo / Etiqueta', required: false, desc: 'Clasificación ("Proyecto de Investigación", "Proyecto de Interacción Social", "Memoria Anual")', ejemplo: 'Proyecto de Investigación' },
+    { name: 'descripcion', label: 'Descripción / Resumen', required: false, desc: 'Abstract, resolución HCF o notas de archivo físico', ejemplo: 'Aprobado con Resolución del HCF Nº 780/2015. Documento en físico.' },
+    { name: 'enlace_url', label: 'Enlace Nube (Drive)', required: false, desc: 'Enlace externo a Google Drive o repositorio digital', ejemplo: 'https://drive.google.com/file/d/...' },
+];
+
+const sampleRows = [
+    {
+        titulo: 'Análisis estadístico del crecimiento poblacional estudiantil en la Universidad Mayor de San Andrés',
+        autor: 'M.Sc. Nicolás Chávez Quisbert',
+        gestion: 2015,
+        etiqueta: 'Proyecto de Investigación',
+        descripcion: 'Aprobado con Resolución del HCF Nº 780/2015. Documento en físico existente en los archivos de la Carrera.',
+        enlace_url: 'https://drive.google.com/file/d/1k0-XxsSjMAefO9nJYz6JispbUhxPDWNN/view',
+    },
+    {
+        titulo: 'Curso Computacional modelación y Simulación de Series de Tiempo Univariadas',
+        autor: 'M.Sc. Nicolás Chávez Quisbert',
+        gestion: 2015,
+        etiqueta: 'Proyecto de Interacción Social',
+        descripcion: 'Resolución del HCF Nº 780/2015. Proyecto de Interacción Social entregado como informe físico.',
+        enlace_url: '',
+    },
+    {
+        titulo: 'Medición de la Disparidad Salarial en las Regiones del Departamento de La Paz',
+        autor: 'Lic. Melisa Abalos Choque',
+        gestion: 2015,
+        etiqueta: 'Proyecto de Investigación',
+        descripcion: 'Aprobado con Resolución del HCF Nº 780/2015. Se encuentra el proyecto en físico.',
+        enlace_url: '',
+    },
+    {
+        titulo: 'Aplicación de las Series de Tiempo Univariadas para la Modelación de Datos del COVID en Bolivia',
+        autor: 'M.Sc. Nicolás Chávez Quisbert',
+        gestion: 2023,
+        etiqueta: 'Proyecto de Investigación',
+        descripcion: 'Modelación estocástica y proyecciones departamentales.',
+        enlace_url: 'https://drive.google.com/file/d/1FxCXo_p6F1_RNahq4XRtmhg0retgldmB/view',
+    },
+];
 </script>
 
 <template>
@@ -105,21 +153,68 @@ const formatDate = (dateStr) => {
                         Memorias de Investigación
                     </h1>
                     <p class="text-[14.5px] text-gray-600 font-medium">
-                        Repositorio de memorias anuales, tesis y monografías institucionales.
+                        Repositorio de proyectos de investigación, memorias anuales y producción científica docente.
                     </p>
                 </div>
-                <Link :href="route('admin.memorias-investigacion.create')">
-                    <PrimaryButton class="cursor-pointer text-[15px] font-bold px-4 py-2.5">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                <div class="flex flex-wrap items-center gap-2 shrink-0">
+                    <!-- Exportar Excel -->
+                    <a
+                        :href="exportUrl"
+                        class="inline-flex items-center gap-1.5 px-3.5 py-2.5 text-xs font-bold text-gray-700 bg-white hover:bg-gray-50 border border-gray-200 rounded-xl shadow-xs transition-colors whitespace-nowrap cursor-pointer"
+                        download
+                        title="Exportar registros a formato Excel"
+                    >
+                        <svg class="size-4 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                         </svg>
-                        Nueva Memoria
-                    </PrimaryButton>
-                </Link>
+                        <span class="hidden sm:inline">Exportar Excel</span>
+                        <span class="sm:hidden">Excel</span>
+                    </a>
+
+                    <!-- Importar Excel / Plantilla -->
+                    <button
+                        type="button"
+                        @click="showImportModal = true"
+                        class="inline-flex items-center gap-1.5 px-3.5 py-2.5 text-xs font-bold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 rounded-xl shadow-xs transition-colors whitespace-nowrap cursor-pointer"
+                        title="Cargar memorias masivamente desde Excel o descargar la plantilla"
+                    >
+                        <svg class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+                        </svg>
+                        <span class="hidden sm:inline">Importar / Plantilla</span>
+                        <span class="sm:hidden">Plantilla</span>
+                    </button>
+
+                    <Link :href="route('admin.memorias-investigacion.create')">
+                        <PrimaryButton class="cursor-pointer text-[15px] font-bold px-4 py-2.5">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                            </svg>
+                            Nueva Memoria
+                        </PrimaryButton>
+                    </Link>
+                </div>
             </div>
         </template>
 
         <div class="space-y-6 pb-12">
+            <!-- Alerta de observaciones de importación si existen -->
+            <div
+                v-if="page.props.flash?.import_errors?.length"
+                class="bg-amber-50 border border-amber-200 rounded-2xl p-4 text-amber-900 space-y-2 shadow-xs"
+            >
+                <div class="flex items-center gap-2 font-bold text-sm">
+                    <svg class="size-5 text-amber-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                    </svg>
+                    <span>Observaciones registradas durante la importación desde Excel:</span>
+                </div>
+                <ul class="list-disc list-inside text-xs space-y-1 text-amber-800 font-mono">
+                    <li v-for="(err, eIdx) in page.props.flash.import_errors" :key="eIdx">
+                        {{ err }}
+                    </li>
+                </ul>
+            </div>
             <!-- Filtros y Buscador -->
             <div class="bg-white rounded-2xl p-4 shadow-xs border border-gray-100 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
                 <div class="relative flex-1">
@@ -146,6 +241,24 @@ const formatDate = (dateStr) => {
                     </button>
                 </div>
 
+                <!-- Filtro por Etiqueta -->
+                <div class="flex items-center gap-2 shrink-0">
+                    <label for="etiqueta_filter" class="text-xs font-bold text-gray-500 uppercase tracking-wider">
+                        Categoría:
+                    </label>
+                    <select
+                        id="etiqueta_filter"
+                        v-model="etiqueta"
+                        @change="applyFilters"
+                        class="rounded-xl border-gray-200 py-2 px-3 text-xs font-semibold focus:border-[#35449F] focus:ring-[#35449F]/20 bg-gray-50/50 cursor-pointer"
+                    >
+                        <option value="">Todas</option>
+                        <option value="Proyecto de Investigación">Proyecto de Investigación</option>
+                        <option value="Proyecto de Interacción Social">Proyecto de Interacción Social</option>
+                        <option value="Memoria Anual">Memoria Anual</option>
+                    </select>
+                </div>
+
                 <!-- Filtro por Autor -->
                 <div class="flex items-center gap-2 shrink-0">
                     <label for="autor_filter" class="text-xs font-bold text-gray-500 uppercase tracking-wider">
@@ -155,12 +268,31 @@ const formatDate = (dateStr) => {
                         id="autor_filter"
                         v-model="autorId"
                         @change="applyFilters"
-                        class="rounded-xl border-gray-200 py-2 px-3 text-xs font-semibold focus:border-[#35449F] focus:ring-[#35449F]/20 bg-gray-50/50"
+                        class="rounded-xl border-gray-200 py-2 px-3 text-xs font-semibold focus:border-[#35449F] focus:ring-[#35449F]/20 bg-gray-50/50 cursor-pointer max-w-[200px] truncate"
                     >
                         <option value="">Todos los autores</option>
                         <option v-for="autor in autores" :key="autor.id" :value="autor.id">
                             {{ autor.persona ? `${autor.persona.p_nombre} ${autor.persona.p_apellido_paterno || ''}`.trim() : `Autor #${autor.id}` }}
                         </option>
+                    </select>
+                </div>
+
+                <!-- Selector de registros por página -->
+                <div class="flex items-center gap-2 shrink-0">
+                    <label for="per_page_filter" class="text-xs font-bold text-gray-500 uppercase tracking-wider">
+                        Mostrar:
+                    </label>
+                    <select
+                        id="per_page_filter"
+                        v-model="perPage"
+                        @change="applyFilters"
+                        class="rounded-xl border-gray-200 py-2 px-3 text-xs font-semibold focus:border-[#35449F] focus:ring-[#35449F]/20 bg-gray-50/50 cursor-pointer"
+                    >
+                        <option :value="10">10</option>
+                        <option :value="25">25</option>
+                        <option :value="50">50</option>
+                        <option :value="100">100</option>
+                        <option :value="200">Todos (200)</option>
                     </select>
                 </div>
             </div>
@@ -175,7 +307,7 @@ const formatDate = (dateStr) => {
                                 <th class="py-3.5 px-6">Título de la Investigación</th>
                                 <th class="py-3.5 px-6">Autor Responsable</th>
                                 <th class="py-3.5 px-6 text-center">Etiqueta</th>
-                                <th class="py-3.5 px-6 text-center">Fecha</th>
+                                <th class="py-3.5 px-6 text-center">Gestión</th>
                                 <th class="py-3.5 px-6 text-center">Archivos / Enlaces</th>
                                 <th class="py-3.5 px-6 text-right">Acciones</th>
                             </tr>
@@ -225,8 +357,8 @@ const formatDate = (dateStr) => {
                                 </td>
 
                                 <td class="py-4 px-6 text-center">
-                                    <span class="font-mono text-xs font-bold text-gray-600">
-                                        {{ formatDate(item.mdi_fecha) }}
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-md font-mono text-xs font-bold bg-blue-50 text-blue-700 border border-blue-100">
+                                        {{ item.mdi_anio || item.mdi_fecha || '—' }}
                                     </span>
                                 </td>
 
@@ -312,8 +444,8 @@ const formatDate = (dateStr) => {
                     </table>
                 </div>
 
-                <div v-if="memorias?.links" class="p-4 border-t border-gray-100 flex items-center justify-between">
-                    <Pagination :links="memorias.links" />
+                <div v-if="memorias?.meta || memorias?.links || memorias?.total" class="p-4 bg-gray-50/50">
+                    <Pagination :meta="memorias" />
                 </div>
             </div>
         </div>
@@ -328,5 +460,17 @@ const formatDate = (dateStr) => {
                 <DangerButton @click="deleteItem" class="cursor-pointer">Eliminar</DangerButton>
             </template>
         </ConfirmationModal>
+
+        <!-- Modal de Importación Masiva desde Excel -->
+        <ExcelImportModal
+            :show="showImportModal"
+            title="Importación Masiva de Memorias y Proyectos"
+            subtitle="Carga y actualiza investigaciones docentes y memorias masivamente desde un archivo Excel (.xlsx o .csv)."
+            :plantilla-url="route('admin.memorias-investigacion.plantilla')"
+            :import-url="route('admin.memorias-investigacion.import')"
+            :columns="memoriasColumns"
+            :sample-rows="sampleRows"
+            @close="showImportModal = false"
+        />
     </AppLayout>
 </template>

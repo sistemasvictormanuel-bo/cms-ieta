@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\TipoArticulo;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class TipoArticuloSeeder extends Seeder
 {
@@ -38,6 +39,14 @@ class TipoArticuloSeeder extends Seeder
                 ['id' => $tipo['id']],
                 $tipo
             );
+        }
+
+        if (DB::getDriverName() === 'pgsql') {
+            DB::statement("SELECT setval(pg_get_serial_sequence('tipo_articulos', 'id'), COALESCE(MAX(id), 1)) FROM tipo_articulos;");
+        }
+
+        if (DB::getDriverName() === 'pgsql') {
+            DB::statement("SELECT setval(pg_get_serial_sequence('tipo_articulos', 'id'), COALESCE(MAX(id), 1)) FROM tipo_articulos;");
         }
     }
 }

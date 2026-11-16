@@ -63,11 +63,22 @@ class ArticulosImport implements SkipsEmptyRows, ToCollection, WithHeadingRow
 
                     // 2. Edición de Revista Varianza
                     $edicionId = null;
-                    $edicionVal = trim($row['edicion'] ?? $row['edicion_varianza'] ?? '');
+                    $edicionVal = trim((string) ($row['edicion'] ?? $row['edicion_varianza'] ?? ''));
                     if (! empty($edicionVal)) {
-                        $edicion = EdicionVarianza::where('ev_numero', $edicionVal)
-                            ->orWhereRaw('LOWER(ev_titulo) LIKE ?', ['%'.mb_strtolower($edicionVal).'%'])
-                            ->first();
+                        $edicion = null;
+                        if (is_numeric($edicionVal)) {
+                            $edicion = EdicionVarianza::where('ev_numero', (string) (int) $edicionVal)->first();
+                        } else {
+                            if (preg_match('/(?:n[°º\.]?|edici[oó]n|volumen|vol[\.]?)\s*(\d+)/i', $edicionVal, $matches)) {
+                                $edicion = EdicionVarianza::where('ev_numero', (string) (int) $matches[1])->first();
+                            }
+                            if (! $edicion) {
+                                $edicion = EdicionVarianza::whereRaw('LOWER(ev_titulo) = ?', [mb_strtolower($edicionVal)])
+                                    ->orWhereRaw('LOWER(ev_titulo) LIKE ?', ['%'.mb_strtolower($edicionVal).'%'])
+                                    ->first();
+                            }
+                        }
+
                         if ($edicion) {
                             $edicionId = $edicion->id;
                         }
@@ -82,34 +93,107 @@ class ArticulosImport implements SkipsEmptyRows, ToCollection, WithHeadingRow
                     $fechaRecepcion = $this->parseExcelDate($row['fecha_recepcion'] ?? null) ?? Carbon::now();
                     $fechaAceptado = $this->parseExcelDate($row['fecha_aceptado'] ?? null);
 
-                    // 5. Generar Slug Único
-                    $baseSlug = Str::slug($titulo);
-                    $slug = $baseSlug ?: 'articulo-'.uniqid();
-                    $counter = 1;
-                    while (Articulo::where('art_slug', $slug)->exists()) {
-                        $slug = "{$baseSlug}-{$counter}";
-                        $counter++;
+                    // 5. Enlace Externo (URL opcional a Google Drive, Dropbox, Repositorio, etc.)
+                    $enlaceRaw = $row['enlace_url']
+                        ?? $row['enlace_externo']
+                        ?? $row['enlace']
+                        ?? $row['url']
+                        ?? $row['link']
+                        ?? $row['drive']
+                        ?? $row['art_enlace_url']
+                        ?? $row['enlace_externo_url']
+                        ?? '';
+
+                    $enlaceUrl = trim((string) $enlaceRaw);
+                    if (! empty($enlaceUrl)) {
+                        if (! preg_match('/^https?:\/\//i', $enlaceUrl)) {
+                            if (str_starts_with($enlaceUrl, 'www.') || str_starts_with($enlaceUrl, 'drive.google.com') || str_contains($enlaceUrl, '.')) {
+                                $enlaceUrl = 'https://'.$enlaceUrl;
+                            }
+                        }
+                        if (! filter_var($enlaceUrl, FILTER_VALIDATE_URL)) {
+                            $enlaceUrl = null;
+                        }
+                    } else {
+                        $enlaceUrl = null;
                     }
 
-                    // 6. Crear Artículo
-                    $articulo = Articulo::create([
-                        'tipo_articulo_id' => $tipoId,
-                        'edicion_varianza_id' => $edicionId,
-                        'art_titulo' => $titulo,
-                        'art_slug' => $slug,
-                        'art_resumen' => $row['resumen'] ?? null,
-                        'art_abstracto' => $row['abstract'] ?? $row['art_abstracto'] ?? null,
-                        'art_fecha_recepcion' => $fechaRecepcion,
-                        'art_fecha_aceptado' => $fechaAceptado,
-                        'art_orcid' => $row['orcid'] ?? null,
-                        'art_doi' => $row['doi'] ?? null,
-                        'art_pag_inicio' => $pagInicio,
-                        'art_pag_fin' => $pagFin,
-                        'art_num_paginas' => $numPaginas,
-                        'art_estado' => true,
-                        'art_referencias' => $row['referencias'] ?? null,
-                        'art_vistas' => 0,
-                    ]);
+                    // 6. Generar Slug Único o Actualizar Artículo Existente
+                    // Buscamos primero por título exacto (los títulos de papers son únicos)
+                    $articuloExistente = Articulo::whereRaw('LOWER(TRIM(art_titulo)) = ?', [mb_strtolower($titulo)])->first();
+
+                    if ($articuloExistente) {
+                        $updateData = [];
+                        if (! empty($enlaceUrl)) {
+                            $updateData['art_enlace_url'] = $enlaceUrl;
+                        }
+                        if ($tipoId) {
+                            $updateData['tipo_articulo_id'] = $tipoId;
+                        }
+                        if ($edicionId) {
+                            $updateData['edicion_varianza_id'] = $edicionId;
+                        }
+                        if ($pagInicio) {
+                            $updateData['art_pag_inicio'] = $pagInicio;
+                        }
+                        if ($pagFin) {
+                            $updateData['art_pag_fin'] = $pagFin;
+                        }
+                        if (! empty($row['doi'])) {
+                            $updateData['art_doi'] = $row['doi'];
+                        }
+                        if (! empty($row['orcid'])) {
+                            $updateData['art_orcid'] = $row['orcid'];
+                        }
+                        if (! empty($row['resumen']) && $row['resumen'] !== 'test') {
+                            $updateData['art_resumen'] = $row['resumen'];
+                        }
+                        $abstractVal = $row['abstract'] ?? $row['art_abstracto'] ?? null;
+                        if (! empty($abstractVal) && $abstractVal !== 'test') {
+                            $updateData['art_abstracto'] = $abstractVal;
+                        }
+                        if (! empty($row['referencias'])) {
+                            $updateData['art_referencias'] = $row['referencias'];
+                        }
+                        if ($fechaRecepcion) {
+                            $updateData['art_fecha_recepcion'] = $fechaRecepcion;
+                        }
+                        if ($fechaAceptado) {
+                            $updateData['art_fecha_aceptado'] = $fechaAceptado;
+                        }
+                        if (! empty($updateData)) {
+                            $articuloExistente->update($updateData);
+                        }
+                        $articulo = $articuloExistente;
+                    } else {
+                        $baseSlug = Str::slug($titulo);
+                        $slug = $baseSlug ?: 'articulo-'.uniqid();
+                        $counter = 1;
+                        while (Articulo::where('art_slug', $slug)->exists()) {
+                            $slug = "{$baseSlug}-{$counter}";
+                            $counter++;
+                        }
+
+                        $articulo = Articulo::create([
+                            'tipo_articulo_id' => $tipoId,
+                            'edicion_varianza_id' => $edicionId,
+                            'art_titulo' => $titulo,
+                            'art_slug' => $slug,
+                            'art_resumen' => $row['resumen'] ?? null,
+                            'art_abstracto' => $row['abstract'] ?? $row['art_abstracto'] ?? null,
+                            'art_fecha_recepcion' => $fechaRecepcion,
+                            'art_fecha_aceptado' => $fechaAceptado,
+                            'art_orcid' => $row['orcid'] ?? null,
+                            'art_doi' => $row['doi'] ?? null,
+                            'art_pag_inicio' => $pagInicio,
+                            'art_pag_fin' => $pagFin,
+                            'art_num_paginas' => $numPaginas,
+                            'art_estado' => true,
+                            'art_referencias' => $row['referencias'] ?? null,
+                            'art_enlace_url' => $enlaceUrl,
+                            'art_vistas' => 0,
+                        ]);
+                    }
 
                     // 7. Sincronizar Edición Pivot si aplica
                     if ($edicionId) {
@@ -130,14 +214,24 @@ class ArticulosImport implements SkipsEmptyRows, ToCollection, WithHeadingRow
                             if (empty($tagNombre)) {
                                 continue;
                             }
-                            $etiqueta = EtiquetaArt::firstOrCreate(
-                                ['ea_nombre' => $tagNombre],
-                                ['ea_slug' => Str::slug($tagNombre)]
-                            );
+                            $tagSlug = Str::slug($tagNombre);
+                            $etiqueta = EtiquetaArt::where('ea_slug', $tagSlug)
+                                ->orWhereRaw('LOWER(TRIM(ea_nombre)) = ?', [mb_strtolower($tagNombre)])
+                                ->first();
+
+                            if (! $etiqueta) {
+                                $etiqueta = EtiquetaArt::create([
+                                    'ea_nombre' => $tagNombre,
+                                    'ea_slug' => $tagSlug ?: 'tag-'.uniqid(),
+                                ]);
+                            }
                             $tagIds[] = $etiqueta->id;
                         }
                         if (! empty($tagIds)) {
-                            $articulo->etiquetas()->sync($tagIds);
+                            // Si ya tiene etiquetas previas (ej. cargadas a mano), conservamos las existentes
+                            if (! $articulo->etiquetas()->exists()) {
+                                $articulo->etiquetas()->sync($tagIds);
+                            }
                         }
                     }
 
@@ -159,12 +253,15 @@ class ArticulosImport implements SkipsEmptyRows, ToCollection, WithHeadingRow
                         }
 
                         if (! empty($autorIds)) {
-                            $defaultParticipacionId = TipoParticipacion::value('id') ?? TipoParticipacion::create(['tp_nombre' => 'Autor'])->id;
-                            $syncData = [];
-                            foreach ($autorIds as $autorId) {
-                                $syncData[$autorId] = ['tipo_participaciones_id' => $defaultParticipacionId];
+                            // Si el artículo ya tiene autores asignados a mano, conservamos sus roles y asignaciones
+                            if (! $articulo->autores()->exists()) {
+                                $defaultParticipacionId = TipoParticipacion::value('id') ?? TipoParticipacion::create(['tp_nombre' => 'Autor'])->id;
+                                $syncData = [];
+                                foreach ($autorIds as $autorId) {
+                                    $syncData[$autorId] = ['tipo_participaciones_id' => $defaultParticipacionId];
+                                }
+                                $articulo->autores()->sync($syncData);
                             }
-                            $articulo->autores()->sync($syncData);
                         }
                     }
 

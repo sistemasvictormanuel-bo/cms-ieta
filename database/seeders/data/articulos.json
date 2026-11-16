@@ -1,0 +1,713 @@
+[
+    {
+        "id": 8,
+        "art_titulo": "Desigualdades en los ingresos de adultos mayores bolivianos",
+        "art_slug": "desigualdades-en-los-ingresos-de-adultos-mayores-bolivianos",
+        "art_resumen": "Esta investigación tiene como objetivo estudiar las desigualdades en ingresos de los adultos mayores bolivianos con información obtenida en la encuesta de hogares realizada por el Instituto Nacional de Estadística en el año 2021. En un marco de bajos ingresos percibidos por una fracción importante de los adultos mayores, inferiores a un salario mínimo, sean activos o inactivos económicamente, se constatan importantes desigualdades. Con base en resultados de la regresión cuantil, se evidencia que (i) los ingresos de los ocupados son significativamente superiores a los de los inactivos, en todos los niveles de ingresos, ampliándose la brecha aún más en niveles de ingresos altos; (ii) los ingresos de amas de casa y de los de edad avanzada son significativamente inferiores a los que perciben los ocupados, en toda la distribución de ingresos; (iii) el efecto de la educación sobre el ingreso crece continuamente a medida que los ingresos pasan de niveles bajos a niveles altos, pero mucho más en niveles de ingresos altos; (iv) luego de controlar el efecto de otras variables, desaparecen las brechas entre los ingresos de hombres y mujeres; y (v) lo propio acontece con la edad de los adultos mayores, no existen brechas intergeneracionales en cuanto a los ingresos. Se recomienda crear las bases para una transición gradual hacia empleos formales y dignos, diseñar políticas y programas para aprovechar el actual bono demográfico, incrementar montos y focalizar grupos de adultos mayores beneficiarios de pensiones no contributivas, y asegurar la culminación de la educación superior, incluida la educación técnica.",
+        "art_abstracto": "This research aims to study the income inequalities of Bolivians elderlys with information obtained in the household survey carried out by the National Institute of Statistics in 2021. In a framework of low income received by a significant fraction of elderlys, less than one minimum wage, whether they are economically active or inactive, important inequalities are observed. Based on the results of the quantile regression, it is evident that (i) the incomes of the employed are significantly higher than that of the inactive, at all income levels, with the gap widening even more at high income levels; (ii) the incomes of housewives and the elderlys are significantly lower than that received by the employed, across the entire income distribution; (iii) the effect of education on income grows continuously as income moves from low to high levels, but much more at high income levels; (iv) after controlling for the effect of other variables, the gaps between men's and women's income disappear; and (v) the same happens with the age of elderlys, there are no intergenerational gaps in terms of income. It is recommended to create the basis for a gradual transition towards formal and decent jobs, design policies and programs to take advantage of the current demographic bonus, increase amounts and focus on groups of elderlys who benefit from non-contributory pensions, and ensure the completion of higher education, including technical education.",
+        "art_fecha_recepcion": "2024-08-25",
+        "art_fecha_aceptado": "2024-09-16",
+        "art_orcid": "0000-0002-2955-0204; 0009-0009-6633-6264",
+        "art_doi": "10.53287\/tewb7429mf77s",
+        "art_pag_inicio": 1,
+        "art_pag_fin": 10,
+        "art_num_paginas": 10,
+        "art_estado": true,
+        "art_referencias": null,
+        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1kj3v1JLoX3jeooqCDa_I122s-MIDMf3S\/view?usp=drive_link",
+        "art_vistas": 4,
+        "tipo_articulo_id": 1,
+        "edicion_varianza_id": 2,
+        "estado_revision": "aprobado",
+        "autores_pivot": [
+            {
+                "autor_id": 21,
+                "tipo_participaciones_id": 2
+            },
+            {
+                "autor_id": 36,
+                "tipo_participaciones_id": 2
+            }
+        ],
+        "etiquetas": [
+            "Virtual Clasess",
+            "Aprendizajes"
+        ]
+    },
+    {
+        "id": 9,
+        "art_titulo": "Análisis factorial dinámico aplicado a la medición de riesgo de liquidez",
+        "art_slug": "analisis-factorial-dinamico-aplicado-a-la-medicion-de-riesgo-de-liquidez",
+        "art_resumen": "Actualmente, hechos como la intervención del Banco Fassil en 2023 ponen en el centro de atención el monitorio de indicadores de riesgos financieros, siendo el riesgo de liquidez uno de los más importantes. Esta tarea ha sido abordada en el medio nacional mediante técnicas muy variadas; sin embargo, la vasta cantidad de estas mediciones requiere la aplicación de métodos multivariados de reducción de dimensión, como el análisis factorial. Este método es denominado análisis factorial dinámico por considerar la dimensión temporal. Su aplicación para cuantificar un proxy del riesgo de liquidez en los Bancos Múltiples permitió cuantificar un indicador proxy del riesgo de liquidez, el cual explica el 36% de la varianza de los indicadores financieros analizados y, además, permite dar alertas tempranas sobre riesgos de liquidez latentes previos.",
+        "art_abstracto": "Currently, events such as the intervention of Banco Fassil in 2023 put the monitoring of financial risk indicators in the spotlight, with liquidity risk being one of the most important. This task has been addressed in the national environment through a wide variety of techniques; however, the vast amount of these measurements requires the application of multivariate dimension reduction methods, such as factor analysis. This method is called dynamic factor analysis because it considers the time dimension. Its application to quantify a proxy of liquidity risk in Multiple Banks allowed quantifying a proxy indicator of liquidity risk, which explains 36% of the variance of the financial indicators analyzed and, in addition, allows early warnings on previous latent liquidity risks.",
+        "art_fecha_recepcion": "2024-08-23",
+        "art_fecha_aceptado": "2024-09-20",
+        "art_orcid": "0000-0003-2557-7079",
+        "art_doi": "10.53287\/zrsb8936ro76t",
+        "art_pag_inicio": 1,
+        "art_pag_fin": 9,
+        "art_num_paginas": 9,
+        "art_estado": true,
+        "art_referencias": null,
+        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1uR0L8MrbL3ba7aZJq_kXX9hwWZL1Tluc\/view?usp=drive_link",
+        "art_vistas": 2,
+        "tipo_articulo_id": 1,
+        "edicion_varianza_id": 2,
+        "estado_revision": "aprobado",
+        "autores_pivot": [
+            {
+                "autor_id": 22,
+                "tipo_participaciones_id": 1
+            }
+        ],
+        "etiquetas": [
+            "Factorial dinámico",
+            "Sistema financiero",
+            "Método multivariante"
+        ]
+    },
+    {
+        "id": 10,
+        "art_titulo": "Determinantes del rendimiento de la qañawa",
+        "art_slug": "determinantes-del-rendimiento-de-la-qanawa",
+        "art_resumen": "El objetivo del presente trabajo de investigación es el de identificar y determinar los principales factores del rendimiento de la qañawa, con la finalidad de aportar información para su mejoramiento genético posterior. Los datos fueron obtenidos del Banco Nacional de Germoplasma de Granos Alto Andinos de la localidad de Kallutaca. Mediante un análisis de regresión múltiple se seleccionaron las variables que más afectan el rendimiento de la qañawa, medida por el peso del grano. También se analizaron los coeficientes de sendero para determinar los efectos directos e indirectos de ocho variables en seis variedades de qañawa. Los resultados revelan que el número de ramas y el peso de broza son los factores más influyentes en el rendimiento de la qañawa, lo que sugiere su uso en programas de mejoramiento genético. El estudio concluye que la variación en el peso de grano está principalmente explicada por estos dos factores, lo que proporciona una base para mejorar la productividad de la especie en condiciones adversas del altiplano.",
+        "art_abstracto": "The objective of this research is to identify and determine the main factors of qañawa yield, in order to provide information for its subsequent genetic improvement. The data were obtained from the germplasm bank in the town of Kallutaca. Using a multiple regression analysis, the variables that most affect qañawa yield, measured by grain weight, were selected. Path coefficients were also analyzed to determine the direct and indirect effects of eight variables on six qañawa varieties. The results reveal that the number of branches and the weight of the brushwood are the most influential factors in qañawa yield, suggesting their use in genetic improvement programs. The study concludes that the variation in grain weight is mainly explained by these two factors, which provides a basis for improving the productivity of the species under adverse conditions of the highlands.",
+        "art_fecha_recepcion": "2026-11-08",
+        "art_fecha_aceptado": null,
+        "art_orcid": "0009-0004-2944-6871",
+        "art_doi": "10.53287\/dkut5788ek82x",
+        "art_pag_inicio": 1,
+        "art_pag_fin": 9,
+        "art_num_paginas": 9,
+        "art_estado": true,
+        "art_referencias": null,
+        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1325h1mfsccPe-wXzQzw7FBi-o-U27Wku\/view?usp=drive_link",
+        "art_vistas": 6,
+        "tipo_articulo_id": 2,
+        "edicion_varianza_id": 2,
+        "estado_revision": "aprobado",
+        "autores_pivot": [
+            {
+                "autor_id": 32,
+                "tipo_participaciones_id": 1
+            }
+        ],
+        "etiquetas": [
+            "Qañawa,",
+            "Coeficientes de sendero",
+            "Regresión lineal"
+        ]
+    },
+    {
+        "id": 11,
+        "art_titulo": "¿Cuál es el modelo más apropiado para analizar datos de sobrevivencia infantil en Bolivia?",
+        "art_slug": "cual-es-el-modelo-mas-apropiado-para-analizar-datos-de-sobrevivencia-infantil-en-bolivia",
+        "art_resumen": "El objetivo principal de este estudio es determinar cuál es el modelo más apropiado para analizar datos de sobrevivencia infantil en Bolivia. Además del modelo semiparamétrico de riesgos proporcionales de Cox, se evalúan tres modelos paramétricos: exponencial, Weibull y gamma generalizado. Para abordar el objetivo se comparan tres resultados: los coeficientes estimados a partir de los distintos modelos, la significancia de las covariables en términos del valor-p y el criterio de información de Akaike (AIC). Se concluye que el modelo Weibull es más apropiado que el modelo de Cox para analizar datos de sobrevivencia infantil en Bolivia, si bien ambos modelos conducen a resultados parecidos. También se recomienda contrastar siempre los resultados de los modelos paramétricos con los del modelo de Cox.",
+        "art_abstracto": "The main objective of this study is to determine which is the most appropriate model to analyze child survival data in Bolivia. In addition to Cox’s proportional hazards semiparametric model, three parametric models are evaluated: exponential, Weibull, and generalized gamma. To address the objective, three results are compared: the coefficients estimated from the different models, the significance of the covariates in terms of the p-value, and the Akaike Information Criterion (AIC). It is concluded that the Weibull model is more appropriate than the Cox model to analyze child survival data in Bolivia, although both models lead to similar results. It is also recommended to always contrast the results of the parametric models with those of the Cox model.",
+        "art_fecha_recepcion": "2023-01-28",
+        "art_fecha_aceptado": "2023-04-03",
+        "art_orcid": "0000-0002-2955-0204",
+        "art_doi": "10.53287\/skjt1649td12r",
+        "art_pag_inicio": null,
+        "art_pag_fin": null,
+        "art_num_paginas": null,
+        "art_estado": true,
+        "art_referencias": null,
+        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1lPf3zUWmonHMh5xIwUWQ-zP2gUQ1bCSc\/view?usp=sharing",
+        "art_vistas": 0,
+        "tipo_articulo_id": 1,
+        "edicion_varianza_id": 25,
+        "estado_revision": "aprobado",
+        "autores_pivot": [
+            {
+                "autor_id": 178,
+                "tipo_participaciones_id": 1
+            }
+        ],
+        "etiquetas": [
+            "Modelo de Cox",
+            "Modelos paramétricos",
+            "Modelo más apropiado para datos de sobrevivencia"
+        ]
+    },
+    {
+        "id": 12,
+        "art_titulo": "Convergencia regional de hogares, Bolivia 1999-2021",
+        "art_slug": "convergencia-regional-de-hogares-bolivia-1999-2021",
+        "art_resumen": "La convergencia regional es un tema ampliamente abordado, sin embargo, el análisis en el caso boliviano se restringe a indicadores macroeconómicos como el PIB per cápita, o el índice de NBI. En el presente trabajo se describe la existencia de la convergencia de tipo sigma (σ) y la convergencia beta (β), utilizando los métodos convencionales, y complementando con el manejo de datos de panel basándonos en el Índice de Riqueza (IR) en base al Análisis de Componentes Principales (ACP) usando variables del hogar y de la población. Permitiendo demostrar la existencia de convergencia de tipo sigma entre departamentos, basada en diferentes medidas de dispersión, además de verificar la evidencia estadísticamente significativa de convergencia absoluta de tipo beta, no así la convergencia condicional para el periodo 1999-2021.",
+        "art_abstracto": "Regional convergence is a widely discussed topic, however, the analysis in the Bolivian case is restricted to macroeconomic indicators such as GDP per capita, or the NBI index. In the present work, the existence of sigma (σ) and beta (β) convergence is described, using conventional methods, and complementing with the management of panel data based on the Wealth Index (IR) based on to Principal Component Analysis (PCA) using household and population variables. Allowing to demonstrate the existence of sigma-type convergence between departments, based on different measures of dispersion, in addition to verifying the statistically significant evidence of absolute beta-type convergence, not the conditional convergence for the period 1999-2021.",
+        "art_fecha_recepcion": "2023-01-20",
+        "art_fecha_aceptado": "2023-03-25",
+        "art_orcid": "0000-0003-2557-7079",
+        "art_doi": "10.53287\/czmk5273fx16y",
+        "art_pag_inicio": null,
+        "art_pag_fin": null,
+        "art_num_paginas": null,
+        "art_estado": true,
+        "art_referencias": null,
+        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1I0OURhuP04uQeWE2LbWXHfz_y1Wt2wyf\/view?usp=sharing",
+        "art_vistas": 0,
+        "tipo_articulo_id": 1,
+        "edicion_varianza_id": 25,
+        "estado_revision": "aprobado",
+        "autores_pivot": [
+            {
+                "autor_id": 179,
+                "tipo_participaciones_id": 1
+            }
+        ],
+        "etiquetas": [
+            "Convergencia",
+            "panel",
+            "riqueza",
+            "hogares"
+        ]
+    },
+    {
+        "id": 13,
+        "art_titulo": "Construcción de la tabla de mortalidad materna en Panamá",
+        "art_slug": "construccion-de-la-tabla-de-mortalidad-materna-en-panama",
+        "art_resumen": "Las tablas de mortalidad materna son prácticamente inexistentes a nivel de los países latinoamericanos, pero muy necesarias e importantes en el campo de las ciencias actuariales. La mortalidad materna es considerada uno de los eventos de vigilancia epidemiológica en poblaciones de mujeres en edad fértil y que generan importantes implicaciones sociales, económicas y culturales. El propósito es construir la tabla de mortalidad materna como una propuesta que sirva de referencia en el campo actuarial, en el cual, las tablas de mortalidad son herramientas de gran utilidad para los cálculos de tarifas y reservas en la industria de seguros.\nSe emplea el método de Greville para determinar las funciones que sirven para los cálculos para la construcción de la tabla de mortalidad materna, y los datos demográficos como los nacimientos vivos y la mortalidad materna en el grupo de mujeres en edad reproductiva, definida desde los quince (15) a los cuarenta y nueve (49) años, según la Organización Mundial de la Salud (OMS).\nLuego de desarrollar la aplicación de la metodología propuesta por Greville se logró la construcción de la tabla de mortalidad materna para Panamá, en la cual se puede observar un incremento importante de la probabilidad de morir por esta causa a partir de los 35 años, así mismo, se observa la disminución en la esperanza de vida.",
+        "art_abstracto": "Maternal mortality tables are practically non-existent at the level of Latin American countries, but very necessary and important in the field of actuarial sciences. Maternal mortality is considered one of the epidemiological surveillance events in populations of women of childbearing age and that generate important social, economic and cultural implications. The purpose is to build the maternal mortality table as a proposal that serves as a reference in the actuarial field, in which mortality tables are very useful tools for calculating rates and reserves in the insurance industry.\nThe Greville method is used to determine the functions that are used for the calculations for the construction of the maternal mortality table, and the demographic data such as live births and maternal mortality in the group of women of reproductive age, defined from the age of fifteen. (15) to forty-nine (49) years, according to the World Health Organization (WHO).\nAfter developing the application of the methodology proposed by Greville, the construction of the maternal mortality table for Panama was achieved, in which a significant increase in the probability of dying from this cause can be observed from 35 years of age, likewise, the decrease in life expectancy is observed.",
+        "art_fecha_recepcion": "2023-01-31",
+        "art_fecha_aceptado": "2023-04-04",
+        "art_orcid": "0000-0002-4308-6532; 0000-0003-2571-7676; 0000-0003-4934-0703; 0000-0003-0089-6436",
+        "art_doi": "10.53287\/osnw7311vt18o",
+        "art_pag_inicio": null,
+        "art_pag_fin": null,
+        "art_num_paginas": null,
+        "art_estado": true,
+        "art_referencias": null,
+        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1wXYXuVv8VRbUMlVNh6p1N0ZN4XkCO8Ud\/view?usp=sharing",
+        "art_vistas": 0,
+        "tipo_articulo_id": 1,
+        "edicion_varianza_id": 25,
+        "estado_revision": "aprobado",
+        "autores_pivot": [
+            {
+                "autor_id": 38,
+                "tipo_participaciones_id": 1
+            },
+            {
+                "autor_id": 41,
+                "tipo_participaciones_id": 1
+            },
+            {
+                "autor_id": 180,
+                "tipo_participaciones_id": 1
+            },
+            {
+                "autor_id": 181,
+                "tipo_participaciones_id": 1
+            }
+        ],
+        "etiquetas": [
+            "Actuarial",
+            "Defunciones maternas",
+            "Estadísticas oficiales"
+        ]
+    },
+    {
+        "id": 14,
+        "art_titulo": "Análisis factorial exploratorio para la evaluación del instrumento de satisfacción de los asistentes al evento CONQUISTA",
+        "art_slug": "analisis-factorial-exploratorio-para-la-evaluacion-del-instrumento-de-satisfaccion-de-los-asistentes-al-evento-conquista",
+        "art_resumen": "Se realiza un estudio con el propósito de medir la validez y la confiabilidad de un cuestionario utilizado para valorar la satisfacción de los asistentes al evento CONQUISTA, el cual es un evento de carácter religioso y que desde el punto de vista del campo de aplicación de la estadística multivariada resulta innovador.\nEl estudio se realizó empleando una base de datos de 115 registros de las respuestas de los asistentes a dicho evento, en el cual se medía además de los datos demográficos como sexo, edad, datos sobre las exposiciones, el servicio, la calidad de la alimentación, hospedaje, alabanzas, y la evaluación general del evento.\nPara obtener la confiabilidad del instrumento se empleó el Coeficiente Alfa de Cronbach dado que el tipo de pregunta de escala ordinal en escala Likert así lo permitía. Se realizó un análisis factorial exploratorio en donde se determinaron ocho factores que representan con claridad las dimensiones de la evaluación, obteniendo así una nueva propuesta de un instrumento con propiedades de validez y confiabilidad aceptables para sus propósitos.",
+        "art_abstracto": "A study is carried out with the purpose of measuring the validity and reliability of a questionnaire used to assess the satisfaction of those attending the CONQUISTA event, which is a religious event and from the point of view of the field of application of the multivariate statistics is innovative.\nThe study was carried out using a database of 115 records of the responses of those attending said event, which was measured in addition to demographic data such as sex, age, data on exhibitions, service, quality of food, lodging, praise, and the general evaluation of the event.\nTo obtain the reliability of the instrument, Cronbach's Alpha Coefficient was used since the type of question of ordinal scale on the Likert scale allowed it. An exploratory factorial analysis was carried out where eight factors that clearly represent the dimensions of the evaluation were determined, thus obtaining a new proposal for an instrument with acceptable validity and reliability properties for its purposes.",
+        "art_fecha_recepcion": "2023-01-31",
+        "art_fecha_aceptado": "2023-03-06",
+        "art_orcid": "0000-0003-3158-0776; 0000-0002-7633-3712; 0000-0003-0089-6436",
+        "art_doi": "10.53287\/noqo6075xs66p",
+        "art_pag_inicio": null,
+        "art_pag_fin": null,
+        "art_num_paginas": null,
+        "art_estado": true,
+        "art_referencias": null,
+        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1kOL6poz6vRh6l78BnXHmxxJ_QURclSJQ\/view?usp=sharing",
+        "art_vistas": 0,
+        "tipo_articulo_id": 2,
+        "edicion_varianza_id": 25,
+        "estado_revision": "aprobado",
+        "autores_pivot": [
+            {
+                "autor_id": 182,
+                "tipo_participaciones_id": 1
+            },
+            {
+                "autor_id": 183,
+                "tipo_participaciones_id": 1
+            },
+            {
+                "autor_id": 184,
+                "tipo_participaciones_id": 1
+            }
+        ],
+        "etiquetas": [
+            "Validación",
+            "Confiabilidad",
+            "Métodos estadísticos",
+            "Cuestionario"
+        ]
+    },
+    {
+        "id": 16,
+        "art_titulo": "Currícula estadística en Bolivia, cambios en la última década",
+        "art_slug": "curricula-estadistica-en-bolivia-cambios-en-la-ultima-decada",
+        "art_resumen": "El presente documento presenta el desarrollo de la currícula estadística en el sistema escolar y universitario en Bolivia, se realiza una revisión de la normativa vigente, se describe los contenidos vinculados a la estadística en el ciclo primario y secundario. Para el pregrado en la universidad se describe el proceso del último plan de estudios en la Universidad Mayor de San Andrés y se incluye el perfil estadístico descrito mediante entrevistas a los directores de carrera de las 2 únicas universidades que ofrecen el programa en estadística.",
+        "art_abstracto": "This document presents the development of the statistical curriculum in the school and university system in Bolivia, a review of the current regulations is carried out, the contents related to statistics in the primary and secondary cycle are described. For the undergraduate at the university, the process of the last study plan at the Universidad Mayor de San Andres is described and the statistical profile described through interviews with the career directors of the only 2 universities that offer the program in statistics is included.",
+        "art_fecha_recepcion": "2022-08-16",
+        "art_fecha_aceptado": "2022-10-03",
+        "art_orcid": "0000-0001-8686-7702; 0000-0002-7143-3271; 0000-0002-6639-7659",
+        "art_doi": "10.53287\/imny6054ru24w",
+        "art_pag_inicio": null,
+        "art_pag_fin": null,
+        "art_num_paginas": null,
+        "art_estado": true,
+        "art_referencias": null,
+        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1hRZuD_gdReaoRskrlvOLhcg7TlpAjmVn\/view?usp=sharing",
+        "art_vistas": 0,
+        "tipo_articulo_id": 1,
+        "edicion_varianza_id": 24,
+        "estado_revision": "aprobado",
+        "autores_pivot": [
+            {
+                "autor_id": 187,
+                "tipo_participaciones_id": 1
+            },
+            {
+                "autor_id": 188,
+                "tipo_participaciones_id": 1
+            },
+            {
+                "autor_id": 189,
+                "tipo_participaciones_id": 1
+            }
+        ],
+        "etiquetas": [
+            "Currícula",
+            "alfabetización estadística",
+            "Bolivia"
+        ]
+    },
+    {
+        "id": 17,
+        "art_titulo": "Una introducción al modelo de regresión lineal normal-asimétrico. Parte 1: Teoría, parametrización directa",
+        "art_slug": "una-introduccion-al-modelo-de-regresion-lineal-normal-asimetrico-parte-1-teoria-parametrizacion-directa",
+        "art_resumen": "En el espectro de las distribuciones elípticas-asimétricas se encuentra la distribución normal-asimétrica que tiene como caso particular a la distribución normal. El objetivo principal de este trabajo es presentar al modelo de regresión lineal con variable aleatoria de error con distribución normal-asimétrica. Este trabajo se divide en tres partes. En esta parte, se revisa los aspectos teóricos base asociados con la parametrización directa. En la Parte 2, se revisa los aspectos teóricos base asociados con la parametrización centrada. Y en la Parte 3, se efectúa la ilustración con un conjunto de datos reales.",
+        "art_abstracto": "In the spectrum of elliptic-asymmetric distributions is the skew-normal distribution, which has the normal distribution as a particular case. The main objective of this work is to present the linear regression model with random error variable with skew-normal distribution. This work is divided into three parts. In this part, the basic theoretical aspects associated with direct parameterization are reviewed. In Part 2, the basic theoretical aspects associated with centered parameterization are reviewed. And in Part 3, the illustration is done with a real data set.",
+        "art_fecha_recepcion": "2022-08-13",
+        "art_fecha_aceptado": "2022-09-22",
+        "art_orcid": "0000-0002-6490-7491",
+        "art_doi": "10.53287\/zogm7286du66v",
+        "art_pag_inicio": null,
+        "art_pag_fin": null,
+        "art_num_paginas": null,
+        "art_estado": true,
+        "art_referencias": null,
+        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1R5EqcR1I7lp20IdwOagYVd5-omnowLA_\/view?usp=sharing",
+        "art_vistas": 0,
+        "tipo_articulo_id": 1,
+        "edicion_varianza_id": 24,
+        "estado_revision": "aprobado",
+        "autores_pivot": [
+            {
+                "autor_id": 190,
+                "tipo_participaciones_id": 1
+            }
+        ],
+        "etiquetas": [
+            "Distribuciones elípticas-asimétricas",
+            "Distribución normal-asimétrica",
+            "Modelo de regresión lineal"
+        ]
+    },
+    {
+        "id": 19,
+        "art_titulo": "El Teorema Central del Límite: Una visión ilustrativa",
+        "art_slug": "el-teorema-central-del-limite-una-vision-ilustrativa",
+        "art_resumen": "El Teorema Central del Límite es de gran importancia, en el estudio de la Estadística, para su compresión además de la variedad de problemas prácticos, está la certeza de su convergencia.\nObjetivo: Comprender el Teorema Central del Límite, y su convergencia.\nMétodo: Se utilizarán cuadros y gráficos de la distribución del promedio de variables aleatorias independientes cada una con distribución Uniforme en el intervalo (0,1) y comparándola con la distribución Normal standard.\nDatos: Para este fin se utilizará una partición del intervalo comprendido entre 0 y 1, en distancias de un décimo.\nResultados: Se mostrará la rápida convergencia del promedio de las variables citadas con distribución Uniforme hacia una distribución Normal estándar; para esta comparación se consideran dos cuadros que mostrarán esta afinidad de forma numérica y posteriormente (para cuando n aumente su valor) se expondrá el gráfico de la distribución del promedio de variables que completará el panorama.",
+        "art_abstracto": "The Central Limit Theorem is of great importance, in the study of Statistics, for its understanding, in addition to the variety of practical problems, there is the certainty of its convergence.\nObjective: To understand the Central Limit Theorem, and its convergence.\nMethod: Tables and graphs of the distribution of the average of independent random variables will be used, each with a Uniform distribution in the interval (0.1) and comparing it with the standard Normal distribution.\nData: For this purpose, a partition of the interval between 0 and 1, in distances of one tenth, will be used.\nResults: The rapid convergence of the average of the variables mentioned with Uniform distribution towards a standard Normal distribution will be shown; For this comparison, two tables are considered that will show this affinity numerically and later (for when n increases its value) the graph of the distribution of the average of variables will be exposed that will complete the panorama.",
+        "art_fecha_recepcion": "2022-08-17",
+        "art_fecha_aceptado": "2022-09-06",
+        "art_orcid": "0000-0001-7886-5264",
+        "art_doi": "10.53287\/uufr9587pp15b",
+        "art_pag_inicio": null,
+        "art_pag_fin": null,
+        "art_num_paginas": null,
+        "art_estado": true,
+        "art_referencias": null,
+        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1kdPbSwRU7fZK5UTTXrjHh_K54eN25DPh\/view?usp=sharing",
+        "art_vistas": 0,
+        "tipo_articulo_id": 1,
+        "edicion_varianza_id": 24,
+        "estado_revision": "aprobado",
+        "autores_pivot": [
+            {
+                "autor_id": 191,
+                "tipo_participaciones_id": 1
+            }
+        ],
+        "etiquetas": [
+            "Convergencia",
+            "distribución Irwin Hall",
+            "ilustración",
+            "Teorema Central del Límite"
+        ]
+    },
+    {
+        "id": 21,
+        "art_titulo": "Comparación del grado de satisfacción de los estudiantes respecto a la modalidad de clases virtuales por factores socio económicos",
+        "art_slug": "comparacion-del-grado-de-satisfaccion-de-los-estudiantes-respecto-a-la-modalidad-de-clases-virtuales-por-factores-socio-economicos",
+        "art_resumen": "El presente artículo tiene por objetivo principal, comparar el grado de satisfacción de los estudiantes de la carrera de Ingeniería de Sistemas de la UPEA respecto a la modalidad de clases virtuales por factores socio económicos en su proceso de aprendizaje a consecuencia de la suspensión de actividades académicas de las clases presenciales como efecto del virus COVID-19. El estudio es de tipo descriptivo con diseño no experimental de corte transversal con enfoque cuantitativo, los resultados obtenidos muestran a 32 ítems, definidos en dos variables: Satisfacción del estudiante y Modalidad de clase. Como resultados se tiene; en general el grado de satisfacción en la mayoría de los estudiantes se sitúa en la categoría medio (>50%), el grado de satisfacción es más alto en los estudiantes que pasan las clases en su domicilio propio, se puede señalar también sobre el tipo de financiamiento de la conexión a internet, la satisfacción es más alta en los estudiantes que son financiados por un tercero (padre, tutor u otro) en relación los que pagan por cuenta propia o tienen un pago compartido, asimismo, los estudiantes que tiene un dispositivo propio para pasar las clases virtuales son los que tienen un grado de satisfacción más alto y no así los que disponen de dispositivos compartidos. En conclusión, la investigación permite comparar el nivel de satisfacción por factores socio económicos.",
+        "art_abstracto": "The main objective of this article is to compare the degree of satisfaction of the students of the Systems Engineering career of the UPEA with respect to the modality of virtual classes due to socio-economic factors in their learning process as a result of the suspension of academic activities. of face-to-face classes as an effect of the COVID-19 virus. The study is of a descriptive type with a non-experimental cross-sectional design with a quantitative approach, the results obtained show 32 items, defined in two variables: Student satisfaction and Class modality. As a result you have; In general, the degree of satisfaction in the majority of the students is in the medium category (>50%), the degree of satisfaction is higher in the students who take the classes in their own home, it can also be pointed out about the type of financing the Internet connection, satisfaction is higher in students who are financed by a third party (parent, guardian or other) in relation to those who pay on their own or have a shared payment, they showed, students who have a Own device to pass the virtual classes are those who have a higher degree of satisfaction and not so those who have shared devices. In conclusion, the research allows us to compare the level of satisfaction by socioeconomic factors.",
+        "art_fecha_recepcion": "2022-08-19",
+        "art_fecha_aceptado": "2022-09-24",
+        "art_orcid": "0000-0003-1430-2854; 0000-0003-0704-0980",
+        "art_doi": "10.53287\/bris9654fw33p",
+        "art_pag_inicio": null,
+        "art_pag_fin": null,
+        "art_num_paginas": null,
+        "art_estado": true,
+        "art_referencias": null,
+        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1mX41vf11jrgtN8a7aU7AzjADKScuMy13\/view?usp=sharing",
+        "art_vistas": 0,
+        "tipo_articulo_id": 1,
+        "edicion_varianza_id": 24,
+        "estado_revision": "aprobado",
+        "autores_pivot": [
+            {
+                "autor_id": 192,
+                "tipo_participaciones_id": 1
+            },
+            {
+                "autor_id": 193,
+                "tipo_participaciones_id": 1
+            }
+        ],
+        "etiquetas": [
+            "Educación virtual",
+            "nivel de satisfacción del estudiante",
+            "clase online"
+        ]
+    },
+    {
+        "id": 24,
+        "art_titulo": "HJ-Biplot como metodología exploratoria para el análisis multidimensional de los objetivos de desarrollo sostenible (ODS) a nivel municipios en Bolivia",
+        "art_slug": "hj-biplot-como-metodologia-exploratoria-para-el-analisis-multidimensional-de-los-objetivos-de-desarrollo-sostenible-ods-a-nivel-municipios-en-bolivia",
+        "art_resumen": "La Agenda 2030 y los Objetivos de Desarrollo Sostenible (ODS) se presentan como oportunidades clave para reconsiderar prácticas y abordar los desafíos de desarrollo, medir y analizar el cumplimiento de estos objetivos es de vital importancia para una planificación objetiva. Por tanto, se destaca la importancia de un análisis estadístico multidimensional descriptivo, tales como, las técnicas de análisis Biplot, metodologías usadas por ciencia de datos, inteligencia artificial y machine learning, como un nuevo paradigma para comprender la información de manera más profunda y como base para el diseño de políticas con alto impacto social. La medición continua y evaluación de indicadores ODS se consideran esenciales para ajustar y mejorar las políticas públicas a lo largo del tiempo. En este sentido, el artículo presenta el HJ-Biplot como una técnica de análisis multivariante, una herramienta analítica avanzada para interpretar grandes volúmenes de información, en este caso, el cumplimiento a los ODS a nivel municipio, logrando clústeres a nivel departamental y nacional de estos de acuerdo a la similiaridad y disimilaridad como insumo para el diseño de políticas publicas objetivas y de alto impacto.",
+        "art_abstracto": "The 2030 Agenda and the Sustainable Development Goals (SDGs) are presented as key opportunities to reconsider practices and address development challenges. Measuring and analyzing compliance with these goals is of vital importance for objective planning. Therefore, the importance of a descriptive multidimensional statistical analysis is highlighted, such as Biplot analysis techniques, methodologies used by data science, artificial intelligence and machine learning, as a new paradigm to understand information in a deeper way and as . basis for the design of policies with high social impact. The continuous measurement and evaluation of SDG indicators are considered essential to adjust and improve public policies over time. In this sense, the article presents the HJ-Biplot as a multivariate analysis technique, an advanced analytical tool to interpret large volumes of information, in this case, compliance with the SDGs at the departmental and municipal level, achieving clusters of these according to their similarity and dissimilarity.",
+        "art_fecha_recepcion": "2024-01-02",
+        "art_fecha_aceptado": "2024-03-28",
+        "art_orcid": "0000-0001-5117-6565",
+        "art_doi": "10.53287\/xttp2122se37f",
+        "art_pag_inicio": null,
+        "art_pag_fin": null,
+        "art_num_paginas": null,
+        "art_estado": true,
+        "art_referencias": null,
+        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/18NsDBo8OcODL3l7eL9HN_4U7doEs6-sN\/view?usp=drive_link",
+        "art_vistas": 0,
+        "tipo_articulo_id": 1,
+        "edicion_varianza_id": 3,
+        "estado_revision": "aprobado",
+        "autores_pivot": [
+            {
+                "autor_id": 194,
+                "tipo_participaciones_id": 1
+            }
+        ],
+        "etiquetas": [
+            "Estadística multivariante",
+            "métodos Biplot",
+            "HJ-Biplot",
+            "ODS",
+            "Clústeres"
+        ]
+    },
+    {
+        "id": 26,
+        "art_titulo": "Bolivia. Comparación de la desigualdad de ingresos en hogares rurales de bajos y altos ingresos",
+        "art_slug": "bolivia-comparacion-de-la-desigualdad-de-ingresos-en-hogares-rurales-de-bajos-y-altos-ingresos",
+        "art_resumen": "En base al análisis de la encuesta de ingresos de los hogares del año 2021, además de las consideraciones generales del estudio de la pobreza en Bolivia como los indicadores de la pobreza, y sobre la desigualdad, se analiza la comparación con la información mostrada en dicha encuesta, principalmente en los indicadores de Gini, Mehran y de Piesch, y también se propone un estudio más completo y de mayor eficacia con la de construcción de indicadores no solamente puntuales, sino por intervalos de confianza.\nEn la comparación de los ingresos del área rural se puede observar que los ingresos medios per cápita son mucho más dispares en la Región Menor (Pando, Chuquisaca, Cochabamba, Oruro y Potosí), que en la Región Mayor (Santa Cruz, La Paz, Tarija y Beni).",
+        "art_abstracto": "Based on the analysis of the household income survey for year 2021, in addition to the general considerations based of the study of poverty in Bolivia as the indicators of poverty, and on inequality, the comparison with the information shown in said survey, maily on the indicators of Gini, Mehran and Piesch, and a more complete and more effective study is also proposed, with that of not only punctual indicators, but by confidence intervals.\nIn the comparison of the income of the rural area, it can be observed that the average per capita income is much more disparate in the smaller region, (Pando, Chuquisaca, Cochabamba, Oruro y Potosí) than in the larger region (Santa Cruz, La Paz, Tarija y Beni).",
+        "art_fecha_recepcion": "2023-08-01",
+        "art_fecha_aceptado": "2023-09-05",
+        "art_orcid": "0000-0001-7886-5264; 0000-0002-1157-2165",
+        "art_doi": "10.53287\/uqtn3784mj44i",
+        "art_pag_inicio": null,
+        "art_pag_fin": null,
+        "art_num_paginas": null,
+        "art_estado": true,
+        "art_referencias": null,
+        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1D2LmZM7YPtQW2bVrK5zNuLR69ScIU0fH\/view?usp=sharing",
+        "art_vistas": 0,
+        "tipo_articulo_id": 1,
+        "edicion_varianza_id": 4,
+        "estado_revision": "aprobado",
+        "autores_pivot": [
+            {
+                "autor_id": 195,
+                "tipo_participaciones_id": 1
+            },
+            {
+                "autor_id": 196,
+                "tipo_participaciones_id": 1
+            }
+        ],
+        "etiquetas": [
+            "Desigualdad",
+            "pobreza",
+            "re muestreo"
+        ]
+    },
+    {
+        "id": 35,
+        "art_titulo": "Afectaciones de los estudiantes debido al COVID-19 en el curso de estadística de primer año de universidad",
+        "art_slug": "afectaciones-de-los-estudiantes-debido-al-covid-19-en-el-curso-de-estadistica-de-primer-ano-de-universidad",
+        "art_resumen": "La pandemia debido al COVID-19 generó importantes afectaciones en todos los sectores particularmente en el de la educación, la salud y en lo socioeconómico en general. En este sentido, se planteó la necesidad de conocer las principales afectaciones que estaban incidiendo en los estudiantes universitarios, toda vez que se observaron deficiencias en el rendimiento académico en los cursos de matemática y estadística. Para esto, se estudió una muestra aleatoria de 64 estudiantes del curso de estadística de primer año de la carrera de Registros Médicos y Estadísticas de Salud quienes completaron un instrumento en línea y cuyas respuestas fueron analizadas mediante el programa Excel y SPSS. Los resultados mostraron que los estudiantes son en mayor proporción de 20 años y más, con responsabilidades familiares, afectados principalmente por el desempleo y problemas económicos.",
+        "art_abstracto": "The pandemic due to COVID-19 generated significant effects in all sectors, particularly in education, health and the socioeconomic sector in general. In this sense, the need to know the main affectations that were affecting university students was raised, since deficiencies were observed in academic performance in mathematics and statistics courses. For this, a random sample of 64 students from the first-year statistics course of the Medical Records and Health Statistics career was studied, who completed an online instrument and whose responses were analyzed using the Excel and SPSS programs. The results showed that the students are in a greater proportion of 20 years and older, with family responsibilities, affected mainly by unemployment and economic problems.",
+        "art_fecha_recepcion": "2022-08-25",
+        "art_fecha_aceptado": "2022-09-27",
+        "art_orcid": "0000-0003-4934-0703; 0000-0001-8480-8573; 0000-0003-0089-6436",
+        "art_doi": "10.53287\/iwck2038aa75j",
+        "art_pag_inicio": null,
+        "art_pag_fin": null,
+        "art_num_paginas": null,
+        "art_estado": true,
+        "art_referencias": "",
+        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1114wf6cgySJrJ2_4l1fMbAOtzByQ_6EW\/view?usp=sharing",
+        "art_vistas": 0,
+        "tipo_articulo_id": 1,
+        "edicion_varianza_id": 24,
+        "estado_revision": "aprobado",
+        "autores_pivot": [
+            {
+                "autor_id": 203,
+                "tipo_participaciones_id": 1
+            },
+            {
+                "autor_id": 204,
+                "tipo_participaciones_id": 1
+            },
+            {
+                "autor_id": 205,
+                "tipo_participaciones_id": 1
+            }
+        ],
+        "etiquetas": [
+            "Clases virtuales",
+            "Aprendizajes",
+            "Tecnologia",
+            "Asignaturas",
+            "Ciencia"
+        ]
+    },
+    {
+        "id": 36,
+        "art_titulo": "¿Es la educación o la situación económica la principal determinante social de la mortalidad infantil en Bolivia?",
+        "art_slug": "es-la-educacion-o-la-situacion-economica-la-principal-determinante-social-de-la-mortalidad-infantil-en-bolivia",
+        "art_resumen": "El objetivo de este estudio es probar estadísticamente si la educación de las madres es una determinante social más importante que la situación económica de los hogares para reducir la mortalidad infantil. Con información de la encuesta nacional de demografía y salud realizada en 2008 y usando el modelo de riesgos proporcionales de Cox, se concluye que la educación materna es una determinante social más importante que la situación económica de los hogares para explicar las diferencias en el riesgo de mortalidad durante el primer año de vida. Como indicador de la situación económica de los hogares se usó el índice de riqueza. Estos resultados son coherentes con los obtenidos en otros estudios y respaldan la afirmación de que la educación es la clave para reducir la mortalidad infantil.",
+        "art_abstracto": "The objective of this study is to test statistically whether the education of mothers is a more important social determinant than the economic status of households in reducing infant mortality. With information from the national demographic and health survey conducted in 2008 and using the Cox proportional hazards model, it is concluded that maternal education is a more important social determinant than the economic status of households in explaining the differences in the risk of mortality during the first year of life. As an indicator of the economic status of households, the wealth index was used. These results are consistent with those obtained in other studies and support the claim that education is the key to reducing infant mortality.",
+        "art_fecha_recepcion": "2022-08-11",
+        "art_fecha_aceptado": "2022-09-27",
+        "art_orcid": "0000-0002-2955-0204",
+        "art_doi": "10.53287\/iimq9052od26g",
+        "art_pag_inicio": null,
+        "art_pag_fin": null,
+        "art_num_paginas": null,
+        "art_estado": true,
+        "art_referencias": "",
+        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1McBw6_z4e3j1maz4eMAg1yI-U1e-2Uyg\/view?usp=sharing",
+        "art_vistas": 0,
+        "tipo_articulo_id": 1,
+        "edicion_varianza_id": 24,
+        "estado_revision": "aprobado",
+        "autores_pivot": [
+            {
+                "autor_id": 206,
+                "tipo_participaciones_id": 1
+            }
+        ],
+        "etiquetas": [
+            "Determinantes de mortalidad infantil",
+            "Educación",
+            "Modelo de Cox",
+            "Situación económica"
+        ]
+    },
+    {
+        "id": 37,
+        "art_titulo": "Confiabilidad y tiempo óptimo de reemplazo de equipo",
+        "art_slug": "confiabilidad-y-tiempo-optimo-de-reemplazo-de-equipo",
+        "art_resumen": "El modelo exponencial se utiliza en la prueba del ciclo de vida de un activo, sin embargo, es utilizado por ser eficaz para tratar problemas de confiabilidad, tomando una muestra al azar de n componentes seleccionados de un lote, en el presente trabajo se desarrolla dos aplicaciones mediante ejemplos de las distribuciones Normal y Weibull.\nEn cuanto al tiempo optimo de reemplazo de equipo, considerando el aspecto teórico mencionado en el trabajo y aplicando los datos como el número de periodos, la tasa de interés, el costo de adquisición del equipo y los costos de mantenimiento se determina aquel punto en el cual el costo del modelo que, en lugar de bajar, sube su costo, éste es el período óptimo para reemplazar el equipo.\nSe presentan los ejercicios prácticos, el primero corresponde a una empresa estatal con relación a la fabricación de piezas en el sistema de combustible; el segundo ejemplo identifica la vida media de un componente, el tercero determina el ciclo de vida de un activo; los ejemplos cuarto y quinto, se basan en él precio de adquisición para determinar el tiempo óptimo de renovación. En este sentido, con el objeto de aplicar la teoría expuesta, que permita identificar el momento exacto en el cual se debe reemplazar un equipo, para no generar daño económico, que reflejaría una perdida a la institución. En conclusión, se otorga prioridad a la optimización de los escasos recursos que se disponen, fomentando la eficiencia y eficacia, generando efectividad de un activo fijo.",
+        "art_abstracto": "The exponential model is used in the life cycle test of an asset, however, it is used because it is effective in dealing with reliability problems, taking a random sample of n components selected from a lot, in the present work two applications through examples of the Normal and Weibull distributions.\nRegarding the optimal time for equipment replacement, considering the theoretical aspect mentioned in the work and applying the data such as the number of periods, the interest rate, the cost of acquiring the equipment and the maintenance costs, that point in time is determined. which the cost of the model that, instead of lowering, raises its cost, this is the optimal period to replace the equipment.\nThe practical exercises are presented, the first corresponds to a state company in relation to the manufacture of parts in the fuel system; the second example identifies the average life of a component, the third determines the life cycle of an asset; the fourth and fifth examples are based on the purchase price to determine the optimal renewal time. In this sense, in order to apply the exposed theory, which allows identifying the exact moment in which an equipment must be replaced, so as not to generate economic damage, which would reflect a loss to the institution. In conclusion, priority is given to optimizing the scarce resources available, promoting efficiency and effectiveness, generating effectiveness of a fixed asset.",
+        "art_fecha_recepcion": "2022-08-08",
+        "art_fecha_aceptado": "2022-09-19",
+        "art_orcid": "0000-0002-8472-9477; 0000-0002-6714-6915",
+        "art_doi": "10.53287\/evek7580of82j",
+        "art_pag_inicio": null,
+        "art_pag_fin": null,
+        "art_num_paginas": null,
+        "art_estado": true,
+        "art_referencias": "",
+        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/103RRUC5p1sfyhP_LOgUU0PtGKcFJHEZY\/view?usp=sharing",
+        "art_vistas": 0,
+        "tipo_articulo_id": 1,
+        "edicion_varianza_id": 24,
+        "estado_revision": "aprobado",
+        "autores_pivot": [
+            {
+                "autor_id": 207,
+                "tipo_participaciones_id": 1
+            },
+            {
+                "autor_id": 208,
+                "tipo_participaciones_id": 1
+            }
+        ],
+        "etiquetas": [
+            "Ciclo de vida",
+            "Confiabilidad",
+            "costos",
+            "decisión",
+            "inferencia",
+            "mantenimiento",
+            "obsoleto"
+        ]
+    },
+    {
+        "id": 38,
+        "art_titulo": "Desigualdades en calidad de vida de los adultos mayores bolivianos. La educación un factor clave",
+        "art_slug": "desigualdades-en-calidad-de-vida-de-los-adultos-mayores-bolivianos-la-educacion-un-factor-clave",
+        "art_resumen": "Esta investigación tiene como objetivo analizar las desigualdades en calidad de vida de los adultos mayores bolivianos a partir de un índice de calidad de vida. Con base en un conjunto de indicadores generados con datos de la encuesta de hogares realizada por el Instituto Nacional de Estadística en el año 2021, indicadores enmarcados en la propuesta teórica-metodológica del Centro Latinoamericano y Caribeño de Demografía, y con el uso de la técnica de componentes principales, se construyó un índice de calidad de vida en la vejez. El índice refleja notables desigualdades en calidad de vida de los adultos mayores. La calidad de vida para el quintil superior es más del doble que para el quintil inferior, disminuye a medida que incrementa su edad, aumenta cuando incrementa su ingreso y sube notablemente cuando aumenta la educación del adulto mayor. El análisis causal revela que la educación del adulto mayor lograda cuando era relativamente joven tiene un impacto muy importante para la calidad de vida en su vejez, mucho más que el de su ingreso, por lo que mayor nivel de educación viabiliza mejor calidad de vida en la vejez. Se recomienda que las políticas y programas orientadas a mejorar la calidad de vida en la vejez deban tomar en cuenta estas desigualdades y que en futuros estudios sobre el tema se obtenga información sobre autopercepción de la calidad de vida.",
+        "art_abstracto": "This research aims to analyze inequalities in quality of life of older Bolivians from a quality of life index. Based on a set of indicators generated with data from the household survey carried out by the National Institute of Statistics in 2021, indicators framed in the theoretical-methodological proposal of the Latin American Demographic Center, and with the use of the main components technique, an index of quality of life in old age was built. The index reflects significant inequalities in the quality of life of elderlys. The quality of life for the upper quintile is more than double that of the lower quintile, decreasing as its age increases, increasing as its income increases and rising markedly as the education of the elderly increases. The causal analysis reveals that the education of the older adult chieved when he was relatively young has a very important impact on the quality of life in his old age, much more than that of his income, so that higher level of education enable a better quality of life in old age. It is recommended that policies and programmes aimed at improving the quality of life in old age should take these inequalities into account and that future studies on the subject should provide information on self-perception of the quality of life.",
+        "art_fecha_recepcion": "2024-02-26",
+        "art_fecha_aceptado": "2024-03-26",
+        "art_orcid": "0000-0002-2955-0204; 0009-0009-6633-6264",
+        "art_doi": "10.53287\/aajp8031ju15n",
+        "art_pag_inicio": null,
+        "art_pag_fin": null,
+        "art_num_paginas": null,
+        "art_estado": true,
+        "art_referencias": "",
+        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1iC4Nq5bdzpN9nTR5krb99c7fdfoVlbvg\/view?usp=drive_link",
+        "art_vistas": 0,
+        "tipo_articulo_id": 1,
+        "edicion_varianza_id": 3,
+        "estado_revision": "aprobado",
+        "autores_pivot": [
+            {
+                "autor_id": 209,
+                "tipo_participaciones_id": 1
+            },
+            {
+                "autor_id": 210,
+                "tipo_participaciones_id": 1
+            }
+        ],
+        "etiquetas": [
+            "Índice de calidad de vida",
+            "Vejez",
+            "Componentes principales",
+            "Educación"
+        ]
+    },
+    {
+        "id": 39,
+        "art_titulo": "Optimización de Portafolios de Markowitz para los Fondos de Pensiones en Bolivia",
+        "art_slug": "optimizacion-de-portafolios-de-markowitz-para-los-fondos-de-pensiones-en-bolivia",
+        "art_resumen": "El incremento en el rendimiento de los fondos de pensiones en Bolivia es un objetivo neurálgico que se busca para la mejora de las pensiones de vejez para los jubilados, antes tanto para las AFP's hasta 2023 y actualmente está como un objetivo para la Gestora Pública, es en este sentido que se expone y desarrolla el proceso de obtención de un portafolio de inversiones óptimo mediante el uso del modelo de Markowitz utilizando el algoritmo de Goldfarb-Idnani planteando un problema de optimización cuadrática, generando resultados satisfactorios en comparación con los asumidos por los fondos de pensiones incrementando de un 3.36% a un 6%, pero con las debidas limitaciones del mercado de renta fija que impera en Bolivia y corriendo otro tipo de riesgos mas allá de las rentabilidades bajas.",
+        "art_abstracto": "The increase in the performance of pension funds in Bolivia is a neuralgic objective that is sought to improve old-age pensions for retirees, previously both for the AFPs until 2023 and currently it is as an objective for the Public Manager, that is In this sense, the process of obtaining an optimal investment portfolio is exposed and developed through the use of the Markowitz model using the Goldfarb-Idnani algorithm, posing a quadratic optimization problem, generating satisfactory results compared to those assumed by the funds. of pensions increasing from 3.36% to 6%, but with the due limitations of the fixed income market that prevails in Bolivia and running other types of risks beyond low returns.",
+        "art_fecha_recepcion": "2023-08-01",
+        "art_fecha_aceptado": "2024-04-08",
+        "art_orcid": "0000-0003-2557-7079",
+        "art_doi": "10.53287\/aszz5960wg30u",
+        "art_pag_inicio": null,
+        "art_pag_fin": null,
+        "art_num_paginas": null,
+        "art_estado": true,
+        "art_referencias": "",
+        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1qMzoc7lz7eqFC6cvv1lPiBEdbmQmeFYg\/view?usp=drive_link",
+        "art_vistas": 0,
+        "tipo_articulo_id": 1,
+        "edicion_varianza_id": 3,
+        "estado_revision": "aprobado",
+        "autores_pivot": [
+            {
+                "autor_id": 211,
+                "tipo_participaciones_id": 1
+            }
+        ],
+        "etiquetas": [
+            "Pensiones",
+            "Cuadrática",
+            "Markowitz",
+            "algoritmo de Goldfarb-Idnani"
+        ]
+    },
+    {
+        "id": 40,
+        "art_titulo": "Sobrestimación de la tasa de mortalidad infantil obtenida con el método indirecto. Un modelo para su corrección",
+        "art_slug": "sobrestimacion-de-la-tasa-de-mortalidad-infantil-obtenida-con-el-metodo-indirecto-un-modelo-para-su-correccion",
+        "art_resumen": "Esta investigación tiene dos objetivos, por una parte, comprobar si el método indirecto para estimar tasas de mortalidad infantil en Bolivia conduce sistemáticamente a una sobrestimación del indicador y, por otra parte, corregir dicha sobrestimación si se constata la existencia de tal problema. Asumiendo que las tasas de mortalidad infantil obtenidas con el método directo son correctas, se confirma que con el método indirecto sistemáticamente se obtienen tasas sobrestimadas. Adicionalmente, hay evidencia estadística de que mayor sobrestimación se produce en niveles bajos de mortalidad infantil y que la sobrestimación ocurre con cualquiera de las familias modelo de mortalidad de Coale y Demeny que se use para su cálculo. Para corregir el problema de sobrestimación en la tasa de mortalidad infantil se seleccionó el modelo de regresión lasso, pues, las tasas de mortalidad infantil predichas con este modelo fueron más próximas a las tasas correctas que las tasas predichas con otros modelos. Se destaca que el modelo lasso seleccionado incluye una única variable predictora, cuyo cálculo es muy simple y no requiere el uso de modelos de mortalidad: la proporción de hijos muertos en mujeres de 25-29 años de edad. Debido a que países como Bolivia aún requieren del método indirecto principalmente para estimar tasas de mortalidad infantil para pequeñas áreas, como son gran parte de los municipios, es necesario seguir explorando modelos estadísticos que permitan obtener tasas de mortalidad infantil no sobrestimadas.",
+        "art_abstracto": "This research has two objectives: on the one hand, to check whether the indirect method for estimating infant mortality rates in Bolivia systematically leads to an overestimation of the indicator and, on the other hand, to correct this overestimation if such a problem is found to exist. Assuming that the infant mortality rates obtained with the direct method are correct, it is confirmed that the indirect method systematically leads to overestimated rates. In addition, there is statistical evidence that greater overestimation occurs with any of the Coale and Demeny mortality model families used for its calculation. To correct the problem of overestimation in the infant mortality rate, the lasso regression model was selected, since the infant mortality rates predicted with this model were closer to the correct rates than the rates predicted with other models. It is noteworthy that the lasso model selected includes a single predictor variable, whose calculation is very simple and does not require the use of mortality models: the proportion of dead children in women aged 25-29 years. Since countries such as Bolivia still require the indirect method mainly to estimate infant mortality rates for small areas, such as most municipalities, it is necessary to continue exploring statistical models that allow us to obtain infant mortality rates that are not overestimated.",
+        "art_fecha_recepcion": "2023-08-13",
+        "art_fecha_aceptado": "2023-09-29",
+        "art_orcid": "0000-0002-2955-0204",
+        "art_doi": "10.53287\/dpph5717ug89s",
+        "art_pag_inicio": null,
+        "art_pag_fin": null,
+        "art_num_paginas": null,
+        "art_estado": true,
+        "art_referencias": "",
+        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1UWIFmmNMuL9VaSA1J81rsVZlzs4iYR1_\/view?usp=sharing",
+        "art_vistas": 0,
+        "tipo_articulo_id": 1,
+        "edicion_varianza_id": 4,
+        "estado_revision": "aprobado",
+        "autores_pivot": [
+            {
+                "autor_id": 212,
+                "tipo_participaciones_id": 1
+            }
+        ],
+        "etiquetas": [
+            "Método directo",
+            "Aprendizaje automático",
+            "Tablas modelo de mortalidad",
+            "Regresión Lasso"
+        ]
+    },
+    {
+        "id": 41,
+        "art_titulo": "Análisis estadístico multivariado exploratorio de estructuras temporales desde una óptica STATIS. Una aplicación a la pobreza urbana multidimensional en Bolivia",
+        "art_slug": "analisis-estadistico-multivariado-exploratorio-de-estructuras-temporales-desde-una-optica-statis-una-aplicacion-a-la-pobreza-urbana-multidimensional-en-bolivia",
+        "art_resumen": "La medición de la pobreza desde una perspectiva multidimensional ha crecido en términos de aportes metodológicos que llevan a obtener medidas más robustas y confiables, pero principalmente, ya son muchos países que han adoptado la metodología ALKIRE-FOSTER apropiándose de la misma y de sus bondades técnicas. La Estadística Multivariante juega hoy en día un papel importante pues responde a esa necesidad, debido a que brinda un conjunto de técnicas que ayudan a tratar la enorme diversidad de problemáticas que hoy por hoy preocupan a las sociedades en términos de tratamiento y análisis de información objetiva. El presente artículo tiene el objetivo de presentar el STATIS: Structuration de Tableaux A Trois Indices de la Statisque aplicada a variables cuantitativas con el objetivo de encontrar una estructura común o representativa a todas las tablas o grupos de variables, en este caso años y las dimensiones de la pobreza multidimensional urbana por departamento. En el documento se muestra que a través del STATIS se pudo comparar y analizar las relaciones entre los diferentes años y las dimensiones de la pobreza multidimensional, se identificó la estructura intercorrelacional, a partir de la obtención de una tipología en los departamentos. Adicionalmente se observó la evolución de las dimensiones de la pobreza multidimensional en los departamentos a lo largo del periodo estudiado. Finalmente, se describió la estructura interna de las dimensiones estudiadas para los departamentos y su evolución en el tiempo.",
+        "art_abstracto": "The measurement of poverty from a multidimensional perspective has grown in terms of methodological contributions that lead to obtaining more robust and reliable measures, but mainly, there are already many countries that have adopted the ALKIRE-FOSTER methodology, appropriating it and its technical benefits. Multivariate Statistics plays an important role today as it responds to this need, since it provides a set of techniques that help to deal with the enormous diversity of problems that currently concern societies in terms of treatment and analysis of objective information. This article aims to present the STATIS: Structuring of Tableaux A Trois Indices de la Statisque applied to quantitative variables with the aim of finding a common or representative structure for all tables or groups of variables, in this case years and the dimensions of urban multidimensional poverty by department. The document shows that through STATIS it was possible to compare and analyze the relationships between the different years and the dimensions of multidimensional poverty, the intercorrelational structure was identified, based on obtaining a typology in the departments. Additionally, the evolution of the dimensions of multidimensional poverty in the departments throughout the period studied was observed. Finally, the internal structure of the dimensions studied for the departments and their evolution over time were described.",
+        "art_fecha_recepcion": "2023-07-31",
+        "art_fecha_aceptado": "2023-09-25",
+        "art_orcid": "0000-0001-5117-6565",
+        "art_doi": "10.53287\/vowo9538zi13d",
+        "art_pag_inicio": null,
+        "art_pag_fin": null,
+        "art_num_paginas": null,
+        "art_estado": true,
+        "art_referencias": "",
+        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1RBSZ6PVFGfBcYKmvRvzQfQ6kAxP7lEnl\/view?usp=sharing",
+        "art_vistas": 0,
+        "tipo_articulo_id": 1,
+        "edicion_varianza_id": 4,
+        "estado_revision": "aprobado",
+        "autores_pivot": [
+            {
+                "autor_id": 213,
+                "tipo_participaciones_id": 1
+            }
+        ],
+        "etiquetas": [
+            "Pobreza Multidimensional",
+            "STATIS",
+            "Análisis de Componentes Principales",
+            "Tablas Multivia"
+        ]
+    }
+]

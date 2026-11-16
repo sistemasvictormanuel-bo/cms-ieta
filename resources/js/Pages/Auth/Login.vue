@@ -146,7 +146,7 @@ const submit = () => {
                 <button
                     type="submit"
                     :disabled="form.processing"
-                    class="w-full h-11 px-4 rounded-xl bg-[#14161C] hover:bg-[#20242D] active:scale-[0.99] text-white text-[14.5px] font-bold shadow-xs hover:shadow-sm transition duration-150 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
+                    class="w-full h-12 px-4 rounded-xl bg-[#35449F] hover:bg-[#283685] active:scale-[0.99] text-white text-[15px] font-bold shadow-md hover:shadow-lg transition duration-150 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                     <svg
                         v-if="form.processing"

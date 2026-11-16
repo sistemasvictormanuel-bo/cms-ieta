@@ -147,8 +147,28 @@ class RolesAndPermissionsSeeder extends Seeder
                 'modulo' => 'CMS y Portal Web',
                 'description' => 'Administrar catálogo de servicios científicos y técnicos',
             ],
+            [
+                'name' => 'traducciones.gestionar',
+                'modulo' => 'CMS y Portal Web',
+                'description' => 'Administrar catálogo de traducciones bilingües (ES / EN) y textos del portal',
+            ],
+            [
+                'name' => 'contacto.gestionar',
+                'modulo' => 'CMS y Portal Web',
+                'description' => 'Administrar información de contacto, redes sociales y ubicación',
+            ],
+            [
+                'name' => 'sobre-nosotros.gestionar',
+                'modulo' => 'CMS y Portal Web',
+                'description' => 'Gestionar reseña histórica, misión, visión y principios institucionales',
+            ],
 
-            // Módulo: Institucional
+            // Módulo: Institucional e Investigación
+            [
+                'name' => 'lineas-investigacion.gestionar',
+                'modulo' => 'Institucional',
+                'description' => 'Gestionar líneas temáticas y proyectos de investigación activa',
+            ],
             [
                 'name' => 'personal.gestionar',
                 'modulo' => 'Institucional',

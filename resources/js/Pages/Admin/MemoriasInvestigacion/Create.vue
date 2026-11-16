@@ -33,7 +33,7 @@ const form = useForm({
     mdi_titulo: '',
     mdi_descripcion: '',
     mdi_etiqueta: 'Investigación Institucional',
-    mdi_fecha: new Date().toISOString().split('T')[0],
+    mdi_anio: new Date().getFullYear(),
     mdi_enlace_url: '',
     mdi_archivo: null,
 });
@@ -110,17 +110,20 @@ const submit = () => {
                             <InputError :message="form.errors.autor_id" class="mt-1.5" />
                         </div>
 
-                        <!-- Fecha de Presentación / Registro -->
+                        <!-- Gestión / Año -->
                         <div>
-                            <InputLabel for="mdi_fecha" value="Fecha de la Memoria / Investigación *" class="text-[15.5px] font-bold text-gray-900" />
+                            <InputLabel for="mdi_anio" value="Año / Gestión *" class="text-[15.5px] font-bold text-gray-900" />
                             <TextInput
-                                id="mdi_fecha"
-                                v-model="form.mdi_fecha"
-                                type="date"
+                                id="mdi_anio"
+                                v-model="form.mdi_anio"
+                                type="number"
+                                min="1950"
+                                :max="new Date().getFullYear() + 2"
                                 class="mt-1.5 block w-full text-[15.5px]"
+                                placeholder="Ej: 2024"
                                 required
                             />
-                            <InputError :message="form.errors.mdi_fecha" class="mt-1.5" />
+                            <InputError :message="form.errors.mdi_anio" class="mt-1.5" />
                         </div>
                     </div>
 

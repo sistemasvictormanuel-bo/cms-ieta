@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\CmsNoticiasController;
 use App\Http\Controllers\Admin\CmsReglamentoInternoController;
 use App\Http\Controllers\Admin\CmsRevistasVariasController;
 use App\Http\Controllers\Admin\CmsRevistaVarianzaController;
+use App\Http\Controllers\Admin\CmsTraduccionController;
 use App\Http\Controllers\Admin\ContactoController;
 use App\Http\Controllers\Admin\CursoModalidadesController;
 use App\Http\Controllers\Admin\DashboardController;
@@ -37,6 +38,7 @@ use App\Http\Controllers\Admin\TipoCursoController;
 use App\Http\Controllers\Admin\TipoParticipacionController;
 use App\Http\Controllers\Admin\UserController;
 use Illuminate\Foundation\Application;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -55,11 +57,15 @@ Route::middleware([
     'verified',
 ])->group(function () {
     // Pantalla de configuración y activación obligatoria de 2FA
-    Route::get('/two-factor-setup', function () {
+    Route::get('/two-factor-setup', function (Request $request) {
+        if ($request->user() && $request->user()->hasEnabledTwoFactorAuthentication()) {
+            return redirect()->route('dashboard');
+        }
+
         return Inertia::render('Auth/TwoFactorSetup');
     })->name('two-factor.setup');
 
-    // Rutas protegidas que requieren 2FA habilitado para roles que lo exijan (autores)
+    // Rutas protegidas que requieren 2FA habilitado obligatoriamente (administrador, autor, etc.)
     Route::middleware(['ensure.2fa'])->group(function () {
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
@@ -155,6 +161,13 @@ Route::middleware([
                     ->name('instrucciones-autores.toggle-activo');
                 Route::resource('instrucciones-autores', InstruccionAutorController::class);
 
+                // Módulo Memorias de Investigación (Export / Import Excel)
+                Route::get('memorias-investigacion/exportar-excel', [MemoriasInvestigacionController::class, 'export'])
+                    ->name('memorias-investigacion.export');
+                Route::get('memorias-investigacion/plantilla-excel', [MemoriasInvestigacionController::class, 'plantilla'])
+                    ->name('memorias-investigacion.plantilla');
+                Route::post('memorias-investigacion/importar-excel', [MemoriasInvestigacionController::class, 'import'])
+                    ->name('memorias-investigacion.import');
                 Route::resource('memorias-investigacion', MemoriasInvestigacionController::class);
 
                 // Módulo Banco de Datos
@@ -203,6 +216,11 @@ Route::middleware([
                     ->name('configuracion.edit');
                 Route::put('/configuracion', [CmsConfiguracionController::class, 'update'])
                     ->name('configuracion.update');
+
+                // Módulo Traducciones Multilenguaje (ES / EN)
+                Route::get('traducciones/exportar-json', [CmsTraduccionController::class, 'exportJson'])
+                    ->name('traducciones.export-json');
+                Route::resource('traducciones', CmsTraduccionController::class)->except(['create', 'edit', 'show']);
             });
         });
     });

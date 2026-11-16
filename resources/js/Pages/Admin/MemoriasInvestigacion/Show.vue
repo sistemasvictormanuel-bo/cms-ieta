@@ -19,16 +19,6 @@ const confirmingDeletion = ref(false);
 const deleteItem = () => {
     router.delete(route('admin.memorias-investigacion.destroy', props.memoria.id));
 };
-
-const formatDate = (dateStr) => {
-    if (!dateStr) return 'N/A';
-    const cleanDate = dateStr.includes('T') ? dateStr.split('T')[0] : dateStr;
-    const parts = cleanDate.split('-');
-    if (parts.length === 3) {
-        return `${parts[2]}/${parts[1]}/${parts[0]}`;
-    }
-    return cleanDate;
-};
 </script>
 
 <template>
@@ -106,7 +96,7 @@ const formatDate = (dateStr) => {
                         🏷️ {{ memoria.mdi_etiqueta }}
                     </span>
                     <span class="font-mono text-xs font-bold px-3 py-1 rounded-full bg-blue-50 text-blue-700">
-                        📅 {{ formatDate(memoria.mdi_fecha) }}
+                        📅 Gestión {{ memoria.mdi_anio || memoria.mdi_fecha }}
                     </span>
                 </div>
 

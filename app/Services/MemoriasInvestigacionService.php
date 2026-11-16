@@ -31,7 +31,8 @@ class MemoriasInvestigacionService
             $term = trim($search);
             $query->where(function ($q) use ($term) {
                 if (is_numeric($term)) {
-                    $q->orWhere('id', (int) $term);
+                    $q->orWhere('id', (int) $term)
+                        ->orWhere('mdi_anio', (int) $term);
                 }
                 $q->orWhere('mdi_titulo', 'like', "%{$term}%")
                     ->orWhere('mdi_descripcion', 'like', "%{$term}%")
@@ -50,7 +51,7 @@ class MemoriasInvestigacionService
 
     public function obtenerListado(): Collection
     {
-        return MemoriasInvestigacion::with(['autor.persona', 'media'])->orderByDesc('mdi_fecha')->get();
+        return MemoriasInvestigacion::with(['autor.persona', 'media'])->orderByDesc('mdi_anio')->get();
     }
 
     public function obtenerPorId(int $id): MemoriasInvestigacion
@@ -68,7 +69,7 @@ class MemoriasInvestigacionService
                 'mdi_titulo' => $data['mdi_titulo'],
                 'mdi_descripcion' => $data['mdi_descripcion'] ?? null,
                 'mdi_etiqueta' => $data['mdi_etiqueta'],
-                'mdi_fecha' => $data['mdi_fecha'],
+                'mdi_anio' => $data['mdi_anio'] ?? (isset($data['mdi_fecha']) ? (int) substr((string) $data['mdi_fecha'], 0, 4) : (int) date('Y')),
                 'mdi_enlace_url' => $data['mdi_enlace_url'] ?? null,
             ]);
 
@@ -97,7 +98,7 @@ class MemoriasInvestigacionService
                 'mdi_titulo' => $data['mdi_titulo'] ?? $registro->mdi_titulo,
                 'mdi_descripcion' => array_key_exists('mdi_descripcion', $data) ? $data['mdi_descripcion'] : $registro->mdi_descripcion,
                 'mdi_etiqueta' => $data['mdi_etiqueta'] ?? $registro->mdi_etiqueta,
-                'mdi_fecha' => $data['mdi_fecha'] ?? $registro->mdi_fecha,
+                'mdi_anio' => $data['mdi_anio'] ?? (isset($data['mdi_fecha']) ? (int) substr((string) $data['mdi_fecha'], 0, 4) : $registro->mdi_anio),
                 'mdi_enlace_url' => array_key_exists('mdi_enlace_url', $data) ? $data['mdi_enlace_url'] : $registro->mdi_enlace_url,
             ]);
 

@@ -5,16 +5,35 @@ import { Link } from '@inertiajs/vue3';
 const props = defineProps({
     meta: {
         type: Object,
-        required: true,
+        default: () => ({}),
+    },
+    links: {
+        type: Array,
+        default: () => [],
     },
 });
 
 const links = computed(() => {
-    return props.meta?.links || [];
+    if (props.links && props.links.length) {
+        return props.links;
+    }
+    return props.meta?.links || props.meta?.meta?.links || [];
+});
+
+const totalRecords = computed(() => {
+    return props.meta?.total ?? props.meta?.meta?.total ?? null;
+});
+
+const fromRecord = computed(() => {
+    return props.meta?.from ?? props.meta?.meta?.from ?? null;
+});
+
+const toRecord = computed(() => {
+    return props.meta?.to ?? props.meta?.meta?.to ?? null;
 });
 
 const hasPagination = computed(() => {
-    return (props.meta?.total || 0) > 0 && links.value.length > 3;
+    return links.value.length > 3;
 });
 
 const cleanLabel = (label) => {
@@ -28,17 +47,18 @@ const cleanLabel = (label) => {
 </script>
 
 <template>
-    <div v-if="meta && meta.total > 0" class="flex flex-col sm:flex-row items-center justify-between gap-4 py-4 px-2 border-t border-gray-100">
+    <div v-if="(totalRecords !== null && totalRecords > 0) || hasPagination" class="flex flex-col sm:flex-row items-center justify-between gap-4 py-4 px-2 border-t border-gray-100">
         <!-- Resumen de registros -->
-        <div class="text-xs sm:text-sm text-gray-500 font-medium">
+        <div v-if="totalRecords !== null" class="text-xs sm:text-sm text-gray-500 font-medium">
             Mostrando
-            <span class="font-bold text-[#14161C]">{{ meta.from || 0 }}</span>
+            <span class="font-bold text-[#14161C]">{{ fromRecord || 0 }}</span>
             a
-            <span class="font-bold text-[#14161C]">{{ meta.to || 0 }}</span>
+            <span class="font-bold text-[#14161C]">{{ toRecord || 0 }}</span>
             de
-            <span class="font-bold text-[#14161C]">{{ meta.total || 0 }}</span>
+            <span class="font-bold text-[#14161C]">{{ totalRecords }}</span>
             registros
         </div>
+        <div v-else></div>
 
         <!-- Botones de Paginación -->
         <nav v-if="hasPagination" class="inline-flex -space-x-px rounded-xl shadow-xs overflow-hidden" aria-label="Paginación">

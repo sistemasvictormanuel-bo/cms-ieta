@@ -34,6 +34,7 @@ class EdicionVarianza extends Model implements HasMedia
         'ev_doi',
         'ev_presentacion',
         'ev_editorial',
+        'ev_enlace_url',
         'ev_fecha_publicacion',
         'ev_estado',
     ];
@@ -41,6 +42,7 @@ class EdicionVarianza extends Model implements HasMedia
     protected $appends = [
         'portada_url',
         'archivo_url',
+        'enlace_url',
     ];
 
     protected function casts(): array
@@ -50,7 +52,7 @@ class EdicionVarianza extends Model implements HasMedia
             'ev_num_art_originales' => 'integer',
             'ev_notas_cientificas' => 'integer',
             'ev_num_paginas' => 'integer',
-            'ev_fecha_publicacion' => 'date',
+            'ev_fecha_publicacion' => 'date:Y-m-d',
             'ev_estado' => 'boolean',
             'ev_presentacion' => 'array',
         ];
@@ -89,6 +91,11 @@ class EdicionVarianza extends Model implements HasMedia
         $url = $this->getFirstMediaUrl('ev_archivo');
 
         return $url ? (parse_url($url, PHP_URL_PATH) ?: $url) : null;
+    }
+
+    public function getEnlaceUrlAttribute(): ?string
+    {
+        return $this->ev_enlace_url;
     }
 
     /**

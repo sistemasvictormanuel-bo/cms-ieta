@@ -81,6 +81,7 @@ const removePhoto = () => {
 const submit = () => {
     form.transform((data) => ({
         ...data,
+        p_sitio_web: data.p_sitio_web ? data.p_sitio_web.trim() : null,
         _method: 'PUT',
     })).post(route('admin.comite-editorial.update', props.miembro.id), {
         preserveScroll: true,
@@ -206,12 +207,13 @@ const submit = () => {
                                     <TextInput
                                         id="p_sitio_web"
                                         v-model="form.p_sitio_web"
-                                        type="url"
+                                        type="text"
+                                        inputmode="url"
                                         class="mt-1.5 block w-full text-[15.5px] font-medium"
-                                        placeholder="https://orcid.org/0000-0002-... o sitio institucional"
+                                        placeholder="ej: https://orcid.org/0000-0002-... o perfil institucional (Opcional)"
                                     />
                                     <p class="text-[13.5px] text-gray-600 font-medium mt-1">
-                                        Opcional. Algunos miembros del comité disponen de sitio o perfil web universitario; otros no.
+                                        Campo 100% opcional. Puedes dejarlo vacío o ingresar un enlace de ORCID, ResearchGate o sitio web institucional.
                                     </p>
                                     <InputError :message="form.errors.p_sitio_web" class="mt-1" />
                                 </div>

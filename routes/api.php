@@ -14,6 +14,7 @@ use App\Http\Controllers\Api\V1\CmsNoticiasController;
 use App\Http\Controllers\Api\V1\CmsReglamentoInternoController;
 use App\Http\Controllers\Api\V1\CmsRevistasVariasController;
 use App\Http\Controllers\Api\V1\CmsRevistaVarianzaController;
+use App\Http\Controllers\Api\V1\CmsTraduccionApiController;
 use App\Http\Controllers\Api\V1\ContactoController;
 use App\Http\Controllers\Api\V1\CursoModalidadController;
 use App\Http\Controllers\Api\V1\EdicionVarianzaController;
@@ -138,3 +139,7 @@ Route::get('/reglamento-interno', [CmsReglamentoInternoController::class, 'show'
 
 // Módulo Configuración Institucional API (REST)
 Route::get('/configuracion', [CmsConfiguracionController::class, 'show']);
+
+// Módulo Traducciones Multilenguaje API (REST)
+Route::get('/traducciones', [CmsTraduccionApiController::class, 'index']);
+Route::get('/traducciones/{modulo}', [CmsTraduccionApiController::class, 'showModulo']);

@@ -135,8 +135,21 @@ test('author cannot access administrator modules', function () {
     $response->assertStatus(403);
 });
 
-test('administrator can access all admin modules', function () {
+test('administrator without two factor authentication is redirected to setup', function () {
     $admin = User::factory()->create([
+        'is_active' => true,
+        'two_factor_secret' => null,
+        'two_factor_confirmed_at' => null,
+    ]);
+    $admin->assignRole('administrador');
+
+    $response = $this->actingAs($admin)->get(route('admin.usuarios.index'));
+
+    $response->assertRedirect(route('two-factor.setup'));
+});
+
+test('administrator can access all admin modules', function () {
+    $admin = User::factory()->withTwoFactor()->create([
         'is_active' => true,
     ]);
     $admin->assignRole('administrador');
@@ -199,7 +212,7 @@ test('author cannot approve articles', function () {
 });
 
 test('administrator can approve articles and publish them', function () {
-    $admin = User::factory()->create();
+    $admin = User::factory()->withTwoFactor()->create();
     $admin->assignRole('administrador');
 
     $articulo = Articulo::create([
@@ -220,7 +233,7 @@ test('administrator can approve articles and publish them', function () {
 });
 
 test('administrator can reject article with observations', function () {
-    $admin = User::factory()->create();
+    $admin = User::factory()->withTwoFactor()->create();
     $admin->assignRole('administrador');
 
     $articulo = Articulo::create([

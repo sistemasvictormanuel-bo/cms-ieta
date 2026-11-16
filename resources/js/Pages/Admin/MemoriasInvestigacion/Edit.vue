@@ -32,9 +32,11 @@ const etiquetasSugeridas = [
 const tieneEnlaceExterno = ref(Boolean(props.memoria.mdi_enlace_url && props.memoria.mdi_enlace_url.trim() !== ''));
 const fileName = ref('');
 
-const formattedFecha = props.memoria.mdi_fecha
-    ? (props.memoria.mdi_fecha.includes('T') ? props.memoria.mdi_fecha.split('T')[0] : props.memoria.mdi_fecha)
-    : '';
+const formattedAnio = props.memoria.mdi_anio
+    ? props.memoria.mdi_anio
+    : (props.memoria.mdi_fecha
+        ? (props.memoria.mdi_fecha.includes('-') ? parseInt(props.memoria.mdi_fecha.split('-')[0]) : parseInt(props.memoria.mdi_fecha))
+        : new Date().getFullYear());
 
 const form = useForm({
     _method: 'put',
@@ -42,7 +44,7 @@ const form = useForm({
     mdi_titulo: props.memoria.mdi_titulo || '',
     mdi_descripcion: props.memoria.mdi_descripcion || '',
     mdi_etiqueta: props.memoria.mdi_etiqueta || '',
-    mdi_fecha: formattedFecha,
+    mdi_anio: formattedAnio,
     mdi_enlace_url: props.memoria.mdi_enlace_url || '',
     mdi_archivo: null,
 });
@@ -124,17 +126,20 @@ const submit = () => {
                             <InputError :message="form.errors.autor_id" class="mt-1.5" />
                         </div>
 
-                        <!-- Fecha de Presentación / Registro -->
+                        <!-- Gestión / Año -->
                         <div>
-                            <InputLabel for="mdi_fecha" value="Fecha de la Memoria / Investigación *" class="text-[15.5px] font-bold text-gray-900" />
+                            <InputLabel for="mdi_anio" value="Año / Gestión *" class="text-[15.5px] font-bold text-gray-900" />
                             <TextInput
-                                id="mdi_fecha"
-                                v-model="form.mdi_fecha"
-                                type="date"
+                                id="mdi_anio"
+                                v-model="form.mdi_anio"
+                                type="number"
+                                min="1950"
+                                :max="new Date().getFullYear() + 2"
                                 class="mt-1.5 block w-full text-[15.5px]"
+                                placeholder="Ej: 2024"
                                 required
                             />
-                            <InputError :message="form.errors.mdi_fecha" class="mt-1.5" />
+                            <InputError :message="form.errors.mdi_anio" class="mt-1.5" />
                         </div>
                     </div>
 

@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, computed, watch } from 'vue';
 import { useForm, Link } from '@inertiajs/vue3';
 import AppLayout from '@/Layouts/AppLayout.vue';
 import InputLabel from '@/Components/InputLabel.vue';
@@ -18,25 +18,45 @@ const form = useForm({
     ev_numero: '',
     ev_volumen: '',
     ev_anio: currentYear,
-    ev_mes: 'Julio - Diciembre',
-    ev_issn_ver_impresa: '2075-6941',
-    ev_issn_ver_electronica: '2415-2684',
+    ev_mes: '',
+    ev_issn_ver_impresa: '',
+    ev_issn_ver_electronica: '',
     ev_num_art_originales: '',
     ev_notas_cientificas: '',
     ev_num_paginas: '',
     ev_doi: '',
     ev_presentacion: { blocks: [] },
     ev_editorial: 'Instituto de Estadística Teórica y Aplicada (IETA) - UMSA',
-    ev_fecha_publicacion: new Date().toISOString().slice(0, 10),
+    ev_fecha_publicacion: '',
     ev_estado: true,
+    ev_enlace_url: '',
+    extraer_portada_de_pdf: false,
     ev_portada: null,
     ev_archivo: null,
 });
 
+const tieneEnlaceExterno = ref(false);
 const isSlugManuallyEdited = ref(false);
 const portadaInput = ref(null);
 const portadaPreview = ref(null);
 const archivoName = ref('');
+
+const googleDriveId = computed(() => {
+    if (!tieneEnlaceExterno.value || !form.ev_enlace_url) return null;
+    const match = form.ev_enlace_url.match(/(?:file\/d\/|open\?id=|id=|\/d\/)([a-zA-Z0-9_-]{20,})/);
+    return match ? match[1] : null;
+});
+
+const googleDrivePreviewUrl = computed(() => {
+    if (!googleDriveId.value) return null;
+    return `https://drive.google.com/thumbnail?id=${googleDriveId.value}&sz=w600`;
+});
+
+watch(googleDriveId, (newId) => {
+    if (newId && !form.ev_portada) {
+        form.extraer_portada_de_pdf = true;
+    }
+});
 
 const onTituloInput = () => {
     if (!isSlugManuallyEdited.value) {
@@ -52,12 +72,21 @@ const handlePortadaChange = (e) => {
     const file = e.target.files?.[0];
     if (!file) return;
     form.ev_portada = file;
+    form.extraer_portada_de_pdf = false;
 
     const reader = new FileReader();
     reader.onload = (event) => {
         portadaPreview.value = event.target.result;
     };
     reader.readAsDataURL(file);
+};
+
+const onToggleExtraerPortada = () => {
+    if (form.extraer_portada_de_pdf) {
+        form.ev_portada = null;
+        portadaPreview.value = null;
+        if (portadaInput.value) portadaInput.value.value = '';
+    }
 };
 
 const triggerPortadaInput = () => {
@@ -75,6 +104,9 @@ const handleArchivoChange = (e) => {
     if (!file) return;
     form.ev_archivo = file;
     archivoName.value = file.name;
+    if (!form.ev_portada) {
+        form.extraer_portada_de_pdf = true;
+    }
 };
 
 const removeArchivo = () => {
@@ -83,7 +115,10 @@ const removeArchivo = () => {
 };
 
 const submit = () => {
-    form.post(route('admin.ediciones-varianza.store'), {
+    form.transform((data) => ({
+        ...data,
+        ev_enlace_url: tieneEnlaceExterno.value ? (data.ev_enlace_url?.trim() || null) : null,
+    })).post(route('admin.ediciones-varianza.store'), {
         preserveScroll: true,
         forceFormData: true,
     });
@@ -162,14 +197,14 @@ const submit = () => {
                                 </span>
                             </div>
                             <div class="relative mt-1">
-                                <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400 text-xs font-mono">
+                                <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400 text-sm font-mono">
                                     /ediciones/
                                 </span>
                                 <TextInput
                                     v-model="form.ev_slug"
                                     @input="onSlugInput"
                                     type="text"
-                                    class="w-full pl-24 font-mono text-xs"
+                                    class="w-full pl-28 font-mono text-sm"
                                     placeholder="revista-varianza-edicion-25"
                                     required
                                 />
@@ -209,7 +244,32 @@ const submit = () => {
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <!-- Portada de la Edición -->
                             <div class="space-y-3">
-                                <InputLabel value="Portada de la Edición (Imagen)" class="text-xs font-bold text-slate-700 uppercase" />
+                                <div class="flex items-center justify-between">
+                                    <InputLabel value="Portada de la Edición (Imagen)" class="text-xs font-bold text-slate-700 uppercase" />
+                                    <span v-if="form.extraer_portada_de_pdf" class="inline-flex items-center gap-1 text-[11px] font-bold text-[#35449F] bg-indigo-50 px-2 py-0.5 rounded-full border border-indigo-100">
+                                        ✨ Extracción 1ª Pág. PDF
+                                    </span>
+                                </div>
+
+                                <!-- Opción para extraer portada del PDF automáticamente -->
+                                <label
+                                    class="flex items-start gap-2.5 p-3 rounded-xl border transition cursor-pointer select-none"
+                                    :class="form.extraer_portada_de_pdf ? 'bg-indigo-50/70 border-indigo-200' : 'bg-slate-50/60 border-slate-200/80 hover:bg-slate-100/60'"
+                                >
+                                    <input
+                                        type="checkbox"
+                                        v-model="form.extraer_portada_de_pdf"
+                                        @change="onToggleExtraerPortada"
+                                        class="mt-0.5 rounded border-gray-300 text-[#35449F] focus:ring-[#35449F]/20 size-4 cursor-pointer"
+                                    />
+                                    <div class="text-xs">
+                                        <span class="font-bold text-slate-800">Usar 1ª página del PDF como portada</span>
+                                        <p class="text-[11px] text-slate-500 mt-0.5">
+                                            Extrae automáticamente la carátula desde la primera página del documento PDF.
+                                        </p>
+                                    </div>
+                                </label>
+
                                 <input
                                     ref="portadaInput"
                                     type="file"
@@ -218,7 +278,59 @@ const submit = () => {
                                     class="hidden"
                                 />
 
+                                <!-- Estado 1: Portada detectada desde Google Drive -->
                                 <div
+                                    v-if="googleDrivePreviewUrl && !form.ev_portada && (form.extraer_portada_de_pdf || !portadaPreview)"
+                                    class="group relative aspect-3/4 rounded-xl border-2 border-indigo-200 overflow-hidden bg-slate-900 shadow-xs flex flex-col justify-end"
+                                >
+                                    <img
+                                        :src="googleDrivePreviewUrl"
+                                        alt="Vista previa portada Drive"
+                                        class="absolute inset-0 w-full h-full object-cover"
+                                    />
+                                    <div class="relative z-10 p-3 bg-gradient-to-t from-slate-950/90 via-slate-900/60 to-transparent text-center space-y-1">
+                                        <span class="inline-block px-2.5 py-1 text-[11px] font-bold text-white bg-indigo-600 rounded-lg shadow-xs">
+                                            ✨ Portada detectada desde Drive
+                                        </span>
+                                        <p class="text-[10px] text-slate-200 font-medium">Se guardará automáticamente en alta resolución.</p>
+                                        <button
+                                            type="button"
+                                            @click.stop="triggerPortadaInput"
+                                            class="text-[11px] text-indigo-300 hover:text-white font-bold underline block mx-auto pt-1 cursor-pointer"
+                                        >
+                                            O cambiar por una imagen manual
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Estado 2: Extracción Automática Activada desde PDF -->
+                                <div
+                                    v-else-if="form.extraer_portada_de_pdf"
+                                    class="group relative aspect-3/4 rounded-xl border-2 border-dashed border-indigo-300 bg-indigo-50/30 flex flex-col items-center justify-center p-4 text-center space-y-2 transition"
+                                >
+                                    <div class="size-14 rounded-2xl bg-indigo-100 text-[#35449F] flex items-center justify-center shadow-xs">
+                                        <svg class="size-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-bold text-[#35449F]">Extracción de portada activa</p>
+                                        <p class="text-[11px] text-slate-500 mt-1 max-w-[200px]">
+                                            El sistema generará la portada automáticamente desde la primera página del documento o enlace al guardar.
+                                        </p>
+                                    </div>
+                                    <button
+                                        type="button"
+                                        @click.stop="triggerPortadaInput"
+                                        class="text-[11px] text-[#35449F] hover:underline font-bold mt-2 cursor-pointer"
+                                    >
+                                        O subir imagen manual
+                                    </button>
+                                </div>
+
+                                <!-- Estado 3: Subida Manual de Portada -->
+                                <div
+                                    v-else
                                     @click="triggerPortadaInput"
                                     class="group relative aspect-3/4 rounded-xl border-2 border-dashed border-slate-200 hover:border-[#35449F] bg-slate-50/50 flex flex-col items-center justify-center p-4 cursor-pointer transition overflow-hidden"
                                 >
@@ -251,7 +363,7 @@ const submit = () => {
                                     </div>
                                 </div>
 
-                                <div v-if="form.ev_portada" class="flex items-center justify-between text-xs">
+                                <div v-if="form.ev_portada && !form.extraer_portada_de_pdf" class="flex items-center justify-between text-xs">
                                     <span class="text-emerald-700 font-semibold truncate max-w-[180px]">
                                         ✓ {{ form.ev_portada.name }}
                                     </span>
@@ -264,7 +376,19 @@ const submit = () => {
 
                             <!-- Archivo PDF Completo -->
                             <div class="space-y-3">
-                                <InputLabel value="Revista Completa en PDF" class="text-xs font-bold text-slate-700 uppercase" />
+                                <div class="flex items-center justify-between">
+                                    <InputLabel value="Revista Completa en PDF" class="text-xs font-bold text-slate-700 uppercase" />
+                                    <label class="inline-flex items-center gap-1.5 cursor-pointer select-none">
+                                        <input
+                                            type="checkbox"
+                                            v-model="tieneEnlaceExterno"
+                                            class="rounded border-gray-300 text-[#35449F] focus:ring-[#35449F]/20 size-4 cursor-pointer"
+                                        />
+                                        <span class="text-xs font-bold text-[#35449F] hover:underline">
+                                            ¿Enlace externo?
+                                        </span>
+                                    </label>
+                                </div>
 
                                 <label class="group relative aspect-3/4 rounded-xl border-2 border-dashed border-slate-200 hover:border-red-500 bg-slate-50/50 flex flex-col items-center justify-center p-4 cursor-pointer transition">
                                     <input
@@ -306,6 +430,42 @@ const submit = () => {
 
                                 <InputError :message="form.errors.ev_archivo" />
                             </div>
+                        </div>
+
+                        <!-- Campo Dinámico: Enlace Externo (Drive, Dropbox, OneDrive, etc.) -->
+                        <div v-if="tieneEnlaceExterno" class="mt-4 p-4 rounded-xl bg-indigo-50/50 border border-indigo-100 space-y-2 transition-all">
+                            <div class="flex items-center justify-between">
+                                <InputLabel for="ev_enlace_url" value="Enlace Externo al PDF de la Revista (Google Drive, Dropbox, OneDrive, etc.)" class="text-xs font-bold text-gray-900" />
+                                <span class="text-[11px] font-bold text-indigo-700 bg-indigo-100 px-2.5 py-0.5 rounded-full">
+                                    Drive • Dropbox • URL Nube
+                                </span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <TextInput
+                                    id="ev_enlace_url"
+                                    v-model="form.ev_enlace_url"
+                                    type="url"
+                                    class="block w-full text-sm"
+                                    placeholder="https://drive.google.com/file/d/... o enlace compartido del PDF de la revista"
+                                />
+                                <a
+                                    v-if="form.ev_enlace_url"
+                                    :href="form.ev_enlace_url"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="shrink-0 px-3.5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold rounded-xl transition flex items-center gap-1.5 shadow-2xs"
+                                    title="Abrir y verificar enlace externo"
+                                >
+                                    <svg class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                    <span>Probar enlace</span>
+                                </a>
+                            </div>
+                            <p class="text-[11px] text-gray-500 font-medium">
+                                Opcional. Puedes subir el archivo PDF local, proporcionar un enlace externo a la nube, ambos o ninguno según lo decidas.
+                            </p>
+                            <InputError :message="form.errors.ev_enlace_url" class="mt-1" />
                         </div>
                     </div>
 
@@ -350,8 +510,9 @@ const submit = () => {
                             <TextInput
                                 v-model="form.ev_fecha_publicacion"
                                 type="date"
-                                class="w-full mt-1 text-sm"
+                                class="w-full mt-1 text-sm font-medium"
                             />
+                            <p class="text-[11px] text-slate-400 mt-1">Opcional. Si solo se conoce mes/semestre y año, déjalo vacío.</p>
                             <InputError :message="form.errors.ev_fecha_publicacion" class="mt-1" />
                         </div>
                     </div>
@@ -369,7 +530,7 @@ const submit = () => {
                                 <TextInput
                                     v-model="form.ev_numero"
                                     type="text"
-                                    class="w-full mt-1 font-bold text-center"
+                                    class="w-full mt-1 font-bold text-center text-sm"
                                     placeholder="25"
                                     required
                                 />
@@ -381,7 +542,7 @@ const submit = () => {
                                 <TextInput
                                     v-model="form.ev_volumen"
                                     type="text"
-                                    class="w-full mt-1 text-center"
+                                    class="w-full mt-1 text-center text-sm"
                                     placeholder="Vol. 14"
                                 />
                                 <InputError :message="form.errors.ev_volumen" class="mt-1" />
@@ -396,7 +557,7 @@ const submit = () => {
                                     type="number"
                                     min="1980"
                                     max="2050"
-                                    class="w-full mt-1 font-bold text-center"
+                                    class="w-full mt-1 font-bold text-center text-sm"
                                     required
                                 />
                                 <InputError :message="form.errors.ev_anio" class="mt-1" />
@@ -407,8 +568,8 @@ const submit = () => {
                                 <TextInput
                                     v-model="form.ev_mes"
                                     type="text"
-                                    class="w-full mt-1 text-xs"
-                                    placeholder="Julio - Dic"
+                                    class="w-full mt-1 text-sm font-medium"
+                                    placeholder="Ej: Julio - Diciembre o Octubre"
                                 />
                                 <InputError :message="form.errors.ev_mes" class="mt-1" />
                             </div>
@@ -427,8 +588,8 @@ const submit = () => {
                             <TextInput
                                 v-model="form.ev_issn_ver_impresa"
                                 type="text"
-                                class="w-full mt-1 font-mono text-xs"
-                                placeholder="2075-6941"
+                                class="w-full mt-1 font-mono text-sm"
+                                placeholder="Ej: 2075-6941"
                             />
                             <InputError :message="form.errors.ev_issn_ver_impresa" class="mt-1" />
                         </div>
@@ -438,8 +599,8 @@ const submit = () => {
                             <TextInput
                                 v-model="form.ev_issn_ver_electronica"
                                 type="text"
-                                class="w-full mt-1 font-mono text-xs"
-                                placeholder="2415-2684"
+                                class="w-full mt-1 font-mono text-sm"
+                                placeholder="Ej: 2415-2684"
                             />
                             <InputError :message="form.errors.ev_issn_ver_electronica" class="mt-1" />
                         </div>
@@ -449,8 +610,8 @@ const submit = () => {
                             <TextInput
                                 v-model="form.ev_doi"
                                 type="text"
-                                class="w-full mt-1 font-mono text-xs"
-                                placeholder="10.53287/varianza.v14i25"
+                                class="w-full mt-1 font-mono text-sm"
+                                placeholder="Ej: 10.53287/varianza.v14i25"
                             />
                             <InputError :message="form.errors.ev_doi" class="mt-1" />
                         </div>
@@ -469,7 +630,7 @@ const submit = () => {
                                 v-model="form.ev_num_paginas"
                                 type="number"
                                 min="1"
-                                class="w-full mt-1"
+                                class="w-full mt-1 text-sm font-medium"
                                 placeholder="Ej: 120"
                             />
                             <InputError :message="form.errors.ev_num_paginas" class="mt-1" />
@@ -482,7 +643,7 @@ const submit = () => {
                                     v-model="form.ev_num_art_originales"
                                     type="number"
                                     min="0"
-                                    class="w-full mt-1 text-center"
+                                    class="w-full mt-1 text-center text-sm font-medium"
                                     placeholder="Ej: 8"
                                 />
                                 <InputError :message="form.errors.ev_num_art_originales" class="mt-1" />
@@ -494,7 +655,7 @@ const submit = () => {
                                     v-model="form.ev_notas_cientificas"
                                     type="number"
                                     min="0"
-                                    class="w-full mt-1 text-center"
+                                    class="w-full mt-1 text-center text-sm font-medium"
                                     placeholder="Ej: 3"
                                 />
                                 <InputError :message="form.errors.ev_notas_cientificas" class="mt-1" />

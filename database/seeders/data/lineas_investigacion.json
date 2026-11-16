@@ -1,0 +1,894 @@
+[
+    {
+        "id": 1,
+        "li_titulo": "Análisis de sobrevivencia",
+        "li_descripcion": "Aborda un conjunto de técnicas estadísticas orientadas a modelar el tiempo transcurrido hasta la ocurrencia de un evento de interés, gestionando adecuadamente datos censurados o incompletos. En el IETA, esta línea desarrolla modelos paramétricos, semiparamétricos y no paramétricos aplicados a la salud pública, la confiabilidad industrial, el riesgo financiero y las ciencias sociales.",
+        "li_contenido": {
+            "time": "1791661153647",
+            "blocks": [
+                {
+                    "id": "0lzq-GpfDu",
+                    "type": "header",
+                    "data": {
+                        "text": "Descripción y Alcance",
+                        "level": "2"
+                    }
+                },
+                {
+                    "id": "JkWq2c2BbS",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Esta línea aborda el tratamiento adecuado de datos que presentan incompletitud estructural, como la censura (cuando el evento no llega a observarse durante el período de estudio) y el truncamiento. Mediante el uso de herramientas metodológicas rigurosas, se busca estimar funciones de supervivencia, tasas de riesgo (hazard functions) y evaluar el impacto de diversas covariables en el tiempo de vida o duración de los procesos observados."
+                    }
+                },
+                {
+                    "id": "yge6YptaIt",
+                    "type": "header",
+                    "data": {
+                        "text": "Enfoques Metodológicos y Temáticos",
+                        "level": "2"
+                    }
+                },
+                {
+                    "id": "nkLazBIikZ",
+                    "type": "list",
+                    "data": {
+                        "style": "unordered",
+                        "items": [
+                            {
+                                "content": "Estimación No Paramétrica: Aplicación e implementación de curvas de supervivencia mediante estimadores como Kaplan-Meier y Nelson-Aalen.",
+                                "meta": {},
+                                "items": []
+                            },
+                            {
+                                "content": "Modelos de Regresión Semiparamétricos: Análisis de riesgos proporcionales de Cox y evaluación de sus supuestos para la identificación de factores de riesgo o protección.",
+                                "meta": {},
+                                "items": []
+                            },
+                            {
+                                "content": "Modelos Paramétricos de Tiempo de Vida: Modelado estadístico basado en distribuciones Weibull, Lognormal, Gamma y Exponencial.",
+                                "meta": {},
+                                "items": []
+                            },
+                            {
+                                "content": "Análisis de Riesgos Competitivos y Eventos Recurrentes: Tratamiento de escenarios donde existen múltiples eventos mutuamente excluyentes o eventos que ocurren más de una vez en el mismo sujeto.",
+                                "meta": {},
+                                "items": []
+                            },
+                            {
+                                "content": "Modelos de Frágil (Frailty Models): Inclusión de efectos aleatorios no observados para capturar la heterogeneidad no explicada en datos agrupados o longitudinales.",
+                                "meta": {},
+                                "items": []
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "2vCobvz5PN",
+                    "type": "header",
+                    "data": {
+                        "text": "Ámbitos de Aplicación",
+                        "level": "2"
+                    }
+                },
+                {
+                    "id": "GApNefvvAg",
+                    "type": "list",
+                    "data": {
+                        "style": "ordered",
+                        "meta": {
+                            "start": null,
+                            "counterType": "numeric"
+                        },
+                        "items": [
+                            {
+                                "content": "Ciencias de la Salud y Biomédicas: Evaluación del tiempo de efectividad de tratamientos médicos, tiempo de recurrencia de enfermedades y estudios de mortalidad.",
+                                "meta": {},
+                                "items": []
+                            },
+                            {
+                                "content": "Ingeniería e Industria: Análisis de confiabilidad de componentes, pruebas de vida acelerada y tiempo de falla de sistemas tecnológicos.",
+                                "meta": {},
+                                "items": []
+                            },
+                            {
+                                "content": "Economía y Finanzas: Modelado de la duración del desempleo, tiempo de retención de clientes y riesgo de mora en créditos financieros.",
+                                "meta": {},
+                                "items": []
+                            },
+                            {
+                                "content": "Ciencias Sociales: Análisis de trayectorias de vida, deserción académica y tiempo transcurrido hasta la ocurrencia de eventos demográficos.",
+                                "meta": {},
+                                "items": []
+                            }
+                        ]
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "li_slug": "analisis-de-sobrevivencia",
+        "created_at": "2026-10-10T19:46:53.000000Z",
+        "updated_at": "2026-10-11T15:59:52.000000Z",
+        "portada_url": "\/storage\/8\/portadanalais.png",
+        "media": [
+            {
+                "id": 8,
+                "model_type": "App\\Models\\CmsLineasInvestigacion",
+                "model_id": 1,
+                "uuid": "f3152d16-15f1-4d21-b2f4-b28e5a465d70",
+                "collection_name": "li_imagen",
+                "name": "portadanalais",
+                "file_name": "portadanalais.png",
+                "mime_type": "image\/png",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 37030,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-10-11T15:59:52.000000Z",
+                "updated_at": "2026-10-11T15:59:52.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/8\/portadanalais.png",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "li_titulo": "Demografias",
+        "li_descripcion": "Una línea de investigación es un eje temático, conceptual o problemático estructurado y continuo que organiza y orienta el desarrollo de diferentes proyectos y estudios científicos en un campo del conocimiento. Básicamente, actúa como el \"paraguas\" o el hilo conductor que permite a un investigador o a un grupo de estudio profundizar de forma sistemática en un área a lo largo del tiempo, en lugar de saltar entre temas aislados",
+        "li_contenido": {
+            "time": "1791663186594",
+            "blocks": [
+                {
+                    "id": "ZvdJKd-N6Q",
+                    "type": "header",
+                    "data": {
+                        "text": "Contenido detallado y funciones",
+                        "level": "2"
+                    }
+                },
+                {
+                    "id": "oppfVPyT5K",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "<b>1. ¿Qué es exactamente?<\/b>"
+                    }
+                },
+                {
+                    "id": "a-vq-TOTNM",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "No es una simple pregunta, un título de tesis ni un problema aislado. Es una categoría o fenómeno general de estudio (como la inteligencia emocional, la sostenibilidad ambiental, la deserción escolar o las enfermedades cardiovasculares) que un investigador adopta como su especialidad. Se alimenta de múltiples investigaciones sucesivas, donde cada estudio responde a un propósito específico dentro de esa misma gran línea."
+                    }
+                },
+                {
+                    "id": "JMpkxVEsKE",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "<b>2. ¿Qué hace y para qué sirve?<\/b>"
+                    }
+                },
+                {
+                    "id": "WWZAo1hy6K",
+                    "type": "list",
+                    "data": {
+                        "style": "unordered",
+                        "items": [
+                            {
+                                "content": "Estructura el conocimiento: Delimita el campo de acción y ayuda a enfocar los esfuerzos metodológicos, teóricos y financieros para evitar la dispersión de recursos.",
+                                "meta": {},
+                                "items": []
+                            },
+                            {
+                                "content": "Genera continuidad: Permite avanzar desde lo más básico (conocer un fenómeno) hasta lo más complejo (predecir soluciones o evaluar tratamientos) de manera progresiva.",
+                                "meta": {},
+                                "items": []
+                            },
+                            {
+                                "content": "Facilita la producción científica: Al volverte experto en una línea conceptual, la recolección de antecedentes, la matriz de consistencia y la operacionalización de tus variables se vuelven procesos mucho más eficientes y fluidos.",
+                                "meta": {},
+                                "items": []
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "EX-grlnRVP",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "<b>3. Componentes esenciales de una línea de investigación<\/b>"
+                    }
+                },
+                {
+                    "id": "iwqsaT96zW",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Para describir formalmente tu línea en un protocolo o documento institucional, esta debe contar con los siguientes elementos:"
+                    }
+                },
+                {
+                    "id": "gWgPpMaxtk",
+                    "type": "list",
+                    "data": {
+                        "style": "unordered",
+                        "items": [
+                            {
+                                "content": "Denominación o Nombre: Un título claro y conciso que identifique el área o fenómeno (ej. \"Calidad de la Atención en Servicios de Salud\" o \"Innovación Tecnológica en PyMEs\").",
+                                "meta": {},
+                                "items": []
+                            },
+                            {
+                                "content": "Justificación y Planteamiento: Breve argumento de por qué es relevante estudiar esa área, cuáles son los vacíos de información globales o locales y a qué tipo de población beneficia.",
+                                "meta": {},
+                                "items": []
+                            },
+                            {
+                                "content": "Variables o Categorías Principales: Los conceptos clave que se medirán o analizarán constantemente a través de los diferentes proyectos que se desprendan de ella.",
+                                "meta": {},
+                                "items": []
+                            },
+                            {
+                                "content": "Sublíneas o Áreas de Interés: Divisiones específicas de la línea general para acotar proyectos particulares (ej. si la línea es \"Educación Virtual\", una sublínea puede ser \"Plataformas de aprendizaje\" y otra \"Estrategias didácticas digitales\").",
+                                "meta": {},
+                                "items": []
+                            },
+                            {
+                                "content": "Estrategia Metodológica General: El enfoque predominante (cualitativo, cuantitativo o mixto) y los alcances lógicos con los que se suele abordar esa temática.",
+                                "meta": {},
+                                "items": []
+                            }
+                        ]
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "li_slug": "demografias",
+        "created_at": "2026-10-10T20:13:34.000000Z",
+        "updated_at": "2026-10-10T20:37:12.000000Z",
+        "portada_url": "\/storage\/7\/Demografia.png",
+        "media": [
+            {
+                "id": 7,
+                "model_type": "App\\Models\\CmsLineasInvestigacion",
+                "model_id": 2,
+                "uuid": "cff71d83-7eb9-4b71-9b39-612622015e77",
+                "collection_name": "li_imagen",
+                "name": "Demografia",
+                "file_name": "Demografia.png",
+                "mime_type": "image\/png",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 210199,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-10-11T15:59:29.000000Z",
+                "updated_at": "2026-10-11T15:59:29.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/7\/Demografia.png",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "li_titulo": "Optimización",
+        "li_descripcion": "Diseño, análisis y aplicación de algoritmos matemáticos orientados a encontrar la mejor solución posible (máximos o mínimos) bajo restricciones dadas.",
+        "li_contenido": {
+            "time": "1793461652137",
+            "blocks": [
+                {
+                    "id": "6LJS5RNXF7",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Es una disciplina transversal entre las matemáticas aplicadas, la investigación de operaciones y la computación científica que modela matemáticamente la toma de decisiones."
+                    }
+                },
+                {
+                    "id": "ol0wNWDU4Q",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Comprende el estudio de espacios de soluciones, convexidad, dualidad y convergencia numérica en problemas definidos por funciones objetivo sujetas a restricciones de igualdad o desigualdad."
+                    }
+                },
+                {
+                    "id": "tEz_er5LEz",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Abarca programación lineal, no lineal, entera y mixta, optimización convexa y heurísticas\/metaheurísticas. Desarrolla algoritmos iterativos (métodos de gradiente descendente, Newton-Raphson, puntos interiores y simplex). Se aplica ampliamente en logística (rutas de transporte, asignación de recursos), diseño estructural, calibración de parámetros en modelos de machine learning y optimización de carteras de inversión."
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "li_slug": "optimizacion",
+        "created_at": "2026-10-31T15:43:14.000000Z",
+        "updated_at": "2026-10-31T15:47:34.000000Z",
+        "portada_url": "\/storage\/28\/Optimizacion.webp",
+        "media": [
+            {
+                "id": 28,
+                "model_type": "App\\Models\\CmsLineasInvestigacion",
+                "model_id": 3,
+                "uuid": "cdd115f4-736e-4922-9742-9540626cbc6d",
+                "collection_name": "li_imagen",
+                "name": "Optimizacion",
+                "file_name": "Optimizacion.webp",
+                "mime_type": "image\/webp",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 20318,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-10-31T15:47:35.000000Z",
+                "updated_at": "2026-10-31T15:47:35.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/28\/Optimizacion.webp",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "li_titulo": "Estadística Bayesiana",
+        "li_descripcion": "Paradigma inferencial que actualiza el conocimiento de parámetros desconocidos combinando información previa (prior) con evidencia muestral mediante el Teorema de Bayes.",
+        "li_contenido": {
+            "time": "1793461836247",
+            "blocks": [
+                {
+                    "id": "kvjh22gvgV",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Un enfoque probabilístico fundamental donde los parámetros poblacionales no se consideran valores fijos desconocidos (como en la estadística frecuentista), sino variables aleatorias dotadas de distribuciones de probabilidad."
+                    }
+                },
+                {
+                    "id": "JCrrtNdClO",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Al ciclo continuo de aprendizaje probabilístico: parte de una distribución a priori que sintetiza el conocimiento o incertidumbre inicial, la actualiza a través de la verosimilitud de los datos observados y obtiene la distribución a posteriori."
+                    }
+                },
+                {
+                    "id": "29pe_gXbMO",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Formula modelos jerárquicos complejos y resuelve integrales de alta dimensión mediante métodos computacionales avanzados como MCMC (Markov Chain Monte Carlo), muestreadores de Gibbs, algoritmos Metropolis-Hastings y aproximaciones variacionales. Se aplica en genética, toma de decisiones bajo incertidumbre, modelado de riesgos y neurociencia."
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "li_slug": "estadistica-bayesiana",
+        "created_at": "2026-10-31T15:50:38.000000Z",
+        "updated_at": "2026-10-31T15:50:38.000000Z",
+        "portada_url": "\/storage\/29\/bayesiana.jpg",
+        "media": [
+            {
+                "id": 29,
+                "model_type": "App\\Models\\CmsLineasInvestigacion",
+                "model_id": 4,
+                "uuid": "439ff3af-c87b-4a61-9c51-2fc6cad1aea4",
+                "collection_name": "li_imagen",
+                "name": "bayesiana",
+                "file_name": "bayesiana.jpg",
+                "mime_type": "image\/jpeg",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 166951,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-10-31T15:50:38.000000Z",
+                "updated_at": "2026-10-31T15:50:38.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/29\/bayesiana.jpg",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "li_titulo": "Series de Tiempo y Procesos Estocásticos",
+        "li_descripcion": "Análisis probabilístico y modelado dinámico de secuencias de variables aleatorias indexadas en el tiempo o en el espacio.",
+        "li_contenido": {
+            "time": "1793462040380",
+            "blocks": [
+                {
+                    "id": "WAH-zWtDt3",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "El campo enfocado en describir, explicar y pronosticar fenómenos dinámicos donde las observaciones sucesivas presentan dependencia y correlación temporal intrínseca."
+                    }
+                },
+                {
+                    "id": "CounwcYTNX",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Examina propiedades probabilísticas de secuencias temporales, tales como estacionariedad, ergodicidad, estacionalidad, cointegración y memoria larga."
+                    }
+                },
+                {
+                    "id": "cCq5H8rdba",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Desarrolla modelos estocásticos en tiempo discreto y continuo: cadenas de Markov, procesos de Poisson, caminatas aleatorias, movimientos brownianos y martingalas; así como modelos econométricos y de pronóstico (ARIMA, SARIMA, VAR, modelos de volatilidad ARCH\/GARCH y filtros de Kalman). Se emplea en econometría financiera, predicción climática, procesamiento de señales y análisis de tráfico en redes."
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "li_slug": "series-de-tiempo-y-procesos-estocasticos",
+        "created_at": "2026-10-31T15:54:03.000000Z",
+        "updated_at": "2026-10-31T15:54:54.000000Z",
+        "portada_url": "\/storage\/30\/series.webp",
+        "media": [
+            {
+                "id": 30,
+                "model_type": "App\\Models\\CmsLineasInvestigacion",
+                "model_id": 5,
+                "uuid": "28c4376d-e098-4aa6-b512-433daf882e0a",
+                "collection_name": "li_imagen",
+                "name": "series",
+                "file_name": "series.webp",
+                "mime_type": "image\/webp",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 63176,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-10-31T15:54:03.000000Z",
+                "updated_at": "2026-10-31T15:54:03.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/30\/series.webp",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "li_titulo": "Teoría de la Medida y Probabilidad",
+        "li_descripcion": "Marco matemático riguroso que formaliza la noción de volumen, integración y espacio de probabilidad a través de estructuras abstractas.",
+        "li_contenido": {
+            "time": "1793462367976",
+            "blocks": [
+                {
+                    "id": "bvu0C5HObT",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "La base axiomática moderna de las matemáticas y la probabilidad formalizada a partir del trabajo de Émile Borel, Henri Lebesgue y Andrey Kolmogorov"
+                    }
+                },
+                {
+                    "id": "DHEwlLKii2",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Aborda la construcción de espacios medibles, funciones medibles y medidas en conjuntos generales, resolviendo las limitaciones teóricas de la integral de Riemann y las paradojas geométricas clásicas."
+                    }
+                },
+                {
+                    "id": "qU8sIJW7n_",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "&nbsp;Investiga teoremas de integración (convergencia monótona, convergencia dominada de Lebesgue), la integral de Lebesgue-Stieltjes, el teorema de Radon-Nikodym, y la formalización de la esperanza condicional y los teoremas límite fundamentales (Leyes de los Grandes Números y Teorema Central del Límite). Es el pilar indispensable para el cálculo estocástico avanzado, el análisis armónico y la física matemática."
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "li_slug": "teoria-de-la-medida-y-probabilidad",
+        "created_at": "2026-10-31T15:59:32.000000Z",
+        "updated_at": "2026-10-31T15:59:32.000000Z",
+        "portada_url": "\/storage\/31\/media-y-propbablidad.jpg",
+        "media": [
+            {
+                "id": 31,
+                "model_type": "App\\Models\\CmsLineasInvestigacion",
+                "model_id": 6,
+                "uuid": "8032dc5e-ae0f-4136-8ea8-97e41e5e385d",
+                "collection_name": "li_imagen",
+                "name": "media y propbablidad",
+                "file_name": "media-y-propbablidad.jpg",
+                "mime_type": "image\/jpeg",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 11889,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-10-31T15:59:32.000000Z",
+                "updated_at": "2026-10-31T15:59:32.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/31\/media-y-propbablidad.jpg",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "li_titulo": "Estadística en Epidemiología",
+        "li_descripcion": "Aplicación y desarrollo de métodos cuantitativos para estudiar la distribución, determinantes y control de eventos de salud en poblaciones humanas.",
+        "li_contenido": {
+            "time": "1793462551667",
+            "blocks": [
+                {
+                    "id": "dhFuskA_Kg",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Disciplina metodológica encargada del diseño, recolección, modelado e interpretación de evidencia empírica en el ámbito de la salud pública y la medicina poblacional."
+                    }
+                },
+                {
+                    "id": "CMM22ytJ54",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Evalúa factores de riesgo, relaciones causales, eficacia de intervenciones terapéuticas o preventivas y dinámica de contagios en diferentes estratos poblacionales."
+                    }
+                },
+                {
+                    "id": "D_KXAMYANz",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Diseña estudios epidemiológicos (ensayos clínicos aleatorizados, cohortes, casos y controles, estudios ecológicos), cuantifica medidas de asociación (Riesgo Relativo, Odds Ratio, Tasas de Incidencia) y ajusta modelos compartimentales (SIR, SEIR) y espaciales de dispersión de patógenos. Su fin es sustentar la toma de decisiones sanitarias basadas en evidencia."
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "li_slug": "estadistica-en-epidemiologia",
+        "created_at": "2026-10-31T16:03:50.000000Z",
+        "updated_at": "2026-10-31T16:03:50.000000Z",
+        "portada_url": "\/storage\/32\/medicina-y-estadtistca-.jpg",
+        "media": [
+            {
+                "id": 32,
+                "model_type": "App\\Models\\CmsLineasInvestigacion",
+                "model_id": 7,
+                "uuid": "18ba7de6-8a02-4d9a-8a2c-02f9bfa748c5",
+                "collection_name": "li_imagen",
+                "name": "medicina y estadtistca ",
+                "file_name": "medicina-y-estadtistca-.jpg",
+                "mime_type": "image\/jpeg",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 11311,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-10-31T16:03:50.000000Z",
+                "updated_at": "2026-10-31T16:03:50.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/32\/medicina-y-estadtistca-.jpg",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "li_titulo": "Análisis Multivariado",
+        "li_descripcion": "Conjunto de técnicas analíticas diseñadas para examinar, reducir la dimensionalidad y modelar simultáneamente múltiples variables correlacionadas.",
+        "li_contenido": {
+            "time": "1793463075039",
+            "blocks": [
+                {
+                    "id": "2Y63aMkHTG",
+                    "type": "list",
+                    "data": {
+                        "style": "unordered",
+                        "items": [
+                            {
+                                "content": "<b>¿Qué es?:<\/b> Rama de la estadística que generaliza los métodos univariados y bivariados hacia vectores y matrices aleatorias de alta dimensión.",
+                                "meta": {},
+                                "items": []
+                            },
+                            {
+                                "content": "<b>A qué se refiere:<\/b> Al estudio de estructuras de covarianza y correlación conjunta, buscando dependencias latentes, agrupamientos naturales o proyecciones en subespacios de menor dimensión sin pérdida crítica de información.",
+                                "meta": {},
+                                "items": []
+                            },
+                            {
+                                "content": "<b>A qué se dedica:<\/b> Implementa métodos de reducción dimensional (Análisis de Componentes Principales - PCA, Análisis de Correspondencias), técnicas factoriales (Análisis Factorial Exploratorio y Confirmatorio), métodos de clasificación y discriminación (Análisis Discriminante Lineal - LDA, clustering jerárquico y k-means) y extensiones inferenciales (MANOVA). Se utiliza en genómica, quimiometría, psicometría y segmentación de mercado.",
+                                "meta": {},
+                                "items": []
+                            }
+                        ]
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "li_slug": "analisis-multivariado",
+        "created_at": "2026-10-31T16:11:21.000000Z",
+        "updated_at": "2026-10-31T16:11:21.000000Z",
+        "portada_url": "\/storage\/33\/analisis-multivariado.jpg",
+        "media": [
+            {
+                "id": 33,
+                "model_type": "App\\Models\\CmsLineasInvestigacion",
+                "model_id": 8,
+                "uuid": "7178296b-5fb7-4ee3-9347-5d1bf2917ad8",
+                "collection_name": "li_imagen",
+                "name": "analisis multivariado",
+                "file_name": "analisis-multivariado.jpg",
+                "mime_type": "image\/jpeg",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 67318,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-10-31T16:11:21.000000Z",
+                "updated_at": "2026-10-31T16:11:21.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/33\/analisis-multivariado.jpg",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "li_titulo": "Modelos Lineales y Lineales Generalizados (GLM)",
+        "li_descripcion": "Marco unificado para modelar la relación funcional entre variables predictoras y una variable de respuesta continua, binaria, de conteo o politómica",
+        "li_contenido": {
+            "time": "1793463121860",
+            "blocks": [
+                {
+                    "id": "etcuVV3g7Y",
+                    "type": "list",
+                    "data": {
+                        "style": "unordered",
+                        "items": [
+                            {
+                                "content": "<b>¿Qué es?:<\/b> La extensión formal de la regresión lineal ordinaria que permite que la variable dependiente pertenezca a cualquier distribución de la familia exponencial (Bernoulli, Poisson, Gamma, Binomial Negativa).",
+                                "meta": {},
+                                "items": []
+                            },
+                            {
+                                "content": "<b>A qué se refiere:<\/b> Introduce el concepto de <i>función de enlace<\/i> (<i>link function<\/i>), conectando el predictor lineal $\\eta = X\\beta$ con la media condicional de la respuesta, superando la restricción de normalidad y homocedasticidad de los residuos.",
+                                "meta": {},
+                                "items": []
+                            },
+                            {
+                                "content": "<b>A qué se dedica:<\/b> Desarrolla teoría de estimación por máxima verosimilitud, análisis de residuales (<i>deviance<\/i>), criterios de selección de variables (AIC, BIC) y extensiones avanzadas (modelos aditivos generalizados - GAM, modelos mixtos y ecuaciones de estimación generalizadas - GEE). Es el núcleo del análisis cuantitativo en ecología, ciencias sociales, economía y bioestadística.",
+                                "meta": {},
+                                "items": []
+                            }
+                        ]
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "li_slug": "modelos-lineales-y-lineales-generalizados-glm",
+        "created_at": "2026-10-31T16:13:05.000000Z",
+        "updated_at": "2026-10-31T16:13:05.000000Z",
+        "portada_url": "\/storage\/34\/modelos-lineales.png",
+        "media": [
+            {
+                "id": 34,
+                "model_type": "App\\Models\\CmsLineasInvestigacion",
+                "model_id": 9,
+                "uuid": "1981089b-35e5-4ddc-8905-01891e901c75",
+                "collection_name": "li_imagen",
+                "name": "modelos lineales",
+                "file_name": "modelos-lineales.png",
+                "mime_type": "image\/png",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 19339,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-10-31T16:13:05.000000Z",
+                "updated_at": "2026-10-31T16:13:05.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/34\/modelos-lineales.png",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "li_titulo": "Muestreo",
+        "li_descripcion": "Metodología probabilística orientada a la selección óptima y representativa de subconjuntos de una población para realizar inferencias válidas minimizando costos y varianza.",
+        "li_contenido": {
+            "time": "1793463221122",
+            "blocks": [
+                {
+                    "id": "lGOulwptAd",
+                    "type": "list",
+                    "data": {
+                        "style": "unordered",
+                        "items": [
+                            {
+                                "content": "<b>¿Qué es?:<\/b> La disciplina encargada de diseñar esquemas de captación de datos y construir estimadores insesgados y eficientes a partir de marcos muestrales definidos.",
+                                "meta": {},
+                                "items": []
+                            },
+                            {
+                                "content": "<b>A qué se refiere:<\/b> A la cuantificación del error muestral y el control del error no muestral (sesgos de cobertura, no respuesta o medición), asegurando que cada elemento tenga una probabilidad de inclusión conocida y no nula.",
+                                "meta": {},
+                                "items": []
+                            },
+                            {
+                                "content": "<b>A qué se dedica:<\/b> Estudia esquemas clásicos y complejos: muestreo aleatorio simple, estratificado, por conglomerados, polietápico y muestreo con probabilidades proporcionales al tamaño (PPT); además de estimadores de calibración, regresión y técnicas de imputación de datos faltantes. Es fundamental para censos nacionales, encuestas de hogares, control de calidad y sondeos de opinión.",
+                                "meta": {},
+                                "items": []
+                            }
+                        ]
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "li_slug": "muestreo",
+        "created_at": "2026-10-31T16:14:27.000000Z",
+        "updated_at": "2026-10-31T16:14:27.000000Z",
+        "portada_url": "\/storage\/35\/muestreo.jpg",
+        "media": [
+            {
+                "id": 35,
+                "model_type": "App\\Models\\CmsLineasInvestigacion",
+                "model_id": 10,
+                "uuid": "19a01341-b474-466a-b74b-683a8cf1347f",
+                "collection_name": "li_imagen",
+                "name": "muestreo",
+                "file_name": "muestreo.jpg",
+                "mime_type": "image\/jpeg",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 143928,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-10-31T16:14:27.000000Z",
+                "updated_at": "2026-10-31T16:14:27.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/35\/muestreo.jpg",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "li_titulo": "Machine Learning",
+        "li_descripcion": "Desarrollo de algoritmos capaces de identificar patrones complejos a partir de datos masivos y optimizar tareas de predicción y toma de decisiones de forma autónoma.",
+        "li_contenido": {
+            "time": "1793463293973",
+            "blocks": [
+                {
+                    "id": "CguP4PaNSY",
+                    "type": "list",
+                    "data": {
+                        "style": "unordered",
+                        "items": [
+                            {
+                                "content": "<b>¿Qué es?:<\/b> Subcampo de las ciencias de la computación y la inteligencia artificial en profunda intersección con la estadística matemática moderna, centrado en el aprendizaje basado en datos.",
+                                "meta": {},
+                                "items": []
+                            },
+                            {
+                                "content": "<b>A qué se refiere:<\/b> A los paradigmas de aprendizaje supervisado, no supervisado, autosupervisado y por refuerzo, abordando el equilibrio entre sesgo y varianza (<i>bias-variance tradeoff<\/i>), generalización y sobreajuste (<i>overfitting<\/i>).",
+                                "meta": {},
+                                "items": []
+                            },
+                            {
+                                "content": "<b>A qué se dedica:<\/b> Abarca algoritmos basados en árboles de decisión y ensambles (Random Forest, Gradient Boosting, XGBoost), máquinas de vectores de soporte (SVM), arquitecturas de redes neuronales profundas (Deep Learning) y algoritmos de reducción no lineal de dimensión (t-SNE, UMAP). Se aplica en procesamiento de lenguaje natural, visión por computadora, bioinformática y sistemas autónomos.",
+                                "meta": {},
+                                "items": []
+                            }
+                        ]
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "li_slug": "machine-learning",
+        "created_at": "2026-10-31T16:17:18.000000Z",
+        "updated_at": "2026-10-31T16:17:18.000000Z",
+        "portada_url": "\/storage\/36\/machinelearning.jpg",
+        "media": [
+            {
+                "id": 36,
+                "model_type": "App\\Models\\CmsLineasInvestigacion",
+                "model_id": 11,
+                "uuid": "0f7ee354-3282-45ca-a684-395c3be20b16",
+                "collection_name": "li_imagen",
+                "name": "machinelearning",
+                "file_name": "machinelearning.jpg",
+                "mime_type": "image\/jpeg",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 36937,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-10-31T16:17:18.000000Z",
+                "updated_at": "2026-10-31T16:17:18.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/36\/machinelearning.jpg",
+                "preview_url": ""
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "li_titulo": "Estadística No Paramétrica",
+        "li_descripcion": "Técnicas de inferencia y estimación que no dependen de supuestos distributivos rígidos sobre los datos subyacentes.",
+        "li_contenido": {
+            "time": "1793463464763",
+            "blocks": [
+                {
+                    "id": "VtdygX4aNs",
+                    "type": "list",
+                    "data": {
+                        "style": "unordered",
+                        "items": [
+                            {
+                                "content": "<b>¿Qué es?:<\/b> El conjunto de métodos diseñados para analizar datos ordinales, asimétricos o con distribuciones complejas donde no se puede asumir una forma paramétrica específica (como la normalidad).",
+                                "meta": {},
+                                "items": []
+                            },
+                            {
+                                "content": "<b>A qué se refiere:<\/b> A construcciones inferenciales fundamentadas en el orden, rangos, signos y permutaciones de las observaciones, garantizando validez estadística aun en tamaños muestrales pequeños o con valores atípicos (<i>outliers<\/i>).",
+                                "meta": {},
+                                "items": []
+                            },
+                            {
+                                "content": "<b>A qué se dedica:<\/b> Desarrolla pruebas clásicas basadas en rangos (Mann-Whitney-Wilcoxon, Kruskal-Wallis, Friedman, Kolmogorov-Smirnov), estimación no paramétrica de densidades (estimadores de núcleo o <i>kernel density estimation<\/i>), regresión no paramétrica (splines, loess) y métodos computacionales de remuestreo intensivo (<i>Bootstrap<\/i> y <i>Jackknife<\/i>). Se utiliza con frecuencia en psicología, ciencias ambientales y evaluación sensorial.",
+                                "meta": {},
+                                "items": []
+                            }
+                        ]
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "li_slug": "estadistica-no-parametrica",
+        "created_at": "2026-10-31T16:18:36.000000Z",
+        "updated_at": "2026-10-31T16:18:36.000000Z",
+        "portada_url": "\/storage\/37\/no-parametrica.jpg",
+        "media": [
+            {
+                "id": 37,
+                "model_type": "App\\Models\\CmsLineasInvestigacion",
+                "model_id": 12,
+                "uuid": "133df585-f2bf-47aa-ab39-7d392cb365a9",
+                "collection_name": "li_imagen",
+                "name": "no parametrica",
+                "file_name": "no-parametrica.jpg",
+                "mime_type": "image\/jpeg",
+                "disk": "public",
+                "conversions_disk": "public",
+                "size": 180288,
+                "manipulations": [],
+                "custom_properties": [],
+                "generated_conversions": [],
+                "responsive_images": [],
+                "order_column": 1,
+                "created_at": "2026-10-31T16:18:36.000000Z",
+                "updated_at": "2026-10-31T16:18:36.000000Z",
+                "original_url": "http:\/\/localhost:8000\/storage\/37\/no-parametrica.jpg",
+                "preview_url": ""
+            }
+        ]
+    }
+]

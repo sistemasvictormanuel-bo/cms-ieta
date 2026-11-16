@@ -28,8 +28,10 @@ class StoreEdicionVarianzaRequest extends FormRequest
             'ev_doi' => 'nullable|string|max:255',
             'ev_presentacion' => 'nullable',
             'ev_editorial' => 'nullable|string',
+            'ev_enlace_url' => 'nullable|string|max:2048',
             'ev_fecha_publicacion' => 'nullable|date',
             'ev_estado' => 'nullable|boolean',
+            'extraer_portada_de_pdf' => 'nullable|boolean',
             'ev_portada' => 'nullable|image|mimes:jpeg,png,webp,jpg|max:5120',
             'ev_archivo' => 'nullable|file|mimes:pdf|max:30720',
         ];

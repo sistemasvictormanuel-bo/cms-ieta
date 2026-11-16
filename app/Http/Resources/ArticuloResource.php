@@ -43,6 +43,8 @@ class ArticuloResource extends JsonResource
             'etiquetas_array' => $this->etiquetas_list,
             'vistas' => $this->art_vistas ?? 0,
             'archivo_url' => $this->archivo_url,
+            'enlace_url' => $this->art_enlace_url,
+            'art_enlace_url' => $this->art_enlace_url,
             'autores' => AutorResource::collection($this->whenLoaded('autores')),
             'articulos_similares' => ArticuloResource::collection($this->whenLoaded('articulosSimilares')),
             'mas_leidos_autor' => ArticuloResource::collection($this->whenLoaded('masLeidosAutor')),

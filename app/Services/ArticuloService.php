@@ -209,6 +209,7 @@ class ArticuloService
                 'estado_revision' => $estadoRevision,
                 'created_by_user_id' => $creadoPor,
                 'art_referencias' => $data['art_referencias'] ?? null,
+                'art_enlace_url' => ! empty($data['art_enlace_url']) ? trim($data['art_enlace_url']) : null,
                 'art_vistas' => $data['art_vistas'] ?? 0,
             ]);
 
@@ -374,6 +375,7 @@ class ArticuloService
                 'art_estado' => isset($data['art_estado']) ? (bool) $data['art_estado'] : ($nuevoEstado === 'aprobado'),
                 'estado_revision' => $nuevoEstado,
                 'art_referencias' => array_key_exists('art_referencias', $data) ? $data['art_referencias'] : $registro->art_referencias,
+                'art_enlace_url' => array_key_exists('art_enlace_url', $data) ? (! empty($data['art_enlace_url']) ? trim($data['art_enlace_url']) : null) : $registro->art_enlace_url,
                 'art_vistas' => array_key_exists('art_vistas', $data) ? (int) $data['art_vistas'] : $registro->art_vistas,
             ]);
 

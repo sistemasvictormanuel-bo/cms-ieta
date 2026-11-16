@@ -8,6 +8,8 @@ use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Process;
 use Illuminate\Support\Str;
 use Throwable;
 
@@ -230,6 +232,7 @@ class EdicionVarianzaService
                 'ev_doi' => $data['ev_doi'] ?? null,
                 'ev_presentacion' => $data['ev_presentacion'] ?? null,
                 'ev_editorial' => $data['ev_editorial'] ?? null,
+                'ev_enlace_url' => ! empty($data['ev_enlace_url']) ? trim($data['ev_enlace_url']) : null,
                 'ev_fecha_publicacion' => $data['ev_fecha_publicacion'] ?? null,
                 'ev_estado' => isset($data['ev_estado']) ? (bool) $data['ev_estado'] : true,
             ]);
@@ -238,8 +241,17 @@ class EdicionVarianzaService
                 $registro->addMedia($portada)->toMediaCollection('ev_portada');
             }
 
+            $savedPdfMedia = null;
             if ($archivo) {
-                $registro->addMedia($archivo)->toMediaCollection('ev_archivo');
+                $savedPdfMedia = $registro->addMedia($archivo)->toMediaCollection('ev_archivo');
+            }
+
+            // Si no se proporcionó portada manual y se tiene un PDF o enlace externo:
+            $solicitaExtraccion = ! empty($data['extraer_portada_de_pdf']);
+            $tieneEnlace = ! empty($data['ev_enlace_url']);
+            if (! $portada && ($solicitaExtraccion || $archivo || $tieneEnlace)) {
+                $pdfPath = ($savedPdfMedia && file_exists($savedPdfMedia->getPath())) ? $savedPdfMedia->getPath() : null;
+                $this->extraerPortadaDesdePdfOEnlace($registro, $pdfPath, $data['ev_enlace_url'] ?? null);
             }
 
             DB::commit();
@@ -292,6 +304,7 @@ class EdicionVarianzaService
                 'ev_doi' => array_key_exists('ev_doi', $data) ? $data['ev_doi'] : $registro->ev_doi,
                 'ev_presentacion' => array_key_exists('ev_presentacion', $data) ? $data['ev_presentacion'] : $registro->ev_presentacion,
                 'ev_editorial' => array_key_exists('ev_editorial', $data) ? $data['ev_editorial'] : $registro->ev_editorial,
+                'ev_enlace_url' => array_key_exists('ev_enlace_url', $data) ? (! empty($data['ev_enlace_url']) ? trim($data['ev_enlace_url']) : null) : $registro->ev_enlace_url,
                 'ev_fecha_publicacion' => array_key_exists('ev_fecha_publicacion', $data) ? $data['ev_fecha_publicacion'] : $registro->ev_fecha_publicacion,
                 'ev_estado' => isset($data['ev_estado']) ? (bool) $data['ev_estado'] : $registro->ev_estado,
             ]);
@@ -301,9 +314,29 @@ class EdicionVarianzaService
                 $registro->addMedia($portada)->toMediaCollection('ev_portada');
             }
 
+            $savedPdfMedia = null;
             if ($archivo) {
                 $registro->clearMediaCollection('ev_archivo');
-                $registro->addMedia($archivo)->toMediaCollection('ev_archivo');
+                $savedPdfMedia = $registro->addMedia($archivo)->toMediaCollection('ev_archivo');
+            }
+
+            $solicitaExtraccion = ! empty($data['extraer_portada_de_pdf']);
+            $enlaceUrlActual = $data['ev_enlace_url'] ?? $registro->ev_enlace_url;
+            $tieneNuevoEnlace = ! empty($data['ev_enlace_url']) && $data['ev_enlace_url'] !== $registro->getOriginal('ev_enlace_url');
+            $faltaPortada = ! $registro->getFirstMedia('ev_portada');
+
+            if (! $portada && ($solicitaExtraccion || ($archivo && $faltaPortada) || ($tieneNuevoEnlace && $faltaPortada))) {
+                $pdfPath = null;
+                if ($savedPdfMedia && file_exists($savedPdfMedia->getPath())) {
+                    $pdfPath = $savedPdfMedia->getPath();
+                } else {
+                    $existingPdf = $registro->getFirstMedia('ev_archivo');
+                    if ($existingPdf && file_exists($existingPdf->getPath())) {
+                        $pdfPath = $existingPdf->getPath();
+                    }
+                }
+
+                $this->extraerPortadaDesdePdfOEnlace($registro, $pdfPath, $enlaceUrlActual);
             }
 
             DB::commit();
@@ -313,6 +346,156 @@ class EdicionVarianzaService
             DB::rollBack();
             throw $e;
         }
+    }
+
+    /**
+     * Extrae automáticamente la portada desde un PDF local o desde un enlace externo (Drive, Dropbox, URL).
+     */
+    public function extraerPortadaDesdePdfOEnlace(
+        EdicionVarianza $registro,
+        string|UploadedFile|null $pdfSource = null,
+        ?string $enlaceUrl = null
+    ): bool {
+        // 1. Intentar desde archivo PDF local si existe
+        if ($pdfSource) {
+            $pdfPath = $pdfSource instanceof UploadedFile ? $pdfSource->getRealPath() : $pdfSource;
+
+            if (! empty($pdfPath) && file_exists($pdfPath) && is_readable($pdfPath)) {
+                $tempImagePrefix = sys_get_temp_dir().'/cover_'.Str::uuid();
+
+                $process = Process::run([
+                    'pdftoppm',
+                    '-png',
+                    '-r', '150',
+                    '-f', '1',
+                    '-l', '1',
+                    '-singlefile',
+                    $pdfPath,
+                    $tempImagePrefix,
+                ]);
+
+                $generatedPng = $tempImagePrefix.'.png';
+
+                if ($process->successful() && file_exists($generatedPng)) {
+                    $registro->clearMediaCollection('ev_portada');
+                    $registro->addMedia($generatedPng)
+                        ->usingFileName('portada_generada_'.time().'.png')
+                        ->toMediaCollection('ev_portada');
+                    @unlink($generatedPng);
+
+                    return true;
+                }
+            }
+        }
+
+        // 2. Si no hubo archivo local o falló, intentar extraer desde enlace externo
+        $url = ! empty($enlaceUrl) ? trim($enlaceUrl) : $registro->ev_enlace_url;
+
+        if (! empty($url) && filter_var($url, FILTER_VALIDATE_URL)) {
+            // A) Caso Google Drive
+            if (str_contains($url, 'drive.google.com') || str_contains($url, 'docs.google.com')) {
+                if (preg_match('/(?:file\/d\/|open\?id=|id=|\/d\/)([a-zA-Z0-9_-]{20,})/', $url, $matches)) {
+                    $fileId = $matches[1];
+                    $thumbUrl = "https://drive.google.com/thumbnail?id={$fileId}&sz=w1200";
+
+                    try {
+                        $response = Http::withoutVerifying()
+                            ->timeout(15)
+                            ->withHeaders([
+                                'User-Agent' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                            ])
+                            ->get($thumbUrl);
+
+                        if ($response->successful() && strlen($response->body()) > 50) {
+                            $tempFile = sys_get_temp_dir().'/gdrive_cover_'.Str::uuid().'.png';
+                            file_put_contents($tempFile, $response->body());
+
+                            $registro->clearMediaCollection('ev_portada');
+                            $registro->addMedia($tempFile)
+                                ->usingFileName('portada_drive_'.time().'.png')
+                                ->toMediaCollection('ev_portada');
+                            @unlink($tempFile);
+
+                            return true;
+                        }
+                    } catch (Throwable $e) {
+                        report($e);
+                    }
+                }
+            }
+
+            // B) Caso Dropbox u otros enlaces directos a PDF
+            try {
+                $downloadUrl = $url;
+                if (str_contains($url, 'dropbox.com')) {
+                    $downloadUrl = str_replace(['?dl=0', '&dl=0'], ['?dl=1', '&dl=1'], $url);
+                    if (! str_contains($downloadUrl, 'dl=1')) {
+                        $downloadUrl .= (str_contains($downloadUrl, '?') ? '&' : '?').'dl=1';
+                    }
+                }
+
+                $tempDownload = sys_get_temp_dir().'/remote_pdf_'.Str::uuid().'.pdf';
+                $response = Http::withoutVerifying()
+                    ->timeout(25)
+                    ->sink($tempDownload)
+                    ->get($downloadUrl);
+
+                if ($response->successful() && file_exists($tempDownload) && filesize($tempDownload) > 500) {
+                    $header = file_get_contents($tempDownload, false, null, 0, 10);
+                    if (str_starts_with($header, '%PDF-')) {
+                        $tempImagePrefix = sys_get_temp_dir().'/remote_cover_'.Str::uuid();
+                        $process = Process::run([
+                            'pdftoppm',
+                            '-png',
+                            '-r', '150',
+                            '-f', '1',
+                            '-l', '1',
+                            '-singlefile',
+                            $tempDownload,
+                            $tempImagePrefix,
+                        ]);
+
+                        $generatedPng = $tempImagePrefix.'.png';
+                        if ($process->successful() && file_exists($generatedPng)) {
+                            $registro->clearMediaCollection('ev_portada');
+                            $registro->addMedia($generatedPng)
+                                ->usingFileName('portada_remota_'.time().'.png')
+                                ->toMediaCollection('ev_portada');
+                            @unlink($generatedPng);
+                            @unlink($tempDownload);
+
+                            return true;
+                        }
+                    } elseif (str_starts_with($header, "\xFF\xD8\xFF") || str_starts_with($header, "\x89PNG")) {
+                        // El enlace devolvió directamente una imagen
+                        $registro->clearMediaCollection('ev_portada');
+                        $registro->addMedia($tempDownload)
+                            ->usingFileName('portada_externa_'.time().'.png')
+                            ->toMediaCollection('ev_portada');
+                        @unlink($tempDownload);
+
+                        return true;
+                    }
+
+                    @unlink($tempDownload);
+                }
+            } catch (Throwable $e) {
+                report($e);
+                if (isset($tempDownload) && file_exists($tempDownload)) {
+                    @unlink($tempDownload);
+                }
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * Alias de compatibilidad para extraer desde PDF.
+     */
+    public function extraerPortadaDesdePdf(EdicionVarianza $registro, string|UploadedFile $pdfSource): bool
+    {
+        return $this->extraerPortadaDesdePdfOEnlace($registro, $pdfSource, null);
     }
 
     public function eliminar(int $id): bool

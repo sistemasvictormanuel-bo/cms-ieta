@@ -177,6 +177,18 @@ const getParticipationName = (autor) => {
                         </svg>
                         Descargar PDF
                     </a>
+                    <a
+                        v-if="articulo.art_enlace_url"
+                        :href="articulo.art_enlace_url"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold bg-indigo-50 text-[#35449F] hover:bg-indigo-100 transition"
+                    >
+                        <svg class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                        Enlace Externo
+                    </a>
                     <Link :href="route('admin.articulos.edit', articulo.id)">
                         <PrimaryButton class="cursor-pointer">
                             <svg class="size-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -309,19 +321,33 @@ const getParticipationName = (autor) => {
                     </div>
                     <div>
                         <div class="text-xs font-bold text-gray-400 uppercase tracking-wider">Documento Adjunto</div>
-                        <div class="mt-1">
-                            <a
-                                v-if="articulo.archivo_url"
-                                :href="articulo.archivo_url"
-                                target="_blank"
-                                class="text-xs font-bold text-[#35449F] hover:underline inline-flex items-center gap-1"
-                            >
-                                <svg class="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                </svg>
-                                Abrir Documento Completo
-                            </a>
-                            <span v-else class="text-xs text-gray-400 italic">Sin archivo adjunto</span>
+                        <div class="mt-1 space-y-1">
+                            <div v-if="articulo.archivo_url">
+                                <a
+                                    :href="articulo.archivo_url"
+                                    target="_blank"
+                                    class="text-xs font-bold text-[#35449F] hover:underline inline-flex items-center gap-1"
+                                >
+                                    <svg class="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                    Abrir Documento Completo
+                                </a>
+                            </div>
+                            <div v-if="articulo.art_enlace_url">
+                                <a
+                                    :href="articulo.art_enlace_url"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="text-xs font-bold text-indigo-600 hover:underline inline-flex items-center gap-1"
+                                >
+                                    <svg class="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                    Enlace Nube / Drive
+                                </a>
+                            </div>
+                            <span v-if="!articulo.archivo_url && !articulo.art_enlace_url" class="text-xs text-gray-400 italic">Sin archivo adjunto</span>
                         </div>
                     </div>
                 </div>

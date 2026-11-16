@@ -1,0 +1,73 @@
+{
+    "cargos": [
+        {
+            "id": 1,
+            "ci_nombre": "Director Ieta",
+            "ci_descripcion": null,
+            "created_at": "2026-10-12T00:13:00.000000Z",
+            "updated_at": "2026-10-12T00:13:00.000000Z"
+        },
+        {
+            "id": 2,
+            "ci_nombre": "Secreatria",
+            "ci_descripcion": null,
+            "created_at": "2026-10-12T00:13:09.000000Z",
+            "updated_at": "2026-10-12T00:13:09.000000Z"
+        },
+        {
+            "id": 3,
+            "ci_nombre": "Investigador",
+            "ci_descripcion": null,
+            "created_at": "2026-10-13T14:48:57.000000Z",
+            "updated_at": "2026-10-13T14:48:57.000000Z"
+        },
+        {
+            "id": 4,
+            "ci_nombre": "Portera",
+            "ci_descripcion": "Portera y Mensajera",
+            "created_at": "2026-10-19T20:31:22.000000Z",
+            "updated_at": "2026-10-19T20:31:22.000000Z"
+        }
+    ],
+    "personal": [
+        {
+            "id": 1,
+            "cargo_id": null,
+            "persona": {
+                "id": 14,
+                "p_nombre": "Ana Maria",
+                "p_apellido_paterno": "Panca",
+                "p_apellido_materno": "Perez",
+                "p_correo": "ampanca@umsa.bo",
+                "p_telefono": null
+            },
+            "per_biografia": null,
+            "per_estado": false
+        },
+        {
+            "id": 2,
+            "cargo_id": null,
+            "persona": {
+                "id": 17,
+                "p_nombre": "Lidia",
+                "p_apellido_paterno": "Mamani",
+                "p_apellido_materno": "Mayta",
+                "p_correo": "mamanimaytalidia1@gmail.com",
+                "p_telefono": null
+            },
+            "per_biografia": null,
+            "per_estado": false
+        }
+    ],
+    "comite": [
+        {
+            "id": 1,
+            "persona_id": 15,
+            "cargo_id": 1,
+            "institucion_id": 1,
+            "ce_tipo": "Nacional",
+            "created_at": "2026-10-13T14:49:46.000000Z",
+            "updated_at": "2026-10-13T23:48:00.000000Z"
+        }
+    ]
+}

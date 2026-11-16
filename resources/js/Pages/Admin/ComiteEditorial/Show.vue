@@ -136,6 +136,21 @@ const getInitials = (persona) => {
                             {{ miembro.institucion.inst_ciudad }}, {{ miembro.institucion.inst_pais }}
                         </div>
                     </div>
+
+                    <div v-if="miembro.persona?.p_sitio_web" class="sm:col-span-2 md:col-span-3 pt-2 border-t border-gray-100">
+                        <div class="text-xs font-bold text-gray-400 uppercase tracking-wider">Sitio Web / Perfil Académico</div>
+                        <a
+                            :href="miembro.persona.p_sitio_web"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center gap-1.5 font-bold text-[#35449F] hover:underline mt-1 break-all"
+                        >
+                            <span>{{ miembro.persona.p_sitio_web }}</span>
+                            <svg class="size-4 shrink-0 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -9,7 +9,7 @@ beforeEach(function () {
 });
 
 it('permite a un usuario autenticado ver la vista de edición de sobre nosotros', function () {
-    $user = User::factory()->create();
+    $user = User::factory()->withTwoFactor()->create();
     $user->assignRole('administrador');
 
     $response = $this->actingAs($user)->get(route('admin.sobre-nosotros.edit'));
@@ -18,7 +18,7 @@ it('permite a un usuario autenticado ver la vista de edición de sobre nosotros'
 });
 
 it('permite actualizar el registro único de sobre nosotros', function () {
-    $user = User::factory()->create();
+    $user = User::factory()->withTwoFactor()->create();
     $user->assignRole('administrador');
 
     $payload = [

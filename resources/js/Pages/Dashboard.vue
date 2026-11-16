@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 import { Link } from '@inertiajs/vue3';
 import AppLayout from '@/Layouts/AppLayout.vue';
 
@@ -17,14 +17,27 @@ const props = defineProps({
     },
     chart_series: {
         type: Array,
-        default: () => [
-            { name: 'Artículos Registrados', data: [0, 0, 0, 0, 0, 0] },
-            { name: 'Bases de Datos Agregadas', data: [0, 0, 0, 0, 0, 0] },
-        ],
+        default: () => [],
     },
     chart_categories: {
         type: Array,
-        default: () => ['May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct'],
+        default: () => [],
+    },
+    chart_timeline: {
+        type: Object,
+        default: () => ({
+            categories: [],
+            series: [],
+            totales: { varianza: 0, memorias: 0, total: 0 },
+        }),
+    },
+    chart_ediciones: {
+        type: Object,
+        default: () => ({
+            categories: [],
+            series: [],
+            totales: { articulos: 0, notas: 0, total: 0 },
+        }),
     },
     donut_data: {
         type: Object,
@@ -68,31 +81,69 @@ const totalAcervo = computed(() => {
     return s.reduce((acc, val) => acc + (Number(val) || 0), 0);
 });
 
-// Opciones del gráfico de Columnas por Edición Semestral (ApexCharts)
-const columnChartOptions = computed(() => ({
+// Vista activa del gráfico: 'timeline' (Línea de tiempo histórica por gestiones) o 'ediciones' (Detalle por volumen de Varianza)
+const activeView = ref('timeline');
+
+const currentCategories = computed(() => {
+    if (activeView.value === 'timeline') {
+        return props.chart_timeline?.categories?.length
+            ? props.chart_timeline.categories
+            : props.chart_categories;
+    }
+    return props.chart_ediciones?.categories?.length
+        ? props.chart_ediciones.categories
+        : props.chart_categories;
+});
+
+const currentSeries = computed(() => {
+    if (activeView.value === 'timeline') {
+        return props.chart_timeline?.series?.length
+            ? props.chart_timeline.series
+            : props.chart_series;
+    }
+    return props.chart_ediciones?.series?.length
+        ? props.chart_ediciones.series
+        : props.chart_series;
+});
+
+// Opciones del gráfico de Área Spline / Línea de Tiempo (ApexCharts)
+const areaChartOptions = computed(() => ({
     chart: {
-        type: 'bar',
+        type: 'area',
         height: 270,
         toolbar: { show: false },
         fontFamily: 'inherit',
-    },
-    plotOptions: {
-        bar: {
-            horizontal: false,
-            columnWidth: '38%',
-            borderRadius: 6,
-            borderRadiusApplication: 'end',
-        },
+        zoom: { enabled: false },
+        sparkline: { enabled: false },
     },
     colors: ['#35449F', '#06B6D4'], // Azul Institucional IETA y Cyan
     dataLabels: { enabled: false },
     stroke: {
-        show: true,
+        curve: 'smooth',
         width: 3,
-        colors: ['transparent'],
+        lineCap: 'round',
+    },
+    fill: {
+        type: 'gradient',
+        gradient: {
+            shadeIntensity: 1,
+            opacityFrom: 0.40,
+            opacityTo: 0.04,
+            stops: [0, 90, 100],
+        },
+    },
+    markers: {
+        size: 4,
+        colors: ['#35449F', '#06B6D4'],
+        strokeColors: '#ffffff',
+        strokeWidth: 2,
+        hover: {
+            size: 6,
+            sizeOffset: 2,
+        },
     },
     xaxis: {
-        categories: props.chart_categories?.length ? props.chart_categories : ['Ed. 24 (2024)', 'Ed. 25 (2024)'],
+        categories: currentCategories.value,
         labels: {
             style: {
                 colors: '#64748B',
@@ -102,6 +153,7 @@ const columnChartOptions = computed(() => ({
         },
         axisBorder: { show: false },
         axisTicks: { show: false },
+        tooltip: { enabled: false },
     },
     yaxis: {
         labels: {
@@ -113,15 +165,20 @@ const columnChartOptions = computed(() => ({
             formatter: (val) => Math.round(val),
         },
         min: 0,
+        forceNiceScale: true,
     },
     grid: {
         borderColor: '#F1F5F9',
         strokeDashArray: 4,
         yaxis: { lines: { show: true } },
+        xaxis: { lines: { show: false } },
+        padding: { top: 10, right: 10, bottom: 0, left: 10 },
     },
     legend: { show: false },
     tooltip: {
         theme: 'dark',
+        shared: true,
+        intersect: false,
         y: {
             formatter: (val) => `${val} publicaciones`,
         },
@@ -307,44 +364,93 @@ const formatNum = (num) => {
             <!-- FILA MEDIA: GRÁFICO DE PRODUCCIÓN (AREA) + DONUT ACERVO  -->
             <!-- ======================================================== -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-                <!-- Gráfico de Columnas por Edición Semestral (8 columnas) -->
+                <!-- Gráfico de Producción Científica (Línea de Tiempo / Área Spline) (8 columnas) -->
                 <div class="lg:col-span-8 bg-white rounded-2xl p-6 border border-slate-200/90 shadow-2xs flex flex-col justify-between">
                     <div>
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-100">
                             <div>
                                 <div class="flex items-center gap-2.5">
                                     <h2 class="text-base sm:text-lg font-black text-slate-900 tracking-tight">
-                                        Producción Científica por Edición (Revista Varianza)
+                                        {{ activeView === 'timeline' ? 'Evolución de la Producción Científica' : 'Producción por Edición (Revista Varianza)' }}
                                     </h2>
                                     <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-extrabold uppercase bg-indigo-50 text-[#35449F] border border-indigo-200/60">
-                                        Semestral • 2 Vol/Año
+                                        {{ activeView === 'timeline' ? 'Línea de Tiempo • Gestiones' : 'Ediciones Indexadas' }}
                                     </span>
                                 </div>
                                 <p class="text-[13px] text-slate-500 font-medium mt-0.5">
-                                    Artículos originales y notas científicas publicadas en cada volumen indexado
+                                    {{ activeView === 'timeline'
+                                        ? 'Tendencia histórica de artículos indexados y memorias de investigación por gestión'
+                                        : 'Artículos originales y notas científicas publicadas en cada volumen reciente' }}
                                 </p>
                             </div>
 
-                            <!-- Indicadores de leyendas superiores -->
-                            <div class="flex items-center gap-4 text-xs font-bold shrink-0">
-                                <div class="flex items-center gap-1.5">
-                                    <span class="size-2.5 rounded-sm bg-[#35449F]"></span>
-                                    <span class="text-slate-700">Artículos Originales</span>
-                                </div>
-                                <div class="flex items-center gap-1.5">
-                                    <span class="size-2.5 rounded-sm bg-cyan-500"></span>
-                                    <span class="text-slate-700">Notas Científicas</span>
-                                </div>
+                            <!-- Selector interactivo de Vista (Línea de tiempo / Ediciones) -->
+                            <div class="flex items-center p-1 bg-slate-100/90 rounded-xl border border-slate-200/80 text-xs font-bold shrink-0 self-start sm:self-auto">
+                                <button
+                                    type="button"
+                                    @click="activeView = 'timeline'"
+                                    :class="activeView === 'timeline' ? 'bg-white text-[#35449F] shadow-xs font-black' : 'text-slate-500 hover:text-slate-800'"
+                                    class="px-2.5 py-1 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer"
+                                    title="Ver evolución histórica anual"
+                                >
+                                    <svg class="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                                    </svg>
+                                    <span>Línea de Tiempo</span>
+                                </button>
+                                <button
+                                    type="button"
+                                    @click="activeView = 'ediciones'"
+                                    :class="activeView === 'ediciones' ? 'bg-white text-[#35449F] shadow-xs font-black' : 'text-slate-500 hover:text-slate-800'"
+                                    class="px-2.5 py-1 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer"
+                                    title="Ver detalle por ediciones de la revista"
+                                >
+                                    <svg class="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                    </svg>
+                                    <span>Por Edición</span>
+                                </button>
                             </div>
                         </div>
 
-                        <!-- Componente ApexCharts (Column Bar) -->
+                        <!-- Sub-barra con leyendas dinámicas y contador total -->
+                        <div class="flex flex-wrap items-center justify-between gap-3 pt-2.5 text-xs font-bold">
+                            <!-- Indicadores de leyendas superiores -->
+                            <div class="flex items-center gap-4">
+                                <template v-if="activeView === 'timeline'">
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="size-2.5 rounded-full bg-[#35449F]"></span>
+                                        <span class="text-slate-700">Artículos Varianza ({{ chart_timeline?.totales?.varianza ?? 0 }})</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="size-2.5 rounded-full bg-[#06B6D4]"></span>
+                                        <span class="text-slate-700">Memorias IETA ({{ chart_timeline?.totales?.memorias ?? 0 }})</span>
+                                    </div>
+                                </template>
+                                <template v-else>
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="size-2.5 rounded-full bg-[#35449F]"></span>
+                                        <span class="text-slate-700">Artículos Originales ({{ chart_ediciones?.totales?.articulos ?? 0 }})</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="size-2.5 rounded-full bg-[#06B6D4]"></span>
+                                        <span class="text-slate-700">Notas Científicas ({{ chart_ediciones?.totales?.notas ?? 0 }})</span>
+                                    </div>
+                                </template>
+                            </div>
+
+                            <div class="text-[11px] font-extrabold text-slate-500 bg-slate-50 px-2 py-0.5 rounded-md border border-slate-200/70">
+                                Total: {{ activeView === 'timeline' ? (chart_timeline?.totales?.total ?? 0) : (chart_ediciones?.totales?.total ?? 0) }} registros
+                            </div>
+                        </div>
+
+                        <!-- Componente ApexCharts (Area Spline / Línea de tiempo) -->
                         <div class="mt-2 -ml-2">
                             <apexchart
-                                type="bar"
+                                type="area"
                                 height="270"
-                                :options="columnChartOptions"
-                                :series="chart_series"
+                                :options="areaChartOptions"
+                                :series="currentSeries"
                             />
                         </div>
                     </div>

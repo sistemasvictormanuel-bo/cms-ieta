@@ -72,6 +72,7 @@ class ArticulosExport implements FromCollection, ShouldAutoSize, WithHeadings, W
             'Abstract',
             'Referencias',
             'Archivo URL',
+            'Enlace Externo (URL)',
         ];
     }
 
@@ -109,6 +110,7 @@ class ArticulosExport implements FromCollection, ShouldAutoSize, WithHeadings, W
             $articulo->art_abstracto,
             $articulo->art_referencias,
             $articulo->archivo_url ? url($articulo->archivo_url) : 'Sin archivo',
+            $articulo->art_enlace_url ?: '',
         ];
     }
 

@@ -204,12 +204,13 @@ const submit = () => {
                                     <TextInput
                                         id="p_sitio_web"
                                         v-model="form.p_sitio_web"
-                                        type="url"
+                                        type="text"
+                                        inputmode="url"
                                         class="mt-1.5 block w-full text-[15.5px] font-medium"
-                                        placeholder="https://linkedin.com/in/... o sitio web personal"
+                                        placeholder="ej: https://linkedin.com/in/... o sitio web personal (Opcional)"
                                     />
                                     <p class="text-[13.5px] text-gray-600 font-medium mt-1">
-                                        Opcional. Algunos miembros disponen de portafolio o perfil en LinkedIn; otros no.
+                                        Campo 100% opcional. Puedes dejarlo vacío o ingresar un enlace de LinkedIn, ORCID o sitio personal.
                                     </p>
                                     <InputError :message="form.errors.p_sitio_web" class="mt-1" />
                                 </div>

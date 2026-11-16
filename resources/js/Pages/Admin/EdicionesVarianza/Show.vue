@@ -44,6 +44,38 @@ const notasCientificasCount = computed(() => {
         a.tipo_articulo?.tar_nombre?.toLowerCase().includes('nota')
     ).length;
 });
+
+const formatDateLong = (val) => {
+    if (!val) return null;
+    try {
+        const dateStr = typeof val === 'string' ? val.slice(0, 10) : val;
+        const [year, month, day] = dateStr.split('-');
+        if (!year || !month || !day) return val;
+        const meses = [
+            'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
+            'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'
+        ];
+        const mIdx = parseInt(month, 10) - 1;
+        const mesNombre = meses[mIdx] || month;
+        return `${parseInt(day, 10)} de ${mesNombre} de ${year}`;
+    } catch {
+        return val;
+    }
+};
+
+const formatDateShort = (val) => {
+    if (!val) return null;
+    try {
+        const dateStr = typeof val === 'string' ? val.slice(0, 10) : val;
+        const [year, month, day] = dateStr.split('-');
+        if (year && month && day) {
+            return `${day}/${month}/${year}`;
+        }
+        return dateStr;
+    } catch {
+        return val;
+    }
+};
 </script>
 
 <template>
@@ -84,6 +116,18 @@ const notasCientificasCount = computed(() => {
                         </svg>
                         Descargar PDF
                     </a>
+                    <a
+                        v-if="edicion.ev_enlace_url || edicion.enlace_url"
+                        :href="edicion.ev_enlace_url || edicion.enlace_url"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold rounded-xl transition shadow-xs"
+                    >
+                        <svg class="size-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                        Enlace Externo
+                    </a>
                     <Link :href="route('admin.articulos.create')">
                         <SecondaryButton class="cursor-pointer">
                             + Añadir Artículo
@@ -112,7 +156,7 @@ const notasCientificasCount = computed(() => {
                                 v-if="edicion.portada_url"
                                 :src="edicion.portada_url"
                                 :alt="edicion.ev_titulo"
-                                class="w-full h-full object-cover"
+                                class="w-full h-full object-cover object-top"
                             />
                             <div v-else class="w-full h-full flex flex-col items-center justify-center p-6 text-center text-slate-400">
                                 <svg class="size-16 mb-2 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -143,8 +187,11 @@ const notasCientificasCount = computed(() => {
                                 <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 font-bold">
                                     Año {{ edicion.ev_anio }} {{ edicion.ev_mes ? `(${edicion.ev_mes})` : '' }}
                                 </span>
-                                <span v-if="edicion.ev_fecha_publicacion" class="text-slate-400 font-medium">
-                                    Publicado el: {{ edicion.ev_fecha_publicacion }}
+                                <span v-if="edicion.ev_fecha_publicacion" class="text-slate-500 font-medium inline-flex items-center gap-1">
+                                    <svg class="size-3.5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    Publicado: {{ formatDateLong(edicion.ev_fecha_publicacion) }}
                                 </span>
                             </div>
 
@@ -413,13 +460,29 @@ const notasCientificasCount = computed(() => {
                         </div>
                         <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
                             <span class="text-xs font-bold uppercase tracking-wider text-slate-400 block">Fecha de Publicación</span>
-                            <span class="font-bold text-slate-900">{{ edicion.ev_fecha_publicacion || 'No definida' }}</span>
+                            <span class="font-bold text-slate-900">
+                                {{ formatDateLong(edicion.ev_fecha_publicacion) || (edicion.ev_mes ? `${edicion.ev_mes} de ${edicion.ev_anio}` : `Gestión ${edicion.ev_anio}`) }}
+                            </span>
                         </div>
                         <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
                             <span class="text-xs font-bold uppercase tracking-wider text-slate-400 block">Formato Digital</span>
-                            <span class="font-bold text-slate-900">
-                                {{ edicion.archivo_url ? 'Archivo PDF Completo disponible' : 'Sin archivo adjunto' }}
-                            </span>
+                            <div class="space-y-1 mt-0.5">
+                                <div v-if="edicion.archivo_url">
+                                    <a :href="edicion.archivo_url" target="_blank" class="font-bold text-red-600 hover:underline text-xs inline-flex items-center gap-1">
+                                        <svg class="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                                        Archivo PDF Completo
+                                    </a>
+                                </div>
+                                <div v-if="edicion.ev_enlace_url || edicion.enlace_url">
+                                    <a :href="edicion.ev_enlace_url || edicion.enlace_url" target="_blank" rel="noopener noreferrer" class="font-bold text-[#35449F] hover:underline text-xs inline-flex items-center gap-1">
+                                        <svg class="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                                        Enlace en la Nube
+                                    </a>
+                                </div>
+                                <span v-if="!edicion.archivo_url && !edicion.ev_enlace_url && !edicion.enlace_url" class="font-bold text-slate-400 italic text-xs">
+                                    Sin archivo adjunto
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>

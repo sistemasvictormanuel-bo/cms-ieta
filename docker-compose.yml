@@ -1,0 +1,64 @@
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        - VITE_API_URL=${VITE_API_URL:-/api}
+    restart: unless-stopped
+    expose:
+      - "80" # Puerto interno consumido por el reverse proxy Traefik en Dokploy
+    networks:
+      - dokploy-network
+      - backend-network
+    env_file:
+      - .env
+    environment:
+      - TZ=${TZ:-America/La_Paz}
+    depends_on:
+      - app
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    expose:
+      - "8000" # Puerto interno consumido por el reverse proxy Traefik en Dokploy
+    networks:
+      - dokploy-network
+      - backend-network
+    env_file:
+      - .env
+    environment:
+      - TZ=${TZ:-America/La_Paz}
+      - APP_ENV=${APP_ENV:-production}
+      - APP_DEBUG=${APP_DEBUG:-false}
+    volumes:
+      - "../files/storage:/var/www/html/storage/app/public"
+    depends_on:
+      - db
+
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    networks:
+      - backend-network
+    env_file:
+      - .env
+    environment:
+      - TZ=${TZ:-America/La_Paz}
+      - POSTGRES_DB=${DB_DATABASE:-db_ieta_2026}
+      - POSTGRES_USER=${DB_USERNAME:-postgres}
+      - POSTGRES_PASSWORD=${DB_PASSWORD:-postgres}
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+networks:
+  dokploy-network:
+    external: true
+  backend-network:
+    driver: bridge
+
+volumes:
+  db_data:

@@ -67,6 +67,7 @@ class UpdateArticuloRequest extends FormRequest
             'art_pag_fin' => 'nullable|integer|min:1|gte:art_pag_inicio',
             'art_estado' => 'nullable|boolean',
             'art_referencias' => 'nullable|string',
+            'art_enlace_url' => 'nullable|string|max:2048',
             'art_vistas' => 'nullable|integer|min:0',
             'art_archivo' => 'nullable|file|mimes:pdf,doc,docx|max:15360',
             'etiquetas' => 'nullable|array',

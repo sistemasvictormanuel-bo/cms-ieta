@@ -10,6 +10,7 @@ use App\Models\CmsBancoDatos;
 use App\Models\CmsComiteEditorial;
 use App\Models\CmsCursos;
 use App\Models\EdicionVarianza;
+use App\Models\MemoriasInvestigacion;
 use App\Models\Personal;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -174,43 +175,104 @@ class DashboardController extends Controller
             ],
         ];
 
-        // Estadísticas de Producción Científica por Edición Semestral (Revista Varianza)
+        // 1. Memorias de investigación agrupadas por año / gestión
+        $memoriasPorAnio = MemoriasInvestigacion::selectRaw('mdi_anio, count(*) as total')
+            ->whereNotNull('mdi_anio')
+            ->groupBy('mdi_anio')
+            ->orderBy('mdi_anio')
+            ->pluck('total', 'mdi_anio')
+            ->mapWithKeys(fn ($total, $anio) => [(string) $anio => (int) $total])
+            ->toArray();
+
+        // 2. Ediciones Varianza con sus conteos de artículos
         $ediciones = EdicionVarianza::withCount('articulos')
             ->orderBy('ev_anio', 'asc')
             ->orderBy('ev_numero', 'asc')
             ->get();
 
-        $chartCategories = [];
-        $dataArticulosOriginales = [];
-        $dataNotasCientificas = [];
+        // Agrupar producción de Varianza por año
+        $varianzaPorAnio = [];
+        foreach ($ediciones as $ed) {
+            $anio = (string) $ed->ev_anio;
+            $numArt = $ed->articulos_count > 0
+                ? max($ed->articulos_count, (int) $ed->ev_num_art_originales)
+                : (int) ($ed->ev_num_art_originales ?? 0);
+            $numNotas = (int) ($ed->ev_notas_cientificas ?? 0);
 
-        if ($ediciones->isNotEmpty()) {
-            foreach ($ediciones as $ed) {
-                $chartCategories[] = "N° {$ed->ev_numero} ({$ed->ev_anio})";
-
-                // Contar artículos originales: preferir conteo directo si existe, o el número declarado en la edición
-                $numArticulos = $ed->articulos_count > 0
-                    ? max($ed->articulos_count, (int) $ed->ev_num_art_originales)
-                    : (int) ($ed->ev_num_art_originales ?? 0);
-
-                $dataArticulosOriginales[] = $numArticulos;
-                $dataNotasCientificas[] = (int) ($ed->ev_notas_cientificas ?? 0);
-            }
-        } else {
-            // Fallback si no hay ediciones registradas aún
-            $chartCategories = ['2024 - I', '2024 - II', '2025 - I', '2025 - II'];
-            $dataArticulosOriginales = [0, 0, 0, $totalArticulos];
-            $dataNotasCientificas = [0, 0, 0, 0];
+            $varianzaPorAnio[$anio] = ($varianzaPorAnio[$anio] ?? 0) + $numArt + $numNotas;
         }
 
-        $chartSeries = [
-            [
-                'name' => 'Artículos Originales',
-                'data' => $dataArticulosOriginales,
+        // Rango de años activos para la Línea de Tiempo (evitando décadas vacías como 2001-2017)
+        $currentYear = (int) date('Y');
+        $minAnio = ! empty($memoriasPorAnio) ? (int) min(array_keys($memoriasPorAnio)) : 2018;
+        $maxAnio = max(
+            ! empty($memoriasPorAnio) ? (int) max(array_keys($memoriasPorAnio)) : $currentYear,
+            $ediciones->max('ev_anio') ?? $currentYear,
+            $currentYear
+        );
+        $startAnio = max($minAnio, 2018);
+        $anios = range($startAnio, $maxAnio);
+
+        $timelineCategories = array_map(fn ($y) => (string) $y, $anios);
+        $seriesVarianza = array_map(fn ($y) => $varianzaPorAnio[(string) $y] ?? 0, $anios);
+        $seriesMemorias = array_map(fn ($y) => $memoriasPorAnio[(string) $y] ?? 0, $anios);
+
+        $chartTimeline = [
+            'categories' => $timelineCategories,
+            'series' => [
+                [
+                    'name' => 'Artículos Revista Varianza',
+                    'data' => $seriesVarianza,
+                ],
+                [
+                    'name' => 'Memorias de Investigación',
+                    'data' => $seriesMemorias,
+                ],
             ],
-            [
-                'name' => 'Notas Científicas',
-                'data' => $dataNotasCientificas,
+            'totales' => [
+                'varianza' => array_sum($seriesVarianza),
+                'memorias' => array_sum($seriesMemorias),
+                'total' => array_sum($seriesVarianza) + array_sum($seriesMemorias),
+            ],
+        ];
+
+        // Ediciones activas de Varianza (filtrando ediciones vacías históricas para que no sature)
+        $edicionesActivas = $ediciones->filter(function ($e) {
+            return $e->articulos_count > 0 || (int) $e->ev_num_art_originales > 0 || (int) $e->ev_notas_cientificas > 0;
+        });
+
+        if ($edicionesActivas->isEmpty()) {
+            $edicionesActivas = $ediciones->take(-6);
+        }
+
+        $edCategories = [];
+        $edArticulos = [];
+        $edNotas = [];
+        foreach ($edicionesActivas as $ed) {
+            $edCategories[] = "N° {$ed->ev_numero} ({$ed->ev_anio})";
+            $numArt = $ed->articulos_count > 0
+                ? max($ed->articulos_count, (int) $ed->ev_num_art_originales)
+                : (int) ($ed->ev_num_art_originales ?? 0);
+            $edArticulos[] = $numArt;
+            $edNotas[] = (int) ($ed->ev_notas_cientificas ?? 0);
+        }
+
+        $chartEdiciones = [
+            'categories' => $edCategories,
+            'series' => [
+                [
+                    'name' => 'Artículos Originales',
+                    'data' => $edArticulos,
+                ],
+                [
+                    'name' => 'Notas Científicas',
+                    'data' => $edNotas,
+                ],
+            ],
+            'totales' => [
+                'articulos' => array_sum($edArticulos),
+                'notas' => array_sum($edNotas),
+                'total' => array_sum($edArticulos) + array_sum($edNotas),
             ],
         ];
 
@@ -233,8 +295,10 @@ class DashboardController extends Controller
                 'total_personal' => $totalPersonal,
                 'total_comite' => $totalComite,
             ],
-            'chart_series' => $chartSeries,
-            'chart_categories' => $chartCategories,
+            'chart_categories' => $timelineCategories,
+            'chart_series' => $chartTimeline['series'],
+            'chart_timeline' => $chartTimeline,
+            'chart_ediciones' => $chartEdiciones,
             'flujo_editorial' => $flujoEditorial,
             'donut_data' => $donutData,
             'articulos_recientes' => $articulosRecientes,

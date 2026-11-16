@@ -1,0 +1,3099 @@
+[
+    {
+        "id": 11,
+        "persona": {
+            "id": 18,
+            "p_nombre": "Nicolás",
+            "p_apellido_paterno": "Chavez",
+            "p_apellido_materno": "Quisbert",
+            "p_correo": "nchavez@umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 5,
+        "grado_academico_id": 2,
+        "at_slug": "nicolas-chavez-quisbert",
+        "at_biografia": {
+            "time": "1792443849334",
+            "blocks": [
+                {
+                    "id": "7ygELPKIlL",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Autor de 9 Artículos publicados en la revista Varianza, Docente emérito de la carrera de Estadística, actualmente dicta las materias de su especialidad&nbsp;"
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            4,
+            5,
+            6
+        ]
+    },
+    {
+        "id": 12,
+        "persona": {
+            "id": 19,
+            "p_nombre": "Melisa",
+            "p_apellido_paterno": "Abalos",
+            "p_apellido_materno": "Choque",
+            "p_correo": "melisa.abalos@gmail.com",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 2,
+        "grado_academico_id": 1,
+        "at_slug": "melisa-choque-melisa",
+        "at_biografia": {
+            "time": "1792453128564",
+            "blocks": [
+                {
+                    "id": "IsWvK8D6Rj",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Docente invitada de la Carrera de Estadística hasta la gestión 2018, fue Coordinadora del Observatorio Agroambiental y Productivo en el Ministerio de Desarrollo Rural y Tierras, también Directora de Información Departamental de la Secretaría Departamental de Planificación del Desarrollo del Gobierno Autónomo Departamental de La Paz, tuvo una importante participación en la Encuesta Sociodemográfica del departamento de La Paz, proyecto de investigación que llevó a cabo el IETA durante las gestiones 2011 al 2014."
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            6,
+            2
+        ]
+    },
+    {
+        "id": 13,
+        "persona": {
+            "id": 20,
+            "p_nombre": "Ivan Yony",
+            "p_apellido_paterno": "Aliaga",
+            "p_apellido_materno": "Casceres",
+            "p_correo": "iyaliaga@umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "ivan-yony-aliaga",
+        "at_biografia": {
+            "time": 1792457658775,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Magíster en Matemática mención Estadística de la Universidad del Bio-Bio, Chile, Licenciado en Estadística de la Universidad Mayor de San Andrés, Bolivia, Diplomado en Educación Superior en la Unidad de Post Grado de la Carrera de Ciencias de la Educación de la Universidad Mayor de San Andrés, Diplomado en Econometría Aplicada de la Universidad Simón Bolívar, Bolivia, trabajos de investigación realizados para la Revista Varianza del Instituto de Estadística Teórica y Aplicada de la Carrera de Estadística de la Universidad Mayor de San Andrés en el área de Estadística Matemática, Demografía y Modelos Bayesianos, trabajos de investigación entrevistas internacionales como ser: Web of Science y la Revista de la Universidad del Zulia, Venezuela, área de Muestreo Estadístico y Series de tiempo Bayesiano, trabajó como Responsable de Estadística en el Observatorio Boliviano de Seguridad Ciudadana y Lucha contra las Drogas dependiente del Ministerio de Gobierno, Trabajó como consultor Estadístico en diversos Ministerios y Consultoras independientes como ser: Ministerio de Desarrollo Productivo y Economía Plural, Ministerio de Economía, Ministerio de Medio Ambiente y Agua, Instituto Nacional de Estadística de Bolivia, Tu Voto cuenta, 365 AID y Cualicuanti."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            12
+        ]
+    },
+    {
+        "id": 14,
+        "persona": {
+            "id": 21,
+            "p_nombre": "José Aníbal",
+            "p_apellido_paterno": "Angulo",
+            "p_apellido_materno": "Angulo",
+            "p_correo": "jose-anibalangulo@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "jose-anibal-angulo",
+        "at_biografia": {
+            "time": 1792457658804,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Docente Jubilado de la Carrera de Estadística, Director de Instituto de Estadística Teórica y Aplicada."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            13
+        ]
+    },
+    {
+        "id": 15,
+        "persona": {
+            "id": 22,
+            "p_nombre": "David",
+            "p_apellido_paterno": "Barrera",
+            "p_apellido_materno": "Ojeda",
+            "p_correo": "davidbarrera@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "david-barrera",
+        "at_biografia": {
+            "time": 1792457658828,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Autor de varios artículos en la Revista Varianza, autor del libro Estadística Informatizada que tuvo su segunda edición el 2019."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            14
+        ]
+    },
+    {
+        "id": 16,
+        "persona": {
+            "id": 23,
+            "p_nombre": "Víctor Rubén",
+            "p_apellido_paterno": "Belmonte",
+            "p_apellido_materno": "Coloma",
+            "p_correo": "victor-rubenbelmonte@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "victor-ruben-belmonte",
+        "at_biografia": {
+            "time": 1792457658853,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Docente emérito de la Carrera de Estadística, fue jefe de la División de Muestreo del Instituto Nacional de Estadística (INE) el año 1973, asimismo fue Director del Departamento de Muestreo y Encuestas del INE entre 1979 y 1980. Asesor y consultor estadístico en diferentes instituciones públicas y privadas en nuestro país. Gerente General del Cualicuanti Srl. consultora que hace investigación en el campo de la estadística. Fallecido el 9 de mayo de 2021."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 17,
+        "persona": {
+            "id": 24,
+            "p_nombre": "Luis Alberto",
+            "p_apellido_paterno": "Castillo",
+            "p_apellido_materno": "Manzur",
+            "p_correo": "lcastillo@asfi.gob.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "luis-alberto-castillo",
+        "at_biografia": {
+            "time": 1792457658877,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Autor de dos Artículos en la Revista Varianza. Analista de monitoreo del sistema financiero - Autoridad de Supervisión del Sistema Financiero (ASFI) 2017"
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            15
+        ]
+    },
+    {
+        "id": 18,
+        "persona": {
+            "id": 25,
+            "p_nombre": "Álvaro Limber",
+            "p_apellido_paterno": "Chirino",
+            "p_apellido_materno": "Gutiérrez",
+            "p_correo": "achirino@aru.org.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "alvaro-limber-chirino",
+        "at_biografia": {
+            "time": 1792457658901,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Profesional Estadístico con una maestría en Modelaje Matemático, promotor de la alfabetización estadística, la cultura del dato y la evidencia. Docente universitario en la Carrera de Estadística e investigador en Fundación ARU."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            16
+        ]
+    },
+    {
+        "id": 19,
+        "persona": {
+            "id": 26,
+            "p_nombre": "Omar",
+            "p_apellido_paterno": "Chocotea",
+            "p_apellido_materno": "Poca",
+            "p_correo": "omar.chocotea@umag.cl",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "omar-chocotea",
+        "at_biografia": {
+            "time": 1792457658923,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "He obtained a Ph.D. in Statistics from the Universidad de Valparaíso in Chile. Preliminarily she completed her Master&#039;s studies in Mathematics with a mention in Statistics from the Universidad del Bío-Bío in Chile and a Bachelor&#039;s Degree in Statistics from the Universidad Mayor de San Andrés in Bolivia. She concluded her graduate studies with the highest distinction. She gave lectures at important events held in Bolivia, Chile, Mexico and Peru. At the Institute of Theoretical and Applied Statistics she published basic and introductory articles. Since 2020, she has collaborated as a researcher at the Institute of Sociological Research of the Universidad Mayor de San Andrés with the direction of the Survey of socioeconomic conditions and effects of COVID in the city of La Paz, which will conclude in 2023. Since March 2023, she has been working in Chile as a full-time academic."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 20,
+        "persona": {
+            "id": 27,
+            "p_nombre": "Jaime",
+            "p_apellido_paterno": "Chumacero",
+            "p_apellido_materno": "López",
+            "p_correo": "jaimechumacero@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "jaime-chumacero",
+        "at_biografia": {
+            "time": 1792457658946,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Autor de un artículo publicado en la Revista Varianza Nº 2 del año 2002. Consultor estadístico y de sistemas."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 21,
+        "persona": {
+            "id": 28,
+            "p_nombre": "Ramiro",
+            "p_apellido_paterno": "Coa",
+            "p_apellido_materno": "Clemente",
+            "p_correo": "clementecoa@gmail.com",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "ramiro-coa",
+        "at_biografia": {
+            "time": 1792457658968,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Docente Titular de la Carrera de Estadística, dicta materias de su especialidad. Actualmente Director del Instituto de Estadística Teórica y Aplicada."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            17
+        ]
+    },
+    {
+        "id": 22,
+        "persona": {
+            "id": 29,
+            "p_nombre": "Ronal Edwin",
+            "p_apellido_paterno": "Condori",
+            "p_apellido_materno": "Huanca",
+            "p_correo": "ronal.c.huanca@gmail.com",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "ronal-edwin-condori",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            18
+        ]
+    },
+    {
+        "id": 23,
+        "persona": {
+            "id": 30,
+            "p_nombre": "Mercy",
+            "p_apellido_paterno": "Crespo",
+            "p_apellido_materno": "Chuquimia",
+            "p_correo": "mercy_0074@hotmail.com",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "mercy-crespo",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            19
+        ]
+    },
+    {
+        "id": 24,
+        "persona": {
+            "id": 31,
+            "p_nombre": "Lucy Gabriela",
+            "p_apellido_paterno": "Cuarita",
+            "p_apellido_materno": "Ajno",
+            "p_correo": "lcuarita@fcpn.edu.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "lucy-gabriela-cuarita",
+        "at_biografia": {
+            "time": 1792457659035,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Docente Titular de la Carrera de Estadística, actualmente dicta materias de su especialidad."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            20
+        ]
+    },
+    {
+        "id": 25,
+        "persona": {
+            "id": 32,
+            "p_nombre": "Verónica",
+            "p_apellido_paterno": "Cuenca",
+            "p_apellido_materno": "Ramallo",
+            "p_correo": "vcramallo12@gmail.com",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "veronica-cuenca",
+        "at_biografia": {
+            "time": 1792457659060,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Docente Invitada de la Carrera de Estadística, actualmente dicta materias de su especialidad."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            21
+        ]
+    },
+    {
+        "id": 26,
+        "persona": {
+            "id": 33,
+            "p_nombre": "Raúl León",
+            "p_apellido_paterno": "Delgado",
+            "p_apellido_materno": "Álvarez",
+            "p_correo": "dea_5@hotmail.com",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "raul-leon-delgado",
+        "at_biografia": {
+            "time": 1792457659088,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Docente emérito de la Carrera de Estadística."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            22
+        ]
+    },
+    {
+        "id": 27,
+        "persona": {
+            "id": 34,
+            "p_nombre": "Ricardo Francisco",
+            "p_apellido_paterno": "Douglas",
+            "p_apellido_materno": "Blackman",
+            "p_correo": "ricardo.douglas@up.ac.pa",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "ricardo-francisco-douglas",
+        "at_biografia": {
+            "time": 1792457659110,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Profesor de cursos de Pregrado. Licenciado en Estadística. Magister en Estadística Aplicada. Miembro de la Comisión Académica de la Maestría en Registros y Estadísticas de Salud de la Universidad de Panamá."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 28,
+        "persona": {
+            "id": 35,
+            "p_nombre": "José Alberto",
+            "p_apellido_paterno": "Flores",
+            "p_apellido_materno": "Aguilar",
+            "p_correo": "floresaguilarjose@gmail.com",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "jose-alberto-flores",
+        "at_biografia": {
+            "time": 1792457659137,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Licenciado de la carrera de estadística con la tesis sobre modelos no lineales (modelo logístico ordinal); Ha sido investigador en la secretaria de planificación para el desarrollo en la unidad de estadísticas municipales. Ha investigado, sistematizado, la planeación y evaluación del desarrollo en pobreza e índices socioeconómicos y sociodemográficos, ha publicado la investigación sobre métodos de predicción en situaciones límite y fue auxiliar de investigación en probabilidad, estadística matemática y modelos lineales y no lineales."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            23
+        ]
+    },
+    {
+        "id": 29,
+        "persona": {
+            "id": 36,
+            "p_nombre": "Juan Carlos",
+            "p_apellido_paterno": "Flores",
+            "p_apellido_materno": "López",
+            "p_correo": "caarloslopez1@gmail.com",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "juan-carlos-flores",
+        "at_biografia": {
+            "time": 1792457659156,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Master en estadística, psicopedagogía en educación superior, en Desarrollo Económico, especialista en educación superior, diplomado en economía informática, diplomado Experto en elaboración de Proyectos Sociales, Planificación y desarrollo de competencias, entre otros. Profesor de pre y postgrado de la Carrera de Estadística de la Universidad Mayor de San Andrés (UMSA), (UCB), (EMI), (UTO), (UMSS). Director actual de la Carrera de Estadística UMSA. Consultor en entidades públicas y privadas del país. Materias impartidas probabilidad, procesos estocásticos, simulación, diseños experimentales, métodos multivariados, series de tiempo, estadística no paramétrica, optimización, investigación de operaciones 1 y 2, Análisis estadístico 1 y 2, modelos avanzados, entre otros."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 30,
+        "persona": {
+            "id": 37,
+            "p_nombre": "Nilda Gloria",
+            "p_apellido_paterno": "Flores",
+            "p_apellido_materno": "Salinas",
+            "p_correo": "nilda-gloriaflores@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "nilda-gloria-flores",
+        "at_biografia": {
+            "time": 1792457659177,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Docente Emérita de la Carrera de Estadística, actualmente dicta materias de su especialidad y es la Directora a.i. del Instituto de Estadística Teórica y Aplicada."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            4
+        ]
+    },
+    {
+        "id": 31,
+        "persona": {
+            "id": 38,
+            "p_nombre": "Juan",
+            "p_apellido_paterno": "Godino",
+            "p_apellido_materno": "Díaz",
+            "p_correo": "jgodino@ugr.es",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "juan-godino",
+        "at_biografia": {
+            "time": 1792457659197,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Es un matemático, educador e investigador en Didáctica de la Matemática conocido por ser el creador del Enfoque Ontosemiótico del Conocimiento y la Instrucción Matemáticos. Actualmente es catedrático del Departamento de Didáctica de la Matemática de la Universidad de Granada."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 32,
+        "persona": {
+            "id": 39,
+            "p_nombre": "Carlos Enrique",
+            "p_apellido_paterno": "Guzmán",
+            "p_apellido_materno": "Delgado",
+            "p_correo": "charly.guzman18@gmail.com",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "carlos-enrique-guzman",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 33,
+        "persona": {
+            "id": 40,
+            "p_nombre": "Kjetil",
+            "p_apellido_paterno": "Halvorsen",
+            "p_apellido_materno": "Brinchmann",
+            "p_correo": "kjetilhalvorsen@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "kjetil-halvorsen",
+        "at_biografia": {
+            "time": 1792457659240,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Fue docente en la Carrera de Estadística."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 34,
+        "persona": {
+            "id": 41,
+            "p_nombre": "Jaime",
+            "p_apellido_paterno": "Inca",
+            "p_apellido_materno": "Flores",
+            "p_correo": "jaimeinca@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "jaime-inca",
+        "at_biografia": {
+            "time": 1792457659262,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Estudiante universitario de la Carrera de Estadística, cuando escribió el presente artículo, actualmente Licenciado interesado en la Data Mining y Big Data uno de nuestros escritores noveles."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 35,
+        "persona": {
+            "id": 42,
+            "p_nombre": "María Gilka",
+            "p_apellido_paterno": "Jiménez",
+            "p_apellido_materno": "Careaga",
+            "p_correo": "gilka.jimenez@gmail.com",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "maria-gilka-jimenez",
+        "at_biografia": {
+            "time": 1792457659281,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Licenciada de la Carrera de Estadística, trabajo muchos años en el INE."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 36,
+        "persona": {
+            "id": 43,
+            "p_nombre": "Patricia",
+            "p_apellido_paterno": "Loza",
+            "p_apellido_materno": "Cruz",
+            "p_correo": "lcruzpatricia@gmail.com",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "patricia-loza",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 37,
+        "persona": {
+            "id": 44,
+            "p_nombre": "Emma Martha",
+            "p_apellido_paterno": "Mancilla",
+            "p_apellido_materno": "Flores",
+            "p_correo": "emmartha3@gmail.com",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "emma-martha-mancilla",
+        "at_biografia": {
+            "time": 1792457659320,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Autora de tres artículos publicados en la Revista Varianza, Docente Interina de la Carrera de Estadística."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 38,
+        "persona": {
+            "id": 45,
+            "p_nombre": "Luis",
+            "p_apellido_paterno": "Martínez",
+            "p_apellido_materno": null,
+            "p_correo": "luis.martinezm@up.ac.pa",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "luis-martinez",
+        "at_biografia": {
+            "time": 1792457659338,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Actuario en la Caja de Seguro Social y profesor de la Universidad de Panamá. Licenciado en Estadística. Magister en Ciencias Actuariales."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 39,
+        "persona": {
+            "id": 46,
+            "p_nombre": "Yuri",
+            "p_apellido_paterno": "Miranda",
+            "p_apellido_materno": "Gonzales",
+            "p_correo": "yymiranda@gmail.com",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "yuri-miranda",
+        "at_biografia": {
+            "time": 1792457659359,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Licenciado en Estadística con estudios de Maestría en Desarrollo Económico, cuenta con estudios de especialidad en España y Brasil, además de tener experiencia en docencia universitaria de la Universidad Mayor de San Andrés (UMSA) y la Universidad Católica Boliviana San Pablo (UCB); fue parte de la Dirección de Cuentas Nacionales del INE, trabajó en el Ministerio de Economía y Finanzas Publicas. También, desempeñó funciones en la Autoridad de Supervisión del Sistema Financiero (ASFI); realizó consultorías Nacionales e Internacionales con la OIT y Naciones Unidas; fue Director Ejecutivo de Bayes Group; y tiene artículos escritos sobre temas de estadística, econometría y coyuntura económica, entre otros. Actualmente Docente invitado de la Carrera de Estadística."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 40,
+        "persona": {
+            "id": 47,
+            "p_nombre": "Deyvis",
+            "p_apellido_paterno": "Nina",
+            "p_apellido_materno": "Canaviri",
+            "p_correo": "deyvisnina@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "deyvis-nina",
+        "at_biografia": {
+            "time": 1792457659380,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Autor de tres artículos publicados en la Revista Varianza."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 41,
+        "persona": {
+            "id": 48,
+            "p_nombre": "Ana Isabel",
+            "p_apellido_paterno": "Olmedo",
+            "p_apellido_materno": null,
+            "p_correo": "anaisabel1610@hotmail.com",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "ana-isabel-olmedo",
+        "at_biografia": {
+            "time": 1792457659402,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Analista Actuarial Jr., Licenciada en Ingeniería Estadística de la Universidad de Panamá, Magistra en Cálculo y Técnicas Actuariales de la Universidad de Panamá, Panamá."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 42,
+        "persona": {
+            "id": 49,
+            "p_nombre": "Edgar",
+            "p_apellido_paterno": "Osorio",
+            "p_apellido_materno": "Brun",
+            "p_correo": "edgarosorio@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "edgar-osorio",
+        "at_biografia": {
+            "time": 1792457659422,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Fue Docente interino de la Carrera de Estadística, trabaja en la Caja de Salud de la Banca privada."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 43,
+        "persona": {
+            "id": 50,
+            "p_nombre": "Martha Mabel",
+            "p_apellido_paterno": "Oviedo",
+            "p_apellido_materno": "Aguilar",
+            "p_correo": "moviedo440@yahoo.com",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "martha-mabel-oviedo",
+        "at_biografia": {
+            "time": 1792457659444,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Licenciada en Ciencias Económicas de la Universidad Católica Boliviana (UCB), tiene una maestría en Gestión y Políticas Públicas y un Diplomado en Gerencia Social. Asimismo, realizó tareas de investigación en ámbitos económicos y socio-políticos en esta entidad académica. Además de desempeñar labores en el INE, como responsable de estadísticas e indicadores económicos, también fue Coordinadora del Proyecto de Reposicionamiento de la Asociación de Concejalas de Bolivia y sus asociaciones departamentales, posesionada como Directora del INE en 2008, fue docente invitada e investigadora del IETA de la Carrera de Estadística has a el 2017."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            24
+        ]
+    },
+    {
+        "id": 44,
+        "persona": {
+            "id": 51,
+            "p_nombre": "Marisol",
+            "p_apellido_paterno": "Paredes",
+            "p_apellido_materno": "Alarcón",
+            "p_correo": "marycorreo7@yahoo.es",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "marisol-paredes",
+        "at_biografia": {
+            "time": 1792457659465,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Licenciada en Estadística. Docente universitario e Investigador en las carreras de Estadística, Informática, Economía, Administración de Empresas, Trabajo Social, Sociología, Geografía, Ciencias de la Información. Trabajó durante más de 20 años como Profesional Estadístico en instituciones públicas y privadas relacionadas con temáticas de educación, salud, economía, demografía y sistemas de información geográfica. Autora de artículos científicos publicados en la Universidad Mayor de San Andrés sobre demografía, indicadores sociales, simulación, estadística bayesiana y estadística espacial. Comparte conocimientos sobre estadística aplicada e investigación científica y trabaja temas referidos al cambio climático, educación, estadística espacial y geografía de la salud."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            25
+        ]
+    },
+    {
+        "id": 45,
+        "persona": {
+            "id": 52,
+            "p_nombre": "Pamela Eliana",
+            "p_apellido_paterno": "Pereyra",
+            "p_apellido_materno": "Zamora",
+            "p_correo": "pamela.pereyra@ua.es",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "pamela-eliana-pereyra",
+        "at_biografia": {
+            "time": 1792457659491,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Es profesora del Departamento de Enfermería Comunitaria, Medicina Preventiva y Salud Pública e Historia de la Ciencia desde el año 2009 en la Universidad de Alicante, España, es Licenciada en Ciencias Estadísticas, tiene una maestría en Demografía en la UMSA y es Doctora en Salud Pública. Tiene un extenso curriculum de formación continua que complementa su formación en diferentes áreas relacionadas con las Ciencias de la Salud. Ha impartido docencia en todos los niveles universitarios grado y postgrado (Bioestadística, Demografía, Indicadores de salud, Salud Internacional, Desigualdades en Salud, etc.), habiendo dirigido o codirigido diversos trabajos de fin de grado y máster."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            26
+        ]
+    },
+    {
+        "id": 46,
+        "persona": {
+            "id": 53,
+            "p_nombre": "Jaime Tito",
+            "p_apellido_paterno": "Pinto",
+            "p_apellido_materno": "Ajhuacho",
+            "p_correo": "titojaime_pinto@yahoo.com",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "jaime-tito-pinto",
+        "at_biografia": {
+            "time": 1792457659513,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Docente Titular de la Carrera de Estadística, actualmente dicta materias de su especialidad."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            27
+        ]
+    },
+    {
+        "id": 47,
+        "persona": {
+            "id": 54,
+            "p_nombre": "Alizón Emilze",
+            "p_apellido_paterno": "Pérez",
+            "p_apellido_materno": "Butrón",
+            "p_correo": "emilzealizon@gmail.com",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "alizon-emilze-perez",
+        "at_biografia": {
+            "time": 1792457659537,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Magister y licenciada en Estadística Alizón Emilze Pérez Butrón nació en Sucre - Chuquisaca, capital del Estado Plurinacional de Bolivia sus estudios universitarios en la carrera de Estadística y Economía de la Facultad de Ciencias Puras y Naturales; Facultad de Ciencias Económicas y financieras respectivamente, de la Universidad Mayor de San Andrés y los posgrados en la Escuela Militar de Ingeniería. Inicio sus trabajos en consultoras como Cualy Cuanti S.R.L.; C.P.D.I. S.R.L.; Instituto de Estadística Teórica y Aplicada de la Carrera de Estadística; Gobernación de La Paz, en el Instituto Nacional de Salud Ocupacional bajo tuición del Ministerio de Salud y Deportes (I.N.S.O.) que luego publicó un artículo en el periódico LA PRENSA por su investigación realizada en el mismo, fue contratada por el Programa de Naciones Unidas para el Desarrollo (P.E.N.U.D.) en calidad de ESTADÍSTICA DEPARTAMENTAL del Programa de Tuberculosis de SEDES La Paz, posteriormente ejerció el cargo de Responsable de Operativo y Planificación de Campo de la Fundación ARU en la Red Boliviana de Microdatos y Encuestas en proyectos ejecutados a nivel nacional en Bolivia, actualmente DIRECTORA DE PROYECTOS en la empresa DIPSEM CONSULTING y trabaja con proyectos de cooperaciones internacionales. Asimismo es catedrática en la Universidad Mayor de San Andrés, Catedrática de la Escuela Militar de Ingeniería EMI - La Paz, en la Universidad UNIVALLE, universidad LOYOLA, en las carreras de Ingeniería Civil, Ingeniería Comercial, Ingeniería de Alimentos, Ingeniería de Sistemas, Administración de Empresas, Ingeniería Electrónica, Informática, Economía, en materias de Investigación Operativa I-II, Métodos de Análisis Estadísticos, Estadística I, Estadística II, Métodos Multivariados, Ingeniería de Métodos entre otras, etc."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            4
+        ]
+    },
+    {
+        "id": 48,
+        "persona": {
+            "id": 55,
+            "p_nombre": "Fernando",
+            "p_apellido_paterno": "Rivero",
+            "p_apellido_materno": "Suguiura",
+            "p_correo": "frivero@fcpn.edu.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "fernando-rivero",
+        "at_biografia": {
+            "time": 1792457659560,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Licenciado en Estadística y Magister en Ciencias de la Estadística. Docente Investigador de la Carrera de Estadística de la Universidad Mayor de San Andrés. Director de la carrera de Estadística gestión 2018-2021, director del Instituto de Estadística Teórica y Aplicada (IETA) gestión 2013-2016. Decano y Vicedecano interino de la Facultad de Ciencias Puras y Naturales gestión 2020. Docente de posgrado en universidades privadas del país. Consultor de Encuestas por Muestreo y análisis estadístico en entidades públicas y privadas. Responsable de la construcción del Marco Muestral y Muestra Maestra de la Encuesta de Hogares del INE (2002). Responsable de la Encuesta de Cobertura Censal (2001), Censo de Población y Vivienda."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            27
+        ]
+    },
+    {
+        "id": 49,
+        "persona": {
+            "id": 56,
+            "p_nombre": "Gustavo",
+            "p_apellido_paterno": "Ruiz",
+            "p_apellido_materno": "Aranibar",
+            "p_correo": "gustavoruiz432@hotmail.com",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "gustavo-ruiz",
+        "at_biografia": {
+            "time": 1792457659593,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Especializado en Estadística. Profesor de Estadística, Matemáticas y Computación, cursó un Doctorado en Ciencias en Educación Superior en la Universidad Autónoma Gabriel René Moreno UAGRM, Facultad de Auditoria Financiera, FAF Facultad de Ciencias Administrativas, Económicas y Financieras, FCEAF. Autor de siete artículos publicados en la Revista Varianza"
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 50,
+        "persona": {
+            "id": 57,
+            "p_nombre": "Astrid Keitel",
+            "p_apellido_paterno": "Ruiz",
+            "p_apellido_materno": "Aviles",
+            "p_correo": "astrid.rree@gmail.com",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "astrid-keitel-ruiz",
+        "at_biografia": {
+            "time": 1792457659615,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Profesora de Estadística, Computación, Administración, Relaciones Internacionales. Se encuentra cursando un Doctorado en Relaciones Internacionales, en la Universidad del Salvador de Argentina. Autora de un artículo publicado en la Revista Varianza."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            28
+        ]
+    },
+    {
+        "id": 51,
+        "persona": {
+            "id": 58,
+            "p_nombre": "Carlos Fernando",
+            "p_apellido_paterno": "Silva",
+            "p_apellido_materno": "Viamonte",
+            "p_correo": "carlos-fernandosilva@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "carlos-fernando-silva",
+        "at_biografia": {
+            "time": 1792457659638,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Fernando Silva Viamonte es un experimentado Estadístico y Analista de Datos. Ha ocupado posiciones clave en diversas instituciones financieras y gubernamentales. Actualmente trabaja en el Banco de Desarrollo Productivo BDP-SAM, como Coordinador de Gerencia General, asesorando y coordinando actividades estratégicas. Trabajo en el Banco Unión S.A., desempeñó un papel importante como Coordinador de Gerencia General y Directorio, supervisando y coordinando actividades estratégicas. En la Oficina Técnica para el Fortalecimiento de la Empresa Pública OFEP, trabajó como Profesional Financiero, enfocándose en el seguimiento y fortalecimiento de empresas públicas en varios sectores. Además, se ha desempeñado como Jefe de Planificación y Proyectos en la Empresa de Apoyo a la Producción de Alimentos EMAPA, liderando la planificación estratégica y la gestión de proyectos de inversión. Carlos Fernando Silva Viamonte también ha tenido una destacada carrera docente, enseñando materias relacionadas con Estadística, Economía, Econometría y Métodos Cuantitativos en varias universidades, tanto a nivel de pregrado como posgrado. Actualmente es estudiante del doctorado en Estadística Multivariante Aplicada de la Universidad de Salamanca, además incluye un Doctorado en Investigación para el Desarrollo Local, Máster en Tourism and Environmental Economics, Máster en Estadística Aplicada y Estadística para el Sector Público, así como un Diplomado en Proyectos de Cooperación Internacional para el Desarrollo. Además, es licenciado en Administración de Empresas. Su habilidad para combinar su experiencia en análisis de datos y estadística con su compromiso docente demuestra su versatilidad y conocimientos en diversos campos, lo que lo convierte en un profesional destacado en su campo."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 52,
+        "persona": {
+            "id": 59,
+            "p_nombre": "Augusto Salvador",
+            "p_apellido_paterno": "Solíz",
+            "p_apellido_materno": "Sánchez",
+            "p_correo": "augusto-salvadorsoliz@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "augusto-salvador-soliz",
+        "at_biografia": {
+            "time": 1792457659660,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Graduado en Economía pero especializado en Demografía, fue El coordinador del Censo del Instituto Nacional de Estadísticas (INE) 2012, actualmente profesor en la Universidad Privada Boliviana, autor de tres artículos para la Revista Varianza y otros libros sobre Demografía."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 53,
+        "persona": {
+            "id": 60,
+            "p_nombre": "Daniel",
+            "p_apellido_paterno": "Sánchez",
+            "p_apellido_materno": "Gómez",
+            "p_correo": "dsanchez68@gmail.com",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "daniel-sanchez",
+        "at_biografia": {
+            "time": 1792457659678,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Profesor e Investigador. Licenciado en Estadística. Magister en Estadística Matemática."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 54,
+        "persona": {
+            "id": 61,
+            "p_nombre": "Jorge Justo",
+            "p_apellido_paterno": "Troche",
+            "p_apellido_materno": "Luna",
+            "p_correo": "jorge-justotroche@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "jorge-justo-troche",
+        "at_biografia": {
+            "time": 1792457659700,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Docente Interino de la Carrera de Estadística."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 55,
+        "persona": {
+            "id": 62,
+            "p_nombre": "Dindo",
+            "p_apellido_paterno": "Valdez",
+            "p_apellido_materno": "Blanco",
+            "p_correo": "dindovaldez@hotmail.com",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "dindo-valdez",
+        "at_biografia": {
+            "time": 1792457659720,
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Docente titular de la Carrera de Estadística en las materias de Estadística no Paramétrica, Procesos Estocásticos y Estadística Bayesiana. Consultor estadístico en diversos trabajos de investigación en instituciones públicas y privadas de nuestro medio."
+                    }
+                }
+            ],
+            "version": "2.29.0"
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 56,
+        "persona": {
+            "id": 63,
+            "p_nombre": "Fernando Rodrigo",
+            "p_apellido_paterno": "Vargas",
+            "p_apellido_materno": "Salazar",
+            "p_correo": "cipacohc@gmail.com",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "fernando-rodrigo-vargas",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 57,
+        "persona": {
+            "id": 64,
+            "p_nombre": "Alvaro Limbert",
+            "p_apellido_paterno": "Chirino",
+            "p_apellido_materno": "Gutierrez",
+            "p_correo": "alvaro-limbertchirino@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 3,
+        "grado_academico_id": 1,
+        "at_slug": "alvaro-limbert-chirino",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": []
+    },
+    {
+        "id": 58,
+        "persona": {
+            "id": 65,
+            "p_nombre": "Raúl León",
+            "p_apellido_paterno": "Dalgado",
+            "p_apellido_materno": "Alvarez",
+            "p_correo": "raul-leondalgado@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 3,
+        "grado_academico_id": 1,
+        "at_slug": "raul-leon-dalgado",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": []
+    },
+    {
+        "id": 173,
+        "persona": {
+            "id": 180,
+            "p_nombre": "Fernando Oday",
+            "p_apellido_paterno": "Rivero",
+            "p_apellido_materno": "Suguiura",
+            "p_correo": "fernando-odayrivero@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 3,
+        "grado_academico_id": 1,
+        "at_slug": "fernando-oday-rivero",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": []
+    },
+    {
+        "id": 174,
+        "persona": {
+            "id": 181,
+            "p_nombre": "Lic.Jorge",
+            "p_apellido_paterno": "Troche",
+            "p_apellido_materno": "Luna",
+            "p_correo": "licjorgetroche@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 3,
+        "grado_academico_id": 1,
+        "at_slug": "licjorge-troche",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": []
+    },
+    {
+        "id": 175,
+        "persona": {
+            "id": 182,
+            "p_nombre": "Iván",
+            "p_apellido_paterno": "Aliaga",
+            "p_apellido_materno": "Casceres",
+            "p_correo": "ivanaliaga@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 3,
+        "grado_academico_id": 1,
+        "at_slug": "ivan-aliaga",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": []
+    },
+    {
+        "id": 176,
+        "persona": {
+            "id": 183,
+            "p_nombre": "Wilma",
+            "p_apellido_paterno": "Peñafiel",
+            "p_apellido_materno": "Rodriguez",
+            "p_correo": "wilmapenafiel@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 3,
+        "grado_academico_id": 5,
+        "at_slug": "wilma-penafiel",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": []
+    },
+    {
+        "id": 177,
+        "persona": {
+            "id": 184,
+            "p_nombre": "M.Sc.Lucy Gabriela",
+            "p_apellido_paterno": "Coarita",
+            "p_apellido_materno": "Ajno",
+            "p_correo": "msclucy-gabrielacoarita@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 3,
+        "grado_academico_id": 5,
+        "at_slug": "msclucy-gabriela-coarita",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": []
+    },
+    {
+        "id": 178,
+        "persona": {
+            "id": 185,
+            "p_nombre": "Ramiro",
+            "p_apellido_paterno": "Coa",
+            "p_apellido_materno": null,
+            "p_correo": "ramiro-coa-clemente@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "ramiro-coa-clemente",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 179,
+        "persona": {
+            "id": 186,
+            "p_nombre": "Ronal",
+            "p_apellido_paterno": "Edwin",
+            "p_apellido_materno": null,
+            "p_correo": "ronal-edwin-condori-huanca@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "ronal-edwin-condori-huanca",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 180,
+        "persona": {
+            "id": 187,
+            "p_nombre": "Roberto",
+            "p_apellido_paterno": "Bula",
+            "p_apellido_materno": null,
+            "p_correo": "roberto-bula-magallon@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "roberto-bula-magallon",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 181,
+        "persona": {
+            "id": 188,
+            "p_nombre": "Elisa",
+            "p_apellido_paterno": "Mendoza",
+            "p_apellido_materno": null,
+            "p_correo": "elisa-mendoza-gonzalez@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "elisa-mendoza-gonzalez",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 182,
+        "persona": {
+            "id": 189,
+            "p_nombre": "Ricardo",
+            "p_apellido_paterno": "Francisco",
+            "p_apellido_materno": null,
+            "p_correo": "ricardo-francisco-douglas-blackman@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "ricardo-francisco-douglas-blackman",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 183,
+        "persona": {
+            "id": 190,
+            "p_nombre": "Daniel",
+            "p_apellido_paterno": "Sánchez",
+            "p_apellido_materno": null,
+            "p_correo": "daniel-sanchez-gomez@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "daniel-sanchez-gomez",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 184,
+        "persona": {
+            "id": 191,
+            "p_nombre": "Elisa",
+            "p_apellido_paterno": "A.",
+            "p_apellido_materno": null,
+            "p_correo": "elisa-a-mendoza-gonzalez@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "elisa-a-mendoza-gonzalez",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 185,
+        "persona": {
+            "id": 192,
+            "p_nombre": "Ramiro",
+            "p_apellido_paterno": "Coa",
+            "p_apellido_materno": null,
+            "p_correo": "ramiro-coa-clemente1@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "ramiro-coa-clemente-1",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 186,
+        "persona": {
+            "id": 193,
+            "p_nombre": "Patricia",
+            "p_apellido_paterno": "Loza",
+            "p_apellido_materno": null,
+            "p_correo": "patricia-loza-cruz@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "patricia-loza-cruz",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 187,
+        "persona": {
+            "id": 194,
+            "p_nombre": "Álvaro",
+            "p_apellido_paterno": "Limber",
+            "p_apellido_materno": null,
+            "p_correo": "alvaro-limber-chirino-gutierrez@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "alvaro-limber-chirino-gutierrez",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 188,
+        "persona": {
+            "id": 195,
+            "p_nombre": "Sherli",
+            "p_apellido_paterno": "Reyna",
+            "p_apellido_materno": null,
+            "p_correo": "sherli-reyna-mamani@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "sherli-reyna-mamani",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 189,
+        "persona": {
+            "id": 196,
+            "p_nombre": "Beatriz",
+            "p_apellido_paterno": "Mamani",
+            "p_apellido_materno": null,
+            "p_correo": "beatriz-mamani@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "beatriz-mamani",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 190,
+        "persona": {
+            "id": 197,
+            "p_nombre": "Omar",
+            "p_apellido_paterno": "Chocotea",
+            "p_apellido_materno": null,
+            "p_correo": "omar-chocotea-poca@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "omar-chocotea-poca",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 191,
+        "persona": {
+            "id": 198,
+            "p_nombre": "Raúl",
+            "p_apellido_paterno": "León",
+            "p_apellido_materno": null,
+            "p_correo": "raul-leon-delgado-alvarez@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "raul-leon-delgado-alvarez",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 192,
+        "persona": {
+            "id": 199,
+            "p_nombre": "Carmen",
+            "p_apellido_paterno": "Vega",
+            "p_apellido_materno": null,
+            "p_correo": "carmen-vega-flores@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "carmen-vega-flores",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 193,
+        "persona": {
+            "id": 200,
+            "p_nombre": "Dindo",
+            "p_apellido_paterno": "Valdez",
+            "p_apellido_materno": null,
+            "p_correo": "dindo-valdez-blanco@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "dindo-valdez-blanco",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 194,
+        "persona": {
+            "id": 201,
+            "p_nombre": "Carlos",
+            "p_apellido_paterno": "Fernando",
+            "p_apellido_materno": null,
+            "p_correo": "carlos-fernando-silva-viamonte@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "carlos-fernando-silva-viamonte",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 195,
+        "persona": {
+            "id": 202,
+            "p_nombre": "Raúl",
+            "p_apellido_paterno": "León",
+            "p_apellido_materno": null,
+            "p_correo": "raul-leon-delgado-alvarez1@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "raul-leon-delgado-alvarez-1",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 196,
+        "persona": {
+            "id": 203,
+            "p_nombre": "Jaime",
+            "p_apellido_paterno": "Tito",
+            "p_apellido_materno": null,
+            "p_correo": "jaime-tito-pinto-ajhuacho@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "jaime-tito-pinto-ajhuacho",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 197,
+        "persona": {
+            "id": 204,
+            "p_nombre": "Ramiro",
+            "p_apellido_paterno": "Coa",
+            "p_apellido_materno": null,
+            "p_correo": "ramiro-coa-clemente2@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "ramiro-coa-clemente-2",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 198,
+        "persona": {
+            "id": 205,
+            "p_nombre": "Ramiro",
+            "p_apellido_paterno": "Coa",
+            "p_apellido_materno": null,
+            "p_correo": "ramiro-coa-clemente3@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "ramiro-coa-clemente-3",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 199,
+        "persona": {
+            "id": 206,
+            "p_nombre": "Patricia",
+            "p_apellido_paterno": "Loza",
+            "p_apellido_materno": null,
+            "p_correo": "patricia-loza-cruz1@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "patricia-loza-cruz-1",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 200,
+        "persona": {
+            "id": 207,
+            "p_nombre": "Ramiro",
+            "p_apellido_paterno": "Coa",
+            "p_apellido_materno": null,
+            "p_correo": "ramiro-coa-clemente4@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "ramiro-coa-clemente-4",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 201,
+        "persona": {
+            "id": 208,
+            "p_nombre": "Ramiro",
+            "p_apellido_paterno": "Coa",
+            "p_apellido_materno": null,
+            "p_correo": "ramiro-coa-clemente5@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "ramiro-coa-clemente-5",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 202,
+        "persona": {
+            "id": 209,
+            "p_nombre": "Patricia",
+            "p_apellido_paterno": "Loza",
+            "p_apellido_materno": null,
+            "p_correo": "patricia-loza-cruz2@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "patricia-loza-cruz-2",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 203,
+        "persona": {
+            "id": 210,
+            "p_nombre": "Roberto",
+            "p_apellido_paterno": "Bula",
+            "p_apellido_materno": null,
+            "p_correo": "roberto-bula-magallon1@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "roberto-bula-magallon-1",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 204,
+        "persona": {
+            "id": 211,
+            "p_nombre": "Lourdes",
+            "p_apellido_paterno": "Carrasquilla",
+            "p_apellido_materno": null,
+            "p_correo": "lourdes-carrasquilla@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "lourdes-carrasquilla",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 205,
+        "persona": {
+            "id": 212,
+            "p_nombre": "Elisa",
+            "p_apellido_paterno": "Aymet",
+            "p_apellido_materno": null,
+            "p_correo": "elisa-aymet-mendoza-gonzales@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "elisa-aymet-mendoza-gonzales",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 206,
+        "persona": {
+            "id": 213,
+            "p_nombre": "Ramiro",
+            "p_apellido_paterno": "Coa",
+            "p_apellido_materno": null,
+            "p_correo": "ramiro-coa-clemente6@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "ramiro-coa-clemente-6",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 207,
+        "persona": {
+            "id": 214,
+            "p_nombre": "Astrid",
+            "p_apellido_paterno": "Keitel",
+            "p_apellido_materno": null,
+            "p_correo": "astrid-keitel-ruiz-aviles@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "astrid-keitel-ruiz-aviles",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 208,
+        "persona": {
+            "id": 215,
+            "p_nombre": "Dindo",
+            "p_apellido_paterno": "Valdez",
+            "p_apellido_materno": null,
+            "p_correo": "dindo-valdez-blanco1@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "dindo-valdez-blanco-1",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 209,
+        "persona": {
+            "id": 216,
+            "p_nombre": "Ramiro",
+            "p_apellido_paterno": "Coa",
+            "p_apellido_materno": null,
+            "p_correo": "ramiro-coa-clemente7@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "ramiro-coa-clemente-7",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 210,
+        "persona": {
+            "id": 217,
+            "p_nombre": "Patricia",
+            "p_apellido_paterno": "Loza",
+            "p_apellido_materno": null,
+            "p_correo": "patricia-loza-cruz3@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "patricia-loza-cruz-3",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 211,
+        "persona": {
+            "id": 218,
+            "p_nombre": "Ronal",
+            "p_apellido_paterno": "Edwin",
+            "p_apellido_materno": null,
+            "p_correo": "ronal-edwin-condori-huanca1@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "ronal-edwin-condori-huanca-1",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 212,
+        "persona": {
+            "id": 219,
+            "p_nombre": "Ramiro",
+            "p_apellido_paterno": "Coa",
+            "p_apellido_materno": null,
+            "p_correo": "ramiro-coa-clemente8@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "ramiro-coa-clemente-8",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 213,
+        "persona": {
+            "id": 220,
+            "p_nombre": "Carlos",
+            "p_apellido_paterno": "Fernando",
+            "p_apellido_materno": null,
+            "p_correo": "carlos-fernando-silva-viamonte1@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "carlos-fernando-silva-viamonte-1",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 214,
+        "persona": {
+            "id": 221,
+            "p_nombre": "Ramiro",
+            "p_apellido_paterno": "Coa",
+            "p_apellido_materno": null,
+            "p_correo": "ramiro-coa-clemente9@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "ramiro-coa-clemente-9",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 215,
+        "persona": {
+            "id": 222,
+            "p_nombre": "Ronal",
+            "p_apellido_paterno": "Edwin",
+            "p_apellido_materno": null,
+            "p_correo": "ronal-edwin-condori-huanca2@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "ronal-edwin-condori-huanca-2",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 216,
+        "persona": {
+            "id": 223,
+            "p_nombre": "Roberto",
+            "p_apellido_paterno": "Bula",
+            "p_apellido_materno": null,
+            "p_correo": "roberto-bula-magallon2@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "roberto-bula-magallon-2",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 217,
+        "persona": {
+            "id": 224,
+            "p_nombre": "Elisa",
+            "p_apellido_paterno": "Mendoza",
+            "p_apellido_materno": null,
+            "p_correo": "elisa-mendoza-gonzalez1@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "elisa-mendoza-gonzalez-1",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 218,
+        "persona": {
+            "id": 225,
+            "p_nombre": "Ricardo",
+            "p_apellido_paterno": "Francisco",
+            "p_apellido_materno": null,
+            "p_correo": "ricardo-francisco-douglas-blackman1@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "ricardo-francisco-douglas-blackman-1",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 219,
+        "persona": {
+            "id": 226,
+            "p_nombre": "Daniel",
+            "p_apellido_paterno": "Sánchez",
+            "p_apellido_materno": null,
+            "p_correo": "daniel-sanchez-gomez1@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "daniel-sanchez-gomez-1",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 220,
+        "persona": {
+            "id": 227,
+            "p_nombre": "Elisa",
+            "p_apellido_paterno": "A.",
+            "p_apellido_materno": null,
+            "p_correo": "elisa-a-mendoza-gonzalez1@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "elisa-a-mendoza-gonzalez-1",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 221,
+        "persona": {
+            "id": 228,
+            "p_nombre": "Ramiro",
+            "p_apellido_paterno": "Coa",
+            "p_apellido_materno": null,
+            "p_correo": "ramiro-coa-clemente10@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "ramiro-coa-clemente-10",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 222,
+        "persona": {
+            "id": 229,
+            "p_nombre": "Patricia",
+            "p_apellido_paterno": "Loza",
+            "p_apellido_materno": null,
+            "p_correo": "patricia-loza-cruz4@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "patricia-loza-cruz-4",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 223,
+        "persona": {
+            "id": 230,
+            "p_nombre": "Ronal",
+            "p_apellido_paterno": "Edwin",
+            "p_apellido_materno": null,
+            "p_correo": "ronal-edwin-condori-huanca3@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "ronal-edwin-condori-huanca-3",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 224,
+        "persona": {
+            "id": 231,
+            "p_nombre": "Carlos",
+            "p_apellido_paterno": "Enrique",
+            "p_apellido_materno": null,
+            "p_correo": "carlos-enrique-guzman-delgado@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "carlos-enrique-guzman-delgado",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 225,
+        "persona": {
+            "id": 232,
+            "p_nombre": "Roberto",
+            "p_apellido_paterno": "Bula",
+            "p_apellido_materno": null,
+            "p_correo": "roberto-bula-magallon3@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "roberto-bula-magallon-3",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 226,
+        "persona": {
+            "id": 233,
+            "p_nombre": "Elisa",
+            "p_apellido_paterno": "Aymet",
+            "p_apellido_materno": null,
+            "p_correo": "elisa-aymet-mendoza-gonzales1@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "elisa-aymet-mendoza-gonzales-1",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 227,
+        "persona": {
+            "id": 234,
+            "p_nombre": "Álvaro",
+            "p_apellido_paterno": "Limber",
+            "p_apellido_materno": null,
+            "p_correo": "alvaro-limber-chirino-gutierrez1@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "alvaro-limber-chirino-gutierrez-1",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 228,
+        "persona": {
+            "id": 235,
+            "p_nombre": "Sherli",
+            "p_apellido_paterno": "Reyna",
+            "p_apellido_materno": null,
+            "p_correo": "sherli-reyna-mamani1@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "sherli-reyna-mamani-1",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 229,
+        "persona": {
+            "id": 236,
+            "p_nombre": "Omar",
+            "p_apellido_paterno": "Chocotea",
+            "p_apellido_materno": null,
+            "p_correo": "omar-chocotea-poca1@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "omar-chocotea-poca-1",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 230,
+        "persona": {
+            "id": 237,
+            "p_nombre": "Ramiro",
+            "p_apellido_paterno": "Coa",
+            "p_apellido_materno": null,
+            "p_correo": "ramiro-coa-clemente11@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "ramiro-coa-clemente-11",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 231,
+        "persona": {
+            "id": 238,
+            "p_nombre": "Raúl",
+            "p_apellido_paterno": "León",
+            "p_apellido_materno": null,
+            "p_correo": "raul-leon-delgado-alvarez2@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "raul-leon-delgado-alvarez-2",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 232,
+        "persona": {
+            "id": 239,
+            "p_nombre": "Astrid",
+            "p_apellido_paterno": "Keitel",
+            "p_apellido_materno": null,
+            "p_correo": "astrid-keitel-ruiz-aviles1@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "astrid-keitel-ruiz-aviles-1",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 233,
+        "persona": {
+            "id": 240,
+            "p_nombre": "Dindo",
+            "p_apellido_paterno": "Valdez",
+            "p_apellido_materno": null,
+            "p_correo": "dindo-valdez-blanco2@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "dindo-valdez-blanco-2",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 234,
+        "persona": {
+            "id": 241,
+            "p_nombre": "Carmen",
+            "p_apellido_paterno": "Vega",
+            "p_apellido_materno": null,
+            "p_correo": "carmen-vega-flores1@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "carmen-vega-flores-1",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 235,
+        "persona": {
+            "id": 242,
+            "p_nombre": "Dindo",
+            "p_apellido_paterno": "Valdez",
+            "p_apellido_materno": null,
+            "p_correo": "dindo-valdez-blanco3@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "dindo-valdez-blanco-3",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 236,
+        "persona": {
+            "id": 243,
+            "p_nombre": "Ramiro",
+            "p_apellido_paterno": "Coa",
+            "p_apellido_materno": null,
+            "p_correo": "ramiro-coa-clemente12@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "ramiro-coa-clemente-12",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 237,
+        "persona": {
+            "id": 244,
+            "p_nombre": "Patricia",
+            "p_apellido_paterno": "Loza",
+            "p_apellido_materno": null,
+            "p_correo": "patricia-loza-cruz5@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "patricia-loza-cruz-5",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 238,
+        "persona": {
+            "id": 245,
+            "p_nombre": "Ronal",
+            "p_apellido_paterno": "Edwin",
+            "p_apellido_materno": null,
+            "p_correo": "ronal-edwin-condori-huanca4@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "ronal-edwin-condori-huanca-4",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 239,
+        "persona": {
+            "id": 246,
+            "p_nombre": "Carlos",
+            "p_apellido_paterno": "Fernando",
+            "p_apellido_materno": null,
+            "p_correo": "carlos-fernando-silva-viamonte2@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "carlos-fernando-silva-viamonte-2",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 240,
+        "persona": {
+            "id": 247,
+            "p_nombre": "Ramiro",
+            "p_apellido_paterno": "Coa",
+            "p_apellido_materno": null,
+            "p_correo": "ramiro-coa-clemente13@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "ramiro-coa-clemente-13",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 241,
+        "persona": {
+            "id": 248,
+            "p_nombre": "Raúl",
+            "p_apellido_paterno": "León",
+            "p_apellido_materno": null,
+            "p_correo": "raul-leon-delgado-alvarez3@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "raul-leon-delgado-alvarez-3",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 242,
+        "persona": {
+            "id": 249,
+            "p_nombre": "Jaime",
+            "p_apellido_paterno": "Tito",
+            "p_apellido_materno": null,
+            "p_correo": "jaime-tito-pinto-ajhuacho1@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "jaime-tito-pinto-ajhuacho-1",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    },
+    {
+        "id": 243,
+        "persona": {
+            "id": 250,
+            "p_nombre": "Carlos",
+            "p_apellido_paterno": "Fernando",
+            "p_apellido_materno": null,
+            "p_correo": "carlos-fernando-silva-viamonte3@ieta.umsa.bo",
+            "p_telefono": null,
+            "p_ci": null
+        },
+        "tipo_autor_id": 1,
+        "grado_academico_id": 1,
+        "at_slug": "carlos-fernando-silva-viamonte-3",
+        "at_biografia": {
+            "blocks": []
+        },
+        "at_orcid": null,
+        "at_estado": true,
+        "especialidades_ids": [
+            1
+        ]
+    }
+]

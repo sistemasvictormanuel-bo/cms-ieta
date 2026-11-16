@@ -30,6 +30,7 @@ class ArticulosPlantillaExport implements FromCollection, ShouldAutoSize, WithHe
                 'resumen' => 'En este artículo se analiza el comportamiento de la inflación mediante modelos autorregresivos cuantílicos aplicados a datos de la economía boliviana...',
                 'abstract' => 'In this article, inflation behavior is analyzed through quantile autoregressive models applied to data from the Bolivian economy...',
                 'referencias' => 'Koenker, R. (2005). Quantile Regression. Cambridge University Press; Greene, W. (2018). Econometric Analysis.',
+                'enlace_url' => 'https://drive.google.com/file/d/1k0-XxsSjMAefO9nJYz6JispbUhxPDWNN/view',
             ],
             [
                 'titulo' => 'Estimación de Áreas Pequeñas para Indicadores de Pobreza Multidimensional',
@@ -46,6 +47,7 @@ class ArticulosPlantillaExport implements FromCollection, ShouldAutoSize, WithHe
                 'resumen' => 'Se presentan estimadores empíricos de Bayes para desagregaciones municipales basadas en encuestas complejas y censos.',
                 'abstract' => 'Empirical Bayes estimators for municipal disaggregations based on complex surveys and censuses are presented.',
                 'referencias' => 'Rao, J. N. K., & Molina, I. (2015). Small Area Estimation. John Wiley & Sons.',
+                'enlace_url' => '',
             ],
         ]);
     }
@@ -67,6 +69,7 @@ class ArticulosPlantillaExport implements FromCollection, ShouldAutoSize, WithHe
             'resumen',
             'abstract',
             'referencias',
+            'enlace_url',
         ];
     }
 

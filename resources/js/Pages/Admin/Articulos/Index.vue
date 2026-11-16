@@ -257,6 +257,7 @@ const articulosColumns = [
     { name: 'resumen', label: 'Resumen', required: false, desc: 'Resumen académico en texto plano', ejemplo: 'En este artículo se analiza...' },
     { name: 'abstract', label: 'Abstract', required: false, desc: 'Resumen en idioma inglés', ejemplo: 'In this article inflation is analyzed...' },
     { name: 'referencias', label: 'Referencias', required: false, desc: 'Bibliografía o citas separadas por punto y coma', ejemplo: 'Koenker, R. (2005)...' },
+    { name: 'enlace_url', label: 'Enlace Externo (URL)', required: false, desc: 'URL o enlace compartido al documento en la nube (Google Drive, Dropbox, etc.) (Opcional)', ejemplo: 'https://drive.google.com/file/d/1k0-XxsSjMAefO9nJYz6JispbUhxPDWNN/view' },
 ];
 
 const articulosSampleRows = [
@@ -275,6 +276,7 @@ const articulosSampleRows = [
         resumen: 'En este artículo se analiza el comportamiento de la inflación mediante modelos autorregresivos cuantílicos...',
         abstract: 'In this article, inflation behavior is analyzed through quantile autoregressive models...',
         referencias: 'Koenker, R. (2005). Quantile Regression. Cambridge University Press.',
+        enlace_url: 'https://drive.google.com/file/d/1k0-XxsSjMAefO9nJYz6JispbUhxPDWNN/view',
     },
     {
         titulo: 'Estimación de Áreas Pequeñas para Indicadores de Pobreza Multidimensional',
@@ -291,6 +293,7 @@ const articulosSampleRows = [
         resumen: 'Se presentan estimadores empíricos de Bayes para desagregaciones municipales basadas en encuestas complejas.',
         abstract: 'Empirical Bayes estimators for municipal disaggregations based on complex surveys are presented.',
         referencias: 'Rao, J. N. K., & Molina, I. (2015). Small Area Estimation. John Wiley & Sons.',
+        enlace_url: '',
     },
 ];
 
@@ -665,19 +668,34 @@ const exportUrl = computed(() => {
                                     </div>
                                 </td>
                                 <td class="py-4 px-6 text-center">
-                                    <a
-                                        v-if="item.archivo_url"
-                                        :href="item.archivo_url"
-                                        target="_blank"
-                                        class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-bold bg-red-50 text-red-700 hover:bg-red-100 transition"
-                                        title="Descargar documento"
-                                    >
-                                        <svg class="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                                        </svg>
-                                        PDF
-                                    </a>
-                                    <span v-else class="text-xs text-gray-300">—</span>
+                                    <div class="flex items-center justify-center gap-1.5 flex-wrap">
+                                        <a
+                                            v-if="item.archivo_url"
+                                            :href="item.archivo_url"
+                                            target="_blank"
+                                            class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-bold bg-red-50 text-red-700 hover:bg-red-100 transition"
+                                            title="Descargar PDF local"
+                                        >
+                                            <svg class="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                            </svg>
+                                            PDF
+                                        </a>
+                                        <a
+                                            v-if="item.art_enlace_url || item.enlace_url"
+                                            :href="item.art_enlace_url || item.enlace_url"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-bold bg-indigo-50 text-[#35449F] hover:bg-indigo-100 transition"
+                                            title="Abrir enlace externo (Drive / Nube)"
+                                        >
+                                            <svg class="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                            </svg>
+                                            Link
+                                        </a>
+                                        <span v-if="!item.archivo_url && !item.art_enlace_url && !item.enlace_url" class="text-xs text-gray-300">—</span>
+                                    </div>
                                 </td>
                                 <td class="py-4 px-6 text-center">
                                     <div class="flex flex-col items-center gap-1">

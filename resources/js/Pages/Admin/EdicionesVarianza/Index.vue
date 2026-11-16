@@ -167,55 +167,41 @@ const deleteItem = () => {
             </div>
 
             <!-- Barra de Filtros y Búsqueda -->
-            <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
-                <div class="flex-1 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-                    <div class="relative flex-1">
-                        <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-                            <svg class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                            </svg>
-                        </span>
-                        <input
-                            v-model="search"
-                            @input="onSearchInput"
-                            type="text"
-                            placeholder="Buscar por título, número, volumen, DOI, ISSN..."
-                            class="w-full pl-10 pr-4 py-2 bg-slate-50/70 border border-slate-200 rounded-xl text-sm text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-hidden focus:ring-2 focus:ring-[#35449F]/20 focus:border-[#35449F] transition"
-                        />
-                    </div>
-
-                    <div class="sm:w-48">
-                        <select
-                            v-model="selectedAnio"
-                            @change="onAnioChange"
-                            class="w-full py-2 bg-slate-50/70 border border-slate-200 rounded-xl text-sm text-slate-900 focus:bg-white focus:outline-hidden focus:ring-2 focus:ring-[#35449F]/20 focus:border-[#35449F] transition"
-                        >
-                            <option value="">Todos los años</option>
-                            <option v-for="a in anios" :key="a" :value="a">Año {{ a }}</option>
-                        </select>
-                    </div>
-
-                    <button
-                        v-if="search || selectedAnio"
-                        @click="clearFilters"
-                        class="text-xs text-slate-500 hover:text-slate-800 underline font-semibold cursor-pointer"
-                    >
-                        Limpiar filtros
-                    </button>
+            <!-- Buscador y Filtros -->
+            <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                <div class="relative flex-1">
+                    <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                        <svg class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </span>
+                    <input
+                        v-model="search"
+                        @input="onSearchInput"
+                        type="text"
+                        placeholder="Buscar por título, número, volumen, DOI, ISSN..."
+                        class="w-full pl-10 pr-4 py-2 bg-slate-50/70 border border-slate-200 rounded-xl text-sm text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-hidden focus:ring-2 focus:ring-[#35449F]/20 focus:border-[#35449F] transition"
+                    />
                 </div>
 
-                <div class="flex items-center gap-2 self-end md:self-auto text-xs text-slate-500 font-semibold">
-                    <span>Mostrar:</span>
+                <div class="sm:w-56">
                     <select
-                        v-model="perPage"
-                        @change="applyFilters"
-                        class="py-1 px-2 bg-slate-50 border border-slate-200 rounded-lg text-xs"
+                        v-model="selectedAnio"
+                        @change="onAnioChange"
+                        class="w-full py-2 bg-slate-50/70 border border-slate-200 rounded-xl text-sm text-slate-900 focus:bg-white focus:outline-hidden focus:ring-2 focus:ring-[#35449F]/20 focus:border-[#35449F] transition"
                     >
-                        <option :value="10">10</option>
-                        <option :value="20">20</option>
-                        <option :value="50">50</option>
+                        <option value="">Todos los años</option>
+                        <option v-for="a in anios" :key="a" :value="a">Año {{ a }}</option>
                     </select>
                 </div>
+
+                <button
+                    v-if="search || selectedAnio"
+                    @click="clearFilters"
+                    class="text-xs text-slate-500 hover:text-slate-800 underline font-semibold cursor-pointer shrink-0"
+                >
+                    Limpiar filtros
+                </button>
             </div>
 
             <!-- Listado de Ediciones -->
@@ -247,12 +233,12 @@ const deleteItem = () => {
 
                                 <!-- Portada -->
                                 <td class="py-4 px-4 text-center">
-                                    <div class="size-12 rounded-lg bg-slate-100 overflow-hidden border border-slate-200 shrink-0 mx-auto">
+                                    <div class="w-11 h-14 rounded-lg bg-slate-100 overflow-hidden border border-slate-200 shrink-0 mx-auto shadow-2xs">
                                         <img
                                             v-if="edicion.portada_url"
                                             :src="edicion.portada_url"
                                             :alt="edicion.ev_titulo"
-                                            class="w-full h-full object-cover"
+                                            class="w-full h-full object-cover object-top"
                                         />
                                         <div v-else class="w-full h-full flex items-center justify-center text-slate-400">
                                             <svg class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -310,22 +296,38 @@ const deleteItem = () => {
                                     </div>
                                 </td>
 
-                                <!-- PDF / Archivo -->
+                                <!-- PDF / Archivo / Enlace -->
                                 <td class="py-4 px-4 text-xs">
-                                    <a
-                                        v-if="edicion.archivo_url"
-                                        :href="edicion.archivo_url"
-                                        target="_blank"
-                                        class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-red-50 text-red-700 font-bold hover:bg-red-100 transition border border-red-200"
-                                    >
-                                        <svg class="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                                        </svg>
-                                        PDF Completo
-                                    </a>
-                                    <span v-else class="text-slate-400 text-xs italic">
-                                        Sin PDF
-                                    </span>
+                                    <div class="flex items-center gap-1.5 flex-wrap">
+                                        <a
+                                            v-if="edicion.archivo_url"
+                                            :href="edicion.archivo_url"
+                                            target="_blank"
+                                            class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-red-50 text-red-700 font-bold hover:bg-red-100 transition border border-red-200"
+                                            title="Descargar PDF compilatorio"
+                                        >
+                                            <svg class="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                            </svg>
+                                            PDF
+                                        </a>
+                                        <a
+                                            v-if="edicion.ev_enlace_url || edicion.enlace_url"
+                                            :href="edicion.ev_enlace_url || edicion.enlace_url"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-indigo-50 text-[#35449F] font-bold hover:bg-indigo-100 transition border border-indigo-200"
+                                            title="Abrir enlace externo en la nube (Drive/Dropbox)"
+                                        >
+                                            <svg class="size-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                            </svg>
+                                            Link
+                                        </a>
+                                        <span v-if="!edicion.archivo_url && !edicion.ev_enlace_url && !edicion.enlace_url" class="text-slate-400 text-xs italic">
+                                            Sin PDF
+                                        </span>
+                                    </div>
                                 </td>
 
                                 <!-- Estado -->
@@ -398,8 +400,8 @@ const deleteItem = () => {
                 </div>
 
                 <!-- Paginación -->
-                <div v-if="ediciones.links && ediciones.links.length > 3" class="p-4 border-t border-slate-100 bg-slate-50/50">
-                    <Pagination :links="ediciones.links" />
+                <div v-if="ediciones?.meta || ediciones?.links || ediciones?.total" class="p-4 border-t border-slate-100 bg-slate-50/50">
+                    <Pagination :meta="ediciones" />
                 </div>
             </div>
         </div>

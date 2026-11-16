@@ -1,0 +1,13 @@
+:root {
+  --color-indigo: #35449F;
+  --color-magenta: #F50088;
+  --color-rosa-carmin: #F30060;
+  --color-violeta: #71589F;
+  --color-purpura: #3E2987;
+  --color-resaltador: #6C81C7;
+  --color-tinta: #14161C;
+  --color-desactivado: #E0E0E0;
+  --color-superficie: #F5F5F8;
+
+  --font-main: 'DM Sans', sans-serif;
+}

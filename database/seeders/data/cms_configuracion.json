@@ -1,0 +1,47 @@
+{
+    "id": 1,
+    "cfg_nombre_institucion": "Instituto de Estadística Teórica y Aplicada",
+    "cfg_siglas": "IETA",
+    "cfg_slogan": "Investigación, rigor científico y análisis estadístico",
+    "cfg_descripcion_corta": "Instituto de investigación científica adscrito a la Universidad Mayor de San Andrés (UMSA), dedicado al avance teórico y práctico de la ciencia estadística.",
+    "cfg_email_principal": "contacto@ieta.umsa.bo",
+    "cfg_telefono_principal": "+591 2 2441234",
+    "cfg_direccion_principal": "Campus Universitario Cota Cota, La Paz - Bolivia",
+    "cfg_redes_sociales": {
+        "facebook": "https:\/\/facebook.com\/ieta.umsa",
+        "twitter": null,
+        "linkedin": null,
+        "youtube": null,
+        "instagram": null
+    },
+    "cfg_copyright": "© 2026 Instituto de Estadística Teórica y Aplicada (IETA). UMSA. Todos los derechos reservados.",
+    "created_at": "2026-10-12T20:55:49.000000Z",
+    "updated_at": "2026-10-19T23:20:53.000000Z",
+    "logo_principal_url": "\/storage\/9\/logoieta.png",
+    "logo_blanco_url": null,
+    "favicon_url": null,
+    "media": [
+        {
+            "id": 9,
+            "model_type": "App\\Models\\CmsConfiguracion",
+            "model_id": 1,
+            "uuid": "2d22d92b-a6ab-4d6d-81a3-b4a581e43337",
+            "collection_name": "cfg_logo_principal",
+            "name": "logoieta",
+            "file_name": "logoieta.png",
+            "mime_type": "image\/png",
+            "disk": "public",
+            "conversions_disk": "public",
+            "size": 16011,
+            "manipulations": [],
+            "custom_properties": [],
+            "generated_conversions": [],
+            "responsive_images": [],
+            "order_column": 1,
+            "created_at": "2026-10-12T20:57:33.000000Z",
+            "updated_at": "2026-10-12T20:57:33.000000Z",
+            "original_url": "http:\/\/localhost:8000\/storage\/9\/logoieta.png",
+            "preview_url": ""
+        }
+    ]
+}
