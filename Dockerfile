@@ -87,14 +87,14 @@ COPY --from=node-builder /app/public/build ./public/build
 RUN mkdir -p storage/framework/cache storage/framework/sessions storage/framework/views storage/logs bootstrap/cache \
     && chmod -R 775 storage bootstrap/cache
 
-# Configurar script de inicio
+# Configurar script de inicio (con sanitización de saltos de línea CRLF)
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
-RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+RUN sed -i 's/\r$//' /usr/local/bin/docker-entrypoint.sh && chmod +x /usr/local/bin/docker-entrypoint.sh
 
 # Dokploy escucha internamente en 8000 (sin mapeo directo de host)
 EXPOSE 8000
 
-ENTRYPOINT ["docker-entrypoint.sh"]
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
 
 CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
 
