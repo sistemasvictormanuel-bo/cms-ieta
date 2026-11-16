@@ -29,7 +29,9 @@ RUN composer install \
     --ignore-platform-req=ext-intl \
     --ignore-platform-req=ext-bcmath \
     --ignore-platform-req=ext-pdo_pgsql \
-    --ignore-platform-req=ext-pgsql
+    --ignore-platform-req=ext-pgsql \
+    --ignore-platform-req=ext-exif \
+    --ignore-platform-req=ext-pcntl
 
 # ==============================================================
 # FASE 3: Imagen Final de Producción (PHP 8.4 Alpine)
