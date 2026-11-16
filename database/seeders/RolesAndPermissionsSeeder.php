@@ -4,9 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Permission;
 use App\Models\Role;
-use App\Models\User;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Hash;
 use Spatie\Permission\PermissionRegistrar;
 
 class RolesAndPermissionsSeeder extends Seeder
@@ -218,32 +216,7 @@ class RolesAndPermissionsSeeder extends Seeder
             'perfil.editar-propio',
         ]);
 
-        // 3. Asignar rol de administrador al usuario principal o crear uno por defecto
-        $users = User::all();
-        if ($users->isNotEmpty()) {
-            foreach ($users as $user) {
-                if ($user->roles->isEmpty()) {
-                    $user->assignRole($adminRole);
-                }
-                if ($user->is_active === null) {
-                    $user->is_active = true;
-                    $user->save();
-                }
-            }
-        } else {
-            $admin = User::firstOrCreate(
-                ['email' => 'admin@ieta.edu.bo'],
-                [
-                    'name' => 'Administrador IETA',
-                    'password' => Hash::make('Admin*2026'),
-                    'is_active' => true,
-                    'email_verified_at' => now(),
-                ]
-            );
-            $admin->assignRole($adminRole);
-        }
-
-        // Limpiar caché de nuevo tras finalizar
+        // Limpiar caché tras finalizar
         app()[PermissionRegistrar::class]->forgetCachedPermissions();
     }
 }

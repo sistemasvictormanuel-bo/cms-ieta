@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('sv_titulo');
             $table->text('sv_descripcion')->nullable();
-            $table->json('sv_contenido');
+            $table->json('sv_contenido')->nullable();
             // CAMPO IMAGEN sv_imagen por media spatie
             $table->timestamps();
         });

@@ -25,7 +25,7 @@ return new class extends Migration
             $table->time('ct_hora_fin')->nullable();
             $table->string('ct_duracion')->nullable();
             $table->text('ct_descripcion')->nullable();
-            $table->json('ct_contenido');
+            $table->json('ct_contenido')->nullable();
             $table->string('ct_email_info')->nullable();
             $table->string('ct_telefono_ref', 20)->nullable();
             $table->string('ct_slug')->unique();

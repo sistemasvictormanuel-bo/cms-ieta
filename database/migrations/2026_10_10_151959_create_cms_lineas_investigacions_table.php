@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('cms_lineas_investigaciones', function (Blueprint $table) {
             $table->id();
             $table->string('li_titulo');
-            $table->string('li_descripcion');
-            $table->json('li_contenido'); // texto enriquecido RIch editor
+            $table->text('li_descripcion')->nullable();
+            $table->text('li_contenido')->nullable(); // texto enriquecido Editor.js
             $table->string('li_slug'); // autogenerado
             // campo de media  spatie  li_imagen
             $table->timestamps();

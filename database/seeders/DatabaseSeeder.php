@@ -31,6 +31,7 @@ class DatabaseSeeder extends Seeder
             CmsServiciosSeeder::class,
             CmsConfiguracionSeeder::class,
             CmsTraduccionSeeder::class,
+            AdminUserSeeder::class,
         ]);
 
         if (DB::getDriverName() === 'pgsql') {

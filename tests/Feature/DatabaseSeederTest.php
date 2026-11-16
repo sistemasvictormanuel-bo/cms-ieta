@@ -12,4 +12,6 @@ test('la suite completa de DatabaseSeeder se ejecuta al 100% sin errores de colu
     $this->assertDatabaseHas('cms_configuracion', ['cfg_siglas' => 'IETA']);
     $this->assertDatabaseCount('cms_autores', 53);
     $this->assertDatabaseHas('personas', ['p_nombre' => 'Ramiro', 'p_apellido_paterno' => 'Coa']);
+    $this->assertDatabaseHas('users', ['email' => 'admin@ieta.edu.bo']);
+    $this->assertDatabaseHas('cms_lineas_investigaciones', ['id' => 1]);
 });
