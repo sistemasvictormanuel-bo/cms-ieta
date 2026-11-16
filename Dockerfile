@@ -1,17 +1,5 @@
 # ==============================================================
-# FASE 1: Construcción de Assets Frontend con Node 20
-# ==============================================================
-FROM node:20-alpine AS node-builder
-WORKDIR /app
-
-COPY package*.json ./
-RUN npm ci
-
-COPY . .
-RUN npm run build
-
-# ==============================================================
-# FASE 2: Instalación de Dependencias PHP con Composer
+# FASE 1: Instalación de Dependencias PHP con Composer
 # ==============================================================
 FROM composer:2 AS composer-builder
 WORKDIR /app
@@ -32,6 +20,20 @@ RUN composer install \
     --ignore-platform-req=ext-pgsql \
     --ignore-platform-req=ext-exif \
     --ignore-platform-req=ext-pcntl
+
+# ==============================================================
+# FASE 2: Construcción de Assets Frontend con Node 20
+# (Incluye vendor para resolver dependencias como Ziggy)
+# ==============================================================
+FROM node:20-alpine AS node-builder
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm ci
+
+COPY . .
+COPY --from=composer-builder /app/vendor ./vendor
+RUN npm run build
 
 # ==============================================================
 # FASE 3: Imagen Final de Producción (PHP 8.4 Alpine)
