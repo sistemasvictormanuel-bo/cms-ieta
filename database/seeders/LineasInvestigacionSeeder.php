@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\CmsLineasInvestigacion;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 
 class LineasInvestigacionSeeder extends Seeder
 {
@@ -22,14 +23,16 @@ class LineasInvestigacionSeeder extends Seeder
         }
 
         foreach ($lineas as $item) {
+            $titulo = $item['li_titulo'] ?? $item['cli_nombre'] ?? 'Línea de Investigación';
+            $slug = $item['li_slug'] ?? Str::slug($titulo);
+
             CmsLineasInvestigacion::updateOrCreate(
                 ['id' => $item['id']],
                 [
-                    'cli_nombre' => $item['cli_nombre'],
-                    'cli_descripcion' => $item['cli_descripcion'] ?? null,
-                    'cli_icono' => $item['cli_icono'] ?? null,
-                    'cli_estado' => (bool) ($item['cli_estado'] ?? true),
-                    'cli_orden' => $item['cli_orden'] ?? 0,
+                    'li_titulo' => $titulo,
+                    'li_descripcion' => $item['li_descripcion'] ?? $item['cli_descripcion'] ?? 'Descripción de la línea de investigación.',
+                    'li_contenido' => $item['li_contenido'] ?? ['time' => (string) time(), 'blocks' => [], 'version' => '2.31.7'],
+                    'li_slug' => $slug,
                 ]
             );
         }

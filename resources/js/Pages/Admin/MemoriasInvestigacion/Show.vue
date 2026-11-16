@@ -113,7 +113,7 @@ const deleteItem = () => {
                         <div>
                             <p class="text-xs font-bold text-gray-400 uppercase tracking-wider">Investigador Responsable</p>
                             <p class="text-[15.5px] font-bold text-gray-900">
-                                {{ memoria.autor?.persona ? `${memoria.autor.persona.p_nombre} ${memoria.autor.persona.p_apellido_paterno || ''} ${memoria.autor.persona.p_apellido_materno || ''}`.trim() : 'Autor no asignado' }}
+                                {{ memoria.autor?.persona?.nombre_completo || (memoria.autor?.persona ? `${memoria.autor.persona.p_nombre} ${memoria.autor.persona.p_apellido_paterno || ''}`.trim() : 'Autor no asignado') }}
                             </p>
                             <p v-if="memoria.autor?.persona?.p_correo" class="text-xs text-gray-500 font-medium">
                                 {{ memoria.autor.persona.p_correo }}

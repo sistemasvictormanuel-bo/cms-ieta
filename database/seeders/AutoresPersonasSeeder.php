@@ -3,7 +3,10 @@
 namespace Database\Seeders;
 
 use App\Models\Autor;
+use App\Models\Especialidades;
+use App\Models\GradoAcademico;
 use App\Models\Persona;
+use App\Models\TipoAutor;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 
@@ -35,8 +38,8 @@ class AutoresPersonasSeeder extends Seeder
                         'p_apellido_paterno' => $pData['p_apellido_paterno'] ?? null,
                         'p_apellido_materno' => $pData['p_apellido_materno'] ?? null,
                         'p_correo' => $pData['p_correo'] ?? null,
-                        'p_telefono' => $pData['p_telefono'] ?? null,
-                        'p_ci' => $pData['p_ci'] ?? null,
+                        'p_celular' => $pData['p_celular'] ?? $pData['p_telefono'] ?? null,
+                        'p_sitio_web' => $pData['p_sitio_web'] ?? null,
                     ]
                 );
                 $personaId = $persona->id;
@@ -44,21 +47,32 @@ class AutoresPersonasSeeder extends Seeder
 
             $slug = $item['at_slug'] ?? Str::slug(($item['persona']['p_nombre'] ?? 'autor').' '.($item['persona']['p_apellido_paterno'] ?? $item['id']));
 
+            $tipoAutorId = ($item['tipo_autor_id'] ?? null) && TipoAutor::where('id', $item['tipo_autor_id'])->exists()
+                ? $item['tipo_autor_id']
+                : 1;
+
+            $gradoId = ($item['grado_academico_id'] ?? null) && GradoAcademico::where('id', $item['grado_academico_id'])->exists()
+                ? $item['grado_academico_id']
+                : (GradoAcademico::first()?->id ?? 1);
+
             $autor = Autor::updateOrCreate(
                 ['id' => $item['id']],
                 [
                     'persona_id' => $personaId,
-                    'tipo_autor_id' => $item['tipo_autor_id'] ?? 1,
-                    'grado_academico_id' => $item['grado_academico_id'] ?? null,
+                    'tipo_autor_id' => $tipoAutorId,
+                    'grado_academico_id' => $gradoId,
                     'at_slug' => $slug,
                     'at_biografia' => $item['at_biografia'] ?? null,
-                    'at_orcid' => $item['at_orcid'] ?? null,
+                    'at_intereses_cientificos' => $item['at_intereses_cientificos'] ?? null,
                     'at_estado' => (bool) ($item['at_estado'] ?? true),
                 ]
             );
 
             if (! empty($item['especialidades_ids']) && is_array($item['especialidades_ids'])) {
-                $autor->especialidades()->syncWithoutDetaching($item['especialidades_ids']);
+                $validEspecialidades = Especialidades::whereIn('id', $item['especialidades_ids'])->pluck('id')->toArray();
+                if (! empty($validEspecialidades)) {
+                    $autor->especialidades()->syncWithoutDetaching($validEspecialidades);
+                }
             }
         }
     }

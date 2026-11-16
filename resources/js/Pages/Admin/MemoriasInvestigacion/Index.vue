@@ -340,7 +340,7 @@ const sampleRows = [
                                         </div>
                                         <div>
                                             <p class="font-bold text-[#14161C] text-xs">
-                                                {{ item.autor.persona ? `${item.autor.persona.p_nombre} ${item.autor.persona.p_apellido_paterno || ''}`.trim() : `Autor #${item.autor.id}` }}
+                                                {{ item.autor.persona?.nombre_completo || (item.autor.persona ? `${item.autor.persona.p_nombre} ${item.autor.persona.p_apellido_paterno || ''}`.trim() : `Autor #${item.autor.id}`) }}
                                             </p>
                                             <p v-if="item.autor.persona?.p_correo" class="text-[11px] text-gray-400">
                                                 {{ item.autor.persona.p_correo }}

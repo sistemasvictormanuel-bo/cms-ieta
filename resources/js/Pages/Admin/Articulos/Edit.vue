@@ -233,8 +233,7 @@ const removeAuthorRow = (index) => {
 
 const authorFullName = (autor) => {
     if (autor?.persona?.nombre_completo) {
-        const grado = autor.grado_academico?.ga_abreviatura ? `[${autor.grado_academico.ga_abreviatura}] ` : '';
-        return `${grado}${autor.persona.nombre_completo}`;
+        return autor.persona.nombre_completo;
     }
     return `Autor #${autor.id}`;
 };

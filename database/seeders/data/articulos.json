@@ -8,13 +8,13 @@
         "art_fecha_recepcion": "2024-08-25",
         "art_fecha_aceptado": "2024-09-16",
         "art_orcid": "0000-0002-2955-0204; 0009-0009-6633-6264",
-        "art_doi": "10.53287\/tewb7429mf77s",
+        "art_doi": "10.53287/tewb7429mf77s",
         "art_pag_inicio": 1,
         "art_pag_fin": 10,
         "art_num_paginas": 10,
         "art_estado": true,
         "art_referencias": null,
-        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1kj3v1JLoX3jeooqCDa_I122s-MIDMf3S\/view?usp=drive_link",
+        "art_enlace_url": "https://drive.google.com/file/d/1kj3v1JLoX3jeooqCDa_I122s-MIDMf3S/view?usp=drive_link",
         "art_vistas": 4,
         "tipo_articulo_id": 1,
         "edicion_varianza_id": 2,
@@ -43,13 +43,13 @@
         "art_fecha_recepcion": "2024-08-23",
         "art_fecha_aceptado": "2024-09-20",
         "art_orcid": "0000-0003-2557-7079",
-        "art_doi": "10.53287\/zrsb8936ro76t",
+        "art_doi": "10.53287/zrsb8936ro76t",
         "art_pag_inicio": 1,
         "art_pag_fin": 9,
         "art_num_paginas": 9,
         "art_estado": true,
         "art_referencias": null,
-        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1uR0L8MrbL3ba7aZJq_kXX9hwWZL1Tluc\/view?usp=drive_link",
+        "art_enlace_url": "https://drive.google.com/file/d/1uR0L8MrbL3ba7aZJq_kXX9hwWZL1Tluc/view?usp=drive_link",
         "art_vistas": 2,
         "tipo_articulo_id": 1,
         "edicion_varianza_id": 2,
@@ -75,13 +75,13 @@
         "art_fecha_recepcion": "2026-11-08",
         "art_fecha_aceptado": null,
         "art_orcid": "0009-0004-2944-6871",
-        "art_doi": "10.53287\/dkut5788ek82x",
+        "art_doi": "10.53287/dkut5788ek82x",
         "art_pag_inicio": 1,
         "art_pag_fin": 9,
         "art_num_paginas": 9,
         "art_estado": true,
         "art_referencias": null,
-        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1325h1mfsccPe-wXzQzw7FBi-o-U27Wku\/view?usp=drive_link",
+        "art_enlace_url": "https://drive.google.com/file/d/1325h1mfsccPe-wXzQzw7FBi-o-U27Wku/view?usp=drive_link",
         "art_vistas": 6,
         "tipo_articulo_id": 2,
         "edicion_varianza_id": 2,
@@ -107,20 +107,20 @@
         "art_fecha_recepcion": "2023-01-28",
         "art_fecha_aceptado": "2023-04-03",
         "art_orcid": "0000-0002-2955-0204",
-        "art_doi": "10.53287\/skjt1649td12r",
+        "art_doi": "10.53287/skjt1649td12r",
         "art_pag_inicio": null,
         "art_pag_fin": null,
         "art_num_paginas": null,
         "art_estado": true,
         "art_referencias": null,
-        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1lPf3zUWmonHMh5xIwUWQ-zP2gUQ1bCSc\/view?usp=sharing",
+        "art_enlace_url": "https://drive.google.com/file/d/1lPf3zUWmonHMh5xIwUWQ-zP2gUQ1bCSc/view?usp=sharing",
         "art_vistas": 0,
         "tipo_articulo_id": 1,
         "edicion_varianza_id": 25,
         "estado_revision": "aprobado",
         "autores_pivot": [
             {
-                "autor_id": 178,
+                "autor_id": 21,
                 "tipo_participaciones_id": 1
             }
         ],
@@ -139,20 +139,20 @@
         "art_fecha_recepcion": "2023-01-20",
         "art_fecha_aceptado": "2023-03-25",
         "art_orcid": "0000-0003-2557-7079",
-        "art_doi": "10.53287\/czmk5273fx16y",
+        "art_doi": "10.53287/czmk5273fx16y",
         "art_pag_inicio": null,
         "art_pag_fin": null,
         "art_num_paginas": null,
         "art_estado": true,
         "art_referencias": null,
-        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1I0OURhuP04uQeWE2LbWXHfz_y1Wt2wyf\/view?usp=sharing",
+        "art_enlace_url": "https://drive.google.com/file/d/1I0OURhuP04uQeWE2LbWXHfz_y1Wt2wyf/view?usp=sharing",
         "art_vistas": 0,
         "tipo_articulo_id": 1,
         "edicion_varianza_id": 25,
         "estado_revision": "aprobado",
         "autores_pivot": [
             {
-                "autor_id": 179,
+                "autor_id": 22,
                 "tipo_participaciones_id": 1
             }
         ],
@@ -172,13 +172,13 @@
         "art_fecha_recepcion": "2023-01-31",
         "art_fecha_aceptado": "2023-04-04",
         "art_orcid": "0000-0002-4308-6532; 0000-0003-2571-7676; 0000-0003-4934-0703; 0000-0003-0089-6436",
-        "art_doi": "10.53287\/osnw7311vt18o",
+        "art_doi": "10.53287/osnw7311vt18o",
         "art_pag_inicio": null,
         "art_pag_fin": null,
         "art_num_paginas": null,
         "art_estado": true,
         "art_referencias": null,
-        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1wXYXuVv8VRbUMlVNh6p1N0ZN4XkCO8Ud\/view?usp=sharing",
+        "art_enlace_url": "https://drive.google.com/file/d/1wXYXuVv8VRbUMlVNh6p1N0ZN4XkCO8Ud/view?usp=sharing",
         "art_vistas": 0,
         "tipo_articulo_id": 1,
         "edicion_varianza_id": 25,
@@ -216,28 +216,28 @@
         "art_fecha_recepcion": "2023-01-31",
         "art_fecha_aceptado": "2023-03-06",
         "art_orcid": "0000-0003-3158-0776; 0000-0002-7633-3712; 0000-0003-0089-6436",
-        "art_doi": "10.53287\/noqo6075xs66p",
+        "art_doi": "10.53287/noqo6075xs66p",
         "art_pag_inicio": null,
         "art_pag_fin": null,
         "art_num_paginas": null,
         "art_estado": true,
         "art_referencias": null,
-        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1kOL6poz6vRh6l78BnXHmxxJ_QURclSJQ\/view?usp=sharing",
+        "art_enlace_url": "https://drive.google.com/file/d/1kOL6poz6vRh6l78BnXHmxxJ_QURclSJQ/view?usp=sharing",
         "art_vistas": 0,
         "tipo_articulo_id": 2,
         "edicion_varianza_id": 25,
         "estado_revision": "aprobado",
         "autores_pivot": [
             {
-                "autor_id": 182,
+                "autor_id": 27,
                 "tipo_participaciones_id": 1
             },
             {
-                "autor_id": 183,
+                "autor_id": 53,
                 "tipo_participaciones_id": 1
             },
             {
-                "autor_id": 184,
+                "autor_id": 181,
                 "tipo_participaciones_id": 1
             }
         ],
@@ -257,20 +257,20 @@
         "art_fecha_recepcion": "2022-08-16",
         "art_fecha_aceptado": "2022-10-03",
         "art_orcid": "0000-0001-8686-7702; 0000-0002-7143-3271; 0000-0002-6639-7659",
-        "art_doi": "10.53287\/imny6054ru24w",
+        "art_doi": "10.53287/imny6054ru24w",
         "art_pag_inicio": null,
         "art_pag_fin": null,
         "art_num_paginas": null,
         "art_estado": true,
         "art_referencias": null,
-        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1hRZuD_gdReaoRskrlvOLhcg7TlpAjmVn\/view?usp=sharing",
+        "art_enlace_url": "https://drive.google.com/file/d/1hRZuD_gdReaoRskrlvOLhcg7TlpAjmVn/view?usp=sharing",
         "art_vistas": 0,
         "tipo_articulo_id": 1,
         "edicion_varianza_id": 24,
         "estado_revision": "aprobado",
         "autores_pivot": [
             {
-                "autor_id": 187,
+                "autor_id": 18,
                 "tipo_participaciones_id": 1
             },
             {
@@ -297,20 +297,20 @@
         "art_fecha_recepcion": "2022-08-13",
         "art_fecha_aceptado": "2022-09-22",
         "art_orcid": "0000-0002-6490-7491",
-        "art_doi": "10.53287\/zogm7286du66v",
+        "art_doi": "10.53287/zogm7286du66v",
         "art_pag_inicio": null,
         "art_pag_fin": null,
         "art_num_paginas": null,
         "art_estado": true,
         "art_referencias": null,
-        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1R5EqcR1I7lp20IdwOagYVd5-omnowLA_\/view?usp=sharing",
+        "art_enlace_url": "https://drive.google.com/file/d/1R5EqcR1I7lp20IdwOagYVd5-omnowLA_/view?usp=sharing",
         "art_vistas": 0,
         "tipo_articulo_id": 1,
         "edicion_varianza_id": 24,
         "estado_revision": "aprobado",
         "autores_pivot": [
             {
-                "autor_id": 190,
+                "autor_id": 19,
                 "tipo_participaciones_id": 1
             }
         ],
@@ -329,20 +329,20 @@
         "art_fecha_recepcion": "2022-08-17",
         "art_fecha_aceptado": "2022-09-06",
         "art_orcid": "0000-0001-7886-5264",
-        "art_doi": "10.53287\/uufr9587pp15b",
+        "art_doi": "10.53287/uufr9587pp15b",
         "art_pag_inicio": null,
         "art_pag_fin": null,
         "art_num_paginas": null,
         "art_estado": true,
         "art_referencias": null,
-        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1kdPbSwRU7fZK5UTTXrjHh_K54eN25DPh\/view?usp=sharing",
+        "art_enlace_url": "https://drive.google.com/file/d/1kdPbSwRU7fZK5UTTXrjHh_K54eN25DPh/view?usp=sharing",
         "art_vistas": 0,
         "tipo_articulo_id": 1,
         "edicion_varianza_id": 24,
         "estado_revision": "aprobado",
         "autores_pivot": [
             {
-                "autor_id": 191,
+                "autor_id": 26,
                 "tipo_participaciones_id": 1
             }
         ],
@@ -362,13 +362,13 @@
         "art_fecha_recepcion": "2022-08-19",
         "art_fecha_aceptado": "2022-09-24",
         "art_orcid": "0000-0003-1430-2854; 0000-0003-0704-0980",
-        "art_doi": "10.53287\/bris9654fw33p",
+        "art_doi": "10.53287/bris9654fw33p",
         "art_pag_inicio": null,
         "art_pag_fin": null,
         "art_num_paginas": null,
         "art_estado": true,
         "art_referencias": null,
-        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1mX41vf11jrgtN8a7aU7AzjADKScuMy13\/view?usp=sharing",
+        "art_enlace_url": "https://drive.google.com/file/d/1mX41vf11jrgtN8a7aU7AzjADKScuMy13/view?usp=sharing",
         "art_vistas": 0,
         "tipo_articulo_id": 1,
         "edicion_varianza_id": 24,
@@ -379,7 +379,7 @@
                 "tipo_participaciones_id": 1
             },
             {
-                "autor_id": 193,
+                "autor_id": 55,
                 "tipo_participaciones_id": 1
             }
         ],
@@ -398,20 +398,20 @@
         "art_fecha_recepcion": "2024-01-02",
         "art_fecha_aceptado": "2024-03-28",
         "art_orcid": "0000-0001-5117-6565",
-        "art_doi": "10.53287\/xttp2122se37f",
+        "art_doi": "10.53287/xttp2122se37f",
         "art_pag_inicio": null,
         "art_pag_fin": null,
         "art_num_paginas": null,
         "art_estado": true,
         "art_referencias": null,
-        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/18NsDBo8OcODL3l7eL9HN_4U7doEs6-sN\/view?usp=drive_link",
+        "art_enlace_url": "https://drive.google.com/file/d/18NsDBo8OcODL3l7eL9HN_4U7doEs6-sN/view?usp=drive_link",
         "art_vistas": 0,
         "tipo_articulo_id": 1,
         "edicion_varianza_id": 3,
         "estado_revision": "aprobado",
         "autores_pivot": [
             {
-                "autor_id": 194,
+                "autor_id": 51,
                 "tipo_participaciones_id": 1
             }
         ],
@@ -432,24 +432,24 @@
         "art_fecha_recepcion": "2023-08-01",
         "art_fecha_aceptado": "2023-09-05",
         "art_orcid": "0000-0001-7886-5264; 0000-0002-1157-2165",
-        "art_doi": "10.53287\/uqtn3784mj44i",
+        "art_doi": "10.53287/uqtn3784mj44i",
         "art_pag_inicio": null,
         "art_pag_fin": null,
         "art_num_paginas": null,
         "art_estado": true,
         "art_referencias": null,
-        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1D2LmZM7YPtQW2bVrK5zNuLR69ScIU0fH\/view?usp=sharing",
+        "art_enlace_url": "https://drive.google.com/file/d/1D2LmZM7YPtQW2bVrK5zNuLR69ScIU0fH/view?usp=sharing",
         "art_vistas": 0,
         "tipo_articulo_id": 1,
         "edicion_varianza_id": 4,
         "estado_revision": "aprobado",
         "autores_pivot": [
             {
-                "autor_id": 195,
+                "autor_id": 26,
                 "tipo_participaciones_id": 1
             },
             {
-                "autor_id": 196,
+                "autor_id": 46,
                 "tipo_participaciones_id": 1
             }
         ],
@@ -468,20 +468,20 @@
         "art_fecha_recepcion": "2022-08-25",
         "art_fecha_aceptado": "2022-09-27",
         "art_orcid": "0000-0003-4934-0703; 0000-0001-8480-8573; 0000-0003-0089-6436",
-        "art_doi": "10.53287\/iwck2038aa75j",
+        "art_doi": "10.53287/iwck2038aa75j",
         "art_pag_inicio": null,
         "art_pag_fin": null,
         "art_num_paginas": null,
         "art_estado": true,
         "art_referencias": "",
-        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1114wf6cgySJrJ2_4l1fMbAOtzByQ_6EW\/view?usp=sharing",
+        "art_enlace_url": "https://drive.google.com/file/d/1114wf6cgySJrJ2_4l1fMbAOtzByQ_6EW/view?usp=sharing",
         "art_vistas": 0,
         "tipo_articulo_id": 1,
         "edicion_varianza_id": 24,
         "estado_revision": "aprobado",
         "autores_pivot": [
             {
-                "autor_id": 203,
+                "autor_id": 180,
                 "tipo_participaciones_id": 1
             },
             {
@@ -489,7 +489,7 @@
                 "tipo_participaciones_id": 1
             },
             {
-                "autor_id": 205,
+                "autor_id": 181,
                 "tipo_participaciones_id": 1
             }
         ],
@@ -510,20 +510,20 @@
         "art_fecha_recepcion": "2022-08-11",
         "art_fecha_aceptado": "2022-09-27",
         "art_orcid": "0000-0002-2955-0204",
-        "art_doi": "10.53287\/iimq9052od26g",
+        "art_doi": "10.53287/iimq9052od26g",
         "art_pag_inicio": null,
         "art_pag_fin": null,
         "art_num_paginas": null,
         "art_estado": true,
         "art_referencias": "",
-        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1McBw6_z4e3j1maz4eMAg1yI-U1e-2Uyg\/view?usp=sharing",
+        "art_enlace_url": "https://drive.google.com/file/d/1McBw6_z4e3j1maz4eMAg1yI-U1e-2Uyg/view?usp=sharing",
         "art_vistas": 0,
         "tipo_articulo_id": 1,
         "edicion_varianza_id": 24,
         "estado_revision": "aprobado",
         "autores_pivot": [
             {
-                "autor_id": 206,
+                "autor_id": 21,
                 "tipo_participaciones_id": 1
             }
         ],
@@ -543,24 +543,24 @@
         "art_fecha_recepcion": "2022-08-08",
         "art_fecha_aceptado": "2022-09-19",
         "art_orcid": "0000-0002-8472-9477; 0000-0002-6714-6915",
-        "art_doi": "10.53287\/evek7580of82j",
+        "art_doi": "10.53287/evek7580of82j",
         "art_pag_inicio": null,
         "art_pag_fin": null,
         "art_num_paginas": null,
         "art_estado": true,
         "art_referencias": "",
-        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/103RRUC5p1sfyhP_LOgUU0PtGKcFJHEZY\/view?usp=sharing",
+        "art_enlace_url": "https://drive.google.com/file/d/103RRUC5p1sfyhP_LOgUU0PtGKcFJHEZY/view?usp=sharing",
         "art_vistas": 0,
         "tipo_articulo_id": 1,
         "edicion_varianza_id": 24,
         "estado_revision": "aprobado",
         "autores_pivot": [
             {
-                "autor_id": 207,
+                "autor_id": 50,
                 "tipo_participaciones_id": 1
             },
             {
-                "autor_id": 208,
+                "autor_id": 55,
                 "tipo_participaciones_id": 1
             }
         ],
@@ -583,24 +583,24 @@
         "art_fecha_recepcion": "2024-02-26",
         "art_fecha_aceptado": "2024-03-26",
         "art_orcid": "0000-0002-2955-0204; 0009-0009-6633-6264",
-        "art_doi": "10.53287\/aajp8031ju15n",
+        "art_doi": "10.53287/aajp8031ju15n",
         "art_pag_inicio": null,
         "art_pag_fin": null,
         "art_num_paginas": null,
         "art_estado": true,
         "art_referencias": "",
-        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1iC4Nq5bdzpN9nTR5krb99c7fdfoVlbvg\/view?usp=drive_link",
+        "art_enlace_url": "https://drive.google.com/file/d/1iC4Nq5bdzpN9nTR5krb99c7fdfoVlbvg/view?usp=drive_link",
         "art_vistas": 0,
         "tipo_articulo_id": 1,
         "edicion_varianza_id": 3,
         "estado_revision": "aprobado",
         "autores_pivot": [
             {
-                "autor_id": 209,
+                "autor_id": 21,
                 "tipo_participaciones_id": 1
             },
             {
-                "autor_id": 210,
+                "autor_id": 36,
                 "tipo_participaciones_id": 1
             }
         ],
@@ -620,20 +620,20 @@
         "art_fecha_recepcion": "2023-08-01",
         "art_fecha_aceptado": "2024-04-08",
         "art_orcid": "0000-0003-2557-7079",
-        "art_doi": "10.53287\/aszz5960wg30u",
+        "art_doi": "10.53287/aszz5960wg30u",
         "art_pag_inicio": null,
         "art_pag_fin": null,
         "art_num_paginas": null,
         "art_estado": true,
         "art_referencias": "",
-        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1qMzoc7lz7eqFC6cvv1lPiBEdbmQmeFYg\/view?usp=drive_link",
+        "art_enlace_url": "https://drive.google.com/file/d/1qMzoc7lz7eqFC6cvv1lPiBEdbmQmeFYg/view?usp=drive_link",
         "art_vistas": 0,
         "tipo_articulo_id": 1,
         "edicion_varianza_id": 3,
         "estado_revision": "aprobado",
         "autores_pivot": [
             {
-                "autor_id": 211,
+                "autor_id": 22,
                 "tipo_participaciones_id": 1
             }
         ],
@@ -653,20 +653,20 @@
         "art_fecha_recepcion": "2023-08-13",
         "art_fecha_aceptado": "2023-09-29",
         "art_orcid": "0000-0002-2955-0204",
-        "art_doi": "10.53287\/dpph5717ug89s",
+        "art_doi": "10.53287/dpph5717ug89s",
         "art_pag_inicio": null,
         "art_pag_fin": null,
         "art_num_paginas": null,
         "art_estado": true,
         "art_referencias": "",
-        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1UWIFmmNMuL9VaSA1J81rsVZlzs4iYR1_\/view?usp=sharing",
+        "art_enlace_url": "https://drive.google.com/file/d/1UWIFmmNMuL9VaSA1J81rsVZlzs4iYR1_/view?usp=sharing",
         "art_vistas": 0,
         "tipo_articulo_id": 1,
         "edicion_varianza_id": 4,
         "estado_revision": "aprobado",
         "autores_pivot": [
             {
-                "autor_id": 212,
+                "autor_id": 21,
                 "tipo_participaciones_id": 1
             }
         ],
@@ -686,20 +686,20 @@
         "art_fecha_recepcion": "2023-07-31",
         "art_fecha_aceptado": "2023-09-25",
         "art_orcid": "0000-0001-5117-6565",
-        "art_doi": "10.53287\/vowo9538zi13d",
+        "art_doi": "10.53287/vowo9538zi13d",
         "art_pag_inicio": null,
         "art_pag_fin": null,
         "art_num_paginas": null,
         "art_estado": true,
         "art_referencias": "",
-        "art_enlace_url": "https:\/\/drive.google.com\/file\/d\/1RBSZ6PVFGfBcYKmvRvzQfQ6kAxP7lEnl\/view?usp=sharing",
+        "art_enlace_url": "https://drive.google.com/file/d/1RBSZ6PVFGfBcYKmvRvzQfQ6kAxP7lEnl/view?usp=sharing",
         "art_vistas": 0,
         "tipo_articulo_id": 1,
         "edicion_varianza_id": 4,
         "estado_revision": "aprobado",
         "autores_pivot": [
             {
-                "autor_id": 213,
+                "autor_id": 51,
                 "tipo_participaciones_id": 1
             }
         ],

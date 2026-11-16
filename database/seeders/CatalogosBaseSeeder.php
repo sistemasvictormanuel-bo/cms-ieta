@@ -28,6 +28,7 @@ class CatalogosBaseSeeder extends Seeder
             ['id' => 2, 'ta_nombre' => 'Docente Externo', 'ta_descripcion' => 'Docente o investigador colaborador externo.', 'ta_estado' => true],
             ['id' => 3, 'ta_nombre' => 'Docente Investigador', 'ta_descripcion' => 'Docente enfocado primordialmente a proyectos de investigación.', 'ta_estado' => true],
             ['id' => 4, 'ta_nombre' => 'Estudiante Investigador', 'ta_descripcion' => 'Estudiante de grado o postgrado en rol de tesista o auxiliar.', 'ta_estado' => true],
+            ['id' => 5, 'ta_nombre' => 'Docente Emérito', 'ta_descripcion' => 'Docente emérito destacado de la carrera.', 'ta_estado' => true],
         ];
         foreach ($tiposAutor as $item) {
             TipoAutor::updateOrCreate(['id' => $item['id']], $item);
@@ -129,7 +130,7 @@ class CatalogosBaseSeeder extends Seeder
                     'youtube' => null,
                     'instagram' => null,
                 ],
-                'cfg_copyright' => '© ' . date('Y') . ' Instituto de Estadística Teórica y Aplicada (IETA). UMSA. Todos los derechos reservados.',
+                'cfg_copyright' => '© '.date('Y').' Instituto de Estadística Teórica y Aplicada (IETA). UMSA. Todos los derechos reservados.',
             ]
         );
     }

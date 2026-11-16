@@ -22,14 +22,14 @@ class CmsServiciosSeeder extends Seeder
         }
 
         foreach ($servicios as $item) {
+            $titulo = $item['sv_titulo'] ?? $item['ser_titulo'] ?? 'Servicio IETA';
+
             CmsServicios::updateOrCreate(
                 ['id' => $item['id']],
                 [
-                    'ser_titulo' => $item['ser_titulo'],
-                    'ser_descripcion' => $item['ser_descripcion'] ?? null,
-                    'ser_icono' => $item['ser_icono'] ?? null,
-                    'ser_estado' => (bool) ($item['ser_estado'] ?? true),
-                    'ser_orden' => $item['ser_orden'] ?? 0,
+                    'sv_titulo' => $titulo,
+                    'sv_descripcion' => $item['sv_descripcion'] ?? $item['ser_descripcion'] ?? 'Descripción del servicio.',
+                    'sv_contenido' => $item['sv_contenido'] ?? ['time' => (string) time(), 'blocks' => [], 'version' => '2.31.7'],
                 ]
             );
         }

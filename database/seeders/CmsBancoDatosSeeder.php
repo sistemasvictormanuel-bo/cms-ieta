@@ -22,17 +22,18 @@ class CmsBancoDatosSeeder extends Seeder
         }
 
         foreach ($bancos as $item) {
+            $titulo = $item['bdd_titulo'] ?? $item['cbd_titulo'] ?? 'Banco de Datos';
+
             CmsBancoDatos::updateOrCreate(
                 ['id' => $item['id']],
                 [
-                    'cbd_titulo' => $item['cbd_titulo'],
-                    'cbd_descripcion' => $item['cbd_descripcion'] ?? null,
-                    'cbd_fuente' => $item['cbd_fuente'] ?? null,
-                    'cbd_anio' => $item['cbd_anio'] ?? null,
-                    'cbd_enlace_url' => $item['cbd_enlace_url'] ?? null,
-                    'cbd_estado' => (bool) ($item['cbd_estado'] ?? true),
-                    'cbd_es_destacado' => (bool) ($item['cbd_es_destacado'] ?? false),
-                    'area_tematica_id' => $item['area_tematica_id'] ?? null,
+                    'bdd_tipo_dato' => $item['bdd_tipo_dato'] ?? 'Censos',
+                    'bdd_anio' => $item['bdd_anio'] ?? $item['cbd_anio'] ?? date('Y'),
+                    'bdd_codigo' => $item['bdd_codigo'] ?? ('BDD-'.$item['id']),
+                    'bdd_titulo' => $titulo,
+                    'bdd_descripcion' => $item['bdd_descripcion'] ?? $item['cbd_descripcion'] ?? null,
+                    'bdd_locacion' => $item['bdd_locacion'] ?? 'Bolivia',
+                    'bdd_url' => $item['bdd_url'] ?? $item['cbd_enlace_url'] ?? null,
                 ]
             );
         }

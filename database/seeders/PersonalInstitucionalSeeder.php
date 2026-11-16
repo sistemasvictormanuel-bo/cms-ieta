@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\CargoInstitucional;
 use App\Models\CmsComiteEditorial;
+use App\Models\Instituciones;
 use App\Models\Persona;
 use App\Models\Personal;
 use Illuminate\Database\Seeder;
@@ -25,16 +26,27 @@ class PersonalInstitucionalSeeder extends Seeder
         }
 
         // 1. Cargos
+        $primerCargoId = null;
         if (! empty($data['cargos'])) {
             foreach ($data['cargos'] as $c) {
-                CargoInstitucional::updateOrCreate(
+                $cargo = CargoInstitucional::updateOrCreate(
                     ['id' => $c['id']],
                     [
                         'ci_nombre' => $c['ci_nombre'],
                         'ci_descripcion' => $c['ci_descripcion'] ?? null,
                     ]
                 );
+                if (! $primerCargoId) {
+                    $primerCargoId = $cargo->id;
+                }
             }
+        }
+
+        if (! $primerCargoId) {
+            $primerCargoId = CargoInstitucional::firstOrCreate(
+                ['ci_nombre' => 'Investigador'],
+                ['ci_descripcion' => 'Personal científico de investigación']
+            )->id;
         }
 
         // 2. Personal
@@ -49,7 +61,8 @@ class PersonalInstitucionalSeeder extends Seeder
                             'p_apellido_paterno' => $p['persona']['p_apellido_paterno'] ?? null,
                             'p_apellido_materno' => $p['persona']['p_apellido_materno'] ?? null,
                             'p_correo' => $p['persona']['p_correo'] ?? null,
-                            'p_telefono' => $p['persona']['p_telefono'] ?? null,
+                            'p_celular' => $p['persona']['p_celular'] ?? $p['persona']['p_telefono'] ?? null,
+                            'p_sitio_web' => $p['persona']['p_sitio_web'] ?? null,
                         ]
                     );
                     $personaId = $persona->id;
@@ -59,9 +72,9 @@ class PersonalInstitucionalSeeder extends Seeder
                     ['id' => $p['id']],
                     [
                         'persona_id' => $personaId,
-                        'cargo_institucional_id' => $p['cargo_id'] ?? null,
-                        'per_biografia' => $p['per_biografia'] ?? null,
-                        'per_estado' => (bool) ($p['per_estado'] ?? true),
+                        'cargo_id' => $p['cargo_id'] ?? $primerCargoId,
+                        'pers_descripcion' => $p['per_biografia'] ?? null,
+                        'pers_estado' => (bool) ($p['per_estado'] ?? true),
                     ]
                 );
             }
@@ -69,16 +82,41 @@ class PersonalInstitucionalSeeder extends Seeder
 
         // 3. Comite Editorial
         if (! empty($data['comite'])) {
+            $institucionDefault = Instituciones::firstOrCreate(
+                ['inst_nombre' => 'Universidad Mayor de San Andrés (UMSA)'],
+                ['inst_pais' => 'Bolivia', 'inst_ciudad' => 'La Paz']
+            )->id;
+
             foreach ($data['comite'] as $c) {
+                $personaId = $c['persona_id'] ?? null;
+                if (! $personaId || ! Persona::where('id', $personaId)->exists()) {
+                    $personaId = Persona::firstOrCreate(
+                        ['id' => $c['persona_id'] ?? 15],
+                        [
+                            'p_nombre' => 'Miembro',
+                            'p_apellido_paterno' => 'Comité Editorial',
+                            'p_correo' => 'comite_editorial@ieta.edu.bo',
+                        ]
+                    )->id;
+                }
+
+                $cargoId = $c['cargo_id'] ?? $primerCargoId;
+                if (! CargoInstitucional::where('id', $cargoId)->exists()) {
+                    $cargoId = $primerCargoId;
+                }
+
+                $institucionId = $c['institucion_id'] ?? $institucionDefault;
+                if (! Instituciones::where('id', $institucionId)->exists()) {
+                    $institucionId = $institucionDefault;
+                }
+
                 CmsComiteEditorial::updateOrCreate(
                     ['id' => $c['id']],
                     [
-                        'cce_nombre' => $c['cce_nombre'],
-                        'cce_cargo' => $c['cce_cargo'] ?? null,
-                        'cce_institucion' => $c['cce_institucion'] ?? null,
-                        'cce_pais' => $c['cce_pais'] ?? null,
-                        'cce_orden' => $c['cce_orden'] ?? 0,
-                        'cce_estado' => (bool) ($c['cce_estado'] ?? true),
+                        'persona_id' => $personaId,
+                        'cargo_id' => $cargoId,
+                        'institucion_id' => $institucionId,
+                        'ce_tipo' => in_array($c['ce_tipo'] ?? '', ['Nacional', 'Internacional', 'Otro']) ? $c['ce_tipo'] : 'Nacional',
                     ]
                 );
             }

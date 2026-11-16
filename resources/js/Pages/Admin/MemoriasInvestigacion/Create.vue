@@ -103,7 +103,7 @@ const submit = () => {
                             >
                                 <option value="" disabled>Selecciona un autor...</option>
                                 <option v-for="autor in autores" :key="autor.id" :value="autor.id">
-                                    {{ autor.persona ? `${autor.persona.p_nombre} ${autor.persona.p_apellido_paterno || ''} ${autor.persona.p_apellido_materno || ''}`.trim() : `Autor #${autor.id}` }}
+                                    {{ autor.persona?.nombre_completo || (autor.persona ? `${autor.persona.p_nombre} ${autor.persona.p_apellido_paterno || ''}`.trim() : `Autor #${autor.id}`) }}
                                     {{ autor.tipo_autor ? `(${autor.tipo_autor.ta_nombre})` : '' }}
                                 </option>
                             </select>

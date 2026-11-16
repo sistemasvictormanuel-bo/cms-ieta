@@ -50,7 +50,15 @@ class Persona extends Model implements HasMedia
 
     public function getNombreCompletoAttribute(): string
     {
-        return trim("{$this->p_nombre} {$this->p_apellido_paterno} ".($this->p_apellido_materno ?? ''));
+        $nombre = trim($this->p_nombre ?? '');
+        $paterno = trim($this->p_apellido_paterno ?? '');
+        $materno = trim($this->p_apellido_materno ?? '');
+
+        if ($paterno !== '' && preg_match('/\b'.preg_quote($paterno, '/').'\b/i', $nombre)) {
+            return trim("{$nombre} {$materno}");
+        }
+
+        return trim("{$nombre} {$paterno} {$materno}");
     }
 
     public function user(): BelongsTo

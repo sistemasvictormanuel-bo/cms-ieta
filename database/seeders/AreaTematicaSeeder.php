@@ -27,7 +27,6 @@ class AreaTematicaSeeder extends Seeder
                 [
                     'at_nombre' => $item['at_nombre'],
                     'at_descripcion' => $item['at_descripcion'] ?? null,
-                    'at_estado' => (bool) ($item['at_estado'] ?? true),
                 ]
             );
         }
