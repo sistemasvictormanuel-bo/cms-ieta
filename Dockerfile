@@ -1,8 +1,11 @@
 # ==============================================================
-# FASE 1: Instalación de Dependencias PHP con Composer
+# FASE 1: Instalación de Dependencias PHP con Composer (PHP 8.4)
 # ==============================================================
-FROM composer:2 AS composer-builder
+FROM php:8.4-cli-alpine AS composer-builder
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 WORKDIR /app
+
+RUN apk add --no-cache git unzip
 
 COPY composer.json composer.lock ./
 RUN composer install \
