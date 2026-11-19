@@ -10,6 +10,7 @@ import PrimaryButton from '@/Components/PrimaryButton.vue';
 import SecondaryButton from '@/Components/SecondaryButton.vue';
 import SearchableSelect from '@/Components/SearchableSelect.vue';
 import { slugify } from '@/Utils/slugify';
+import { validateFileSize } from '@/Utils/fileValidation';
 
 const props = defineProps({
     articulo: {
@@ -210,13 +211,22 @@ const regenerateSlug = () => {
 
 const handleFileChange = (e) => {
     const file = e.target.files[0];
-    if (file) {
-        form.art_archivo = file;
-        fileName.value = file.name;
-    } else {
+    if (!file) {
         form.art_archivo = null;
         fileName.value = '';
+        return;
     }
+
+    if (!validateFileSize(file, 20, '¿Enlace externo?')) {
+        tieneEnlaceExterno.value = true;
+        e.target.value = '';
+        form.art_archivo = null;
+        fileName.value = '';
+        return;
+    }
+
+    form.art_archivo = file;
+    fileName.value = file.name;
 };
 
 const addAuthorRow = () => {
@@ -832,7 +842,7 @@ const submit = () => {
                                     Haz clic para seleccionar un nuevo documento (Opcional)
                                 </span>
                                 <span class="text-xs text-gray-400 mt-1">
-                                    Formatos permitidos: PDF, DOC o DOCX (Máx. 15 MB)
+                                    Formatos permitidos: PDF, DOC o DOCX (Máx. 20 MB). Para archivos mayores se sugiere usar Enlace Externo.
                                 </span>
                                 <div v-if="fileName" class="mt-3 inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-[#35449F]">
                                     <svg class="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

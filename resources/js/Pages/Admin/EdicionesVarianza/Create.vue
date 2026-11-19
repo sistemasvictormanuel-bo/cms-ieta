@@ -9,6 +9,7 @@ import PrimaryButton from '@/Components/PrimaryButton.vue';
 import SecondaryButton from '@/Components/SecondaryButton.vue';
 import EditorJs from '@/Components/EditorJs.vue';
 import { slugify } from '@/Utils/slugify';
+import { validateFileSize } from '@/Utils/fileValidation';
 
 const currentYear = new Date().getFullYear();
 
@@ -102,6 +103,15 @@ const removePortada = () => {
 const handleArchivoChange = (e) => {
     const file = e.target.files?.[0];
     if (!file) return;
+
+    if (!validateFileSize(file, 20, '¿Enlace externo?')) {
+        tieneEnlaceExterno.value = true;
+        e.target.value = '';
+        form.ev_archivo = null;
+        archivoName.value = '';
+        return;
+    }
+
     form.ev_archivo = file;
     archivoName.value = file.name;
     if (!form.ev_portada) {
@@ -423,7 +433,7 @@ const submit = () => {
                                         </div>
                                         <div>
                                             <p class="text-xs font-bold text-slate-700">Subir PDF completo</p>
-                                            <p class="text-[11px] text-slate-400">Documento PDF (máx. 50MB)</p>
+                                            <p class="text-[11px] text-slate-400">Documento PDF (máx. 20MB)</p>
                                         </div>
                                     </div>
                                 </label>

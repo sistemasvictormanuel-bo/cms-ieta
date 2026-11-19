@@ -33,7 +33,7 @@ class StoreEdicionVarianzaRequest extends FormRequest
             'ev_estado' => 'nullable|boolean',
             'extraer_portada_de_pdf' => 'nullable|boolean',
             'ev_portada' => 'nullable|image|mimes:jpeg,png,webp,jpg|max:5120',
-            'ev_archivo' => 'nullable|file|mimes:pdf|max:30720',
+            'ev_archivo' => 'nullable|file|mimes:pdf|max:25600',
         ];
     }
 
@@ -47,7 +47,8 @@ class StoreEdicionVarianzaRequest extends FormRequest
             'ev_portada.image' => 'La portada debe ser una imagen válida (JPEG, PNG o WEBP).',
             'ev_portada.max' => 'La portada no debe superar los 5 MB.',
             'ev_archivo.mimes' => 'El archivo completo de la edición debe estar en formato PDF.',
-            'ev_archivo.max' => 'El archivo PDF no debe exceder los 30 MB.',
+            'ev_archivo.uploaded' => 'El archivo PDF no pudo subirse. Verifica que no exceda los 25 MB o utiliza un enlace externo (Google Drive).',
+            'ev_archivo.max' => 'El archivo PDF no debe exceder los 25 MB.',
         ];
     }
 }

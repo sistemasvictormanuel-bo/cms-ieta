@@ -7,6 +7,7 @@ import TextInput from '@/Components/TextInput.vue';
 import InputError from '@/Components/InputError.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import SecondaryButton from '@/Components/SecondaryButton.vue';
+import { validateFileSize } from '@/Utils/fileValidation';
 
 const props = defineProps({
     areas: {
@@ -52,13 +53,22 @@ const portadaPreview = ref(null);
 
 const handleArchivoChange = (e) => {
     const file = e.target.files[0];
-    if (file) {
-        form.bdd_archivo = file;
-        fileName.value = file.name;
-    } else {
+    if (!file) {
         form.bdd_archivo = null;
         fileName.value = '';
+        return;
     }
+
+    if (!validateFileSize(file, 20, '¿Enlace externo?')) {
+        tieneEnlaceExterno.value = true;
+        e.target.value = '';
+        form.bdd_archivo = null;
+        fileName.value = '';
+        return;
+    }
+
+    form.bdd_archivo = file;
+    fileName.value = file.name;
 };
 
 const handlePortadaChange = (e) => {
@@ -256,7 +266,7 @@ onUnmounted(() => {
                             <!-- Archivo de Datos (ZIP, CSV, SAV, XLSX) -->
                             <div class="space-y-2">
                                 <div class="flex items-center justify-between">
-                                    <InputLabel for="bdd_archivo" value="Archivo de Datos (máx 50MB)" class="text-[15.5px] font-bold text-gray-900" />
+                                    <InputLabel for="bdd_archivo" value="Archivo de Datos (máx 20MB)" class="text-[15.5px] font-bold text-gray-900" />
                                     <label class="inline-flex items-center gap-2 cursor-pointer select-none">
                                         <input
                                             type="checkbox"

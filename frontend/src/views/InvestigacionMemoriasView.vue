@@ -47,8 +47,14 @@ const resource = usePaginatedResource<ResearchMemoryApiItem>(
 )
 
 function memoryYear(memory: ResearchMemoryApiItem) {
-  const value = memoryDate(memory)
-  const date = new Date(value)
+  const raw = memory.anio ?? memory.mdi_anio ?? memoryDate(memory)
+  if (!raw) return ''
+  const str = String(raw).trim()
+  const match = /^(\d{4})/.exec(str)
+  if (match) {
+    return match[1]
+  }
+  const date = new Date(str)
   return Number.isNaN(date.getTime()) ? '' : String(date.getFullYear())
 }
 
@@ -57,7 +63,7 @@ const allItems = computed(() => resource.items.value)
 const filters = computed(() => [{
   key: 'year',
   label: 'Año',
-  options: [...new Set(allItems.value.map(memoryYear).filter(Boolean))]
+  options: [...new Set(allItems.value.map(memoryYear).filter((y): y is string => Boolean(y)))]
     .sort((first, second) => second.localeCompare(first))
     .map((year) => ({ value: year, label: year })),
 }])
@@ -78,9 +84,12 @@ const visibleMemories = computed(() => {
   })
 
   return [...list].sort((a, b) => {
-    const timeA = new Date(memoryDate(a)).getTime() || 0
-    const timeB = new Date(memoryDate(b)).getTime() || 0
-    return sortBy.value === 'asc' ? timeA - timeB : timeB - timeA
+    const yearA = Number(memoryYear(a)) || 0
+    const yearB = Number(memoryYear(b)) || 0
+    if (yearA !== yearB) {
+      return sortBy.value === 'asc' ? yearA - yearB : yearB - yearA
+    }
+    return sortBy.value === 'asc' ? (a.id || 0) - (b.id || 0) : (b.id || 0) - (a.id || 0)
   })
 })
 

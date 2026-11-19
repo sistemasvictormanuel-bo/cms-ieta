@@ -72,6 +72,14 @@ RUN apk add --no-cache \
         pcntl \
     && rm -rf /var/cache/apk/*
 
+# Configuración de límites de subida para PHP (soporta hasta 20-25 MB con holgura)
+RUN { \
+        echo 'upload_max_filesize = 32M'; \
+        echo 'post_max_size = 32M'; \
+        echo 'memory_limit = 512M'; \
+        echo 'max_execution_time = 300'; \
+    } > /usr/local/etc/php/conf.d/uploads.ini
+
 WORKDIR /var/www/html
 
 # Copiar código del proyecto

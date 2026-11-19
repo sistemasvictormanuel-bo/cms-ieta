@@ -308,6 +308,8 @@ export interface ResearchMemoryApiItem {
   mdi_descripcion?: string | null
   etiqueta?: string | null
   mdi_etiqueta?: string | null
+  anio?: number | string | null
+  mdi_anio?: number | string | null
   fecha?: string | null
   mdi_fecha?: string | null
   enlace_url?: string | null

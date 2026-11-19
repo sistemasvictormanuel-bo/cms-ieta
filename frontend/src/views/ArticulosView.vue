@@ -66,11 +66,17 @@ const issueOptions = computed(() => {
 })
 const activeIssue = computed(() => issueResource.data.value)
 const editionArticles = computed(() => activeIssue.value?.articulos ?? [])
+function extractArticleYear(date?: string | null): number | undefined {
+  if (!date) return undefined
+  const match = /^(\d{4})/.exec(String(date).trim())
+  if (match) return Number(match[1])
+  const parsed = new Date(date).getFullYear()
+  return Number.isFinite(parsed) ? parsed : undefined
+}
+
 const years = computed(() => [...new Set(editionArticles.value
-  .map((article) => article.fecha_aceptado || article.fecha_recepcion)
-  .filter((date): date is string => Boolean(date))
-  .map((date) => new Date(date).getFullYear())
-  .filter(Number.isFinite))]
+  .map((article) => extractArticleYear(article.fecha_aceptado || article.fecha_recepcion))
+  .filter((year): year is number => typeof year === 'number' && Number.isFinite(year)))]
   .sort((first, second) => second - first)
   .map((year) => ({ value: String(year), label: String(year) })))
 const filters = computed(() => [{ key: 'year', label: 'Año', options: years.value }])
@@ -82,7 +88,7 @@ const visibleArticles = computed(() => {
     const tagText = article.etiquetas?.map((tag) => tag.nombre).join(' ') ?? ''
     const searchable = `${article.titulo} ${article.resumen ?? ''} ${article.abstracto ?? ''} ${article.doi ?? ''} ${authorText} ${tagText}`
     const matchesSearch = !term || searchable.toLocaleLowerCase().includes(term)
-    const articleYear = new Date(article.fecha_aceptado || article.fecha_recepcion || '').getFullYear()
+    const articleYear = extractArticleYear(article.fecha_aceptado || article.fecha_recepcion)
     const matchesYear = !filterValues.value.year || String(articleYear) === filterValues.value.year
     const matchesTag = !selectedTag.value || article.etiquetas?.some((tag) => String(tag.id) === selectedTag.value || tag.slug === selectedTag.value)
     return matchesSearch && matchesYear && matchesTag

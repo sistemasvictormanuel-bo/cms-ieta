@@ -52,7 +52,7 @@ export function memoryDescription(memory: ResearchMemoryApiItem) {
 }
 
 export function memoryDate(memory: ResearchMemoryApiItem) {
-  return memory.fecha || memory.mdi_fecha || ''
+  return memory.anio || memory.mdi_anio || memory.fecha || memory.mdi_fecha || ''
 }
 
 export function memoryDocumentUrl(memory: ResearchMemoryApiItem): string | undefined {

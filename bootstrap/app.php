@@ -5,6 +5,7 @@ use App\Http\Middleware\HandleInertiaRequests;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
+use Illuminate\Http\Exceptions\PostTooLargeException;
 use Illuminate\Http\Middleware\AddLinkHeadersForPreloadedAssets;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
@@ -37,6 +38,24 @@ return Application::configure(basePath: dirname(__DIR__))
         $exceptions->shouldRenderJsonWhen(
             fn (Request $request) => $request->is('api/*') || $request->expectsJson(),
         );
+
+        $exceptions->render(function (PostTooLargeException $e, Request $request) {
+            $mensaje = 'El archivo supera el tamaño máximo permitido para subida (20 MB). Te recomendamos optimizar el documento o utilizar la opción de enlace externo (Google Drive / Nube).';
+
+            if ($request->is('api/*') || $request->expectsJson()) {
+                return response()->json([
+                    'message' => $mensaje,
+                ], 413);
+            }
+
+            return back()->with('error', $mensaje)->withErrors([
+                'archivo' => $mensaje,
+                'art_archivo' => $mensaje,
+                'mdi_archivo' => $mensaje,
+                'ev_archivo' => $mensaje,
+                'bdd_archivo' => $mensaje,
+            ]);
+        });
 
         $exceptions->render(function (HttpException $e, Request $request) {
             if ($e->getStatusCode() === 403 && ! $request->is('api/*') && ! $request->expectsJson()) {

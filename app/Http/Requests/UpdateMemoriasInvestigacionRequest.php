@@ -28,7 +28,7 @@ class UpdateMemoriasInvestigacionRequest extends FormRequest
             'mdi_etiqueta' => 'required|string|max:100',
             'mdi_anio' => 'required|integer|min:1950|max:'.(date('Y') + 5),
             'mdi_enlace_url' => 'nullable|string|max:2048',
-            'mdi_archivo' => 'nullable|file|max:51200',
+            'mdi_archivo' => 'nullable|file|max:25600',
         ];
     }
 
@@ -43,7 +43,8 @@ class UpdateMemoriasInvestigacionRequest extends FormRequest
             'mdi_anio.integer' => 'El año o gestión debe ser un número entero válido.',
             'mdi_anio.min' => 'El año o gestión no es válido.',
             'mdi_anio.max' => 'El año o gestión no puede ser superior a :max.',
-            'mdi_archivo.max' => 'El archivo adjunto no debe superar los 50 MB.',
+            'mdi_archivo.uploaded' => 'El archivo no pudo subirse. Verifica que no supere los 20 MB o utiliza un enlace externo (Google Drive).',
+            'mdi_archivo.max' => 'El archivo adjunto no debe superar los 20 MB.',
         ];
     }
 }

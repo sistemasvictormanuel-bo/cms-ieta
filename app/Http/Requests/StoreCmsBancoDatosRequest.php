@@ -21,7 +21,7 @@ class StoreCmsBancoDatosRequest extends FormRequest
             'bdd_descripcion' => 'nullable|string',
             'bdd_locacion' => 'nullable|string|max:255',
             'bdd_url' => 'nullable|string|max:2048',
-            'bdd_archivo' => 'nullable|file|max:51200',
+            'bdd_archivo' => 'nullable|file|max:25600',
             'bdd_portada' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:5120',
             'areas' => 'nullable|array',
             'areas.*' => 'integer|exists:area_tematicas,id',
@@ -36,7 +36,8 @@ class StoreCmsBancoDatosRequest extends FormRequest
             'bdd_codigo.required' => 'El código de la base de datos es obligatorio.',
             'bdd_codigo.unique' => 'Este código ya está registrado en el banco de datos.',
             'bdd_titulo.required' => 'El título de la base de datos es obligatorio.',
-            'bdd_archivo.max' => 'El archivo adjunto no debe superar los 50 MB.',
+            'bdd_archivo.uploaded' => 'El archivo no pudo subirse. Verifica que no supere los 20 MB o utiliza un enlace externo (Google Drive).',
+            'bdd_archivo.max' => 'El archivo adjunto no debe superar los 20 MB.',
             'bdd_portada.max' => 'La imagen de portada no debe superar los 5 MB.',
         ];
     }
