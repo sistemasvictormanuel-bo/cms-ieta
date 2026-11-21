@@ -27,8 +27,11 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->configureDefaults();
 
-        // Configuración para Proxy Inverso Traefik en Dokploy (forzar HTTPS en producción o tras proxy)
-        if (app()->isProduction() || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https')) {
+        // Configuración para Proxy Inverso Traefik en Dokploy (detecta HTTP o HTTPS dinámicamente)
+        $isHttps = (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https')
+            || str_starts_with((string) config('app.url'), 'https://');
+
+        if ($isHttps) {
             URL::forceScheme('https');
             request()->server->set('HTTPS', 'on');
         }
