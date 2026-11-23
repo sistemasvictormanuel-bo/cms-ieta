@@ -43,6 +43,7 @@ class EdicionVarianzaSeeder extends Seeder
                     'ev_notas_cientificas' => $item['ev_notas_cientificas'] ?? null,
                     'ev_num_paginas' => $item['ev_num_paginas'] ?? null,
                     'ev_doi' => $item['ev_doi'] ?? null,
+                    'ev_presentacion' => $item['ev_presentacion'] ?? null,
                     'ev_editorial' => $item['ev_editorial'] ?? null,
                     'ev_fecha_publicacion' => $item['ev_fecha_publicacion'] ?? null,
                     'ev_estado' => (bool) ($item['ev_estado'] ?? true),

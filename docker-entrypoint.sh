@@ -66,15 +66,9 @@ php artisan storage:link 2>/dev/null || true
 echo "==> Ejecutando migraciones de base de datos..."
 php artisan migrate --force --no-interaction
 
-# 8. Seeders iniciales automáticos (solo si la tabla users está vacía para no duplicar datos)
-echo "==> Verificando si se requieren datos iniciales (Seeders)..."
-USER_COUNT=$(php artisan tinker --execute="echo \App\Models\User::count();" 2>/dev/null | tail -n 1 | tr -d '[:space:]')
-if [ "$USER_COUNT" = "0" ] || [ -z "$USER_COUNT" ]; then
-    echo "==> Base de datos vacía. Ejecutando Seeders..."
-    php artisan db:seed --force --no-interaction
-else
-    echo "==> Datos iniciales ya existentes ($USER_COUNT usuarios). Omitiendo seeders."
-fi
+# 8. Sincronización y actualización de Seeders (idempotentes mediante updateOrCreate)
+echo "==> Sincronizando y ejecutando Seeders institucionales..."
+php artisan db:seed --force --no-interaction
 
 # 9. Optimización de caché para producción
 echo "==> Optimizando rutas, vistas y configuración..."

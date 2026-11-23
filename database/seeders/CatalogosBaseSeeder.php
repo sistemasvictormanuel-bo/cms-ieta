@@ -74,10 +74,10 @@ class CatalogosBaseSeeder extends Seeder
         }
 
         // 6. Instituciones de Afiliación
-        Instituciones::firstOrCreate(
-            ['inst_nombre' => 'Universidad Mayor de San Andrés (UMSA)'],
+        Instituciones::updateOrCreate(
+            ['id' => 1],
             [
-                'id' => 1,
+                'inst_nombre' => 'Universidad Mayor de San Andrés (UMSA)',
                 'inst_pais' => 'Bolivia',
                 'inst_ciudad' => 'La Paz',
             ]

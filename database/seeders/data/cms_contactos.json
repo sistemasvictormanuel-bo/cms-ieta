@@ -1,0 +1,15 @@
+[
+    {
+        "id": 1,
+        "cc_telefono": "[\"+591 261-2824\",\"+591 261-2844\"]",
+        "cc_dia_inicio": "Martes",
+        "cc_dia_fin": "Sábado",
+        "cc_hora_apertura": "08:00:00",
+        "cc_hora_cierre": "16:00:00",
+        "cc_direccion": "Primer Piso, Bloque FCPN, Calle 27, Zona Cota-Cota La Paz - Boliviaa",
+        "cc_email": "[\"ieta@umsa.bo\",\"ieta.estadistica@gmail.com\"]",
+        "cc_contenido": "{\"time\":1791737539809,\"blocks\":[{\"id\":\"_7bLoLVtLW\",\"type\":\"header\",\"data\":{\"text\":\"Oficinas\",\"level\":2}},{\"id\":\"FXrorcSBe6\",\"type\":\"paragraph\",\"data\":{\"text\":\"El IETA (Instituto de Estad\\u00edstica Te\\u00f3rica y Aplicada) dependiente de la Carrera de Estad\\u00edstica de la Facultad de Ciencias Puras y Naturales de la UMSA tiene sus oficinas en el primer piso del Edificio del Bloque FCPN en el campus universitario de Cota Cota.as\"}},{\"id\":\"3P8g11OEK4\",\"type\":\"image\",\"data\":{\"caption\":\"Oficina del Ieta\",\"withBorder\":false,\"withBackground\":false,\"stretched\":false,\"file\":{\"url\":\"\\/storage\\/editor\\/aauMf9bj4LroY21rIxWa5yy755wG83H8750XiCYC.jpg\"}}}],\"version\":\"2.31.7\"}",
+        "created_at": "2026-10-11 16:43:00",
+        "updated_at": "2026-10-11 16:52:22"
+    }
+]

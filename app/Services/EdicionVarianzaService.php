@@ -250,7 +250,9 @@ class EdicionVarianzaService
             $solicitaExtraccion = ! empty($data['extraer_portada_de_pdf']);
             $tieneEnlace = ! empty($data['ev_enlace_url']);
             if (! $portada && ($solicitaExtraccion || $archivo || $tieneEnlace)) {
-                $pdfPath = ($savedPdfMedia && file_exists($savedPdfMedia->getPath())) ? $savedPdfMedia->getPath() : null;
+                $pdfPath = ($savedPdfMedia && file_exists($savedPdfMedia->getPath()))
+                    ? $savedPdfMedia->getPath()
+                    : ($archivo ? $archivo->getRealPath() : null);
                 $this->extraerPortadaDesdePdfOEnlace($registro, $pdfPath, $data['ev_enlace_url'] ?? null);
             }
 
@@ -329,6 +331,8 @@ class EdicionVarianzaService
                 $pdfPath = null;
                 if ($savedPdfMedia && file_exists($savedPdfMedia->getPath())) {
                     $pdfPath = $savedPdfMedia->getPath();
+                } elseif ($archivo) {
+                    $pdfPath = $archivo->getRealPath();
                 } else {
                     $existingPdf = $registro->getFirstMedia('ev_archivo');
                     if ($existingPdf && file_exists($existingPdf->getPath())) {

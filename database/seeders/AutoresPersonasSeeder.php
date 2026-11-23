@@ -47,6 +47,13 @@ class AutoresPersonasSeeder extends Seeder
 
             $slug = $item['at_slug'] ?? Str::slug(($item['persona']['p_nombre'] ?? 'autor').' '.($item['persona']['p_apellido_paterno'] ?? $item['id']));
 
+            $slugBase = $slug;
+            $counter = 1;
+            while (Autor::where('at_slug', $slug)->where('id', '!=', $item['id'])->exists()) {
+                $slug = $slugBase.'-'.$counter;
+                $counter++;
+            }
+
             $tipoAutorId = ($item['tipo_autor_id'] ?? null) && TipoAutor::where('id', $item['tipo_autor_id'])->exists()
                 ? $item['tipo_autor_id']
                 : 1;

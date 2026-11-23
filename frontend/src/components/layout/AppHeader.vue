@@ -192,7 +192,7 @@ function isActive(to: string): boolean {
       <div class="header-right-col">
         <!-- Top Utility Row: Ingresar, Contacto, Idioma -->
         <div class="header-utility-row">
-          <RouterLink to="#" class="utility-link">{{ t('nav.login') }}</RouterLink>
+          <a href="/login" class="utility-link">{{ t('nav.login') }}</a>
           <RouterLink
             to="/contacto"
             class="utility-link"
@@ -346,9 +346,9 @@ function isActive(to: string): boolean {
           </div>
         </div>
 
-        <RouterLink to="#" class="header-mobile-nav__ingresar" @click="closeMenu">
+        <a href="/login" class="header-mobile-nav__ingresar" @click="closeMenu">
           {{ t('nav.login') }}
-        </RouterLink>
+        </a>
       </nav>
     </Transition>
   </header>

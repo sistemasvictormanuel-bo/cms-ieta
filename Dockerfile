@@ -60,6 +60,7 @@ RUN apk add --no-cache \
     icu-dev \
     oniguruma-dev \
     bash \
+    poppler-utils \
     && cp /usr/share/zoneinfo/${TZ} /etc/localtime \
     && echo "${TZ}" > /etc/timezone \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \

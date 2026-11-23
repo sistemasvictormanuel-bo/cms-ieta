@@ -24,11 +24,19 @@ class ArticulosSeeder extends Seeder
         }
 
         foreach ($articulos as $item) {
+            $slug = $item['art_slug'] ?? Str::slug($item['art_titulo']);
+            $slugBase = $slug;
+            $counter = 1;
+            while (Articulo::where('art_slug', $slug)->where('id', '!=', $item['id'])->exists()) {
+                $slug = $slugBase.'-'.$counter;
+                $counter++;
+            }
+
             $articulo = Articulo::updateOrCreate(
                 ['id' => $item['id']],
                 [
                     'art_titulo' => $item['art_titulo'],
-                    'art_slug' => $item['art_slug'] ?? Str::slug($item['art_titulo']),
+                    'art_slug' => $slug,
                     'art_resumen' => $item['art_resumen'] ?? null,
                     'art_abstracto' => $item['art_abstracto'] ?? null,
                     'art_fecha_recepcion' => $item['art_fecha_recepcion'] ?? null,

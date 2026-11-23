@@ -42,7 +42,7 @@
                 "p_telefono": null
             },
             "per_biografia": null,
-            "per_estado": false
+            "per_estado": true
         },
         {
             "id": 2,
@@ -56,7 +56,7 @@
                 "p_telefono": null
             },
             "per_biografia": null,
-            "per_estado": false
+            "per_estado": true
         }
     ],
     "comite": [

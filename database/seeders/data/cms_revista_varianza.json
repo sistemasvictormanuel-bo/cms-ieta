@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "rv_titulo": "Revista Varianza",
+        "rv_subtitulo": "Revista Científica del Instituto de Estadística Teórica y Aplicada (IETA), Carrera de Estadística, Facultad de Ciencias Puras y Naturales Universidad Mayor de San Andrés La Paz, Bolivia",
+        "rv_mision": "Difundir principalmente artículos originales de investigación científica en los ámbitos social, económico y medioambiental, basados en el uso de métodos y técnicas estadísticas apropiadas. También difundir artículos de naturaleza teórica en el campo de la estadística. Todo ello con el propósito de contribuir a la formulación de políticas orientadas a impulsar el desarrollo de nuestra sociedad.",
+        "rv_vision": "Llegar a ser la revista científica nacional de mayor calidad e impacto en el campo de la estadística aplicada y teórica, así como ser el principal referente para el contexto internacional.",
+        "rv_contenido": "{\"time\":\"1794497060129\",\"blocks\":[{\"id\":\"3zDNhoezk6\",\"type\":\"paragraph\",\"data\":{\"text\":\"<b>ISSN 2789-3510 versi\\u00f3n impresa<\\/b>\"}},{\"id\":\"8m5h5Nv0k6\",\"type\":\"paragraph\",\"data\":{\"text\":\"<b>ISSN 2789-3529 versi\\u00f3n en l\\u00ednea<\\/b>\"}},{\"id\":\"RO7DyQ627F\",\"type\":\"paragraph\",\"data\":{\"text\":\"<a href=\\\"https:\\/\\/ojs.umsa.bo\\/ojs\\/\\\" target=\\\"_blank\\\">https:\\/\\/ojs.umsa.bo\\/ojs\\/<\\/a>\"}},{\"id\":\"SYZL_sqAcM\",\"type\":\"paragraph\",\"data\":{\"text\":\"<a href=\\\"https:\\/\\/ieta.umsa.bo\\/\\\">https:\\/\\/ieta.umsa.bo\\/<\\/a>\"}}],\"version\":\"2.31.7\"}",
+        "rv_alcance": "{\"time\":\"1792450336874\",\"blocks\":[{\"id\":\"5j4qyMWvy3\",\"type\":\"paragraph\",\"data\":{\"text\":\"En la Revista Varianza se publican art\\u00edculos cient\\u00edficos relacionados con cualquier \\u00e1mbito, sea social, econ\\u00f3mico, cultural, medioambiental u otro, es decir, no existe restricci\\u00f3n en cuanto al \\u00e1rea de aplicaci\\u00f3n. Sin embargo, por tratarse de una revista cient\\u00edfica editada por una instituci\\u00f3n vinculada netamente al campo estad\\u00edstico, los art\\u00edculos originales publicados deben ser rigurosos en cuanto a los m\\u00e9todos estad\\u00edsticos usados en el an\\u00e1lisis de sus datos.\"}},{\"id\":\"avm0AtBO4K\",\"type\":\"paragraph\",\"data\":{\"text\":\"Por otra parte, la Revista Varianza est\\u00e1 dirigida en general a toda la poblaci\\u00f3n, sin ninguna restricci\\u00f3n, pero particularmente est\\u00e1 orientada tanto a la comunidad acad\\u00e9mica, incluido los estudiantes, docentes, investigadores y profesionales, as\\u00ed como a los tomadores de decisi\\u00f3n, incluido las autoridades nacionales, regionales y locales.\"}}],\"version\":\"2.31.7\"}",
+        "rv_politicas": "{\"blocks\":[]}",
+        "rv_issn_impreso": "2076-6645",
+        "rv_issn_electronico": "2664-0899",
+        "rv_periodicidad": "Semestral",
+        "rv_correo_contacto": null,
+        "created_at": "2026-10-12 22:19:43",
+        "updated_at": "2026-11-12 15:24:27"
+    }
+]

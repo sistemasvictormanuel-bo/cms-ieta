@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "rev_titulo": "INTERNATIONAL JOURNAL OF STATISTICS AND APPLICATIONS",
+        "rev_descripcion": "es una revista internacional totalmente arbitrada, que publica artículos de investigación originales y encuestas en todas las áreas de estadística y aplicaciones. Es una revista de amplia base que cubre todas las ramas de las ciencias estadísticas y sus aplicaciones en ciencias médicas, agrícolas, econométricas, físicas o sociales e industria, comercio y gobierno y otras disciplinas científicas.",
+        "rev_url_enlace": "http://www.sapub.org/journal/articles.aspx?journalid=1114",
+        "rev_entidad": "Scientific & Academic Publishin",
+        "rev_issn": "ISSN: 2168-5215",
+        "rev_activo": true,
+        "rev_orden": 2,
+        "created_at": "2026-10-19 21:29:40",
+        "updated_at": "2026-10-19 21:29:40"
+    },
+    {
+        "id": 2,
+        "rev_titulo": "LA REVISTA ELECTRÓNICA DE ANÁLISIS ESTADÍSTICO APLICADO (EJASA)",
+        "rev_descripcion": "es una revista internacional OPEN ACCESS y revisada por pares, que publica artículos semestrales (hasta 2009 anualmente) que aportan nuevas ideas de investigación en todas las áreas de la ciencia estadística, incluidas las aplicaciones sociales y económicas, o artículos computacionales relacionados con la probabilidad o la estadística. Todos los artículos de la EJASA son artículos arbitrados por dos revisores internacionales.",
+        "rev_url_enlace": "http://siba-ese.unisalento.it/index.php/ejasa",
+        "rev_entidad": "EJASA",
+        "rev_issn": null,
+        "rev_activo": true,
+        "rev_orden": 2,
+        "created_at": "2026-11-07 22:08:25",
+        "updated_at": "2026-11-07 22:08:25"
+    },
+    {
+        "id": 3,
+        "rev_titulo": "JOURNAL OF PROBABILITY AND STATISTICS",
+        "rev_descripcion": "publica artículos sobre la teoría y aplicación de probabilidad y estadística que consideran nuevos métodos y enfoques para su implementación, o informan resultados significativos para el campo.",
+        "rev_url_enlace": "https://onlinelibrary.wiley.com/journal/5139",
+        "rev_entidad": "Wiley Online Library",
+        "rev_issn": "1687-9538",
+        "rev_activo": true,
+        "rev_orden": 3,
+        "created_at": "2026-11-07 22:10:44",
+        "updated_at": "2026-11-07 22:10:44"
+    },
+    {
+        "id": 4,
+        "rev_titulo": "REVISTA COLOMBIANA DE ESTADÍSTICA",
+        "rev_descripcion": "La Revista Colombiana de Estadística es una publicación semestral del Departamento de Estadística de la Universidad Nacional de Colombia, orientada a difundir conocimientos, resultados, aplicaciones e historia de la estadística. La Revista contempla también la publicación de trabajos sobre la enseñanza de la estadística.",
+        "rev_url_enlace": "https://revistas.unal.edu.co/index.php/estad/issue/archive",
+        "rev_entidad": "Universidad Nacional de Colombia",
+        "rev_issn": null,
+        "rev_activo": true,
+        "rev_orden": 4,
+        "created_at": "2026-11-07 22:12:21",
+        "updated_at": "2026-11-07 22:12:21"
+    }
+]
