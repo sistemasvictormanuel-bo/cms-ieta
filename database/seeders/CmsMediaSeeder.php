@@ -4,12 +4,14 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 
 class CmsMediaSeeder extends Seeder
 {
     public function run(): void
     {
         $jsonPath = __DIR__.'/data/media.json';
+        $seedStorageDir = __DIR__.'/data/storage';
 
         if (! file_exists($jsonPath)) {
             return;
@@ -43,7 +45,24 @@ class CmsMediaSeeder extends Seeder
                     'updated_at' => $media['updated_at'] ?? now(),
                 ]
             );
+
+            // Asegurar la presencia física del archivo en el almacenamiento público
+            $targetDir = storage_path("app/public/{$media['id']}");
+            $targetFile = "{$targetDir}/{$media['file_name']}";
+            $sourceFile = "{$seedStorageDir}/{$media['id']}/{$media['file_name']}";
+
+            if (! file_exists($targetFile) && file_exists($sourceFile)) {
+                File::ensureDirectoryExists($targetDir);
+                File::copy($sourceFile, $targetFile);
+            }
+        }
+
+        // Sincronizar imágenes del editor multimedia si existen en seeders
+        $sourceEditor = "{$seedStorageDir}/editor";
+        $targetEditor = storage_path('app/public/editor');
+        if (file_exists($sourceEditor)) {
+            File::ensureDirectoryExists($targetEditor);
+            File::copyDirectory($sourceEditor, $targetEditor);
         }
     }
 }
-
