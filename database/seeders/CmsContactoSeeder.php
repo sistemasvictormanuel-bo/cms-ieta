@@ -3,7 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\CmsContacto;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class CmsContactoSeeder extends Seeder
 {
@@ -19,6 +21,8 @@ class CmsContactoSeeder extends Seeder
         if (! is_array($items)) {
             return;
         }
+
+        Model::unguard();
 
         foreach ($items as $item) {
             $telefonos = is_string($item['cc_telefono']) ? json_decode($item['cc_telefono'], true) : $item['cc_telefono'];
@@ -39,6 +43,11 @@ class CmsContactoSeeder extends Seeder
                 ]
             );
         }
+
+        Model::reguard();
+
+        if (DB::getDriverName() === 'pgsql') {
+            DB::statement("SELECT setval(pg_get_serial_sequence('cms_contactos', 'id'), COALESCE(MAX(id), 1)) FROM cms_contactos;");
+        }
     }
 }
-

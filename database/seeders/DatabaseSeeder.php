@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -15,6 +16,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        Model::unguard();
+
+        \Illuminate\Database\Eloquent\Model::unguard();
+
         $this->call([
             RolesAndPermissionsSeeder::class,
             CatalogosBaseSeeder::class,
@@ -43,6 +48,10 @@ class DatabaseSeeder extends Seeder
             CmsTraduccionSeeder::class,
             AdminUserSeeder::class,
         ]);
+
+        Model::reguard();
+
+        \Illuminate\Database\Eloquent\Model::reguard();
 
         if (DB::getDriverName() === 'pgsql') {
             $this->resetPostgresSequences();

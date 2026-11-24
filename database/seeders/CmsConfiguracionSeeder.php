@@ -3,7 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\CmsConfiguracion;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class CmsConfiguracionSeeder extends Seeder
 {
@@ -21,6 +23,8 @@ class CmsConfiguracionSeeder extends Seeder
             return;
         }
 
+        Model::unguard();
+
         CmsConfiguracion::updateOrCreate(
             ['id' => $config['id'] ?? 1],
             [
@@ -35,5 +39,11 @@ class CmsConfiguracionSeeder extends Seeder
                 'cfg_copyright' => $config['cfg_copyright'] ?? ('© '.date('Y').' Instituto de Estadística Teórica y Aplicada (IETA). UMSA.'),
             ]
         );
+
+        Model::reguard();
+
+        if (DB::getDriverName() === 'pgsql') {
+            DB::statement("SELECT setval(pg_get_serial_sequence('cms_configuracion', 'id'), COALESCE(MAX(id), 1)) FROM cms_configuracion;");
+        }
     }
 }

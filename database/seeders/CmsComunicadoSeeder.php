@@ -3,7 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\CmsComunicado;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class CmsComunicadoSeeder extends Seeder
 {
@@ -20,8 +22,10 @@ class CmsComunicadoSeeder extends Seeder
             return;
         }
 
+        Model::unguard();
+
         foreach ($items as $item) {
-            CmsComunicado::updateOrCreate(
+            CmsComunicado::withTrashed()->updateOrCreate(
                 ['id' => $item['id']],
                 [
                     'com_titulo' => $item['com_titulo'],
@@ -33,9 +37,15 @@ class CmsComunicadoSeeder extends Seeder
                     'com_fecha_fin' => $item['com_fecha_fin'] ?? null,
                     'com_activo' => (bool) ($item['com_activo'] ?? true),
                     'com_vistas' => (int) ($item['com_vistas'] ?? 0),
+                    'deleted_at' => null,
                 ]
             );
         }
+
+        Model::reguard();
+
+        if (DB::getDriverName() === 'pgsql') {
+            DB::statement("SELECT setval(pg_get_serial_sequence('cms_comunicados', 'id'), COALESCE(MAX(id), 1)) FROM cms_comunicados;");
+        }
     }
 }
-

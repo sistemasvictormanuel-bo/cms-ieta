@@ -12,16 +12,20 @@ use App\Models\Instituciones;
 use App\Models\TipoAutor;
 use App\Models\TipoCurso;
 use App\Models\TipoParticipacion;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class CatalogosBaseSeeder extends Seeder
 {
     /**
      * Semillero de catálogos base e institucionales del IETA.
-     * Diseñado de manera idempotente (firstOrCreate / updateOrCreate).
+     * Diseñado de manera 100% idempotente (updateOrCreate con IDs explícitos).
      */
     public function run(): void
     {
+        Model::unguard();
+
         // 1. Tipos de Autor / Investigador
         $tiposAutor = [
             ['id' => 1, 'ta_nombre' => 'Docente Titular', 'ta_descripcion' => 'Docente titular e investigador de planta.', 'ta_estado' => true],
@@ -48,7 +52,10 @@ class CatalogosBaseSeeder extends Seeder
         $especialidades = [
             ['id' => 1, 'ep_nombre' => 'Ciencia de Datos', 'ep_descripcion' => 'Machine learning, big data y analítica computacional.', 'ep_estado' => true],
             ['id' => 2, 'ep_nombre' => 'Estadística Aplicada', 'ep_descripcion' => 'Métodos estadísticos aplicados a ciencias sociales y económicas.', 'ep_estado' => true],
-            ['id' => 3, 'ep_nombre' => 'Bioestadística', 'ep_descripcion' => 'Estadística orientada a ciencias de la salud y biológicas.', 'ep_estado' => true],
+            ['id' => 3, 'ep_nombre' => 'Bioestadística y Epidemiología', 'ep_descripcion' => 'Modelado de supervivencia, ensayos clínicos y salud pública.', 'ep_estado' => true],
+            ['id' => 4, 'ep_nombre' => 'Econometría Financiera', 'ep_descripcion' => 'Riesgo financiero, series temporales y volatilidad.', 'ep_estado' => true],
+            ['id' => 5, 'ep_nombre' => 'Muestreo y Encuestas', 'ep_descripcion' => 'Diseño muestral complejo, inferencia y encuestas de hogares.', 'ep_estado' => true],
+            ['id' => 6, 'ep_nombre' => 'Series de Tiempo', 'ep_descripcion' => 'Pronósticos, modelos ARIMA/GARCH y análisis espectral.', 'ep_estado' => true],
         ];
         foreach ($especialidades as $item) {
             Especialidades::updateOrCreate(['id' => $item['id']], $item);
@@ -56,8 +63,9 @@ class CatalogosBaseSeeder extends Seeder
 
         // 4. Tipos de Participación en Artículos
         $participaciones = [
-            ['id' => 1, 'tp_nombre' => 'Principal', 'tp_descripcion' => 'Autor principal o primer autor de la investigación.'],
-            ['id' => 2, 'tp_nombre' => 'Coautor', 'tp_descripcion' => 'Coautor o colaborador en la investigación.'],
+            ['id' => 1, 'tp_nombre' => 'Autor Principal', 'tp_descripcion' => 'Investigador principal responsable del manuscrito.'],
+            ['id' => 2, 'tp_nombre' => 'Coautor', 'tp_descripcion' => 'Investigador colaborador en análisis y redacción.'],
+            ['id' => 3, 'tp_nombre' => 'Autor de Correspondencia', 'tp_descripcion' => 'Punto de contacto para consultas científicas y editoriales.'],
         ];
         foreach ($participaciones as $item) {
             TipoParticipacion::updateOrCreate(['id' => $item['id']], $item);
@@ -65,9 +73,10 @@ class CatalogosBaseSeeder extends Seeder
 
         // 5. Cargos Institucionales
         $cargos = [
-            ['id' => 1, 'ci_nombre' => 'Director IETA', 'ci_descripcion' => 'Máxima autoridad ejecutiva del instituto.'],
-            ['id' => 2, 'ci_nombre' => 'Secretaría', 'ci_descripcion' => 'Coordinación administrativa y recepción documental.'],
+            ['id' => 1, 'ci_nombre' => 'Director IETA', 'ci_descripcion' => 'Máxima autoridad ejecutiva y científica del instituto.'],
+            ['id' => 2, 'ci_nombre' => 'Secretaría', 'ci_descripcion' => 'Gestión administrativa y correspondencia institucional.'],
             ['id' => 3, 'ci_nombre' => 'Investigador', 'ci_descripcion' => 'Personal científico asignado a proyectos y líneas activas.'],
+            ['id' => 4, 'ci_nombre' => 'Portera y Mensajera', 'ci_descripcion' => 'Personal de apoyo operativo y servicios auxiliares.'],
         ];
         foreach ($cargos as $item) {
             CargoInstitucional::updateOrCreate(['id' => $item['id']], $item);
@@ -93,8 +102,9 @@ class CatalogosBaseSeeder extends Seeder
         }
 
         $modalidades = [
-            ['id' => 1, 'mc_nombre' => 'Presencial', 'mc_descripcion' => 'Actividades impartidas en instalaciones del IETA / UMSA.'],
-            ['id' => 2, 'mc_nombre' => 'Virtual', 'mc_descripcion' => 'Sesiones sincrónicas o asincrónicas por plataformas digitales.'],
+            ['id' => 1, 'mc_nombre' => 'Virtual', 'mc_descripcion' => '100% sincrónico y asincrónico por plataforma digital.'],
+            ['id' => 2, 'mc_nombre' => 'Presencial', 'mc_descripcion' => 'Sesiones presenciales en aulas del IETA / UMSA.'],
+            ['id' => 3, 'mc_nombre' => 'Semipresencial', 'mc_descripcion' => 'Combinación híbrida de teoría online y práctica presencial.'],
         ];
         foreach ($modalidades as $item) {
             CursoModalidades::updateOrCreate(['id' => $item['id']], $item);
@@ -113,7 +123,7 @@ class CatalogosBaseSeeder extends Seeder
         }
 
         // 9. Configuración Institucional Básica
-        CmsConfiguracion::firstOrCreate(
+        CmsConfiguracion::updateOrCreate(
             ['id' => 1],
             [
                 'cfg_nombre_institucion' => 'Instituto de Estadística Teórica y Aplicada',
@@ -133,5 +143,21 @@ class CatalogosBaseSeeder extends Seeder
                 'cfg_copyright' => '© '.date('Y').' Instituto de Estadística Teórica y Aplicada (IETA). UMSA. Todos los derechos reservados.',
             ]
         );
+
+        Model::reguard();
+
+        // 10. Sincronizar secuencias de PostgreSQL
+        if (DB::getDriverName() === 'pgsql') {
+            DB::statement("SELECT setval(pg_get_serial_sequence('tipo_autores', 'id'), COALESCE(MAX(id), 1)) FROM tipo_autores;");
+            DB::statement("SELECT setval(pg_get_serial_sequence('grado_academicos', 'id'), COALESCE(MAX(id), 1)) FROM grado_academicos;");
+            DB::statement("SELECT setval(pg_get_serial_sequence('especialidades', 'id'), COALESCE(MAX(id), 1)) FROM especialidades;");
+            DB::statement("SELECT setval(pg_get_serial_sequence('tipo_participaciones', 'id'), COALESCE(MAX(id), 1)) FROM tipo_participaciones;");
+            DB::statement("SELECT setval(pg_get_serial_sequence('cargo_institucionales', 'id'), COALESCE(MAX(id), 1)) FROM cargo_institucionales;");
+            DB::statement("SELECT setval(pg_get_serial_sequence('instituciones', 'id'), COALESCE(MAX(id), 1)) FROM instituciones;");
+            DB::statement("SELECT setval(pg_get_serial_sequence('tipo_cursos', 'id'), COALESCE(MAX(id), 1)) FROM tipo_cursos;");
+            DB::statement("SELECT setval(pg_get_serial_sequence('curso_modalidades', 'id'), COALESCE(MAX(id), 1)) FROM curso_modalidades;");
+            DB::statement("SELECT setval(pg_get_serial_sequence('area_tematicas', 'id'), COALESCE(MAX(id), 1)) FROM area_tematicas;");
+            DB::statement("SELECT setval(pg_get_serial_sequence('cms_configuracion', 'id'), COALESCE(MAX(id), 1)) FROM cms_configuracion;");
+        }
     }
 }

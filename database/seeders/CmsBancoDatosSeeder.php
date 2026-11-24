@@ -3,7 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\CmsBancoDatos;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class CmsBancoDatosSeeder extends Seeder
 {
@@ -21,6 +23,8 @@ class CmsBancoDatosSeeder extends Seeder
             return;
         }
 
+        Model::unguard();
+
         foreach ($bancos as $item) {
             $titulo = $item['bdd_titulo'] ?? $item['cbd_titulo'] ?? 'Banco de Datos';
 
@@ -36,6 +40,12 @@ class CmsBancoDatosSeeder extends Seeder
                     'bdd_url' => $item['bdd_url'] ?? $item['cbd_enlace_url'] ?? null,
                 ]
             );
+        }
+
+        Model::reguard();
+
+        if (DB::getDriverName() === 'pgsql') {
+            DB::statement("SELECT setval(pg_get_serial_sequence('cms_banco_datos', 'id'), COALESCE(MAX(id), 1)) FROM cms_banco_datos;");
         }
     }
 }

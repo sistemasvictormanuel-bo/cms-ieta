@@ -64,5 +64,9 @@ class CmsMediaSeeder extends Seeder
             File::ensureDirectoryExists($targetEditor);
             File::copyDirectory($sourceEditor, $targetEditor);
         }
+
+        if (DB::getDriverName() === 'pgsql') {
+            DB::statement("SELECT setval(pg_get_serial_sequence('media', 'id'), COALESCE(MAX(id), 1)) FROM media;");
+        }
     }
 }

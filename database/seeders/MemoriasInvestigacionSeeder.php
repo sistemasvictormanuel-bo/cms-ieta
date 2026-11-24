@@ -3,7 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\MemoriasInvestigacion;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class MemoriasInvestigacionSeeder extends Seeder
 {
@@ -21,6 +23,8 @@ class MemoriasInvestigacionSeeder extends Seeder
             return;
         }
 
+        Model::unguard();
+
         foreach ($memorias as $item) {
             MemoriasInvestigacion::updateOrCreate(
                 ['id' => $item['id']],
@@ -33,6 +37,12 @@ class MemoriasInvestigacionSeeder extends Seeder
                     'mdi_anio' => $item['mdi_anio'] ?? 2024,
                 ]
             );
+        }
+
+        Model::reguard();
+
+        if (DB::getDriverName() === 'pgsql') {
+            DB::statement("SELECT setval(pg_get_serial_sequence('memorias_investigaciones', 'id'), COALESCE(MAX(id), 1)) FROM memorias_investigaciones;");
         }
     }
 }

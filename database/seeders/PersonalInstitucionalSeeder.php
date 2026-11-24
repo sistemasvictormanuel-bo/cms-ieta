@@ -7,7 +7,9 @@ use App\Models\CmsComiteEditorial;
 use App\Models\Instituciones;
 use App\Models\Persona;
 use App\Models\Personal;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class PersonalInstitucionalSeeder extends Seeder
 {
@@ -24,6 +26,8 @@ class PersonalInstitucionalSeeder extends Seeder
         if (! is_array($data)) {
             return;
         }
+
+        Model::unguard();
 
         // 1. Cargos
         $primerCargoId = null;
@@ -43,10 +47,11 @@ class PersonalInstitucionalSeeder extends Seeder
         }
 
         if (! $primerCargoId) {
-            $primerCargoId = CargoInstitucional::firstOrCreate(
+            $primerCargo = CargoInstitucional::firstOrCreate(
                 ['ci_nombre' => 'Investigador'],
                 ['ci_descripcion' => 'Personal científico de investigación']
-            )->id;
+            );
+            $primerCargoId = $primerCargo->id;
         }
 
         // 2. Personal
@@ -54,7 +59,7 @@ class PersonalInstitucionalSeeder extends Seeder
             foreach ($data['personal'] as $p) {
                 $personaId = null;
                 if (! empty($p['persona'])) {
-                    $persona = Persona::updateOrCreate(
+                    $persona = Persona::withTrashed()->updateOrCreate(
                         ['id' => $p['persona']['id']],
                         [
                             'p_nombre' => $p['persona']['p_nombre'],
@@ -63,41 +68,47 @@ class PersonalInstitucionalSeeder extends Seeder
                             'p_correo' => $p['persona']['p_correo'] ?? null,
                             'p_celular' => $p['persona']['p_celular'] ?? $p['persona']['p_telefono'] ?? null,
                             'p_sitio_web' => $p['persona']['p_sitio_web'] ?? null,
+                            'deleted_at' => null,
                         ]
                     );
                     $personaId = $persona->id;
                 }
 
-                Personal::updateOrCreate(
+                Personal::withTrashed()->updateOrCreate(
                     ['id' => $p['id']],
                     [
                         'persona_id' => $personaId,
                         'cargo_id' => $p['cargo_id'] ?? $primerCargoId,
                         'pers_descripcion' => $p['per_biografia'] ?? null,
                         'pers_estado' => (bool) ($p['per_estado'] ?? true),
+                        'deleted_at' => null,
                     ]
                 );
             }
         }
 
-        // 3. Comite Editorial
+        // 3. Comité Editorial
         if (! empty($data['comite'])) {
-            $institucionDefault = Instituciones::firstOrCreate(
-                ['inst_nombre' => 'Universidad Mayor de San Andrés (UMSA)'],
-                ['inst_pais' => 'Bolivia', 'inst_ciudad' => 'La Paz']
-            )->id;
+            $institucionDefault = Instituciones::find(1)?->id
+                ?? Instituciones::firstOrCreate(
+                    ['inst_nombre' => 'Universidad Mayor de San Andrés (UMSA)'],
+                    ['inst_pais' => 'Bolivia', 'inst_ciudad' => 'La Paz']
+                )->id;
 
             foreach ($data['comite'] as $c) {
                 $personaId = $c['persona_id'] ?? null;
-                if (! $personaId || ! Persona::where('id', $personaId)->exists()) {
-                    $personaId = Persona::firstOrCreate(
-                        ['id' => $c['persona_id'] ?? 15],
+                if (! $personaId || ! Persona::withTrashed()->where('id', $personaId)->exists()) {
+                    $comitePersonaId = $c['persona_id'] ?? 15;
+                    $persona = Persona::withTrashed()->updateOrCreate(
+                        ['id' => $comitePersonaId],
                         [
                             'p_nombre' => 'Miembro',
                             'p_apellido_paterno' => 'Comité Editorial',
                             'p_correo' => 'comite_editorial@ieta.edu.bo',
+                            'deleted_at' => null,
                         ]
-                    )->id;
+                    );
+                    $personaId = $persona->id;
                 }
 
                 $cargoId = $c['cargo_id'] ?? $primerCargoId;
@@ -120,6 +131,16 @@ class PersonalInstitucionalSeeder extends Seeder
                     ]
                 );
             }
+        }
+
+        Model::reguard();
+
+        // 4. Sincronizar secuencias de PostgreSQL
+        if (DB::getDriverName() === 'pgsql') {
+            DB::statement("SELECT setval(pg_get_serial_sequence('personal', 'id'), COALESCE(MAX(id), 1)) FROM personal;");
+            DB::statement("SELECT setval(pg_get_serial_sequence('personas', 'id'), COALESCE(MAX(id), 1)) FROM personas;");
+            DB::statement("SELECT setval(pg_get_serial_sequence('cargo_institucionales', 'id'), COALESCE(MAX(id), 1)) FROM cargo_institucionales;");
+            DB::statement("SELECT setval(pg_get_serial_sequence('cms_comite_editoriales', 'id'), COALESCE(MAX(id), 1)) FROM cms_comite_editoriales;");
         }
     }
 }

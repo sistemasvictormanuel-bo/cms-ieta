@@ -3,7 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\CmsRevistasVarias;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class CmsRevistasVariasSeeder extends Seeder
 {
@@ -20,6 +22,8 @@ class CmsRevistasVariasSeeder extends Seeder
             return;
         }
 
+        Model::unguard();
+
         foreach ($items as $item) {
             CmsRevistasVarias::updateOrCreate(
                 ['id' => $item['id']],
@@ -34,6 +38,11 @@ class CmsRevistasVariasSeeder extends Seeder
                 ]
             );
         }
+
+        Model::reguard();
+
+        if (DB::getDriverName() === 'pgsql') {
+            DB::statement("SELECT setval(pg_get_serial_sequence('cms_revistas_varias', 'id'), COALESCE(MAX(id), 1)) FROM cms_revistas_varias;");
+        }
     }
 }
-

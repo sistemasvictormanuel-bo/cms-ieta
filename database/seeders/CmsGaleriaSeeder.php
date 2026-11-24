@@ -3,7 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\CmsGaleria;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class CmsGaleriaSeeder extends Seeder
 {
@@ -20,6 +22,8 @@ class CmsGaleriaSeeder extends Seeder
             return;
         }
 
+        Model::unguard();
+
         foreach ($items as $item) {
             CmsGaleria::updateOrCreate(
                 ['id' => $item['id']],
@@ -35,6 +39,11 @@ class CmsGaleriaSeeder extends Seeder
                 ]
             );
         }
+
+        Model::reguard();
+
+        if (DB::getDriverName() === 'pgsql') {
+            DB::statement("SELECT setval(pg_get_serial_sequence('cms_galerias', 'id'), COALESCE(MAX(id), 1)) FROM cms_galerias;");
+        }
     }
 }
-

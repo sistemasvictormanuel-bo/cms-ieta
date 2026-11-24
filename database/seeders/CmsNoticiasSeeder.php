@@ -3,7 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\CmsNoticias;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class CmsNoticiasSeeder extends Seeder
 {
@@ -20,6 +22,8 @@ class CmsNoticiasSeeder extends Seeder
             return;
         }
 
+        Model::unguard();
+
         foreach ($noticias as $item) {
             CmsNoticias::updateOrCreate(
                 ['id' => $item['id']],
@@ -35,6 +39,11 @@ class CmsNoticiasSeeder extends Seeder
                 ]
             );
         }
+
+        Model::reguard();
+
+        if (DB::getDriverName() === 'pgsql') {
+            DB::statement("SELECT setval(pg_get_serial_sequence('cms_noticias', 'id'), COALESCE(MAX(id), 1)) FROM cms_noticias;");
+        }
     }
 }
-

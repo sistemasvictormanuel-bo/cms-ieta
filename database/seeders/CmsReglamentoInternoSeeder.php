@@ -3,7 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\CmsReglamentoInterno;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class CmsReglamentoInternoSeeder extends Seeder
 {
@@ -20,6 +22,8 @@ class CmsReglamentoInternoSeeder extends Seeder
             return;
         }
 
+        Model::unguard();
+
         foreach ($items as $item) {
             $contenido = is_string($item['reg_contenido']) ? json_decode($item['reg_contenido'], true) : $item['reg_contenido'];
 
@@ -32,6 +36,11 @@ class CmsReglamentoInternoSeeder extends Seeder
                 ]
             );
         }
+
+        Model::reguard();
+
+        if (DB::getDriverName() === 'pgsql') {
+            DB::statement("SELECT setval(pg_get_serial_sequence('cms_reglamento_internos', 'id'), COALESCE(MAX(id), 1)) FROM cms_reglamento_internos;");
+        }
     }
 }
-

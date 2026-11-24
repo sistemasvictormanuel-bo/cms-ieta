@@ -3,7 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\CmsRevistaVarianza;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class CmsRevistaVarianzaSeeder extends Seeder
 {
@@ -19,6 +21,8 @@ class CmsRevistaVarianzaSeeder extends Seeder
         if (! is_array($items)) {
             return;
         }
+
+        Model::unguard();
 
         foreach ($items as $item) {
             $contenido = is_string($item['rv_contenido']) ? json_decode($item['rv_contenido'], true) : $item['rv_contenido'];
@@ -42,6 +46,11 @@ class CmsRevistaVarianzaSeeder extends Seeder
                 ]
             );
         }
+
+        Model::reguard();
+
+        if (DB::getDriverName() === 'pgsql') {
+            DB::statement("SELECT setval(pg_get_serial_sequence('cms_revista_varianzas', 'id'), COALESCE(MAX(id), 1)) FROM cms_revista_varianzas;");
+        }
     }
 }
-

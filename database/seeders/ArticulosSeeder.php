@@ -4,7 +4,9 @@ namespace Database\Seeders;
 
 use App\Models\Articulo;
 use App\Models\EtiquetaArt;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
 class ArticulosSeeder extends Seeder
@@ -23,16 +25,18 @@ class ArticulosSeeder extends Seeder
             return;
         }
 
+        Model::unguard();
+
         foreach ($articulos as $item) {
             $slug = $item['art_slug'] ?? Str::slug($item['art_titulo']);
             $slugBase = $slug;
             $counter = 1;
-            while (Articulo::where('art_slug', $slug)->where('id', '!=', $item['id'])->exists()) {
+            while (Articulo::withTrashed()->where('art_slug', $slug)->where('id', '!=', $item['id'])->exists()) {
                 $slug = $slugBase.'-'.$counter;
                 $counter++;
             }
 
-            $articulo = Articulo::updateOrCreate(
+            $articulo = Articulo::withTrashed()->updateOrCreate(
                 ['id' => $item['id']],
                 [
                     'art_titulo' => $item['art_titulo'],
@@ -53,6 +57,7 @@ class ArticulosSeeder extends Seeder
                     'tipo_articulo_id' => $item['tipo_articulo_id'] ?? null,
                     'edicion_varianza_id' => $item['edicion_varianza_id'] ?? null,
                     'estado_revision' => $item['estado_revision'] ?? 'aprobado',
+                    'deleted_at' => null,
                 ]
             );
 
@@ -87,10 +92,10 @@ class ArticulosSeeder extends Seeder
                         ->first();
 
                     if (! $etiqueta) {
-                        $etiqueta = EtiquetaArt::create([
-                            'ea_nombre' => $tagNombre,
-                            'ea_slug' => $tagSlug ?: 'tag-'.uniqid(),
-                        ]);
+                        $etiqueta = EtiquetaArt::firstOrCreate(
+                            ['ea_slug' => $tagSlug ?: 'tag-'.Str::random(6)],
+                            ['ea_nombre' => $tagNombre]
+                        );
                     }
                     $tagIds[] = $etiqueta->id;
                 }
@@ -98,6 +103,13 @@ class ArticulosSeeder extends Seeder
                     $articulo->etiquetas()->sync($tagIds);
                 }
             }
+        }
+
+        Model::reguard();
+
+        if (DB::getDriverName() === 'pgsql') {
+            DB::statement("SELECT setval(pg_get_serial_sequence('articulos', 'id'), COALESCE(MAX(id), 1)) FROM articulos;");
+            DB::statement("SELECT setval(pg_get_serial_sequence('etiquetas_art', 'id'), COALESCE(MAX(id), 1)) FROM etiquetas_art;");
         }
     }
 }

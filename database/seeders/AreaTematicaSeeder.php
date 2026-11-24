@@ -3,7 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\AreaTematicas;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class AreaTematicaSeeder extends Seeder
 {
@@ -21,6 +23,8 @@ class AreaTematicaSeeder extends Seeder
             return;
         }
 
+        Model::unguard();
+
         foreach ($areas as $item) {
             AreaTematicas::updateOrCreate(
                 ['id' => $item['id']],
@@ -29,6 +33,12 @@ class AreaTematicaSeeder extends Seeder
                     'at_descripcion' => $item['at_descripcion'] ?? null,
                 ]
             );
+        }
+
+        Model::reguard();
+
+        if (DB::getDriverName() === 'pgsql') {
+            DB::statement("SELECT setval(pg_get_serial_sequence('area_tematicas', 'id'), COALESCE(MAX(id), 1)) FROM area_tematicas;");
         }
     }
 }

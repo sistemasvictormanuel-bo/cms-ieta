@@ -3,7 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\CmsLineasInvestigacion;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
 class LineasInvestigacionSeeder extends Seeder
@@ -22,6 +24,8 @@ class LineasInvestigacionSeeder extends Seeder
             return;
         }
 
+        Model::unguard();
+
         foreach ($lineas as $item) {
             $titulo = $item['li_titulo'] ?? $item['cli_nombre'] ?? 'Línea de Investigación';
             $slug = $item['li_slug'] ?? Str::slug($titulo);
@@ -35,6 +39,12 @@ class LineasInvestigacionSeeder extends Seeder
                     'li_slug' => $slug,
                 ]
             );
+        }
+
+        Model::reguard();
+
+        if (DB::getDriverName() === 'pgsql') {
+            DB::statement("SELECT setval(pg_get_serial_sequence('cms_lineas_investigaciones', 'id'), COALESCE(MAX(id), 1)) FROM cms_lineas_investigaciones;");
         }
     }
 }

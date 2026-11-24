@@ -3,7 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\CmsSobreNosotros;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class CmsSobreNosotrosSeeder extends Seeder
 {
@@ -20,6 +22,8 @@ class CmsSobreNosotrosSeeder extends Seeder
             return;
         }
 
+        Model::unguard();
+
         foreach ($items as $item) {
             $contenido = is_string($item['sn_contenido']) ? json_decode($item['sn_contenido'], true) : $item['sn_contenido'];
             $objetivos = is_string($item['sn_objetivos']) ? json_decode($item['sn_objetivos'], true) : $item['sn_objetivos'];
@@ -35,6 +39,11 @@ class CmsSobreNosotrosSeeder extends Seeder
                 ]
             );
         }
+
+        Model::reguard();
+
+        if (DB::getDriverName() === 'pgsql') {
+            DB::statement("SELECT setval(pg_get_serial_sequence('cms_sobre_nosotros', 'id'), COALESCE(MAX(id), 1)) FROM cms_sobre_nosotros;");
+        }
     }
 }
-

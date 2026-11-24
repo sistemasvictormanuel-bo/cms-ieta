@@ -78,7 +78,7 @@ php artisan migrate --force --no-interaction
 
 # 8. Sincronización y actualización de Seeders (idempotentes mediante updateOrCreate)
 echo "==> Sincronizando y ejecutando Seeders institucionales..."
-php artisan db:seed --force --no-interaction
+php artisan db:seed --force --no-interaction || echo "==> [ADVERTENCIA] Revisa los logs de seeders, continuando arranque del servidor..."
 
 # 9. Optimización de caché para producción
 echo "==> Optimizando rutas, vistas y configuración..."

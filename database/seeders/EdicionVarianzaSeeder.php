@@ -3,7 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\EdicionVarianza;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
 class EdicionVarianzaSeeder extends Seeder
@@ -24,6 +26,8 @@ class EdicionVarianzaSeeder extends Seeder
         if (! is_array($ediciones)) {
             return;
         }
+
+        Model::unguard();
 
         foreach ($ediciones as $item) {
             $slug = $item['ev_slug'] ?? Str::slug($item['ev_titulo'] ?? ('Varianza N° '.$item['ev_numero']));
@@ -50,6 +54,12 @@ class EdicionVarianzaSeeder extends Seeder
                     'ev_enlace_url' => $item['ev_enlace_url'] ?? null,
                 ]
             );
+        }
+
+        Model::reguard();
+
+        if (DB::getDriverName() === 'pgsql') {
+            DB::statement("SELECT setval(pg_get_serial_sequence('ediciones_varianzas', 'id'), COALESCE(MAX(id), 1)) FROM ediciones_varianzas;");
         }
     }
 }
