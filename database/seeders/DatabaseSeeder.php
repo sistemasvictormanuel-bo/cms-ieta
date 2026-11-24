@@ -38,6 +38,7 @@ class DatabaseSeeder extends Seeder
             CmsGaleriaSeeder::class,
             CmsReglamentoInternoSeeder::class,
             CmsComunicadoSeeder::class,
+            CmsNoticiasSeeder::class,
             CmsMediaSeeder::class,
             CmsTraduccionSeeder::class,
             AdminUserSeeder::class,

@@ -1,0 +1,101 @@
+[
+    {
+        "id": 3,
+        "persona_id": null,
+        "not_titulo": "Entrevista al Dr. Ramiro Coa Clemente",
+        "not_descripcion": "Entrevista al Dr. Ramiro Coa Clemente en el programa Cartas sobre la Mesa de TVU",
+        "not_fecha": "2025-12-03",
+        "not_destacado": false,
+        "not_publicado": true,
+        "not_contenido": {
+            "time": "1795479898487",
+            "blocks": [
+                {
+                    "id": "jGDem4eT1p",
+                    "type": "embed",
+                    "data": {
+                        "service": "youtube",
+                        "source": "https://youtu.be/feCxvo1svrs",
+                        "embed": "https://www.youtube.com/embed/feCxvo1svrs",
+                        "width": "580",
+                        "height": "320",
+                        "caption": null
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "not_url": null
+    },
+    {
+        "id": 4,
+        "persona_id": null,
+        "not_titulo": "PRESENTACIÓN DE PROYECTOS DESARROLLADOS POR LOS DOCENTES",
+        "not_descripcion": null,
+        "not_fecha": "2024-03-12",
+        "not_destacado": false,
+        "not_publicado": true,
+        "not_contenido": {
+            "time": "1795480055786",
+            "blocks": [
+                {
+                    "id": "rIhYu2HB85",
+                    "type": "image",
+                    "data": {
+                        "caption": null,
+                        "withBorder": "0",
+                        "withBackground": "0",
+                        "stretched": "0",
+                        "file": {
+                            "url": "/storage/editor/DalLetnKuwDXF8h6L8m1gfI2U2G7RwjlOwxdN6G5.png"
+                        }
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "not_url": null
+    },
+    {
+        "id": 5,
+        "persona_id": null,
+        "not_titulo": "CONCURSO DE CONOCIMIENTOS ESTADISTICOS",
+        "not_descripcion": null,
+        "not_fecha": "2024-06-25",
+        "not_destacado": false,
+        "not_publicado": true,
+        "not_contenido": {
+            "blocks": []
+        },
+        "not_url": "https://drive.google.com/file/d/1ucTlp6in3qpwevma6B8kYComIM2t6gQr/view"
+    },
+    {
+        "id": 6,
+        "persona_id": null,
+        "not_titulo": "Invitación Varianza 24",
+        "not_descripcion": null,
+        "not_fecha": "2024-05-29",
+        "not_destacado": false,
+        "not_publicado": true,
+        "not_contenido": {
+            "time": "1795480268137",
+            "blocks": [
+                {
+                    "id": "EWSkcWSzTv",
+                    "type": "image",
+                    "data": {
+                        "caption": null,
+                        "withBorder": "0",
+                        "withBackground": "0",
+                        "stretched": "0",
+                        "file": {
+                            "url": "/storage/editor/61TtYKxF1U1OIUb5eySnnBBvF0MwEbVlDlDroWMc.jpg"
+                        }
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "not_url": null
+    }
+]

@@ -1,0 +1,168 @@
+\documentclass[11pt,letterpaper]{article}
+
+% --- Paquetes Esenciales ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage[margin=2.2cm,top=2.2cm,bottom=2.5cm]{geometry}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage[most]{tcolorbox}
+\usepackage{hyperref}
+
+% --- Colores Institucionales ---
+\definecolor{ietaBlue}{RGB}{24, 43, 73}
+\definecolor{ietaAccent}{RGB}{185, 28, 28}
+\definecolor{ietaGray}{RGB}{75, 85, 99}
+\definecolor{boxBg}{RGB}{248, 250, 252}
+\definecolor{boxBorder}{RGB}{203, 213, 225}
+\definecolor{alertBg}{RGB}{254, 242, 242}
+\definecolor{alertBorder}{RGB}{239, 68, 68}
+\definecolor{alertText}{RGB}{153, 27, 27}
+
+% --- Configuración de Encabezado y Pie de Página ---
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\fancyhead[L]{\small \textbf{\color{ietaBlue}UNIVERSIDAD MAYOR DE SAN ANDRÉS} \\ \footnotesize Facultad de Ciencias Puras y Naturales --- Carrera de Estadística}
+\fancyhead[R]{\small \textbf{\color{ietaBlue}IETA} \\ \footnotesize Proyecto Portal Web}
+\fancyfoot[C]{\footnotesize Página \thepage\ de \pageref{LastPage}}
+\usepackage{lastpage}
+
+% --- Ajustes de Párrafo ---
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\begin{document}
+
+% --- Membrete / Encabezado de la Carta ---
+\begin{center}
+    {\large \textbf{\color{ietaBlue}INSTITUTO DE ESTADÍSTICA TEÓRICA Y APLICADA (IETA)}}\\[2pt]
+    {\small \textbf{CARRERA DE ESTADÍSTICA --- UMSA}}\\[8pt]
+    \rule{\textwidth}{1.2pt}
+\end{center}
+
+\vspace{-4pt}
+\begin{flushright}
+    \small \textbf{La Paz}, \underline{\hspace{1.2cm}} de \underline{\hspace{2.5cm}} de 2026\\[2pt]
+    \textbf{CITE:} IETA-WEB-DEV/2026-N° \underline{\hspace{1.5cm}}
+\end{flushright}
+
+\vspace{4pt}
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+    \textbf{A:} & \textbf{[Nombre de la Autoridad / Director del IETA]} \\
+                & Director / Coordinador \\
+                & Instituto de Estadística Teórica y Aplicada (IETA) --- UMSA \\[6pt]
+    \textbf{DE:} & \textbf{[Nombre del Primer Solicitante]} \\
+                 & Responsable / Desarrollador del Proyecto Web IETA \\[4pt]
+                 & \textbf{[Nombre del Segundo Solicitante]} \\
+                 & Responsable / Desarrollador del Proyecto Web IETA \\[6pt]
+    \textbf{REF.:} & \textbf{\color{ietaBlue}REITERACIÓN FORMAL DE SOLICITUD DE INFORMACIÓN, PRODUCCIÓN CIENTÍFICA (REVISTAS Y ARTÍCULOS) Y MATERIAL MULTIMEDIA PARA LA PUBLICACIÓN DEL PORTAL WEB INSTITUCIONAL IETA}
+\end{tabularx}
+
+\vspace{6pt}
+\rule{\textwidth}{0.5pt}
+
+\vspace{4pt}
+De nuestra mayor consideración:
+
+Mediante la presente, nos dirigimos a su distinguida autoridad para hacerle llegar un cordial saludo y desearle éxito en las funciones académicas y administrativas que desempeña en beneficio de nuestra institución.
+
+El motivo de la presente nota es remitir una \textbf{reiteración formal} respecto a la entrega de la información institucional, artículos científicos, números editoriales y material multimedia actualizado, insumos indispensables para concluir la configuración, alimentación de base de datos y puesta en producción del \textbf{Nuevo Portal Web del Instituto de Estadística Teórica y Aplicada (IETA)}.
+
+Al respecto, nos permitimos recordar respetuosamente que \textbf{dicha solicitud fue planteada formalmente hace más de un mes}. A la fecha, el equipo técnico ha culminado satisfactoriamente el desarrollo de la arquitectura informática, el gestor de contenidos (CMS), los módulos públicos de consulta y los servicios de base de datos, encontrándonos en la fase final de despliegue que requiere indispensablemente los datos oficiales vigentes.
+
+% --- Caja de Alerta / Plazo Límite ---
+\begin{tcolorbox}[
+    enhanced,
+    colback=alertBg,
+    colframe=alertBorder,
+    boxrule=1pt,
+    arc=4pt,
+    title={\textbf{\color{alertText} COMUNICADO URGENTE Y PLAZO DE ENTREGA: JUEVES 26 DE NOVIEMBRE DE 2026}},
+    coltitle=alertText,
+    fonttitle=\bfseries\small
+]
+\small \color{alertText}
+Con el fin de no perjudicar el cronograma de entrega del sistema, solicitamos que la información solicitada sea remitida de forma digital a más tardar el día \textbf{jueves 26 de noviembre de 2026 hasta horas 18:00}.
+
+\textbf{Aclaración fundamental:} En caso de no contar con la documentación y archivos actualizados dentro del plazo indicado, \textbf{se procederá a la publicación y despliegue del portal web únicamente con el contenido histórico del sitio anterior (gestión 2023)}, deslindando cualquier responsabilidad técnica respecto a la falta de visibilidad de publicaciones, autoridades, personal o comunicados recientes de las gestiones 2024, 2025 y 2026.
+\end{tcolorbox}
+
+\vspace{4pt}
+\textbf{\large \color{ietaBlue}Detalle de Requerimientos Solicitados}
+
+A continuación, se detalla la documentación y archivos específicos que se requieren para cada módulo del sistema:
+
+\begin{enumerate}[label=\textbf{\color{ietaBlue}\arabic*.}, leftmargin=1.5em]
+    \item \textbf{Revista Varianza y Producción Científica (Prioridad Alta):}
+    \begin{itemize}[leftmargin=1.2em, itemsep=2pt]
+        \item \textbf{Ediciones recientes (Gestiones 2024 a la fecha):} Número de edición, volumen, año, mes de publicación, códigos ISSN (versión impresa y electrónica) y enlace DOI oficial.
+        \item \textbf{Documento de Edición Completa:} Archivo PDF oficial de cada volumen en alta calidad para descarga pública.
+        \item \textbf{Artículos Científicos Individuales:}
+        \begin{itemize}[leftmargin=1em]
+            \item Archivo PDF independiente por cada artículo publicado.
+            \item Título oficial en español e inglés.
+            \item Resumen (\textit{Abstract}) y palabras clave (\textit{keywords}).
+            \item Fechas de recepción y aceptación del artículo.
+            \item Datos de los autores: Nombre completo, correo institucional, filiación académica y código ORCID.
+        \end{itemize}
+        \item \textbf{Presentación Editorial:} Texto o carta de presentación de cada edición (mensaje del Director / Comité Científico).
+        \item \textbf{Directrices e Instrucciones para Autores:} Normas de publicación actualizadas, formato de envío y comités revisores.
+    \end{itemize}
+
+    \item \textbf{Material Fotográfico y Archivo Multimedia:}
+    \begin{itemize}[leftmargin=1.2em, itemsep=2pt]
+        \item \textbf{Portadas Oficiales de Revistas:} Imágenes en alta resolución (JPG o PNG) de las portadas de cada número.
+        \item \textbf{Fotografías del Personal y Equipo de Investigadores:} Fotografías individuales actualizadas del personal docente, investigadores y personal administrativo para su ficha pública.
+        \item \textbf{Galería Institucional y Eventos:} Fotografías de eventos científicos, jornadas, seminarios, talleres, aniversarios o conferencias recientes del IETA, acompañadas de una breve descripción y fecha del evento.
+    \end{itemize}
+
+    \item \textbf{Comunicados, Noticias y Convocatorias Recientes:}
+    \begin{itemize}[leftmargin=1.2em, itemsep=2pt]
+        \item Convocatorias abiertas a presentación de artículos, pasantías, becas o ayudantías.
+        \item Avisos y comunicados oficiales vigentes con sus respectivos afiches o respaldos en PDF.
+    \end{itemize}
+
+    \item \textbf{Cursos, Servicios y Líneas de Investigación:}
+    \begin{itemize}[leftmargin=1.2em, itemsep=2pt]
+        \item Catálogo de cursos de capacitación, talleres o programas ofertados (título, descripción, afiche, docentes y enlaces).
+        \item Información de servicios de consultoría, asesoramiento metodológico y líneas de investigación activas.
+    \end{itemize}
+\end{enumerate}
+
+Reiterando nuestra entera disposición para coordinar la recepción digital de los archivos e integrarlos de manera expedita al sistema, nos despedimos con las consideraciones más distinguidas.
+
+\vspace{1.8cm}
+
+% --- Bloque de Firmas para los Dos Solicitantes ---
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \rule{6.5cm}{0.6pt}\\[4pt]
+    \textbf{[Nombre del Solicitante 1]}\\[2pt]
+    \small C.I.: \underline{\hspace{3.5cm}}\\[2pt]
+    \footnotesize Responsable de Desarrollo Web \\
+    Proyecto Portal Web IETA --- UMSA
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \rule{6.5cm}{0.6pt}\\[4pt]
+    \textbf{[Nombre del Solicitante 2]}\\[2pt]
+    \small C.I.: \underline{\hspace{3.5cm}}\\[2pt]
+    \footnotesize Responsable de Desarrollo Web \\
+    Proyecto Portal Web IETA --- UMSA
+\end{minipage}
+
+\vspace{1.5cm}
+\footnotesize \textit{c.c. Archivo personal / Archivo del Proyecto}
+
+\end{document}
+
