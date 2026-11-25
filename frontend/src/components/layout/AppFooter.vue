@@ -61,45 +61,49 @@ function formatTime(value: string) {
           </div>
 
           <address v-if="contact || institutionConfig" class="footer-contact">
+            <template v-if="contact?.emails?.length">
+              <a
+                v-for="email in contact.emails"
+                :key="email"
+                :href="`mailto:${email}`"
+                class="footer-contact__item"
+              >
+                <Mail class="footer-contact__icon" aria-hidden="true" />
+                <span>{{ email }}</span>
+              </a>
+            </template>
             <a
-              v-if="institutionConfig?.email_principal"
+              v-else-if="institutionConfig?.email_principal"
               :href="`mailto:${institutionConfig.email_principal}`"
               class="footer-contact__item"
             >
               <Mail class="footer-contact__icon" aria-hidden="true" />
               <span>{{ institutionConfig.email_principal }}</span>
             </a>
+
+            <template v-if="contact?.telefonos?.length">
+              <a
+                v-for="phone in contact.telefonos"
+                :key="phone"
+                :href="phoneHref(phone)"
+                class="footer-contact__item"
+              >
+                <Phone class="footer-contact__icon" aria-hidden="true" />
+                <span>{{ phone }}</span>
+              </a>
+            </template>
             <a
-              v-else
-              v-for="email in contact?.emails || []"
-              :key="email"
-              :href="`mailto:${email}`"
-              class="footer-contact__item"
-            >
-              <Mail class="footer-contact__icon" aria-hidden="true" />
-              <span>{{ email }}</span>
-            </a>
-            <a
-              v-if="institutionConfig?.telefono_principal"
+              v-else-if="institutionConfig?.telefono_principal"
               :href="phoneHref(institutionConfig.telefono_principal)"
               class="footer-contact__item"
             >
               <Phone class="footer-contact__icon" aria-hidden="true" />
               <span>{{ institutionConfig.telefono_principal }}</span>
             </a>
-            <a
-              v-else
-              v-for="phone in contact?.telefonos || []"
-              :key="phone"
-              :href="phoneHref(phone)"
-              class="footer-contact__item"
-            >
-              <Phone class="footer-contact__icon" aria-hidden="true" />
-              <span>{{ phone }}</span>
-            </a>
-            <p v-if="institutionConfig?.direccion_principal || contact?.direccion" class="footer-contact__item">
+
+            <p v-if="contact?.direccion || institutionConfig?.direccion_principal" class="footer-contact__item">
               <MapPin class="footer-contact__icon" aria-hidden="true" />
-              <span>{{ institutionConfig?.direccion_principal || contact?.direccion }}</span>
+              <span>{{ contact?.direccion || institutionConfig?.direccion_principal }}</span>
             </p>
             <p v-if="contact?.dia_inicio && contact?.dia_fin" class="footer-contact__item">
               <Clock3 class="footer-contact__icon" aria-hidden="true" />

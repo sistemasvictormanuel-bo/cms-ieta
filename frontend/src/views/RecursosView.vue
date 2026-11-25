@@ -783,7 +783,7 @@ onMounted(() => {
               </p>
             </header>
 
-            <!-- Type filter tabs/pills: [ Todos (79) ] [ Encuestas (65) ] [ Censos (14) ] -->
+            <!-- Type filter tabs/pills: [ Todos ] [ Encuestas ] [ Censos ] -->
             <div class="resource-type-tabs-container">
               <div class="resource-type-tabs" role="tablist" aria-label="Filtrar por tipo de conjunto de datos">
                 <button
@@ -793,7 +793,6 @@ onMounted(() => {
                   @click="setTypeFilter('all')"
                 >
                   <span>Todos</span>
-                  <span class="type-pill-count">({{ totalRecursos ?? allCount }})</span>
                 </button>
                 <button
                   type="button"
@@ -803,7 +802,6 @@ onMounted(() => {
                 >
                   <FileSpreadsheet :size="15" aria-hidden="true" />
                   <span>Encuestas</span>
-                  <span class="type-pill-count">({{ totalEncuestas ?? encuestasCount }})</span>
                 </button>
                 <button
                   type="button"
@@ -813,7 +811,6 @@ onMounted(() => {
                 >
                   <Database :size="15" aria-hidden="true" />
                   <span>Censos</span>
-                  <span class="type-pill-count">({{ totalCensos ?? censosCount }})</span>
                 </button>
               </div>
             </div>
