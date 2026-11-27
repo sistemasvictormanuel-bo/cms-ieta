@@ -1,0 +1,160 @@
+[
+    {
+        "id": 1,
+        "ct_titulo": "Curso de Machine Learning",
+        "tipo_curso_id": 2,
+        "modalidad_curso_id": 2,
+        "docente_id": 12,
+        "ct_fecha_inicio": "2026-01-01",
+        "ct_fecha_fin": "2026-01-02",
+        "ct_hora_inicio": null,
+        "ct_hora_fin": null,
+        "ct_duracion": "40",
+        "ct_descripcion": "La carrera de Computación de la Sede Quito invita a participar del curso de formación continua: Machine Learning a estudiantes, graduados y al público interesado en el aprendizaje automático.",
+        "ct_contenido": {
+            "time": "1794089074250",
+            "blocks": [
+                {
+                    "id": "PwIigIRgg0",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Machine Learning (aprendizaje automático) es la ciencia detrás de los algoritmos que permite como a Facebook reconocer un rostro, y a Shazam identificar una canción y a Watson realizar un diagnóstico médico."
+                    }
+                },
+                {
+                    "id": "T5_-gg6a1H",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "Los participantes aprenderán el funcionamiento de los algoritmos como: k-NN, Support Vector Machines, Redes Neuronales, k-means, por medio de prácticas en MATLAB, así como la comprensión de sus fundamentos matemáticos."
+                    }
+                },
+                {
+                    "id": "PKCUMOkuuO",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "El curso tendrá una duración de 40 horas y tiene el valor de 200 dólares para estudiantes y graduados y 250 dólares para público externo."
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "ct_email_info": null,
+        "ct_telefono_ref": null,
+        "ct_slug": "curso-de-machine-learning",
+        "ct_activo": true,
+        "ct_costo": "250.00"
+    },
+    {
+        "id": 2,
+        "ct_titulo": "Análisis Exploratorio de Datos con el paquete DPLYR de R Studio",
+        "tipo_curso_id": 2,
+        "modalidad_curso_id": 1,
+        "docente_id": null,
+        "ct_fecha_inicio": "2023-10-16",
+        "ct_fecha_fin": "2023-10-30",
+        "ct_hora_inicio": "18:00:00",
+        "ct_hora_fin": "20:00:00",
+        "ct_duracion": "35 horas académicas",
+        "ct_descripcion": "Curso virtual dictado por el M. Sc. Romer Machaca Aguilar sobre introducción al lenguaje de R, transformación de datos con el paquete DPLYR y exploración de datos. Inscripciones del 22 de septiembre al 18 de octubre de 2023.",
+        "ct_contenido": {
+            "time": "1795822825000",
+            "blocks": [
+                {
+                    "id": "dplyr_01",
+                    "type": "header",
+                    "data": {
+                        "text": "Curso: Análisis Exploratorio de Datos con el paquete DPLYR de R Studio",
+                        "level": 3
+                    }
+                },
+                {
+                    "id": "dplyr_02",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "<b>Dictado por:</b> M. Sc. Romer Machaca Aguilar"
+                    }
+                },
+                {
+                    "id": "dplyr_03",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "<b>Fecha de Inscripción:</b> Del 22 de septiembre 2023 al 18 de octubre 2023"
+                    }
+                },
+                {
+                    "id": "dplyr_04",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "<b>Horas Académicas:</b> 35 horas académicas | <b>Duración:</b> Del 16 al 30 de octubre de 2023"
+                    }
+                },
+                {
+                    "id": "dplyr_05",
+                    "type": "header",
+                    "data": {
+                        "text": "Contenido",
+                        "level": 4
+                    }
+                },
+                {
+                    "id": "dplyr_06",
+                    "type": "list",
+                    "data": {
+                        "style": "unordered",
+                        "items": [
+                            {
+                                "content": "Introducción al lenguaje de R y su interfaz (objetos y funciones)",
+                                "meta": {},
+                                "items": []
+                            },
+                            {
+                                "content": "Transformación de datos (agregación, filtros, selección, manipulación y combinación)",
+                                "meta": {},
+                                "items": []
+                            },
+                            {
+                                "content": "Exploración de datos (datos atípicos, imputación, entre otros)",
+                                "meta": {},
+                                "items": []
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "dplyr_07",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "<b>Horario:</b> Lunes, Miércoles y Viernes de 18:00 a 20:00 (16, 18, 20, 23, 25, 27 y 30 de octubre) — <b>Modalidad virtual</b>."
+                    }
+                },
+                {
+                    "id": "dplyr_08",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "<b>Inversión:</b> 100 Bs. Estudiantes en General — 150 Bs. Profesionales."
+                    }
+                },
+                {
+                    "id": "dplyr_09",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "<b>Pago:</b> Debe realizarse en la unidad de Área Desconcentrada de la Facultad de Ciencias Puras y Naturales, Av. Villazón, Edif. Antiguo detrás del Monoblock Central, primer piso. Posteriormente, remitir el comprobante de pago con su nombre completo, matrícula en caso de ser estudiante universitario y su número de celular al correo: <b>ieta@umsa.bo</b>"
+                    }
+                },
+                {
+                    "id": "dplyr_10",
+                    "type": "paragraph",
+                    "data": {
+                        "text": "<b>Contactos:</b> Cel. 73264056 | Correo: rcoa@fcpn.edu.bo"
+                    }
+                }
+            ],
+            "version": "2.31.7"
+        },
+        "ct_email_info": "rcoa@fcpn.edu.bo",
+        "ct_telefono_ref": "73264056",
+        "ct_slug": "analisis-exploratorio-de-datos-con-el-paquete-dplyr-de-r-studio",
+        "ct_activo": true,
+        "ct_costo": "100.00"
+    }
+]

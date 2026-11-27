@@ -404,6 +404,7 @@ function isActive(to: string): boolean {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1.75rem;
   height: 100%;
   position: relative;
 }
@@ -475,6 +476,8 @@ function isActive(to: string): boolean {
   flex-direction: column;
   align-items: flex-end;
   gap: 0.35rem;
+  min-width: 0;
+  flex: 1 1 auto;
 }
 
 /* Utility Row (Top) */
@@ -593,6 +596,7 @@ function isActive(to: string): boolean {
   font-weight: 600;
   color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
+  white-space: nowrap;
   padding: 0.35rem 0.45rem;
   border-radius: var(--radius-sm);
   transition: all 0.18s ease;
@@ -832,6 +836,68 @@ function isActive(to: string): boolean {
 }
 
 /* Responsive Breakpoints */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .app-header__container {
+    padding-inline: 1.25rem;
+  }
+
+  .header-inner {
+    gap: 1.5rem;
+  }
+
+  .header-brand {
+    padding: 0.4rem 0.75rem 0.4rem 0.25rem;
+    gap: 0.55rem;
+  }
+
+  .header-brand__logo {
+    width: 2.85rem;
+    height: 2.85rem;
+  }
+
+  .header-brand__full-name {
+    font-size: 0.78rem;
+    line-height: 1.15;
+  }
+
+  .header-brand__career {
+    font-size: 0.7rem;
+  }
+
+  .header-nav {
+    gap: 0.4rem;
+  }
+
+  .header-nav__link {
+    font-size: 0.78rem;
+    padding: 0.3rem 0.35rem;
+    gap: 0.2rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1180px) {
+  .header-brand__full-name {
+    display: none;
+  }
+
+  .header-brand__short-name {
+    display: block;
+    color: #202e71;
+    font-size: 1.05rem;
+    font-weight: 800;
+    line-height: 1.1;
+  }
+
+  .header-nav {
+    gap: 0.25rem;
+  }
+
+  .header-nav__link {
+    font-size: 0.75rem;
+    padding: 0.28rem 0.3rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .app-header {
     height: 5.75rem;

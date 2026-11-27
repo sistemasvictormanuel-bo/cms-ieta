@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        \Illuminate\Database\Eloquent\Model::unguard();
+        Model::unguard();
 
         $this->call([
             RolesAndPermissionsSeeder::class,
@@ -44,6 +44,7 @@ class DatabaseSeeder extends Seeder
             CmsReglamentoInternoSeeder::class,
             CmsComunicadoSeeder::class,
             CmsNoticiasSeeder::class,
+            CmsCursosSeeder::class,
             CmsMediaSeeder::class,
             CmsTraduccionSeeder::class,
             AdminUserSeeder::class,
@@ -51,7 +52,7 @@ class DatabaseSeeder extends Seeder
 
         Model::reguard();
 
-        \Illuminate\Database\Eloquent\Model::reguard();
+        Model::reguard();
 
         if (DB::getDriverName() === 'pgsql') {
             $this->resetPostgresSequences();
