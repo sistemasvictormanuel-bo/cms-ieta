@@ -61,7 +61,7 @@ class AutoresPersonasSeeder extends Seeder
 
             $tipoAutorId = ($item['tipo_autor_id'] ?? null) && TipoAutor::where('id', $item['tipo_autor_id'])->exists()
                 ? $item['tipo_autor_id']
-                : 1;
+                : (TipoAutor::where('ta_nombre', 'Docente')->value('id') ?? 6);
 
             $gradoId = ($item['grado_academico_id'] ?? null) && GradoAcademico::where('id', $item['grado_academico_id'])->exists()
                 ? $item['grado_academico_id']

@@ -33,6 +33,7 @@ class CatalogosBaseSeeder extends Seeder
             ['id' => 3, 'ta_nombre' => 'Docente Investigador', 'ta_descripcion' => 'Docente enfocado primordialmente a proyectos de investigación.', 'ta_estado' => true],
             ['id' => 4, 'ta_nombre' => 'Estudiante Investigador', 'ta_descripcion' => 'Estudiante de grado o postgrado en rol de tesista o auxiliar.', 'ta_estado' => true],
             ['id' => 5, 'ta_nombre' => 'Docente Emérito', 'ta_descripcion' => 'Docente emérito destacado de la carrera.', 'ta_estado' => true],
+            ['id' => 6, 'ta_nombre' => 'Docente', 'ta_descripcion' => 'Docente o autor general sin categoría específica asignada.', 'ta_estado' => true],
         ];
         foreach ($tiposAutor as $item) {
             TipoAutor::updateOrCreate(['id' => $item['id']], $item);
